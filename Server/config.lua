@@ -25,10 +25,10 @@ Server =
 
     -- The name of the server, as seen by players and the server browser.
     -- Default value: "JC2-MP Server"
-    Name                        = "Brasil Role Play",
+    Name                        = "Just Cause Role Play",
     -- The server description, as seen by players and the server browser.
     -- Default value: "No description available"
-    Description                 = "Servidor Brasileiro de Role Play",
+    Description                 = "Servidor de Role Play",
     -- The server password.
     -- Default value: ""
     Password                    = "",
@@ -131,7 +131,7 @@ Player =
     -- to handle spawns, such as the freeroam script, then this spawn position
     -- will be used.
     -- Default value: Vector3( -6550, 209, -3290 )
-    SpawnPosition               = Vector3( -6550, 209, -3290 )
+    SpawnPosition               = Vector3( -6031, 218, -3792 )
 }
 
 --[[
