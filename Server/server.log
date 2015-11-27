@@ -1,0 +1,22 @@
+09:27:32 | [info ] | JCMP Server 0.2.1 (Build 1011)
+09:27:32 | [info ] | Loading configuration
+09:27:32 | [info ] | Succesfully loaded configuration
+09:27:33 | [info ] | No ban list found: cleared bans
+09:27:33 | [info ] | Server started up successfully
+09:28:36 | [info ] | Connection accepted
+09:28:36 | [info ] | Adding player with ID 0 and guid 54046915290205907, SteamID: STEAM_0:1:79588837
+09:28:36 | [info ] | watermelon joined the server (41.135.85.140)
+09:29:36 | [info ] | Connection accepted
+09:29:36 | [info ] | Adding player with ID 1 and guid 1017813517686552628, SteamID: STEAM_0:0:11728421
+09:29:36 | [info ] | Proglote joined the server (192.168.0.1)
+09:29:52 | [info ] | Proglote left the server (192.168.0.1)
+09:29:58 | [info ] | watermelon left the server (41.135.85.140)
+11:24:26 | [info ] | JCMP Server 0.2.1 (Build 1011)
+11:24:26 | [info ] | Loading configuration
+11:24:26 | [info ] | Succesfully loaded configuration
+11:24:27 | [info ] | No ban list found: cleared bans
+11:24:27 | [info ] | Server started up successfully
+11:24:27 | [info ] | Failed to load module Oil: Module can't be loaded because the path is empty
+11:25:34 | [info ] | Connection accepted
+11:25:34 | [info ] | Adding player with ID 0 and guid 653021995196375342, SteamID: STEAM_0:1:79139420
+11:25:34 | [info ] | Flam3 joined the server (179.233.187.235)
