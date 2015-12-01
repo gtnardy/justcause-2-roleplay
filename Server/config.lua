@@ -22,10 +22,9 @@ Server =
     -- connection, or crashing without properly disconnecting.
     -- Default value (in milliseconds): 10000
     Timeout                     = 10000,
-
     -- The name of the server, as seen by players and the server browser.
     -- Default value: "JC2-MP Server"
-    Name                        = "Just Cause Role Play",
+    Name                        = "Just Cause Role Play - Under Maintenance",
     -- The server description, as seen by players and the server browser.
     -- Default value: "No description available"
     Description                 = "Servidor de Role Play",
@@ -49,7 +48,7 @@ Server =
     --  * Execution of Lua from arbitrary paths (Access to loadfile/dofile)
     --  * Unbound io functions, allowing for access to the entire file-system
     -- Default value: false
-    IKnowWhatImDoing            = true
+    IKnowWhatImDoing            = false
 }
 
 --[[
@@ -173,7 +172,7 @@ World =
 {
     -- The default time of day at world creation.
     -- Default value (in hours): 0.0
-    Time                        = 12.0,
+    Time                        = 0.0,
 
     -- The increment added to the time of day each second.
     -- Default value (in minutes): 1
