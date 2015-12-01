@@ -83,7 +83,7 @@ function UTChat:PostMessage( utxt )
 
 	for ix,m in ipairs(self.Messages) do
 		m.MessageID = ix
-		local pos = Vector2(30,(Render.Height*self.position)-((ix-1)/10*160))
+		local pos = Vector2(60,(Render.Height*self.position)-((ix-1)/10*160))
 		if ix == 1 then
 			m.position = pos
 		else
@@ -113,7 +113,7 @@ function UTChat:OnPlayerChat( args )
 	--local namefiller = ""
 	--for i=1,#args.player:GetName() do namefiller = namefiller .. "." end
 	--utxt = UText(namefiller .. ": " .. args.text,Vector2(30,(Render.Height*0.80)))
-	utxt = UText(args.player:GetName() .. ": " .. args.text,Vector2(30,(Render.Height*self.position)))
+	utxt = UText(args.player:GetName() .. ": " .. args.text,Vector2(60,(Render.Height*self.position)))
 	math.randomseed(FNV(args.player:GetName()))
 	utxt:Format( "color", 1, #( args.player:GetName() ) + 1,Color( 150 + math.random( 100 ), 150 + math.random( 100 ), 150 + math.random( 100 ) ) )
 	self:PostMessage(utxt)
@@ -126,7 +126,7 @@ function UTChat:PrintChat( args )
 	local duration = args.duration or 0
 	local color = args.color or Color(255,255,255,255)
 	if alpha <= 0 or color.a <= 0 then return end
-	local utxt = UText(args.text,Vector2(30,(Render.Height*self.position + 0.05)),duration,color,{alpha=alpha, nochathandling = args.noparse or false})
+	local utxt = UText(args.text,Vector2(60,(Render.Height*self.position + 0.05)),duration,color,{alpha=alpha, nochathandling = args.noparse or false})
 	if args.format then args.formats = {args.format} end
 	if args.formats then
 		for i, fmt in pairs(args.formats) do
@@ -147,12 +147,12 @@ end
 
 function UTChat:Render( args ) -- Render Hook
 	if (Chat:GetUserEnabled() and Chat:GetEnabled()) != chat_enabled then self:ToggleChat(Chat:GetUserEnabled() and Chat:GetEnabled()) end
-	if paused != (Game:GetState() != GUIState.Game) then
+	if paused != (Game:GetState() == GUIState.Loading or Game:GetState() == GUIState.PDA or Game:GetState() == GUIState.Menu) then
 		for i,m in ipairs(self.Messages) do
 			m.alpha = paused and m.init_alpha or
 			chat_enabled and (m.init_alpha * 0.50) or 0
 		end
-		paused = (Game:GetState() != GUIState.Game)
+		paused = (Game:GetState() == GUIState.Loading or Game:GetState() == GUIState.PDA or Game:GetState() == GUIState.Menu)
 	end
 
 	for i,m in ipairs(self.Messages) do
