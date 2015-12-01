@@ -49,7 +49,7 @@ Server =
     --  * Execution of Lua from arbitrary paths (Access to loadfile/dofile)
     --  * Unbound io functions, allowing for access to the entire file-system
     -- Default value: false
-    IKnowWhatImDoing            = false
+    IKnowWhatImDoing            = true
 }
 
 --[[
@@ -173,7 +173,7 @@ World =
 {
     -- The default time of day at world creation.
     -- Default value (in hours): 0.0
-    Time                        = 0.0,
+    Time                        = 12.0,
 
     -- The increment added to the time of day each second.
     -- Default value (in minutes): 1
