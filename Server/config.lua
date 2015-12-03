@@ -22,10 +22,9 @@ Server =
     -- connection, or crashing without properly disconnecting.
     -- Default value (in milliseconds): 10000
     Timeout                     = 10000,
-
     -- The name of the server, as seen by players and the server browser.
     -- Default value: "JC2-MP Server"
-    Name                        = "Just Cause Role Play",
+    Name                        = "Just Cause Role Play - Under Maintenance",
     -- The server description, as seen by players and the server browser.
     -- Default value: "No description available"
     Description                 = "Servidor de Role Play",
