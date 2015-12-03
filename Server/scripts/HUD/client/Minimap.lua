@@ -3,17 +3,44 @@ class 'Minimapa'
 function Minimapa:__init()
 	
 	self.mapaImagem = Image.Create(AssetLocation.Disk, "Map.jpg")
-	self.mapaImagem:SetSize(self.mapaImagem:GetSize() * 1.5)
-	self.tamanhoMapa = 32768
+	self.mapaImagem:SetSize(self.mapaImagem:GetSize() * 2)
+	self.mapaImagem:SetAlpha(0.5)
+	
+	self.tamanhoMapa = Vector2(32768, 32768)
+	self.proporcao = self.tamanhoMapa.x / math.ceil(self.mapaImagem:GetSize().x)
+	
+	self.spots = {}
+	self.spotsRender = {}
+	
+	
+	Events:Subscribe("PostTick", self, self.PostTick)
+	self.timer = Timer()
+	self.lastUpdatePosition = nil
+end
+
+
+function Minimapa:PostTick()
+	if (self.timer:GetSeconds() > 2) then
+		if (not self.lastUpdatePosition or Vector3.Distance(self.lastUpdatePosition, LocalPlayer:GetPosition()) >= 200) then
+			self.lastUpdatePosition = LocalPlayer:GetPosition()
+			self.spotsRender = {}
+			for i, v in ipairs(self.spots) do
+			
+				if Vector3.Distance(v:GetPosition(), self.lastUpdatePosition) < 1700 then
+					table.insert(self.spotsRender, v)
+				end
+			end
+			self.timer:Restart()
+		end
+	end
 end
 
 
 function Minimapa:Render(posicao, tamanho)
 
-	Render:FillArea(posicao, tamanho, Color(5, 37, 48))	
+	Render:FillArea(posicao, tamanho, Color(5, 37, 48, 120))	
 	
-	local posicaoImagem = self:Vector3ToMinimapa(LocalPlayer:GetPosition(), posicao, self.mapaImagem:GetSize().x)
-	self.mapaImagem:SetPosition(posicao - posicaoImagem - posicao)
+	self.mapaImagem:SetPosition(self:GetMinimapPosition(posicao, tamanho))
 	
 	local transformMapa = Transform2()
 	transformMapa:Translate(posicao + tamanho / 2)
@@ -24,24 +51,60 @@ function Minimapa:Render(posicao, tamanho)
 	self.mapaImagem:Draw()
 	
 	Render:ResetTransform()
-	Render:FillCircle(posicao + tamanho / 2, 3, Color(255, 0, 0))
+	
+	self:RenderStreamablePlayers(posicao, tamanho)
+	
+	self:RenderSpots(posicao, tamanho)
+	Render:SetClip(false)
 end
 
 
-function Minimapa:Vector3ToMinimapa(vec3, posicaoMinimapa, tamanhoMapa)
+function Minimapa:RenderSpots(posicao, tamanho)
 	
-	local posBruta = Vector2(vec3.x, vec3.z) + Vector2(self.tamanhoMapa, self.tamanhoMapa) / 2
+	for i = #self.spotsRender, 1, -1 do
+			
+		local spot = self.spotsRender[i]
+		if (spot) then 			
+			local pos = spot:GetPosition()
+			
+			local posMinimapa = self:Vector3ToMinimap(pos, posicao, tamanho, spot.fixed)
+			spot:Render(posMinimapa, self.mapaImagem:GetAlpha() * 1.75)
+		end
+	end
 	
-	local posMapa = posBruta * self.mapaImagem:GetSize().x / self.tamanhoMapa
-	
-	return posMapa
-	
-	
-	
-	
-	-- local posicao = Vector2(math.ceil(vec3.x) + self.tamanhoMapa / 2, math.ceil(vec3.z) + self.tamanhoMapa / 2)
+end
 
-	-- local prop = self.tamanhoMapa / math.ceil(self.mapaImagem:GetSize().x)
 
-	-- return posicao / prop
+function Minimapa:RenderStreamablePlayers(posicao, tamanho)
+	
+	for player, _ in Client:GetStreamedPlayers() do
+			
+		local posMinimapa = self:Vector3ToMinimap(player:GetPosition(), posicao, tamanho)
+		Render:FillCircle(posMinimapa, 3, player:GetColor())		
+	end
+end
+
+
+function Minimapa:GetMinimapPosition(posicao, tamanho)
+
+	local posPlayer = LocalPlayer:GetPosition()
+	local posPlayerV2Bruta = Vector2(posPlayer.x, posPlayer.z) + self.tamanhoMapa / 2
+	
+	return -(self.mapaImagem:GetSize().x * posPlayerV2Bruta / self.tamanhoMapa.x)
+end
+
+
+function Minimapa:Vector3ToMinimap(posicao, posicaoMinimapa, tamanhoMinimapa, fixed)
+
+	posicao = Vector2(math.ceil(posicao.x) + self.tamanhoMapa.x / 2, math.ceil(posicao.z) + self.tamanhoMapa.y / 2)
+
+	local posicaoFinal = posicao / self.proporcao + self.mapaImagem:GetPosition()
+
+	posicaoFinal = -Angle(Camera:GetAngle().yaw, 0, 0) * Vector3(posicaoFinal.x, 0, posicaoFinal.y)
+	posicaoFinal = Vector2(posicaoFinal.x, posicaoFinal.z) + tamanhoMinimapa / 2 + posicaoMinimapa
+	
+	if fixed then
+		posicaoFinal = Vector2(math.max(posicaoMinimapa.x, math.min(posicaoMinimapa.x + tamanhoMinimapa.x, posicaoFinal.x)), math.max(posicaoMinimapa.y, math.min(posicaoMinimapa.y + tamanhoMinimapa.y, posicaoFinal.y)))
+	end
+	return posicaoFinal
 end
