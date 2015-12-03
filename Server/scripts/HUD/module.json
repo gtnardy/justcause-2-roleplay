@@ -1,0 +1,20 @@
+{
+  "info": {
+    "author": "",
+    "author_url": "",
+    "description": "Auto-generated",
+    "name": "HUD"
+  },
+  "resources": {
+	"JCMap": "http://i.imgur.com/wrLKely.jpg",
+	"Player_Spot": "http://i.imgur.com/Yawg8n4.png",
+	"Waypoint_Spot": "https://i.imgur.com/4B34G7j.png",
+	"Village_Spot": "http://i.imgur.com/f7KhqsG.png",
+	"City_Spot": "http://i.imgur.com/yp3KXIe.png",
+	"Airport_Spot": "http://i.imgur.com/rPgf5ov.png",
+	"Port_Spot": "http://i.imgur.com/j8hLvIU.png",
+	"Stronghold_Spot": "http://i.imgur.com/64otw9j.png",
+	"Radio_Spot": "http://i.imgur.com/O8xnU8f.png",
+	"Oil_Spot": "http://i.imgur.com/BwdGcKW.png"
+  }
+}
