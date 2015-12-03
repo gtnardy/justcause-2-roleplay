@@ -2,14 +2,12 @@ class 'UsuarioController'
 
 function UsuarioController:__init()
 
-	Events:Subscribe("", self, self.LocalPlayerChat)
+	Events:Subscribe("PlayerJoin", self, self.PlayerJoin)
 end
 
-function UsuarioController:LocalPlayerChat(args)
+function UsuarioController:PlayerJoin(args)
 	
-	if args.text == "/pos" then
-		Chat:Print(tostring(LocalPlayer:GetPosition()), Color(255, 255, 255))
-	end
+	Chat:Broadcast(tostring(args.player) .. " entrou no servidor.", Color(255, 255, 255))
 end
 
 UsuarioController = UsuarioController()
