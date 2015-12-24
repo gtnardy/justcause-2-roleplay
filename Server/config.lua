@@ -48,7 +48,7 @@ Server =
     --  * Execution of Lua from arbitrary paths (Access to loadfile/dofile)
     --  * Unbound io functions, allowing for access to the entire file-system
     -- Default value: false
-    IKnowWhatImDoing            = false
+    IKnowWhatImDoing            = true
 }
 
 --[[

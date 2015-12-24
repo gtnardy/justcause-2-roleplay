@@ -2,16 +2,13 @@ class 'Minimapa'
 
 function Minimapa:__init()
 	
-	self.mapaImagem = Image.Create(AssetLocation.Disk, "Map.jpg")
-	self.mapaImagem:SetSize(self.mapaImagem:GetSize() * 2)
-	self.mapaImagem:SetAlpha(0.5)
-	
+	self.mapaImagem = Image.Create(AssetLocation.Resource, "JCMap")
+
 	self.tamanhoMapa = Vector2(32768, 32768)
-	self.proporcao = self.tamanhoMapa.x / math.ceil(self.mapaImagem:GetSize().x)
+	self.proporcao = self.tamanhoMapa.x / 5000--self.mapaImagem:GetSize().x
 	
 	self.spots = {}
 	self.spotsRender = {}
-	
 	
 	Events:Subscribe("PostTick", self, self.PostTick)
 	self.timer = Timer()
@@ -30,16 +27,16 @@ function Minimapa:PostTick()
 					table.insert(self.spotsRender, v)
 				end
 			end
-			self.timer:Restart()
 		end
+		self.timer:Restart()
 	end
 end
 
 
 function Minimapa:Render(posicao, tamanho)
 
-	Render:FillArea(posicao, tamanho, Color(5, 37, 48, 120))	
-	
+	Render:FillArea(posicao, tamanho, Color(5, 37, 48, 120))
+	self.mapaImagem:SetAlpha(0.5)
 	self.mapaImagem:SetPosition(self:GetMinimapPosition(posicao, tamanho))
 	
 	local transformMapa = Transform2()
@@ -68,7 +65,8 @@ function Minimapa:RenderSpots(posicao, tamanho)
 			local pos = spot:GetPosition()
 			
 			local posMinimapa = self:Vector3ToMinimap(pos, posicao, tamanho, spot.fixed)
-			spot:Render(posMinimapa, self.mapaImagem:GetAlpha() * 1.75)
+
+			spot:RenderMinimap(posMinimapa, self.mapaImagem:GetAlpha() * 1.5)
 		end
 	end
 	

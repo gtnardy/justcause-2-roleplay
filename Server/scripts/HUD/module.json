@@ -6,15 +6,32 @@
     "name": "HUD"
   },
   "resources": {
-	"JCMap": "http://i.imgur.com/wrLKely.jpg",
+	"JCMap": "http://i.imgur.com/tHINtlw.jpg",
 	"Player_Spot": "http://i.imgur.com/Yawg8n4.png",
 	"Waypoint_Spot": "https://i.imgur.com/4B34G7j.png",
-	"Village_Spot": "http://i.imgur.com/f7KhqsG.png",
-	"City_Spot": "http://i.imgur.com/yp3KXIe.png",
-	"Airport_Spot": "http://i.imgur.com/rPgf5ov.png",
-	"Port_Spot": "http://i.imgur.com/j8hLvIU.png",
-	"Stronghold_Spot": "http://i.imgur.com/64otw9j.png",
-	"Radio_Spot": "http://i.imgur.com/O8xnU8f.png",
-	"Oil_Spot": "http://i.imgur.com/BwdGcKW.png"
+	"Village_Spot": "http://i.imgur.com/dpsirR7.png",
+	"City_Spot": "http://i.imgur.com/ymE5Yvc.png",
+	"Airport_Spot": "http://i.imgur.com/pUNafL1.png",
+	"Port_Spot": "http://imgur.com/6MRXs90",
+	"Stronghold_Spot": "http://i.imgur.com/6crur7s.png",
+	"Radio_Spot": "http://i.imgur.com/gOF0CNt.png",
+	"Oil_Spot": "http://i.imgur.com/BwdGcKW.png",
+	
+	"Pistol_Weapon": "http://i.imgur.com/OiMhyOZ.png",
+	"Revolver_Weapon": "http://i.imgur.com/72LyJN6.png",
+	"SMG_Weapon": "http://i.imgur.com/vSGVoEq.png",
+	"Sawed_Weapon": "http://i.imgur.com/8kcdP2z.png",
+	"Granade_Weapon": "http://i.imgur.com/b4XO78s.png",
+	"Bazooka_Ammo_Weapon": "http://i.imgur.com/qZeZIek.png",
+	"Bazooka_Weapon": "http://i.imgur.com/NnpyMmX.png",
+	"Assault_Weapon": "http://i.imgur.com/48JqoYs.png",
+	"Turret_Weapon": "http://i.imgur.com/dRYwGLF.png",
+	"StickBomb_Weapon": "http://i.imgur.com/g9RjqTF.png",
+	"Sniper_Weapon": "http://i.imgur.com/DqAm9rO.png",
+	"Shotgun_Weapon": "http://i.imgur.com/LarP22u.png",
+	"Minigun_Weapon": "http://i.imgur.com/R6mIbuU.png",
+	"Bomb_Weapon": "http://i.imgur.com/kNC82DP.png",
+	"Machinegun_Weapon": "http://i.imgur.com/Z9D1C83.png",
+	"Granadier_Weapon": "http://i.imgur.com/npXQ2HQ.png"
   }
 }

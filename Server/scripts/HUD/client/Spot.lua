@@ -13,9 +13,17 @@ function Spot:Render(positionMinimap, alpha)
 	
 	if self.image then
 		self.image:SetPosition(positionMinimap - self.image:GetSize() / 2)
-		self.image:SetAlpha(alpha)
+		if alpha then
+			self.image:SetAlpha(alpha)
+		end
 		self.image:Draw()
 	end
+end
+
+
+function Spot:RenderMinimap(positionMinimap, alpha)
+	
+	self:Render(positionMinimap, alpha)
 end
 
 
@@ -36,7 +44,20 @@ function SpotPlayer:__init()
 end
 
 
-function SpotPlayer:Render(positionMinimap)
+function SpotPlayer:Render(position)
+	
+	local t2 = Transform2()
+	t2:Translate(Render.Size / 2 + position - self.image:GetSize() / 2)
+	t2:Rotate(-LocalPlayer:GetAngle().yaw + Camera:GetAngle().yaw)
+	Render:SetTransform(t2)
+		
+	self.image:SetPosition(-self.image:GetSize() / 2)
+	self.image:Draw()
+	Render:ResetTransform()
+end
+
+
+function SpotPlayer:RenderMinimap(positionMinimap)
 	
 	local t2 = Transform2()
 	t2:Translate(positionMinimap)		
@@ -73,6 +94,12 @@ function SpotWaypoint:Render(positionMinimap, alpha)
 	self.image:SetPosition(positionMinimap - self.image:GetSize() / 2)
 	self.image:SetAlpha(0.9)
 	self.image:Draw()
+end
+
+
+function SpotWaypoint:RenderMinimap(positionMinimap, alpha)
+
+	self:Render(positionMinimap, alpha)
 end
 
 
