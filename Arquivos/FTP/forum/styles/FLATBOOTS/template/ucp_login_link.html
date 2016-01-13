@@ -1,0 +1,80 @@
+<!-- INCLUDE overall_header.html -->
+<div class="side-segment"><h3>{SITENAME}&nbsp;&#45;&nbsp;{L_LOGIN_LINK}</h3></div>
+  <p>{L_LOGIN_LINK_EXPLAIN}</p>
+
+<!-- IF LOGIN_LINK_ERROR -->
+<div class="alert alert-warning fade in">
+ <i class="fa fa-info"></i>&nbsp;<strong>{LOGIN_LINK_ERROR}</strong>
+</div>
+<!-- ENDIF -->
+	
+<section class="panel-login panel-w-form">
+        <div class="container">
+            <div class="row">
+                <!-- IF S_REGISTER_ENABLED -->
+				<form action="{REGISTER_ACTION}" method="post" id="register">
+				<fieldset>
+				<div class="col-sm-6">
+				<div class="signin-text">
+					<span>{L_CREATE_ACCOUNT}</span>
+				</div>
+                    <p>{L_LOGIN_INFO}</p>
+				    <p><a href="{U_TERMS_USE}">{L_TERMS_USE}</a>&nbsp;&#124;&nbsp;<a href="{U_PRIVACY}">{L_PRIVACY}</a></p>
+					{S_HIDDEN_FIELDS}
+					<p><input type="submit" name="register" tabindex="1" value="{L_REGISTER}" class="btn btn-default btn-reg-login" /></p>
+                </div>
+				</fieldset>
+		        </form> 
+				<!-- ELSE -->
+				<div class="col-sm-6">
+				<div class="signin-text">
+					<span>{L_CREATE_ACCOUNT_DISABLED}</span>
+				</div>
+                    <p>{L_REGISTRATION_DISABLED}</p>
+				    <p><a href="{U_TERMS_USE}">{L_TERMS_USE}</a>&nbsp;&#124;&nbsp;<a href="{U_PRIVACY}">{L_PRIVACY}</a></p>
+					<p><a href="mailto:{BOARD_EMAIL}?subject=Registrations Closed&body=Dear Admin, %0A%0AI Just wanted to let you know that the board registrations are closed. %0A%0AThis might be an error and I would like to register. %0A%0APlease let me know if this is possible.%0A%0AThanks!" class="btn btn-default">{L_CONTACT_WEBMASTER}</a></p>
+                </div>
+				<!-- ENDIF -->
+				<div class="col-sm-6">
+				<div class="signin-text">
+					<span>{L_SIGN_IN_ACCOUNT}</span>
+				</div>
+				 <form role="form" method="post" action="{S_LOGIN_ACTION}">
+				  <fieldset>
+					<div class="form-group">
+					 <label class="sr-only" for="username">{L_USERNAME}{L_COLON}</label>
+					<div class="form-icon">
+					 <input type="text" class="form-control input-lg" name="username" id="username" placeholder="{L_USERNAME}">
+					 <span class="fa fa-user login-form-icon"></span>
+					</div> 
+				    </div> 
+					<div class="form-group">
+					  <label class="sr-only" for="password">{L_PASSWORD}{L_COLON}</label>
+					  <div class="form-icon">
+						<input type="password" class="form-control input-lg" name="password" tabindex="3" id="password" placeholder="{L_PASSWORD}" autocomplete="off">
+						<span class="fa fa-lock login-form-icon"></span>
+					  </div> 
+					</div>
+				 <p>
+				    <!-- IF S_AUTOLOGIN_ENABLED -->
+					<div class="checkbox pull-right">
+					  <label for="autologin"><input type="checkbox" name="autologin" id="autologin">{L_LOGIN_REMEMBER}</label>
+					</div>
+				    <!-- ENDIF -->
+					
+				<!-- IF CAPTCHA_TEMPLATE and S_CONFIRM_CODE -->
+					<!-- DEFINE $CAPTCHA_TAB_INDEX = 4 -->
+					<!-- INCLUDE {CAPTCHA_TEMPLATE} -->
+				<!-- ENDIF -->
+
+				{S_LOGIN_REDIRECT}
+				{S_HIDDEN_FIELDS}
+					<button type="submit" class="btn btn-primary" name="login" tabindex="5" value="{L_LOGIN}" data-loading-text="{L_LOADING_LOG_IN}<i class='fa-spin fa fa-spinner fa-lg'></i>">{L_LOGIN_ME_IN}</button>
+				  </p>
+				  </fieldset>
+				  </form>
+			    </div>  
+            </div>
+        </div>
+    </section>
+<!-- INCLUDE overall_footer.html -->

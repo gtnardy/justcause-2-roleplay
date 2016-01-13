@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html dir="{S_CONTENT_DIRECTION}" lang="{S_USER_LANG}">
+<head>
+
+<meta charset="{S_CONTENT_ENCODING}">
+<meta name="author" content="SiteSplat www.sitesplat.com">
+<meta name="designer" content="SiteSplat www.sitesplat.com">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+{META}
+<title>{SITENAME}&nbsp;&bull;&nbsp;<!-- IF S_IN_MCP -->{L_MCP}&nbsp;&bull;&nbsp;<!-- ELSEIF S_IN_UCP -->{L_UCP}&nbsp;&bull;&nbsp;<!-- ENDIF -->{PAGE_TITLE}</title>
+
+<!-- Google free font here -->
+<link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Asap:700' rel='stylesheet' type='text/css'>
+
+<!-- CSS files start here-->
+<link href="{T_STYLESHEET_LINK}" rel="stylesheet">
+<!-- EVENT overall_header_head_append -->
+{$STYLESHEETS}
+<!-- EVENT overall_header_stylesheets_after -->
+<link href="{T_THEME_PATH}/basics.css" rel="stylesheet">
+<link href="{T_THEME_PATH}/custom.css" rel="stylesheet">
+<!-- CSS files -->
+
+<!-- Scripts start here after the jquery.js -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/headjs/1.0.3/head.min.js"></script>
+<script>
+// this loads jquery asyncrounously & in parallel
+head.load("//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js", "{T_THEME_PATH}/vendors/bootstrap/js/bootstrap.min.js", "{T_THEME_PATH}/vendors/core.min.js?assets_version={T_ASSETS_VERSION}", "{T_THEME_PATH}/vendors/forum_fn.js", "{T_THEME_PATH}/vendors/ajax.min.js");
+</script>
+
+<!-- DEFINE $POPUP = 1 -->
+
+<!-- EVENT simple_header_head_append -->
+
+{$STYLESHEETS}
+
+<!-- EVENT simple_header_stylesheets_after -->
+
+</head>
+
+<body id="phpbb" class="section-{SCRIPT_NAME} {S_CONTENT_DIRECTION} {BODY_CLASS}">
+
+<!-- EVENT simple_header_body_before -->
+
+<div class="dormient">
+<div class="container">
+  <!-- start content -->
+  <div id="content-forum">
+   
+   <div id="page-body">
+	 <main role="main">
