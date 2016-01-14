@@ -462,9 +462,11 @@ $(document).ready(function(){
 		$(".footer-social .icon-linkedin-with-circle").hover(function(){$("#main-footer").toggleClass("footer-linkedin-hovered")});
 		$(".footer-social .icon-instagram-with-circle").hover(function(){$("#main-footer").toggleClass("footer-instagram-hovered")});
 		$(".footer-social .icon-google-with-circle").hover(function(){$("#main-footer").toggleClass("footer-google-hovered")});
+		$(".footer-social .icon-youtube-with-circle").hover(function(){$("#main-footer").toggleClass("footer-youtube-hovered")});
 		$(".footer-social .icon-dribbble-with-circle").hover(function(){$("#main-footer").toggleClass("footer-dribbble-hovered")});
 		$(".footer-social .icon-pinterest-with-circle").hover(function(){$("#main-footer").toggleClass("footer-pinterest-hovered")});
 		$(".footer-social .icon-vimeo-with-circle").hover(function(){$("#main-footer").toggleClass("footer-vimeo-hovered")});
+		$(".footer-social .icon-steam2").hover(function(){$("#main-footer").toggleClass("footer-steam-hovered")});
 	}
 
 });

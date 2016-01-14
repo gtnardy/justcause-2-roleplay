@@ -3375,6 +3375,14 @@ ul.language-selection {
 	background: #1ab7ea !important;
 }
 
+#main-footer.footer-steam-hovered {
+	background: rgb(38, 38, 38) !important;
+}
+
+#main-footer.footer-youtube-hovered {
+	background: #cc3732 !important;
+}
+
 #main-footer.footer-facebook-hovered,
 #main-footer.footer-facebook-hovered li a,
 #main-footer.footer-facebook-hovered .copyright .language:before,
@@ -3406,6 +3414,14 @@ ul.language-selection {
 #main-footer.footer-vimeo-hovered,
 #main-footer.footer-vimeo-hovered li a,
 #main-footer.footer-vimeo-hovered .copyright .language:before,
-#main-footer.footer-vimeo-hovered .copyright .language a {
+#main-footer.footer-vimeo-hovered .copyright .language a,
+#main-footer.footer-youtube-hovered,
+#main-footer.footer-youtube-hovered li a,
+#main-footer.footer-youtube-hovered .copyright .language:before,
+#main-footer.footer-youtube-hovered .copyright .language a,
+#main-footer.footer-steam-hovered,
+#main-footer.footer-steam-hovered li a,
+#main-footer.footer-steam-hovered .copyright .language:before,
+#main-footer.footer-steam-hovered .copyright .language a {
 	color: #fff;
 }
