@@ -305,10 +305,10 @@ $lang = array_merge($lang, array(
 	'G_ADMINISTRATORS'					=> 'Administradores', 
 	'G_BOTS'							=> 'BOTs', 
 	'G_GUESTS'							=> 'Visitantes', 
-	'G_REGISTERED'						=> 'Usuários registrados', 
-	'G_REGISTERED_COPPA'				=> 'Usuários registrados da COPPA', 
+	'G_REGISTERED'						=> 'Membros', 
+	'G_REGISTERED_COPPA'				=> 'Membros da COPPA', 
 	'G_GLOBAL_MODERATORS'				=> 'Moderadores globais',
-	'G_NEWLY_REGISTERED'				=> 'Usuários registrados recentemente',	
+	'G_NEWLY_REGISTERED'				=> 'Membros recentes',	
 
 	'HIDDEN_USERS_ONLINE'				=> array(
 		1	=> '%d usuário invisível online',
@@ -610,7 +610,7 @@ $lang = array_merge($lang, array(
 	'REDIRECT'						=> 'Redirecionar',	 
 	'REDIRECTS'						=> 'Total de redirecionamentos', 
 	'REGISTER'						=> 'Registrar', 
-	'REGISTERED_USERS'				=> 'Usuários registrados:', 
+	'REGISTERED_USERS'				=> 'Membros:', 
 	// "... and 2 hidden users online"
 	'REG_USERS_ONLINE'				=> array(
 		1	=> 'Há %1$d usuário registrado e %2$s online',
