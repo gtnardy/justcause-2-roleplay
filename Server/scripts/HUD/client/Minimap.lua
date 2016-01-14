@@ -4,8 +4,11 @@ function Minimapa:__init()
 	
 	self.mapaImagem = Image.Create(AssetLocation.Resource, "JCMap")
 
+	self.imageSize = Vector2(5000, 5000)
 	self.tamanhoMapa = Vector2(32768, 32768)
-	self.proporcao = self.tamanhoMapa.x / 5000--self.mapaImagem:GetSize().x
+	self.proporcao = self.tamanhoMapa.x / self.imageSize.x --self.mapaImagem:GetSize().x
+	
+	self.zoom = 1
 	
 	self.spots = {}
 	self.spotsRender = {}
@@ -36,7 +39,8 @@ end
 function Minimapa:Render(posicao, tamanho)
 
 	Render:FillArea(posicao, tamanho, Color(5, 37, 48, 120))
-	self.mapaImagem:SetAlpha(0.5)
+	self.mapaImagem:SetAlpha(0.4)
+	self.mapaImagem:SetSize(self.imageSize * self.zoom)
 	self.mapaImagem:SetPosition(self:GetMinimapPosition(posicao, tamanho))
 	
 	local transformMapa = Transform2()
@@ -66,7 +70,7 @@ function Minimapa:RenderSpots(posicao, tamanho)
 			
 			local posMinimapa = self:Vector3ToMinimap(pos, posicao, tamanho, spot.fixed)
 
-			spot:RenderMinimap(posMinimapa, self.mapaImagem:GetAlpha() * 1.5)
+			spot:RenderMinimap(posMinimapa, 1, self.mapaImagem:GetAlpha() * 1.5)
 		end
 	end
 	

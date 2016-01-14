@@ -70,7 +70,7 @@ function HUD:AtualizarPosicoes()
 
 	self.posicaoVelocimetro = Vector2(self.raioHUD + self.bordaHUD.x, Render.Height - self.raioHUD - self.bordaHUD.y)
 	self.posicaoArmometro = Vector2(Render.Width - self.raioHUD - self.bordaHUD.x, Render.Height - self.raioHUD - self.bordaHUD.y)
-	self.posicaoMinimapa = Vector2(self.bordaHUD.x, self.bordaHUD.y / 2)
+	self.posicaoMinimapa = Vector2(self.bordaHUD.x, Render.Height - self.bordaHUD.y - self.raioHUD * 2)
 end
 
 
@@ -90,11 +90,11 @@ function HUD:Render()
 	if self.Menu:GetActive() then return end
 	
 	if self.Velocimetro and LocalPlayer:InVehicle() then
-		self.Velocimetro:Render(self.posicaoVelocimetro, self.raioHUD)
+		--self.Velocimetro:Render(self.posicaoVelocimetro, self.raioHUD)
 	end
 	
 	if self.Armometro and IsValid(LocalPlayer:GetEquippedWeapon().id) and LocalPlayer:GetEquippedWeapon().id != 0 then
-		self.Armometro:Render(self.posicaoArmometro, self.raioHUD)
+		--self.Armometro:Render(self.posicaoArmometro, self.raioHUD)
 	end
 	
 	if self.Minimapa then
@@ -103,11 +103,11 @@ function HUD:Render()
 	end
 	
 	if self.Status then
-		self.Status:Render(self.posicaoMinimapa + Vector2(0, self.raioHUD / 1.2)*2.5 + Vector2(-2, 2), Vector2(self.raioHUD * 2.5, 9) + Vector2(4, 0))
+		self.Status:Render(self.posicaoMinimapa + Vector2(0, self.raioHUD / 1.2)*2.5 + Vector2(-2, 3), Vector2(self.raioHUD * 2.5, 9) + Vector2(4, 0))
 	end
 	
 	if self.Fome then
-		self.Fome:Render(self.posicaoMinimapa + Vector2(0, self.raioHUD / 1.2)*2.5 + Vector2(-2, 2), Vector2(self.raioHUD * 2.5, 9) + Vector2(4, 0))
+		--self.Fome:Render(self.posicaoMinimapa + Vector2(0, self.raioHUD / 1.2)*2.5 + Vector2(-2, 2), Vector2(self.raioHUD * 2.5, 9) + Vector2(4, 0))
 	end
 end
 

@@ -6,13 +6,19 @@ function Spot:__init(args)
 	self.image = args.image
 	self.position = args.position
 	self.fixed = args.fixed
+	
+	if self.image then
+		self.imageSize = self.image:GetSize()
+	end
 end
 
 
-function Spot:Render(positionMinimap, alpha)
+function Spot:Render(position, zoom, alpha)
 	
 	if self.image then
-		self.image:SetPosition(positionMinimap - self.image:GetSize() / 2)
+	
+		self.image:SetSize(self.imageSize * zoom)
+		self.image:SetPosition(position - self.image:GetSize() / 2)
 		if alpha then
 			self.image:SetAlpha(alpha)
 		end
@@ -21,9 +27,9 @@ function Spot:Render(positionMinimap, alpha)
 end
 
 
-function Spot:RenderMinimap(positionMinimap, alpha)
+function Spot:RenderMinimap(positionMinimap, zoom, alpha)
 	
-	self:Render(positionMinimap, alpha)
+	self:Render(positionMinimap, zoom, alpha)
 end
 
 
@@ -41,30 +47,35 @@ function SpotPlayer:__init()
 	self.name = "VOCÊ"
 	self.image = Image.Create(AssetLocation.Resource, "Player_Spot")
 	self.fixed = false
+	
+	self.imageSize = self.image:GetSize()
 end
 
 
-function SpotPlayer:Render(position)
+function SpotPlayer:Render(position, zoom)
 	
+	--self.image:SetSize(self.imageSize * zoom)
+
 	local t2 = Transform2()
-	t2:Translate(Render.Size / 2 + position - self.image:GetSize() / 2)
-	t2:Rotate(-LocalPlayer:GetAngle().yaw + Camera:GetAngle().yaw)
+	t2:Translate(position)		
+	t2:Rotate(-LocalPlayer:GetAngle().yaw)
 	Render:SetTransform(t2)
-		
-	self.image:SetPosition(-self.image:GetSize() / 2)
+	
+	self.image:SetPosition( - Vector2(self.image:GetSize().x / 2, self.image:GetSize().y / 2))
 	self.image:Draw()
+	
 	Render:ResetTransform()
 end
 
 
-function SpotPlayer:RenderMinimap(positionMinimap)
+function SpotPlayer:RenderMinimap(positionMinimap, zoom, alpha)
 	
 	local t2 = Transform2()
 	t2:Translate(positionMinimap)		
 	t2:Rotate(-LocalPlayer:GetAngle().yaw + Camera:GetAngle().yaw)
 	Render:SetTransform(t2)
 	
-	self.image:SetPosition(- self.image:GetSize() / 2)
+	self.image:SetPosition( - Vector2(self.image:GetSize().x / 2, self.image:GetSize().y / 2))
 	self.image:Draw()
 	
 	Render:ResetTransform()
@@ -84,22 +95,26 @@ function SpotWaypoint:__init()
 	self.name = "WAYPOINT"
 	self.image = Image.Create(AssetLocation.Resource, "Waypoint_Spot")
 	self.fixed = true
+	
+	self.imageSize = self.image:GetSize()
 end
 
 
-function SpotWaypoint:Render(positionMinimap, alpha)
+function SpotWaypoint:Render(position, zoom, alpha)
 	
 	local pos, bool = Waypoint:GetPosition()
 	if not bool then return end
-	self.image:SetPosition(positionMinimap - self.image:GetSize() / 2)
+	
+	self.image:SetSize(self.imageSize * zoom)
+	self.image:SetPosition(position - self.image:GetSize() / 2)
 	self.image:SetAlpha(0.9)
 	self.image:Draw()
 end
 
 
-function SpotWaypoint:RenderMinimap(positionMinimap, alpha)
-
-	self:Render(positionMinimap, alpha)
+function SpotWaypoint:RenderMinimap(positionMinimap, zoom, alpha)
+	
+	self:Render(positionMinimap, zoom, alpha)
 end
 
 

@@ -6,10 +6,10 @@ function Maintenance:__init()
 	Events:Subscribe("LocalPlayerInput", self, self.LocalPlayerInput)
 	
 	self.titleSize = 32
-	self.titleText = "SERVIDOR EM MANUTENÇÃO"
+	self.titleText = "JUST CAUSE: ROLEPLAY - EM CONSTRUÇÃO"
 	
 	self.subTitleSize = 16
-	self.subTitleText = "SERVER DOWN FOR MAINTENANCE"
+	self.subTitleText = "JUST CAUSE: ROLEPLAY - UNDER CONSTRUCTION"
 	
 	self.leftInfoSize = 16
 	self.leftInfoText = "SIGA NOSSO FACEBOOK"

@@ -13111,3 +13111,2003 @@
 14:15:21 | [info ] | Module PlayerController unloaded successfully
 14:15:21 | [info ] | Module utchat unloaded successfully
 14:15:21 | [info ] | Server shutdown
+11:09:55 | [info ] | JCMP Server 0.2.1 (Build 1011)
+11:09:55 | [info ] | Loading configuration
+11:09:55 | [info ] | Succesfully loaded configuration
+11:09:56 | [info ] | No ban list found: cleared bans
+11:09:56 | [info ] | Server started up successfully
+11:09:56 | [info ] | Loading module CommandsController
+11:09:56 | [info ] | Module CommandsController loaded successfully
+11:09:56 | [info ] | Loading module Controls
+11:09:56 | [info ] | Module Controls loaded successfully
+11:09:56 | [info ] | Loading module Estabelecimento
+11:09:56 | [info ] | 	Loading script "server\Estabelecimento.lua"
+11:09:56 | [info ] | Module Estabelecimento loaded successfully
+11:09:56 | [info ] | Loading module Fome
+11:09:56 | [info ] | 	Loading script "server\Fome.lua"
+11:09:56 | [info ] | Module Fome loaded successfully
+11:09:56 | [info ] | Loading module freeroam
+11:09:56 | [info ] | 	Loading script "server\freeroam.lua"
+11:09:56 | [info ] | [freeroam] Opening spawns.txt
+11:09:57 | [info ] | [freeroam] Loaded spawns, 0.42 seconds
+11:09:57 | [info ] | Module freeroam loaded successfully
+11:09:57 | [info ] | Loading module HUD
+11:09:57 | [info ] | 	Loading script "server\HUD.lua"
+11:09:57 | [info ] | Module HUD loaded successfully
+11:09:57 | [info ] | Loading module Maintenance
+11:09:57 | [info ] | Module Maintenance loaded successfully
+11:09:57 | [info ] | Loading module PlayerController
+11:09:57 | [info ] | 	Loading script "shared\utcIntegration.lua"
+11:09:57 | [info ] | 	Loading script "server\PlayerController.lua"
+11:09:57 | [info ] | Module PlayerController loaded successfully
+11:09:57 | [info ] | Loading module utchat
+11:09:57 | [info ] | 	Loading script "shared\NetworkedEvent.lua"
+11:09:57 | [info ] | 	Loading script "shared\utcIntegration.lua"
+11:09:57 | [info ] | 	Loading script "server\Console.lua"
+11:09:57 | [info ] | 	Loading script "server\Install.lua"
+11:09:57 | [info ] | 	Loading script "server\__init.lua"
+11:09:57 | [info ] | Module utchat loaded successfully
+11:12:03 | [info ] | Connection accepted
+11:12:03 | [info ] | Adding player with ID 0 and guid 1085367515627452186, SteamID: STEAM_0:0:11728421
+11:12:03 | [info ] | Gesóis de Nazarois joined the server (192.168.0.1)
+11:14:53 | [info ] | Gesóis de Nazarois left the server (192.168.0.1)
+11:14:57 | [info ] | Connection accepted
+11:14:57 | [info ] | Adding player with ID 0 and guid 1085367515627452186, SteamID: STEAM_0:0:11728421
+11:14:57 | [info ] | Gesóis de Nazarois joined the server (192.168.0.1)
+11:15:00 | [info ] | Gesóis de Nazarois left the server (192.168.0.1)
+11:15:03 | [info ] | Connection accepted
+11:15:03 | [info ] | Adding player with ID 0 and guid 1085367515627452186, SteamID: STEAM_0:0:11728421
+11:15:03 | [info ] | Gesóis de Nazarois joined the server (192.168.0.1)
+11:15:13 | [info ] | Gesóis de Nazarois left the server (192.168.0.1)
+11:15:16 | [info ] | Connection accepted
+11:15:16 | [info ] | Adding player with ID 0 and guid 130604394935645924, SteamID: STEAM_0:0:11728421
+11:15:16 | [info ] | Gesóis de Nazarois joined the server (192.168.0.1)
+11:20:36 | [info ] | Connection accepted
+11:20:36 | [info ] | Adding player with ID 1 and guid 175640391392210133, SteamID: STEAM_0:1:98551035
+11:20:36 | [info ] | Кирилл joined the server (93.124.64.143)
+11:20:36 | [info ] | Connection accepted
+11:20:36 | [info ] | Adding player with ID 2 and guid 693554346820210642, SteamID: STEAM_0:0:146378354
+11:20:36 | [info ] | <<_Barsik_>> joined the server (80.95.38.58)
+11:23:00 | [info ] | Module CommandsController unloaded successfully
+11:23:00 | [info ] | Module Controls unloaded successfully
+11:23:00 | [info ] | Module Estabelecimento unloaded successfully
+11:23:00 | [info ] | Module Fome unloaded successfully
+11:23:00 | [info ] | Module freeroam unloaded successfully
+11:23:00 | [info ] | Module HUD unloaded successfully
+11:23:00 | [info ] | Module Maintenance unloaded successfully
+11:23:01 | [info ] | Module PlayerController unloaded successfully
+11:23:01 | [info ] | Module utchat unloaded successfully
+11:23:01 | [info ] | Loading module CommandsController
+11:23:01 | [info ] | Module CommandsController loaded successfully
+11:23:01 | [info ] | Loading module Controls
+11:23:01 | [info ] | Module Controls loaded successfully
+11:23:01 | [info ] | Loading module Estabelecimento
+11:23:01 | [info ] | 	Loading script "server\Estabelecimento.lua"
+11:23:01 | [info ] | Module Estabelecimento loaded successfully
+11:23:01 | [info ] | Loading module Fome
+11:23:01 | [info ] | 	Loading script "server\Fome.lua"
+11:23:01 | [info ] | Module Fome loaded successfully
+11:23:01 | [info ] | Loading module freeroam
+11:23:01 | [info ] | 	Loading script "server\freeroam.lua"
+11:23:01 | [info ] | [freeroam] Opening spawns.txt
+11:23:01 | [info ] | [freeroam] Loaded spawns, 0.46 seconds
+11:23:01 | [info ] | Module freeroam loaded successfully
+11:23:01 | [info ] | Loading module HUD
+11:23:01 | [info ] | 	Loading script "server\HUD.lua"
+11:23:01 | [info ] | Module HUD loaded successfully
+11:23:01 | [info ] | Loading module Maintenance
+11:23:01 | [info ] | Module Maintenance loaded successfully
+11:23:01 | [info ] | Loading module PlayerController
+11:23:01 | [info ] | 	Loading script "shared\utcIntegration.lua"
+11:23:01 | [info ] | 	Loading script "server\PlayerController.lua"
+11:23:02 | [info ] | Module PlayerController loaded successfully
+11:23:02 | [info ] | Loading module utchat
+11:23:02 | [info ] | 	Loading script "shared\NetworkedEvent.lua"
+11:23:02 | [info ] | 	Loading script "shared\utcIntegration.lua"
+11:23:02 | [info ] | 	Loading script "server\Console.lua"
+11:23:02 | [info ] | 	Loading script "server\Install.lua"
+11:23:02 | [info ] | 	Loading script "server\__init.lua"
+11:23:02 | [info ] | Module utchat loaded successfully
+11:23:12 | [info ] | Module CommandsController unloaded successfully
+11:23:12 | [info ] | Module Controls unloaded successfully
+11:23:12 | [info ] | Module Estabelecimento unloaded successfully
+11:23:12 | [info ] | Module Fome unloaded successfully
+11:23:13 | [info ] | Module freeroam unloaded successfully
+11:23:13 | [info ] | Module HUD unloaded successfully
+11:23:13 | [info ] | Module Maintenance unloaded successfully
+11:23:13 | [info ] | Module PlayerController unloaded successfully
+11:23:13 | [info ] | Module utchat unloaded successfully
+11:23:13 | [info ] | Loading module CommandsController
+11:23:13 | [info ] | Module CommandsController loaded successfully
+11:23:13 | [info ] | Loading module Controls
+11:23:13 | [info ] | Module Controls loaded successfully
+11:23:13 | [info ] | Loading module Estabelecimento
+11:23:13 | [info ] | 	Loading script "server\Estabelecimento.lua"
+11:23:13 | [info ] | Module Estabelecimento loaded successfully
+11:23:13 | [info ] | Loading module Fome
+11:23:13 | [info ] | 	Loading script "server\Fome.lua"
+11:23:13 | [info ] | Module Fome loaded successfully
+11:23:13 | [info ] | Loading module freeroam
+11:23:13 | [info ] | 	Loading script "server\freeroam.lua"
+11:23:13 | [info ] | [freeroam] Opening spawns.txt
+11:23:13 | [info ] | [freeroam] Loaded spawns, 0.47 seconds
+11:23:13 | [info ] | Module freeroam loaded successfully
+11:23:13 | [info ] | Loading module HUD
+11:23:13 | [info ] | 	Loading script "server\HUD.lua"
+11:23:13 | [info ] | Module HUD loaded successfully
+11:23:13 | [info ] | Loading module Maintenance
+11:23:13 | [info ] | Module Maintenance loaded successfully
+11:23:13 | [info ] | Loading module PlayerController
+11:23:13 | [info ] | 	Loading script "shared\utcIntegration.lua"
+11:23:13 | [info ] | 	Loading script "server\PlayerController.lua"
+11:23:14 | [info ] | Module PlayerController loaded successfully
+11:23:14 | [info ] | Loading module utchat
+11:23:14 | [info ] | 	Loading script "shared\NetworkedEvent.lua"
+11:23:14 | [info ] | 	Loading script "shared\utcIntegration.lua"
+11:23:14 | [info ] | 	Loading script "server\Console.lua"
+11:23:14 | [info ] | 	Loading script "server\Install.lua"
+11:23:14 | [info ] | 	Loading script "server\__init.lua"
+11:23:14 | [info ] | Module utchat loaded successfully
+11:23:19 | [info ] | Кирилл left the server (93.124.64.143)
+11:23:21 | [info ] | <<_Barsik_>> left the server (80.95.38.58)
+11:23:23 | [info ] | Module HUD unloaded successfully
+11:23:23 | [info ] | Loading module HUD
+11:23:23 | [info ] | 	Loading script "server\HUD.lua"
+11:23:23 | [info ] | Module HUD loaded successfully
+11:23:31 | [info ] | Module HUD unloaded successfully
+11:23:31 | [info ] | Loading module HUD
+11:23:31 | [info ] | 	Loading script "server\HUD.lua"
+11:23:31 | [info ] | Module HUD loaded successfully
+11:23:37 | [info ] | Module HUD unloaded successfully
+11:23:37 | [info ] | Loading module HUD
+11:23:37 | [info ] | 	Loading script "server\HUD.lua"
+11:23:37 | [info ] | Module HUD loaded successfully
+11:24:01 | [info ] | Module HUD unloaded successfully
+11:24:01 | [info ] | Loading module HUD
+11:24:01 | [info ] | 	Loading script "server\HUD.lua"
+11:24:01 | [info ] | Module HUD loaded successfully
+11:24:09 | [info ] | Module HUD unloaded successfully
+11:24:09 | [info ] | Loading module HUD
+11:24:09 | [info ] | 	Loading script "server\HUD.lua"
+11:24:09 | [info ] | Module HUD loaded successfully
+11:24:21 | [info ] | [chat]: <Gesóis de Nazarois>: a
+11:26:08 | [info ] | Module HUD unloaded successfully
+11:26:08 | [info ] | Loading module HUD
+11:26:08 | [info ] | 	Loading script "server\HUD.lua"
+11:26:08 | [info ] | Module HUD loaded successfully
+11:26:14 | [info ] | Module HUD unloaded successfully
+11:26:14 | [info ] | Loading module HUD
+11:26:14 | [info ] | 	Loading script "server\HUD.lua"
+11:26:14 | [info ] | Module HUD loaded successfully
+11:26:19 | [info ] | Module HUD unloaded successfully
+11:26:19 | [info ] | Loading module HUD
+11:26:19 | [info ] | 	Loading script "server\HUD.lua"
+11:26:19 | [info ] | Module HUD loaded successfully
+11:26:32 | [info ] | Module HUD unloaded successfully
+11:26:32 | [info ] | Loading module HUD
+11:26:32 | [info ] | 	Loading script "server\HUD.lua"
+11:26:32 | [info ] | Module HUD loaded successfully
+11:27:01 | [info ] | Module HUD unloaded successfully
+11:27:01 | [info ] | Loading module HUD
+11:27:01 | [info ] | 	Loading script "server\HUD.lua"
+11:27:01 | [info ] | Module HUD loaded successfully
+11:27:17 | [info ] | Connection accepted
+11:33:13 | [info ] | Module CommandsController unloaded successfully
+11:33:13 | [info ] | Module Controls unloaded successfully
+11:33:13 | [info ] | Module Estabelecimento unloaded successfully
+11:33:13 | [info ] | Module Fome unloaded successfully
+11:33:13 | [info ] | Module freeroam unloaded successfully
+11:33:13 | [info ] | Module HUD unloaded successfully
+11:33:13 | [info ] | Module Maintenance unloaded successfully
+11:33:13 | [info ] | Module PlayerController unloaded successfully
+11:33:13 | [info ] | Module utchat unloaded successfully
+11:33:13 | [info ] | Server shutdown
+10:58:10 | [info ] | JCMP Server 0.2.1 (Build 1011)
+10:58:10 | [info ] | Loading configuration
+10:58:10 | [info ] | Succesfully loaded configuration
+10:58:10 | [info ] | No ban list found: cleared bans
+10:58:10 | [info ] | Server started up successfully
+10:58:10 | [info ] | Loading module CommandsController
+10:58:10 | [info ] | Module CommandsController loaded successfully
+10:58:10 | [info ] | Loading module Controls
+10:58:10 | [info ] | Module Controls loaded successfully
+10:58:10 | [info ] | Loading module Estabelecimento
+10:58:10 | [info ] | 	Loading script "server\Estabelecimento.lua"
+10:58:10 | [info ] | Module Estabelecimento loaded successfully
+10:58:10 | [info ] | Loading module Fome
+10:58:10 | [info ] | 	Loading script "server\Fome.lua"
+10:58:10 | [info ] | Module Fome loaded successfully
+10:58:10 | [info ] | Loading module freeroam
+10:58:10 | [info ] | 	Loading script "server\freeroam.lua"
+10:58:10 | [info ] | [freeroam] Opening spawns.txt
+10:58:11 | [info ] | [freeroam] Loaded spawns, 0.44 seconds
+10:58:11 | [info ] | Module freeroam loaded successfully
+10:58:11 | [info ] | Loading module HUD
+10:58:11 | [info ] | 	Loading script "server\HUD.lua"
+10:58:11 | [info ] | Module HUD loaded successfully
+10:58:11 | [info ] | Loading module Maintenance
+10:58:11 | [info ] | Module Maintenance loaded successfully
+10:58:11 | [info ] | Loading module PlayerController
+10:58:11 | [info ] | 	Loading script "shared\utcIntegration.lua"
+10:58:11 | [info ] | 	Loading script "server\PlayerController.lua"
+10:58:11 | [info ] | Module PlayerController loaded successfully
+10:58:11 | [info ] | Loading module utchat
+10:58:11 | [info ] | 	Loading script "shared\NetworkedEvent.lua"
+10:58:11 | [info ] | 	Loading script "shared\utcIntegration.lua"
+10:58:11 | [info ] | 	Loading script "server\Console.lua"
+10:58:11 | [info ] | 	Loading script "server\Install.lua"
+10:58:11 | [info ] | 	Loading script "server\__init.lua"
+10:58:11 | [info ] | Module utchat loaded successfully
+10:58:32 | [info ] | Connection accepted
+10:58:32 | [info ] | Adding player with ID 0 and guid 252201583434991482, SteamID: STEAM_0:0:11728421
+10:58:32 | [info ] | Gesóis de Nazarois joined the server (192.168.0.1)
+10:58:47 | [info ] | [chat]: <Gesóis de Nazarois>: a
+10:58:52 | [info ] | [chat]: <Gesóis de Nazarois>: a
+10:58:58 | [info ] | [chat]: <Gesóis de Nazarois>: a
+10:59:20 | [info ] | Module utchat unloaded successfully
+10:59:36 | [info ] | Module CommandsController unloaded successfully
+10:59:36 | [info ] | Module Controls unloaded successfully
+10:59:36 | [info ] | Module Estabelecimento unloaded successfully
+10:59:36 | [info ] | Module Fome unloaded successfully
+10:59:36 | [info ] | Module freeroam unloaded successfully
+10:59:36 | [info ] | Module HUD unloaded successfully
+10:59:36 | [info ] | Module Maintenance unloaded successfully
+10:59:36 | [info ] | Module PlayerController unloaded successfully
+10:59:37 | [info ] | Loading module CommandsController
+10:59:37 | [info ] | Module CommandsController loaded successfully
+10:59:37 | [info ] | Loading module Controls
+10:59:37 | [info ] | Module Controls loaded successfully
+10:59:37 | [info ] | Loading module Estabelecimento
+10:59:37 | [info ] | 	Loading script "server\Estabelecimento.lua"
+10:59:37 | [info ] | Module Estabelecimento loaded successfully
+10:59:37 | [info ] | Loading module Fome
+10:59:37 | [info ] | 	Loading script "server\Fome.lua"
+10:59:37 | [info ] | Module Fome loaded successfully
+10:59:37 | [info ] | Loading module freeroam
+10:59:37 | [info ] | 	Loading script "server\freeroam.lua"
+10:59:37 | [info ] | [freeroam] Opening spawns.txt
+10:59:37 | [info ] | [freeroam] Loaded spawns, 0.43 seconds
+10:59:37 | [info ] | Module freeroam loaded successfully
+10:59:37 | [info ] | Loading module HUD
+10:59:37 | [info ] | 	Loading script "server\HUD.lua"
+10:59:37 | [info ] | Module HUD loaded successfully
+10:59:37 | [info ] | Loading module Maintenance
+10:59:37 | [info ] | Module Maintenance loaded successfully
+10:59:37 | [info ] | Loading module PlayerController
+10:59:37 | [info ] | 	Loading script "server\PlayerController.lua"
+10:59:37 | [info ] | Module PlayerController loaded successfully
+10:59:39 | [info ] | [chat]: <Gesóis de Nazarois>: a
+10:59:42 | [info ] | [chat]: <Gesóis de Nazarois>: a
+10:59:45 | [info ] | [chat]: <Gesóis de Nazarois>: asd
+10:59:45 | [info ] | [chat]: <Gesóis de Nazarois>: a
+10:59:46 | [info ] | [chat]: <Gesóis de Nazarois>: a
+10:59:46 | [info ] | [chat]: <Gesóis de Nazarois>: a
+10:59:46 | [info ] | [chat]: <Gesóis de Nazarois>: a
+10:59:46 | [info ] | [chat]: <Gesóis de Nazarois>: a
+10:59:47 | [info ] | [chat]: <Gesóis de Nazarois>: a
+10:59:47 | [info ] | [chat]: <Gesóis de Nazarois>: a
+10:59:47 | [info ] | [chat]: <Gesóis de Nazarois>: a
+10:59:47 | [info ] | [chat]: <Gesóis de Nazarois>: a
+10:59:48 | [info ] | [chat]: <Gesóis de Nazarois>: a
+10:59:48 | [info ] | [chat]: <Gesóis de Nazarois>: a
+11:06:49 | [info ] | Module CommandsController unloaded successfully
+11:06:49 | [info ] | Module Controls unloaded successfully
+11:06:49 | [info ] | Module Estabelecimento unloaded successfully
+11:06:49 | [info ] | Module Fome unloaded successfully
+11:06:49 | [info ] | Module freeroam unloaded successfully
+11:06:49 | [info ] | Module HUD unloaded successfully
+11:06:49 | [info ] | Module Maintenance unloaded successfully
+11:06:49 | [info ] | Module PlayerController unloaded successfully
+11:06:49 | [info ] | Loading module CommandsController
+11:06:49 | [info ] | Module CommandsController loaded successfully
+11:06:49 | [info ] | Loading module Controls
+11:06:49 | [info ] | Module Controls loaded successfully
+11:06:49 | [info ] | Loading module Estabelecimento
+11:06:49 | [info ] | 	Loading script "server\Estabelecimento.lua"
+11:06:49 | [info ] | Module Estabelecimento loaded successfully
+11:06:49 | [info ] | Loading module Fome
+11:06:49 | [info ] | 	Loading script "server\Fome.lua"
+11:06:49 | [info ] | Module Fome loaded successfully
+11:06:49 | [info ] | Loading module freeroam
+11:06:49 | [info ] | 	Loading script "server\freeroam.lua"
+11:06:49 | [info ] | [freeroam] Opening spawns.txt
+11:06:50 | [info ] | [freeroam] Loaded spawns, 0.45 seconds
+11:06:50 | [info ] | Module freeroam loaded successfully
+11:06:50 | [info ] | Loading module HUD
+11:06:50 | [info ] | 	Loading script "server\HUD.lua"
+11:06:50 | [info ] | Module HUD loaded successfully
+11:06:50 | [info ] | Loading module Maintenance
+11:06:50 | [info ] | Module Maintenance loaded successfully
+11:06:50 | [info ] | Loading module PlayerController
+11:06:50 | [info ] | 	Loading script "server\PlayerController.lua"
+11:06:50 | [info ] | Module PlayerController loaded successfully
+11:07:22 | [info ] | Module CommandsController unloaded successfully
+11:07:22 | [info ] | Module Controls unloaded successfully
+11:07:22 | [info ] | Module Estabelecimento unloaded successfully
+11:07:22 | [info ] | Module Fome unloaded successfully
+11:07:22 | [info ] | Module freeroam unloaded successfully
+11:07:22 | [info ] | Module HUD unloaded successfully
+11:07:22 | [info ] | Module Maintenance unloaded successfully
+11:07:23 | [info ] | Module PlayerController unloaded successfully
+11:07:23 | [info ] | Loading module CommandsController
+11:07:23 | [info ] | Module CommandsController loaded successfully
+11:07:23 | [info ] | Loading module Controls
+11:07:23 | [info ] | Module Controls loaded successfully
+11:07:23 | [info ] | Loading module Estabelecimento
+11:07:23 | [info ] | 	Loading script "server\Estabelecimento.lua"
+11:07:23 | [info ] | Module Estabelecimento loaded successfully
+11:07:23 | [info ] | Loading module Fome
+11:07:23 | [info ] | 	Loading script "server\Fome.lua"
+11:07:23 | [info ] | Module Fome loaded successfully
+11:07:23 | [info ] | Loading module freeroam
+11:07:23 | [info ] | 	Loading script "server\freeroam.lua"
+11:07:23 | [info ] | [freeroam] Opening spawns.txt
+11:07:23 | [info ] | [freeroam] Loaded spawns, 0.45 seconds
+11:07:23 | [info ] | Module freeroam loaded successfully
+11:07:23 | [info ] | Loading module HUD
+11:07:23 | [info ] | 	Loading script "server\HUD.lua"
+11:07:23 | [info ] | Module HUD loaded successfully
+11:07:23 | [info ] | Loading module Maintenance
+11:07:23 | [info ] | Module Maintenance loaded successfully
+11:07:23 | [info ] | Loading module PlayerController
+11:07:23 | [info ] | 	Loading script "server\PlayerController.lua"
+11:07:23 | [info ] | Module PlayerController loaded successfully
+11:07:56 | [info ] | Module HUD unloaded successfully
+11:07:56 | [info ] | Loading module HUD
+11:07:56 | [info ] | 	Loading script "server\HUD.lua"
+11:07:56 | [info ] | Module HUD loaded successfully
+11:08:28 | [info ] | Module HUD unloaded successfully
+11:08:28 | [info ] | Loading module HUD
+11:08:28 | [info ] | 	Loading script "server\HUD.lua"
+11:08:28 | [info ] | Module HUD loaded successfully
+11:09:17 | [info ] | Module HUD unloaded successfully
+11:09:17 | [info ] | Loading module HUD
+11:09:17 | [info ] | 	Loading script "server\HUD.lua"
+11:09:17 | [info ] | Module HUD loaded successfully
+11:09:22 | [info ] | Connection accepted
+11:09:22 | [info ] | Adding player with ID 1 and guid 941252323731993149, SteamID: STEAM_0:1:87849035
+11:09:22 | [info ] | VegaPunk joined the server (152.238.189.156)
+11:09:23 | [info ] | Connection accepted
+11:09:23 | [info ] | Adding player with ID 2 and guid 531424924488597874, SteamID: STEAM_0:1:79686419
+11:09:23 | [info ] | .:\Wixmix/:. - TinyD joined the server (177.91.179.10)
+11:09:34 | [info ] | Connection accepted
+11:09:34 | [info ] | Adding player with ID 3 and guid 644014748987343037, SteamID: STEAM_0:0:150133638
+11:09:34 | [info ] | josenaumes joined the server (177.204.74.124)
+11:09:42 | [info ] | [chat]: <.:\Wixmix/:. - TinyD>: mds
+11:09:43 | [info ] | VegaPunk left the server (152.238.189.156)
+11:09:45 | [info ] | [chat]: <.:\Wixmix/:. - TinyD>: manutençao
+11:09:58 | [info ] | .:\Wixmix/:. - TinyD left the server (177.91.179.10)
+11:10:14 | [info ] | Module HUD unloaded successfully
+11:10:14 | [info ] | Loading module HUD
+11:10:14 | [info ] | 	Loading script "server\HUD.lua"
+11:10:14 | [info ] | Module HUD loaded successfully
+11:10:19 | [info ] | Connection accepted
+11:10:48 | [info ] | Module HUD unloaded successfully
+11:10:48 | [info ] | Loading module HUD
+11:10:48 | [info ] | 	Loading script "server\HUD.lua"
+11:10:48 | [info ] | Module HUD loaded successfully
+11:11:02 | [info ] | josenaumes left the server (177.204.74.124)
+11:11:29 | [info ] | Module HUD unloaded successfully
+11:11:29 | [info ] | Loading module HUD
+11:11:29 | [info ] | 	Loading script "server\HUD.lua"
+11:11:29 | [info ] | Module HUD loaded successfully
+11:13:07 | [info ] | Module HUD unloaded successfully
+11:13:07 | [info ] | Loading module HUD
+11:13:07 | [info ] | 	Loading script "server\HUD.lua"
+11:13:07 | [info ] | Module HUD loaded successfully
+11:14:30 | [info ] | Module HUD unloaded successfully
+11:14:30 | [info ] | Loading module HUD
+11:14:30 | [info ] | 	Loading script "server\HUD.lua"
+11:14:30 | [info ] | Module HUD loaded successfully
+11:14:38 | [info ] | Module HUD unloaded successfully
+11:14:38 | [info ] | Loading module HUD
+11:14:38 | [info ] | 	Loading script "server\HUD.lua"
+11:14:38 | [info ] | Module HUD loaded successfully
+11:15:15 | [info ] | Module HUD unloaded successfully
+11:15:15 | [info ] | Loading module HUD
+11:15:15 | [info ] | 	Loading script "server\HUD.lua"
+11:15:15 | [info ] | Module HUD loaded successfully
+11:15:35 | [info ] | Module HUD unloaded successfully
+11:15:35 | [info ] | Loading module HUD
+11:15:35 | [info ] | 	Loading script "server\HUD.lua"
+11:15:35 | [info ] | Module HUD loaded successfully
+11:15:45 | [info ] | Module HUD unloaded successfully
+11:15:45 | [info ] | Loading module HUD
+11:15:45 | [info ] | 	Loading script "server\HUD.lua"
+11:15:45 | [info ] | Module HUD loaded successfully
+11:16:41 | [info ] | Module HUD unloaded successfully
+11:16:41 | [info ] | Loading module HUD
+11:16:41 | [info ] | 	Loading script "server\HUD.lua"
+11:16:41 | [info ] | Module HUD loaded successfully
+11:16:51 | [info ] | Module HUD unloaded successfully
+11:16:51 | [info ] | Loading module HUD
+11:16:51 | [info ] | 	Loading script "server\HUD.lua"
+11:16:51 | [info ] | Module HUD loaded successfully
+11:17:47 | [info ] | Module HUD unloaded successfully
+11:17:47 | [info ] | Loading module HUD
+11:17:47 | [info ] | 	Loading script "server\HUD.lua"
+11:17:47 | [info ] | Module HUD loaded successfully
+11:18:08 | [info ] | Module HUD unloaded successfully
+11:18:08 | [info ] | Loading module HUD
+11:18:08 | [info ] | 	Loading script "server\HUD.lua"
+11:18:08 | [info ] | Module HUD loaded successfully
+11:20:42 | [info ] | Module HUD unloaded successfully
+11:20:42 | [info ] | Loading module HUD
+11:20:42 | [info ] | 	Loading script "server\HUD.lua"
+11:20:42 | [info ] | Module HUD loaded successfully
+11:21:25 | [info ] | Module HUD unloaded successfully
+11:21:25 | [info ] | Loading module HUD
+11:21:25 | [info ] | 	Loading script "server\HUD.lua"
+11:21:25 | [info ] | Module HUD loaded successfully
+11:21:33 | [info ] | Module HUD unloaded successfully
+11:21:33 | [info ] | Loading module HUD
+11:21:33 | [info ] | 	Loading script "server\HUD.lua"
+11:21:33 | [info ] | Module HUD loaded successfully
+11:23:53 | [info ] | Module HUD unloaded successfully
+11:23:53 | [info ] | Loading module HUD
+11:23:53 | [info ] | 	Loading script "server\HUD.lua"
+11:23:53 | [info ] | Module HUD loaded successfully
+11:25:45 | [info ] | Module HUD unloaded successfully
+11:25:45 | [info ] | Loading module HUD
+11:25:45 | [info ] | 	Loading script "server\HUD.lua"
+11:25:45 | [info ] | Module HUD loaded successfully
+11:26:08 | [info ] | Connection accepted
+11:26:08 | [info ] | Adding player with ID 3 and guid 342273582940066537, SteamID: STEAM_0:0:92575199
+11:26:08 | [info ] | Ozone joined the server (5.139.130.157)
+11:26:14 | [info ] | Module HUD unloaded successfully
+11:26:14 | [info ] | Loading module HUD
+11:26:14 | [info ] | 	Loading script "server\HUD.lua"
+11:26:14 | [info ] | Module HUD loaded successfully
+11:26:39 | [info ] | Connection accepted
+11:26:39 | [info ] | Adding player with ID 2 and guid 508906761775032111, SteamID: STEAM_0:0:150133638
+11:26:39 | [info ] | josenaumes joined the server (177.204.74.124)
+11:26:53 | [info ] | Ozone left the server (5.139.130.157)
+11:27:30 | [info ] | Module HUD unloaded successfully
+11:27:30 | [info ] | Loading module HUD
+11:27:30 | [info ] | 	Loading script "server\HUD.lua"
+11:27:30 | [info ] | Module HUD loaded successfully
+11:27:43 | [info ] | Module HUD unloaded successfully
+11:27:43 | [info ] | Loading module HUD
+11:27:43 | [info ] | 	Loading script "server\HUD.lua"
+11:27:43 | [info ] | Module HUD loaded successfully
+11:28:34 | [info ] | josenaumes left the server (177.204.74.124)
+11:28:35 | [info ] | Module HUD unloaded successfully
+11:28:35 | [info ] | Loading module HUD
+11:28:35 | [info ] | 	Loading script "server\HUD.lua"
+11:28:35 | [info ] | Module HUD loaded successfully
+11:29:08 | [info ] | Module HUD unloaded successfully
+11:29:08 | [info ] | Loading module HUD
+11:29:08 | [info ] | 	Loading script "server\HUD.lua"
+11:29:08 | [info ] | Module HUD loaded successfully
+11:30:12 | [info ] | Module HUD unloaded successfully
+11:30:12 | [info ] | Loading module HUD
+11:30:12 | [info ] | 	Loading script "server\HUD.lua"
+11:30:12 | [info ] | Module HUD loaded successfully
+11:34:19 | [info ] | Module HUD unloaded successfully
+11:34:19 | [info ] | Loading module HUD
+11:34:19 | [info ] | 	Loading script "server\HUD.lua"
+11:34:19 | [info ] | Module HUD loaded successfully
+11:35:27 | [info ] | Module HUD unloaded successfully
+11:35:27 | [info ] | Loading module HUD
+11:35:27 | [info ] | 	Loading script "server\HUD.lua"
+11:35:27 | [info ] | Module HUD loaded successfully
+11:35:44 | [info ] | Module HUD unloaded successfully
+11:35:44 | [info ] | Loading module HUD
+11:35:44 | [info ] | 	Loading script "server\HUD.lua"
+11:35:44 | [info ] | Module HUD loaded successfully
+11:35:51 | [info ] | Connection accepted
+11:35:51 | [info ] | Adding player with ID 2 and guid 207165755944973924, SteamID: STEAM_0:0:70615147
+11:35:51 | [info ] | Eyeiron joined the server (201.33.64.133)
+11:36:08 | [info ] | Module HUD unloaded successfully
+11:36:08 | [info ] | Loading module HUD
+11:36:08 | [info ] | 	Loading script "server\HUD.lua"
+11:36:08 | [info ] | Module HUD loaded successfully
+11:36:17 | [info ] | Module HUD unloaded successfully
+11:36:17 | [info ] | Loading module HUD
+11:36:17 | [info ] | 	Loading script "server\HUD.lua"
+11:36:17 | [info ] | Module HUD loaded successfully
+11:36:23 | [info ] | Module HUD unloaded successfully
+11:36:23 | [info ] | Loading module HUD
+11:36:23 | [info ] | 	Loading script "server\HUD.lua"
+11:36:23 | [info ] | Module HUD loaded successfully
+11:36:38 | [info ] | Module HUD unloaded successfully
+11:36:38 | [info ] | Loading module HUD
+11:36:38 | [info ] | 	Loading script "server\HUD.lua"
+11:36:38 | [info ] | Module HUD loaded successfully
+11:37:32 | [info ] | Connection accepted
+11:37:32 | [info ] | Adding player with ID 3 and guid 684547169071912508, SteamID: STEAM_0:0:90180664
+11:37:32 | [info ] | {K}Kirito{o} joined the server (94.45.168.130)
+11:38:25 | [info ] | Connection accepted
+11:38:25 | [info ] | Adding player with ID 1 and guid 306244775633776142, SteamID: STEAM_0:0:105476507
+11:38:25 | [info ] | $killshot$ joined the server (213.5.76.131)
+11:38:46 | [info ] | Module HUD unloaded successfully
+11:38:46 | [info ] | Loading module HUD
+11:38:46 | [info ] | 	Loading script "server\HUD.lua"
+11:38:46 | [info ] | Module HUD loaded successfully
+11:39:32 | [info ] | {K}Kirito{o} left the server (94.45.168.130)
+11:39:50 | [info ] | Module HUD unloaded successfully
+11:39:50 | [info ] | Loading module HUD
+11:39:50 | [info ] | 	Loading script "server\HUD.lua"
+11:39:50 | [info ] | Module HUD loaded successfully
+11:39:55 | [info ] | $killshot$ left the server (213.5.76.131)
+11:40:02 | [info ] | Module HUD unloaded successfully
+11:40:02 | [info ] | Loading module HUD
+11:40:02 | [info ] | 	Loading script "server\HUD.lua"
+11:40:02 | [info ] | Module HUD loaded successfully
+11:40:17 | [info ] | Eyeiron left the server (201.33.64.133)
+11:40:33 | [info ] | Module HUD unloaded successfully
+11:40:33 | [info ] | Loading module HUD
+11:40:33 | [info ] | 	Loading script "server\HUD.lua"
+11:40:33 | [info ] | Module HUD loaded successfully
+11:41:55 | [info ] | Module HUD unloaded successfully
+11:41:55 | [info ] | Loading module HUD
+11:41:55 | [info ] | 	Loading script "server\HUD.lua"
+11:41:55 | [info ] | Module HUD loaded successfully
+11:42:30 | [info ] | Module HUD unloaded successfully
+11:42:30 | [info ] | Loading module HUD
+11:42:30 | [info ] | 	Loading script "server\HUD.lua"
+11:42:30 | [info ] | Module HUD loaded successfully
+11:42:49 | [info ] | Module HUD unloaded successfully
+11:42:49 | [info ] | Loading module HUD
+11:42:49 | [info ] | 	Loading script "server\HUD.lua"
+11:42:49 | [info ] | Module HUD loaded successfully
+11:43:34 | [info ] | Module HUD unloaded successfully
+11:43:34 | [info ] | Loading module HUD
+11:43:34 | [info ] | 	Loading script "server\HUD.lua"
+11:43:34 | [info ] | Module HUD loaded successfully
+11:43:41 | [info ] | Connection accepted
+11:43:41 | [info ] | Adding player with ID 2 and guid 319755577764621846, SteamID: STEAM_0:1:87849035
+11:43:41 | [info ] | VegaPunk joined the server (152.238.189.156)
+11:43:51 | [info ] | Connection accepted
+11:43:51 | [info ] | Adding player with ID 1 and guid 328762779904015121, SteamID: STEAM_0:1:74137845
+11:43:51 | [info ] | #Mangá-Hu3-XD joined the server (177.177.253.226)
+11:43:55 | [info ] | Module HUD unloaded successfully
+11:43:55 | [info ] | Loading module HUD
+11:43:55 | [info ] | 	Loading script "server\HUD.lua"
+11:43:55 | [info ] | Module HUD loaded successfully
+11:43:56 | [info ] | Connection accepted
+11:43:56 | [info ] | Adding player with ID 3 and guid 607986063844945622, SteamID: STEAM_0:0:98882650
+11:43:56 | [info ] | Gandalf joined the server (179.99.54.74)
+11:44:24 | [info ] | [chat]: <VegaPunk>: como pega itens?
+11:44:31 | [info ] | [chat]: <Gandalf>: b
+11:44:36 | [info ] | [chat]: <Gesóis de Nazarois>: o server t
+11:44:39 | [info ] | [chat]: <Gesóis de Nazarois>: não está pronto ainda
+11:44:44 | [info ] | [chat]: <VegaPunk>: aaaa blz
+11:44:50 | [info ] | [chat]: <#Mangá-Hu3-XD>: flw
+11:44:52 | [info ] | [chat]: <Gesóis de Nazarois>: se quiser
+11:44:54 | [info ] | [chat]: <Gesóis de Nazarois>: segue o face la
+11:45:00 | [info ] | [chat]: <Gesóis de Nazarois>: que postaremos as novidades
+11:45:00 | [info ] | [chat]: <#Mangá-Hu3-XD>: ta
+11:45:02 | [info ] | [chat]: <VegaPunk>: qual?
+11:45:03 | [info ] | [chat]: <Gesóis de Nazarois>: vlw o/
+11:45:06 | [info ] | [chat]: <Gesóis de Nazarois>: ta na tela ai xD
+11:45:10 | [info ] | [chat]: <Gesóis de Nazarois>: fb.com/jc2rp
+11:45:11 | [info ] | [chat]: <VegaPunk>: aaaaa é msm
+11:45:12 | [info ] | [chat]: <#Mangá-Hu3-XD>: certin
+11:45:22 | [info ] | [chat]: <Gandalf>: adiciona na steam
+11:45:26 | [info ] | [chat]: <Gesóis de Nazarois>: add ai
+11:45:34 | [info ] | #Mangá-Hu3-XD left the server (177.177.253.226)
+11:45:49 | [info ] | Module HUD unloaded successfully
+11:45:49 | [info ] | Loading module HUD
+11:45:49 | [info ] | 	Loading script "server\HUD.lua"
+11:45:49 | [info ] | Module HUD loaded successfully
+11:45:52 | [info ] | [chat]: <Gandalf>: manda o link da sua profile
+11:45:53 | [info ] | [chat]: <VegaPunk>: segui la
+11:46:00 | [info ] | VegaPunk left the server (152.238.189.156)
+11:46:37 | [info ] | Connection accepted
+11:46:37 | [info ] | Adding player with ID 2 and guid 382805973052570731, SteamID: STEAM_0:1:87849035
+11:46:37 | [info ] | VegaPunk joined the server (152.238.189.156)
+11:46:52 | [info ] | VegaPunk left the server (152.238.189.156)
+11:48:36 | [info ] | Module HUD unloaded successfully
+11:48:36 | [info ] | Loading module HUD
+11:48:36 | [info ] | 	Loading script "server\HUD.lua"
+11:48:36 | [info ] | Module HUD loaded successfully
+11:49:13 | [info ] | Module HUD unloaded successfully
+11:49:13 | [info ] | Loading module HUD
+11:49:13 | [info ] | 	Loading script "server\HUD.lua"
+11:49:13 | [info ] | Module HUD loaded successfully
+11:50:42 | [info ] | Module HUD unloaded successfully
+11:50:42 | [info ] | Loading module HUD
+11:50:42 | [info ] | 	Loading script "server\HUD.lua"
+11:50:42 | [info ] | Module HUD loaded successfully
+11:51:16 | [info ] | Module HUD unloaded successfully
+11:51:16 | [info ] | Loading module HUD
+11:51:16 | [info ] | 	Loading script "server\HUD.lua"
+11:51:16 | [info ] | Module HUD loaded successfully
+11:51:35 | [info ] | Module HUD unloaded successfully
+11:51:35 | [info ] | Loading module HUD
+11:51:35 | [info ] | 	Loading script "server\HUD.lua"
+11:51:35 | [info ] | Module HUD loaded successfully
+11:51:54 | [info ] | [chat]: <Gesóis de Nazarois>: vou fechar o server aqui
+11:52:00 | [info ] | [chat]: <Gandalf>: vai
+11:52:03 | [info ] | [chat]: <Gandalf>: reabrir
+11:52:07 | [info ] | [chat]: <Gesóis de Nazarois>: talvez a tarde
+11:52:15 | [info ] | [chat]: <Gesóis de Nazarois>: ou quando eu for continuar com o desenvolvimento
+11:52:20 | [info ] | [chat]: <Gandalf>: ok
+11:52:25 | [info ] | [chat]: <Gesóis de Nazarois>: flws vlws
+11:52:26 | [info ] | Gesóis de Nazarois left the server (192.168.0.1)
+11:52:34 | [info ] | Module CommandsController unloaded successfully
+11:52:34 | [info ] | Module Controls unloaded successfully
+11:52:34 | [info ] | Module Estabelecimento unloaded successfully
+11:52:34 | [info ] | Module Fome unloaded successfully
+11:52:34 | [info ] | Module freeroam unloaded successfully
+11:52:34 | [info ] | Module HUD unloaded successfully
+11:52:34 | [info ] | Module Maintenance unloaded successfully
+11:52:35 | [info ] | Module PlayerController unloaded successfully
+11:52:35 | [info ] | Server shutdown
+13:00:07 | [info ] | JCMP Server 0.2.1 (Build 1011)
+13:00:07 | [info ] | Loading configuration
+13:00:07 | [info ] | Succesfully loaded configuration
+13:00:07 | [info ] | No ban list found: cleared bans
+13:00:07 | [info ] | Server started up successfully
+13:00:07 | [info ] | Loading module CommandsController
+13:00:07 | [info ] | Module CommandsController loaded successfully
+13:00:07 | [info ] | Loading module Controls
+13:00:07 | [info ] | Module Controls loaded successfully
+13:00:07 | [info ] | Loading module Estabelecimento
+13:00:07 | [info ] | 	Loading script "server\Estabelecimento.lua"
+13:00:07 | [info ] | Module Estabelecimento loaded successfully
+13:00:07 | [info ] | Loading module Fome
+13:00:07 | [info ] | 	Loading script "server\Fome.lua"
+13:00:07 | [info ] | Module Fome loaded successfully
+13:00:07 | [info ] | Loading module freeroam
+13:00:07 | [info ] | 	Loading script "server\freeroam.lua"
+13:00:07 | [info ] | [freeroam] Opening spawns.txt
+13:00:07 | [info ] | [freeroam] Loaded spawns, 0.42 seconds
+13:00:07 | [info ] | Module freeroam loaded successfully
+13:00:07 | [info ] | Loading module HUD
+13:00:07 | [info ] | 	Loading script "server\HUD.lua"
+13:00:07 | [info ] | Module HUD loaded successfully
+13:00:07 | [info ] | Loading module Maintenance
+13:00:07 | [info ] | Module Maintenance loaded successfully
+13:00:07 | [info ] | Loading module PlayerController
+13:00:07 | [info ] | 	Loading script "server\PlayerController.lua"
+13:00:07 | [info ] | Module PlayerController loaded successfully
+13:02:20 | [info ] | Connection accepted
+13:02:21 | [info ] | Adding player with ID 0 and guid 193654795609834473, SteamID: STEAM_0:0:11728421
+13:02:21 | [info ] | Gesóis de Nazarois joined the server (192.168.0.1)
+13:03:13 | [info ] | Module HUD unloaded successfully
+13:03:13 | [info ] | Loading module HUD
+13:03:13 | [info ] | 	Loading script "server\HUD.lua"
+13:03:13 | [info ] | Module HUD loaded successfully
+13:03:36 | [info ] | Module HUD unloaded successfully
+13:03:36 | [info ] | Loading module HUD
+13:03:36 | [info ] | 	Loading script "server\HUD.lua"
+13:03:36 | [info ] | Module HUD loaded successfully
+13:04:09 | [info ] | Module HUD unloaded successfully
+13:04:09 | [info ] | Loading module HUD
+13:04:09 | [info ] | 	Loading script "server\HUD.lua"
+13:04:09 | [info ] | Module HUD loaded successfully
+13:04:10 | [info ] | Connection accepted
+13:04:10 | [info ] | Adding player with ID 1 and guid 450359965487305597, SteamID: STEAM_0:0:93973693
+13:04:10 | [info ] | RetroLSD{RLTW} joined the server (173.206.15.169)
+13:04:22 | [info ] | Connection accepted
+13:04:22 | [info ] | Adding player with ID 2 and guid 1148418107541225564, SteamID: STEAM_0:1:62937283
+13:04:22 | [info ] | DesignerOrb362 joined the server (198.13.166.136)
+13:04:38 | [info ] | DesignerOrb362 left the server (198.13.166.136)
+13:05:02 | [info ] | Module HUD unloaded successfully
+13:05:02 | [info ] | Loading module HUD
+13:05:02 | [info ] | 	Loading script "server\HUD.lua"
+13:05:02 | [info ] | Module HUD loaded successfully
+13:05:07 | [info ] | RetroLSD{RLTW} left the server (173.206.15.169)
+13:06:57 | [info ] | Connection accepted
+13:07:01 | [info ] | Module HUD unloaded successfully
+13:07:01 | [info ] | Loading module HUD
+13:07:01 | [info ] | 	Loading script "server\HUD.lua"
+13:07:01 | [info ] | Module HUD loaded successfully
+13:08:04 | [info ] | Module HUD unloaded successfully
+13:08:04 | [info ] | Loading module HUD
+13:08:04 | [info ] | 	Loading script "server\HUD.lua"
+13:08:04 | [info ] | Module HUD loaded successfully
+13:08:38 | [info ] | Module HUD unloaded successfully
+13:08:38 | [info ] | Loading module HUD
+13:08:38 | [info ] | 	Loading script "server\HUD.lua"
+13:08:38 | [info ] | Module HUD loaded successfully
+13:08:51 | [info ] | Module HUD unloaded successfully
+13:08:51 | [info ] | Loading module HUD
+13:08:51 | [info ] | 	Loading script "server\HUD.lua"
+13:08:51 | [info ] | Module HUD loaded successfully
+13:09:05 | [info ] | Module HUD unloaded successfully
+13:09:05 | [info ] | Loading module HUD
+13:09:05 | [info ] | 	Loading script "server\HUD.lua"
+13:09:05 | [info ] | Module HUD loaded successfully
+13:09:26 | [info ] | Module HUD unloaded successfully
+13:09:26 | [info ] | Loading module HUD
+13:09:26 | [info ] | 	Loading script "server\HUD.lua"
+13:09:26 | [info ] | Module HUD loaded successfully
+13:09:43 | [info ] | Module HUD unloaded successfully
+13:09:43 | [info ] | Loading module HUD
+13:09:43 | [info ] | 	Loading script "server\HUD.lua"
+13:09:43 | [info ] | Module HUD loaded successfully
+13:10:03 | [info ] | Module HUD unloaded successfully
+13:10:03 | [info ] | Loading module HUD
+13:10:03 | [info ] | 	Loading script "server\HUD.lua"
+13:10:03 | [info ] | Module HUD loaded successfully
+13:10:24 | [info ] | Gesóis de Nazarois left the server (192.168.0.1)
+13:22:29 | [info ] | Connection accepted
+13:22:30 | [info ] | Adding player with ID 0 and guid 693554484338153770, SteamID: STEAM_0:0:61517302
+13:22:30 | [info ] | Skeletonrambo joined the server (92.78.42.30)
+13:22:50 | [info ] | Skeletonrambo left the server (92.78.42.30)
+13:25:17 | [info ] | Connection accepted
+13:25:17 | [info ] | Adding player with ID 0 and guid 873699056703998598, SteamID: STEAM_0:1:63613230
+13:25:17 | [info ] | steegmans.nico joined the server (78.21.185.151)
+13:25:48 | [info ] | steegmans.nico left the server (78.21.185.151)
+13:54:56 | [info ] | Connection accepted
+13:54:56 | [info ] | Adding player with ID 0 and guid 40532405916312206, SteamID: STEAM_0:0:156107999
+13:54:56 | [info ] | chester_555 joined the server (2.62.191.190)
+13:56:22 | [info ] | chester_555 left the server (2.62.191.190)
+14:03:34 | [info ] | Connection accepted
+14:03:34 | [info ] | Adding player with ID 0 and guid 954763126847887938, SteamID: STEAM_0:0:100748090
+14:03:34 | [info ] | J.D. joined the server (94.181.60.26)
+14:04:24 | [info ] | J.D. left the server (94.181.60.26)
+14:05:53 | [info ] | Connection accepted
+14:05:53 | [info ] | Adding player with ID 0 and guid 279223187071094461, SteamID: STEAM_0:0:150133638
+14:05:53 | [info ] | josenaumes joined the server (177.204.74.124)
+14:06:27 | [info ] | josenaumes left the server (177.204.74.124)
+14:07:38 | [info ] | Connection accepted
+14:07:38 | [info ] | Adding player with ID 0 and guid 558446368183253816, SteamID: STEAM_0:0:150133638
+14:07:38 | [info ] | josenaumes joined the server (177.204.74.124)
+14:08:02 | [info ] | Connection accepted
+14:08:02 | [info ] | Adding player with ID 1 and guid 360287980033696645, SteamID: STEAM_0:0:156107999
+14:08:02 | [info ] | chester_555 joined the server (2.62.191.190)
+14:08:12 | [info ] | josenaumes left the server (177.204.74.124)
+14:08:13 | [info ] | chester_555 left the server (2.62.191.190)
+14:15:36 | [info ] | Connection accepted
+14:15:36 | [info ] | Adding player with ID 1 and guid 806144334271166504, SteamID: STEAM_0:0:71315497
+14:15:36 | [info ] | Hokama Philips joined the server (186.204.75.205)
+14:15:37 | [info ] | Connection accepted
+14:15:37 | [info ] | Adding player with ID 0 and guid 914231823728893287, SteamID: STEAM_0:1:63975636
+14:15:37 | [info ] | Mark Zuckerberg joined the server (179.211.254.202)
+14:17:41 | [info ] | Hokama Philips left the server (186.204.75.205)
+14:17:56 | [info ] | Mark Zuckerberg left the server (179.211.254.202)
+14:25:19 | [info ] | Connection accepted
+14:25:19 | [info ] | Adding player with ID 0 and guid 1017813543155218660, SteamID: STEAM_0:1:102443387
+14:25:19 | [info ] | Killer Whale joined the server (37.147.154.14)
+14:26:44 | [info ] | Killer Whale left the server (37.147.154.14)
+14:54:38 | [info ] | Connection accepted
+14:54:38 | [info ] | Adding player with ID 0 and guid 774619159360350382, SteamID: STEAM_0:1:86363614
+14:54:38 | [info ] | robinvikstr joined the server (85.157.20.27)
+14:54:39 | [info ] | Connection accepted
+14:54:39 | [info ] | Adding player with ID 1 and guid 932245143019808819, SteamID: STEAM_0:1:80913881
+14:54:39 | [info ] | CJS joined the server (109.240.49.10)
+14:54:45 | [info ] | CJS left the server (109.240.49.10)
+14:55:21 | [info ] | robinvikstr left the server (85.157.20.27)
+14:57:24 | [info ] | Connection accepted
+14:57:24 | [info ] | Adding player with ID 0 and guid 914230745167061959, SteamID: STEAM_0:1:80913881
+14:57:24 | [info ] | CJS joined the server (109.240.49.10)
+14:57:29 | [info ] | Connection accepted
+14:57:29 | [info ] | Adding player with ID 1 and guid 774619159360350382, SteamID: STEAM_0:1:86363614
+14:57:29 | [info ] | robinvikstr joined the server (85.157.20.27)
+14:58:22 | [info ] | robinvikstr left the server (85.157.20.27)
+14:58:28 | [info ] | CJS left the server (109.240.49.10)
+15:00:14 | [info ] | Connection accepted
+15:00:14 | [info ] | Adding player with ID 0 and guid 238690795801343137, SteamID: STEAM_0:0:91313380
+15:00:14 | [info ] | Unkillable Sk-K1ng joined the server (178.17.176.19)
+15:01:44 | [info ] | Connection accepted
+15:01:44 | [info ] | Adding player with ID 1 and guid 968273923365299860, SteamID: STEAM_0:0:104061007
+15:01:44 | [info ] | gg joined the server (217.145.16.234)
+15:02:53 | [info ] | Connection accepted
+15:02:53 | [info ] | Adding player with ID 2 and guid 1089871128826487207, SteamID: STEAM_0:0:11728421
+15:02:53 | [info ] | Gesóis de Nazarois joined the server (192.168.0.1)
+15:03:09 | [info ] | Connection accepted
+15:03:09 | [info ] | Adding player with ID 3 and guid 454863760187755668, SteamID: STEAM_0:0:78756434
+15:03:09 | [info ] | ツKing1a2ツ joined the server (37.78.9.47)
+15:03:13 | [info ] | Unkillable Sk-K1ng left the server (178.17.176.19)
+15:03:18 | [info ] | gg left the server (217.145.16.234)
+15:03:24 | [info ] | Connection accepted
+15:03:24 | [info ] | Adding player with ID 1 and guid 909727226353324404, SteamID: STEAM_0:1:82197521
+15:03:24 | [info ] | Carnifex joined the server (37.78.24.93)
+15:04:10 | [info ] | ツKing1a2ツ left the server (37.78.9.47)
+15:04:13 | [info ] | Carnifex left the server (37.78.24.93)
+15:04:18 | [info ] | Gesóis de Nazarois left the server (192.168.0.1)
+15:05:51 | [info ] | Module CommandsController unloaded successfully
+15:05:51 | [info ] | Module Controls unloaded successfully
+15:05:51 | [info ] | Module Estabelecimento unloaded successfully
+15:05:51 | [info ] | Module Fome unloaded successfully
+15:05:51 | [info ] | Module freeroam unloaded successfully
+15:05:51 | [info ] | Module HUD unloaded successfully
+15:05:51 | [info ] | Module Maintenance unloaded successfully
+15:05:51 | [info ] | Module PlayerController unloaded successfully
+15:05:51 | [info ] | Server shutdown
+19:40:03 | [info ] | JCMP Server 0.2.1 (Build 1011)
+19:40:03 | [info ] | Loading configuration
+19:40:03 | [info ] | Succesfully loaded configuration
+19:40:04 | [info ] | No ban list found: cleared bans
+19:40:04 | [info ] | Server started up successfully
+19:40:04 | [info ] | Loading module CommandsController
+19:40:04 | [info ] | Module CommandsController loaded successfully
+19:40:04 | [info ] | Loading module Controls
+19:40:04 | [info ] | Module Controls loaded successfully
+19:40:04 | [info ] | Loading module Estabelecimento
+19:40:04 | [info ] | 	Loading script "server\Estabelecimento.lua"
+19:40:04 | [info ] | Module Estabelecimento loaded successfully
+19:40:04 | [info ] | Loading module Fome
+19:40:04 | [info ] | 	Loading script "server\Fome.lua"
+19:40:04 | [info ] | Module Fome loaded successfully
+19:40:04 | [info ] | Loading module freeroam
+19:40:04 | [info ] | 	Loading script "server\freeroam.lua"
+19:40:04 | [info ] | [freeroam] Opening spawns.txt
+19:40:04 | [info ] | [freeroam] Loaded spawns, 0.45 seconds
+19:40:04 | [info ] | Module freeroam loaded successfully
+19:40:04 | [info ] | Loading module HUD
+19:40:04 | [info ] | 	Loading script "server\HUD.lua"
+19:40:04 | [info ] | Module HUD loaded successfully
+19:40:04 | [info ] | Loading module Maintenance
+19:40:04 | [info ] | Module Maintenance loaded successfully
+19:40:04 | [info ] | Loading module PlayerController
+19:40:04 | [info ] | 	Loading script "server\PlayerController.lua"
+19:40:04 | [info ] | Module PlayerController loaded successfully
+19:40:34 | [info ] | Connection accepted
+19:40:34 | [info ] | Adding player with ID 0 and guid 612489584943121976, SteamID: STEAM_0:0:11728421
+19:40:34 | [info ] | Gesóis de Nazarois joined the server (192.168.0.1)
+19:41:59 | [info ] | Failed to load module spot: Module can't be loaded because the path does not exist
+19:42:01 | [info ] | Module HUD unloaded successfully
+19:42:01 | [info ] | Loading module HUD
+19:42:01 | [info ] | 	Loading script "server\HUD.lua"
+19:42:02 | [info ] | Module HUD loaded successfully
+19:42:34 | [info ] | Module HUD unloaded successfully
+19:42:34 | [info ] | Loading module HUD
+19:42:34 | [info ] | 	Loading script "server\HUD.lua"
+19:42:34 | [info ] | Module HUD loaded successfully
+19:44:55 | [info ] | Module HUD unloaded successfully
+19:44:55 | [info ] | Loading module HUD
+19:44:55 | [info ] | 	Loading script "server\HUD.lua"
+19:44:55 | [info ] | Module HUD loaded successfully
+19:47:30 | [info ] | Module HUD unloaded successfully
+19:47:30 | [info ] | Loading module HUD
+19:47:30 | [info ] | 	Loading script "server\HUD.lua"
+19:47:30 | [info ] | Module HUD loaded successfully
+19:47:44 | [info ] | Module HUD unloaded successfully
+19:47:44 | [info ] | Loading module HUD
+19:47:44 | [info ] | 	Loading script "server\HUD.lua"
+19:47:44 | [info ] | Module HUD loaded successfully
+19:48:04 | [info ] | Module HUD unloaded successfully
+19:48:04 | [info ] | Loading module HUD
+19:48:04 | [info ] | 	Loading script "server\HUD.lua"
+19:48:04 | [info ] | Module HUD loaded successfully
+19:51:56 | [info ] | Gesóis de Nazarois left the server (192.168.0.1)
+19:53:08 | [info ] | Module CommandsController unloaded successfully
+19:53:08 | [info ] | Module Controls unloaded successfully
+19:53:08 | [info ] | Module Estabelecimento unloaded successfully
+19:53:08 | [info ] | Module Fome unloaded successfully
+19:53:08 | [info ] | Module freeroam unloaded successfully
+19:53:08 | [info ] | Module HUD unloaded successfully
+19:53:08 | [info ] | Module Maintenance unloaded successfully
+19:53:08 | [info ] | Module PlayerController unloaded successfully
+19:53:08 | [info ] | Server shutdown
+14:25:49 | [info ] | JCMP Server 0.2.1 (Build 1011)
+14:25:49 | [info ] | Loading configuration
+14:25:49 | [info ] | Succesfully loaded configuration
+14:25:50 | [info ] | No ban list found: cleared bans
+14:25:50 | [info ] | Server started up successfully
+14:25:50 | [info ] | Loading module CommandsController
+14:25:50 | [info ] | Module CommandsController loaded successfully
+14:25:50 | [info ] | Loading module Controls
+14:25:50 | [info ] | Module Controls loaded successfully
+14:25:50 | [info ] | Loading module Estabelecimento
+14:25:50 | [info ] | 	Loading script "server\Estabelecimento.lua"
+14:25:50 | [info ] | Module Estabelecimento loaded successfully
+14:25:50 | [info ] | Loading module Fome
+14:25:50 | [info ] | 	Loading script "server\Fome.lua"
+14:25:50 | [info ] | Module Fome loaded successfully
+14:25:50 | [info ] | Loading module freeroam
+14:25:50 | [info ] | 	Loading script "server\freeroam.lua"
+14:25:50 | [info ] | [freeroam] Opening spawns.txt
+14:25:50 | [info ] | [freeroam] Loaded spawns, 0.41 seconds
+14:25:50 | [info ] | Module freeroam loaded successfully
+14:25:50 | [info ] | Loading module HUD
+14:25:50 | [info ] | 	Loading script "server\HUD.lua"
+14:25:50 | [info ] | Module HUD loaded successfully
+14:25:50 | [info ] | Loading module Maintenance
+14:25:50 | [info ] | Module Maintenance loaded successfully
+14:25:50 | [info ] | Loading module PlayerController
+14:25:50 | [info ] | 	Loading script "server\PlayerController.lua"
+14:25:50 | [info ] | Module PlayerController loaded successfully
+14:37:55 | [info ] | Connection accepted
+14:37:55 | [info ] | Adding player with ID 0 and guid 310748378018162755, SteamID: STEAM_0:1:79326904
+14:37:55 | [info ] | (TZH) Masterrp joined the server (189.107.28.158)
+14:38:29 | [info ] | Connection accepted
+14:38:30 | [info ] | Adding player with ID 1 and guid 441352765588506571, SteamID: STEAM_0:1:87908547
+14:38:30 | [info ] | Shiomi joined the server (177.35.220.196)
+14:38:54 | [info ] | Connection accepted
+14:38:54 | [info ] | Adding player with ID 2 and guid 445856466832327153, SteamID: STEAM_0:1:112335090
+14:38:54 | [info ] | Кошмарный Фокси joined the server (178.207.82.198)
+14:39:10 | [info ] | Connection accepted
+14:39:10 | [info ] | Adding player with ID 3 and guid 1139410733820152953, SteamID: STEAM_0:0:138476006
+14:39:10 | [info ] | salabon2004 joined the server (178.206.103.183)
+14:39:17 | [info ] | Кошмарный Фокси left the server (178.207.82.198)
+14:39:44 | [info ] | Shiomi left the server (177.35.220.196)
+14:40:32 | [info ] | Connection accepted
+14:40:32 | [info ] | Adding player with ID 1 and guid 54043303391041868, SteamID: STEAM_0:1:112335090
+14:40:32 | [info ] | Кошмарный Фокси joined the server (178.207.82.198)
+14:40:55 | [info ] | [chat]: <Кошмарный Фокси>: куку
+14:41:06 | [info ] | salabon2004 left the server (178.206.103.183)
+14:41:37 | [info ] | Connection accepted
+14:41:37 | [info ] | Adding player with ID 3 and guid 603482378314288425, SteamID: STEAM_0:0:138476006
+14:41:37 | [info ] | salabon2004 joined the server (178.206.103.183)
+14:42:38 | [info ] | salabon2004 left the server (178.206.103.183)
+14:43:38 | [info ] | Кошмарный Фокси left the server (178.207.82.198)
+14:52:36 | [info ] | (TZH) Masterrp left the server (189.107.28.158)
+14:52:38 | [info ] | Connection accepted
+14:52:38 | [info ] | Adding player with ID 0 and guid 1139410714336404608, SteamID: STEAM_0:0:71891388
+14:52:38 | [info ] | sogam#csGOD joined the server (80.95.39.50)
+14:52:52 | [info ] | [chat]: <sogam#csGOD>: hi
+14:53:27 | [info ] | Connection accepted
+14:53:27 | [info ] | Adding player with ID 1 and guid 1080864015025888584, SteamID: STEAM_0:0:65089481
+14:53:27 | [info ] | ฉันเพียงพอ joined the server (95.152.22.53)
+14:53:38 | [info ] | sogam#csGOD left the server (80.95.39.50)
+14:54:04 | [info ] | ฉันเพียงพอ left the server (95.152.22.53)
+14:55:03 | [info ] | Connection accepted
+14:55:03 | [info ] | Adding player with ID 1 and guid 562949982735528608, SteamID: STEAM_0:1:89754989
+14:55:03 | [info ] | D.Gray-man joined the server (89.232.118.217)
+14:57:16 | [info ] | D.Gray-man left the server (89.232.118.217)
+15:02:52 | [info ] | Connection accepted
+15:02:52 | [info ] | Adding player with ID 1 and guid 1085367605452772976, SteamID: STEAM_0:0:65586972
+15:02:52 | [info ] | :D Russian Teacher joined the server (94.29.48.222)
+15:03:23 | [info ] | :D Russian Teacher left the server (94.29.48.222)
+15:03:54 | [info ] | Module CommandsController unloaded successfully
+15:03:54 | [info ] | Module Controls unloaded successfully
+15:03:54 | [info ] | Module Estabelecimento unloaded successfully
+15:03:54 | [info ] | Module Fome unloaded successfully
+15:03:54 | [info ] | Module freeroam unloaded successfully
+15:03:54 | [info ] | Module HUD unloaded successfully
+15:03:54 | [info ] | Module Maintenance unloaded successfully
+15:03:54 | [info ] | Module PlayerController unloaded successfully
+15:03:54 | [info ] | Server shutdown
+12:44:48 | [info ] | JCMP Server 0.2.1 (Build 1011)
+12:44:48 | [info ] | Loading configuration
+12:44:48 | [info ] | Succesfully loaded configuration
+12:44:48 | [info ] | No ban list found: cleared bans
+12:44:48 | [info ] | Server started up successfully
+12:44:48 | [info ] | Loading module CommandsController
+12:44:48 | [info ] | Module CommandsController loaded successfully
+12:44:48 | [info ] | Loading module Controls
+12:44:48 | [info ] | Module Controls loaded successfully
+12:44:48 | [info ] | Loading module Estabelecimento
+12:44:48 | [info ] | 	Loading script "server\Estabelecimento.lua"
+12:44:48 | [info ] | Module Estabelecimento loaded successfully
+12:44:48 | [info ] | Loading module Fome
+12:44:48 | [info ] | 	Loading script "server\Fome.lua"
+12:44:48 | [info ] | Module Fome loaded successfully
+12:44:48 | [info ] | Loading module freeroam
+12:44:48 | [info ] | 	Loading script "server\freeroam.lua"
+12:44:48 | [info ] | [freeroam] Opening spawns.txt
+12:44:49 | [info ] | [freeroam] Loaded spawns, 0.44 seconds
+12:44:49 | [info ] | Module freeroam loaded successfully
+12:44:49 | [info ] | Loading module HUD
+12:44:49 | [info ] | 	Loading script "server\HUD.lua"
+12:44:49 | [info ] | Module HUD loaded successfully
+12:44:49 | [info ] | Loading module Maintenance
+12:44:49 | [info ] | Module Maintenance loaded successfully
+12:44:49 | [info ] | Loading module PlayerController
+12:44:49 | [info ] | 	Loading script "server\PlayerController.lua"
+12:44:49 | [info ] | Module PlayerController loaded successfully
+12:50:56 | [info ] | Connection accepted
+12:50:56 | [info ] | Adding player with ID 0 and guid 45036006898058691, SteamID: STEAM_0:0:11728421
+12:50:56 | [info ] | Josnee joined the server (192.168.0.1)
+12:50:59 | [info ] | Connection accepted
+12:50:59 | [info ] | Adding player with ID 1 and guid 653021960013045479, SteamID: STEAM_0:1:40497884
+12:50:59 | [info ] | @Master joined the server (186.203.220.79)
+12:51:11 | [info ] | @Master left the server (186.203.220.79)
+12:51:11 | [info ] | [chat]: <Josnee>: opa
+12:51:29 | [info ] | Josnee left the server (192.168.0.1)
+12:51:55 | [info ] | Connection accepted
+12:51:55 | [info ] | Adding player with ID 0 and guid 1080863924703915913, SteamID: STEAM_0:1:40497884
+12:51:55 | [info ] | @Master joined the server (186.203.220.79)
+12:53:24 | [info ] | Connection accepted
+12:53:24 | [info ] | Adding player with ID 1 and guid 585467953985829037, SteamID: STEAM_0:1:86589249
+12:53:24 | [info ] | Polaczek joined the server (151.248.56.74)
+12:54:14 | [info ] | Polaczek left the server (151.248.56.74)
+12:54:21 | [info ] | @Master left the server (186.203.220.79)
+14:21:23 | [info ] | Module CommandsController unloaded successfully
+14:21:23 | [info ] | Module Controls unloaded successfully
+14:21:23 | [info ] | Module Estabelecimento unloaded successfully
+14:21:23 | [info ] | Module Fome unloaded successfully
+14:21:23 | [info ] | Module freeroam unloaded successfully
+14:21:23 | [info ] | Module HUD unloaded successfully
+14:21:23 | [info ] | Module Maintenance unloaded successfully
+14:21:23 | [info ] | Module PlayerController unloaded successfully
+14:21:23 | [info ] | Server shutdown
+16:13:58 | [info ] | JCMP Server 0.2.1 (Build 1011)
+16:13:58 | [info ] | Loading configuration
+16:13:58 | [info ] | Succesfully loaded configuration
+16:13:59 | [info ] | No ban list found: cleared bans
+16:13:59 | [info ] | Server started up successfully
+16:13:59 | [info ] | Loading module CommandsController
+16:13:59 | [info ] | Module CommandsController loaded successfully
+16:13:59 | [info ] | Loading module Controls
+16:13:59 | [info ] | Module Controls loaded successfully
+16:13:59 | [info ] | Loading module Estabelecimento
+16:13:59 | [info ] | 	Loading script "server\Estabelecimento.lua"
+16:13:59 | [info ] | Module Estabelecimento loaded successfully
+16:13:59 | [info ] | Loading module Fome
+16:13:59 | [info ] | 	Loading script "server\Fome.lua"
+16:13:59 | [info ] | Module Fome loaded successfully
+16:13:59 | [info ] | Loading module freeroam
+16:13:59 | [info ] | 	Loading script "server\freeroam.lua"
+16:13:59 | [info ] | [freeroam] Opening spawns.txt
+16:13:59 | [info ] | [freeroam] Loaded spawns, 0.41 seconds
+16:13:59 | [info ] | Module freeroam loaded successfully
+16:13:59 | [info ] | Loading module HUD
+16:13:59 | [info ] | 	Loading script "server\HUD.lua"
+16:13:59 | [info ] | Module HUD loaded successfully
+16:13:59 | [info ] | Loading module Maintenance
+16:13:59 | [info ] | Module Maintenance loaded successfully
+16:13:59 | [info ] | Loading module PlayerController
+16:13:59 | [info ] | 	Loading script "server\PlayerController.lua"
+16:13:59 | [info ] | Module PlayerController loaded successfully
+16:14:19 | [info ] | Connection accepted
+16:14:19 | [info ] | Adding player with ID 0 and guid 1067353135306209451, SteamID: STEAM_0:0:11728421
+16:14:19 | [info ] | Josnee joined the server (192.168.0.1)
+16:22:36 | [info ] | Connection accepted
+16:22:36 | [info ] | Adding player with ID 1 and guid 864691278425072051, SteamID: STEAM_0:0:60609645
+16:22:36 | [info ] | Josnei joined the server (177.9.61.137)
+16:23:55 | [info ] | Josnee left the server (192.168.0.1)
+16:24:02 | [info ] | Connection accepted
+16:24:02 | [info ] | Adding player with ID 0 and guid 211669206687120359, SteamID: STEAM_0:0:11728421
+16:24:02 | [info ] | Josnee joined the server (192.168.0.1)
+16:25:11 | [info ] | Josnee left the server (192.168.0.1)
+16:25:24 | [info ] | Josnei left the server (177.9.61.137)
+16:27:24 | [info ] | Module CommandsController unloaded successfully
+16:27:24 | [info ] | Module Controls unloaded successfully
+16:27:24 | [info ] | Module Estabelecimento unloaded successfully
+16:27:24 | [info ] | Module Fome unloaded successfully
+16:27:24 | [info ] | Module freeroam unloaded successfully
+16:27:24 | [info ] | Module HUD unloaded successfully
+16:27:24 | [info ] | Module Maintenance unloaded successfully
+16:27:24 | [info ] | Module PlayerController unloaded successfully
+16:27:24 | [info ] | Server shutdown
+10:41:26 | [info ] | JCMP Server 0.2.1 (Build 1011)
+10:41:26 | [info ] | Loading configuration
+10:41:26 | [info ] | Succesfully loaded configuration
+10:41:26 | [info ] | No ban list found: cleared bans
+10:41:26 | [info ] | Server started up successfully
+10:41:26 | [info ] | Loading module CommandsController
+10:41:26 | [info ] | Module CommandsController loaded successfully
+10:41:26 | [info ] | Loading module Controls
+10:41:26 | [info ] | Module Controls loaded successfully
+10:41:26 | [info ] | Loading module Estabelecimento
+10:41:26 | [info ] | 	Loading script "server\Estabelecimento.lua"
+10:41:26 | [info ] | Module Estabelecimento loaded successfully
+10:41:26 | [info ] | Loading module Fome
+10:41:26 | [info ] | 	Loading script "server\Fome.lua"
+10:41:26 | [info ] | Module Fome loaded successfully
+10:41:26 | [info ] | Loading module freeroam
+10:41:26 | [info ] | 	Loading script "server\freeroam.lua"
+10:41:26 | [info ] | [freeroam] Opening spawns.txt
+10:41:27 | [info ] | [freeroam] Loaded spawns, 0.41 seconds
+10:41:27 | [info ] | Module freeroam loaded successfully
+10:41:27 | [info ] | Loading module HUD
+10:41:27 | [info ] | 	Loading script "server\HUD.lua"
+10:41:27 | [info ] | Module HUD loaded successfully
+10:41:27 | [info ] | Loading module Maintenance
+10:41:27 | [info ] | Module Maintenance loaded successfully
+10:41:27 | [info ] | Loading module PlayerController
+10:41:27 | [info ] | 	Loading script "server\PlayerController.lua"
+10:41:27 | [info ] | Module PlayerController loaded successfully
+10:41:35 | [info ] | Connection accepted
+10:41:35 | [info ] | Adding player with ID 0 and guid 117093594522446134, SteamID: STEAM_0:0:11728421
+10:41:35 | [info ] | Josnee joined the server (192.168.0.1)
+10:42:22 | [info ] | Josnee left the server (192.168.0.1)
+10:42:26 | [info ] | Module CommandsController unloaded successfully
+10:42:26 | [info ] | Module Controls unloaded successfully
+10:42:26 | [info ] | Module Estabelecimento unloaded successfully
+10:42:26 | [info ] | Module Fome unloaded successfully
+10:42:26 | [info ] | Module freeroam unloaded successfully
+10:42:26 | [info ] | Module HUD unloaded successfully
+10:42:26 | [info ] | Module Maintenance unloaded successfully
+10:42:26 | [info ] | Module PlayerController unloaded successfully
+10:42:26 | [info ] | Server shutdown
+12:11:38 | [info ] | JCMP Server 0.2.1 (Build 1011)
+12:11:38 | [info ] | Loading configuration
+12:11:38 | [info ] | Succesfully loaded configuration
+12:11:39 | [info ] | No ban list found: cleared bans
+12:11:39 | [info ] | Server started up successfully
+12:11:39 | [info ] | Loading module CommandsController
+12:11:39 | [info ] | Module CommandsController loaded successfully
+12:11:39 | [info ] | Loading module Controls
+12:11:39 | [info ] | Module Controls loaded successfully
+12:11:39 | [info ] | Loading module Estabelecimento
+12:11:39 | [info ] | 	Loading script "server\Estabelecimento.lua"
+12:11:39 | [info ] | Module Estabelecimento loaded successfully
+12:11:39 | [info ] | Loading module Fome
+12:11:39 | [info ] | 	Loading script "server\Fome.lua"
+12:11:39 | [info ] | Module Fome loaded successfully
+12:11:39 | [info ] | Loading module freeroam
+12:11:39 | [info ] | 	Loading script "server\freeroam.lua"
+12:11:39 | [info ] | [freeroam] Opening spawns.txt
+12:11:39 | [info ] | [freeroam] Loaded spawns, 0.45 seconds
+12:11:39 | [info ] | Module freeroam loaded successfully
+12:11:39 | [info ] | Loading module HUD
+12:11:39 | [info ] | 	Loading script "server\HUD.lua"
+12:11:39 | [info ] | Module HUD loaded successfully
+12:11:39 | [info ] | Loading module Maintenance
+12:11:39 | [info ] | Module Maintenance loaded successfully
+12:11:39 | [info ] | Loading module PlayerController
+12:11:39 | [info ] | 	Loading script "server\PlayerController.lua"
+12:11:39 | [info ] | Module PlayerController loaded successfully
+12:13:11 | [info ] | Connection accepted
+12:13:11 | [info ] | Adding player with ID 0 and guid 1058345920836651767, SteamID: STEAM_0:0:11728421
+12:13:11 | [info ] | Syed Muhammad joined the server (192.168.0.1)
+12:14:55 | [info ] | Module HUD unloaded successfully
+12:14:55 | [info ] | Loading module HUD
+12:14:55 | [info ] | 	Loading script "server\HUD.lua"
+12:14:55 | [info ] | Module HUD loaded successfully
+12:15:24 | [info ] | Connection accepted
+12:15:25 | [info ] | Adding player with ID 1 and guid 76561244079845134, SteamID: STEAM_0:0:63628169
+12:15:25 | [info ] | OzY.Renato joined the server (186.244.37.37)
+12:15:51 | [info ] | Module HUD unloaded successfully
+12:15:51 | [info ] | Loading module HUD
+12:15:51 | [info ] | 	Loading script "server\HUD.lua"
+12:15:51 | [info ] | Module HUD loaded successfully
+12:19:35 | [info ] | OzY.Renato left the server (186.244.37.37)
+12:27:08 | [info ] | Syed Muhammad left the server (192.168.0.1)
+12:27:43 | [info ] | Connection accepted
+12:27:43 | [info ] | Adding player with ID 0 and guid 463870929612227039, SteamID: STEAM_0:0:83101802
+12:27:43 | [info ] | AlphaWolf(アニメ) joined the server (122.108.165.162)
+12:28:03 | [info ] | AlphaWolf(アニメ) left the server (122.108.165.162)
+12:31:15 | [info ] | Connection accepted
+12:31:15 | [info ] | Adding player with ID 0 and guid 1049338730728754988, SteamID: STEAM_0:1:93709702
+12:31:15 | [info ] | ZATOICHI joined the server (188.244.155.38)
+12:31:42 | [info ] | Connection accepted
+12:31:42 | [info ] | Adding player with ID 1 and guid 67554033728389488, SteamID: STEAM_0:0:142150952
+12:31:42 | [info ] | Ҝหฑ∂εקּ joined the server (188.244.145.173)
+12:32:44 | [info ] | Connection accepted
+12:32:44 | [info ] | Adding player with ID 2 and guid 1125899916418879757, SteamID: STEAM_0:0:11728421
+12:32:44 | [info ] | Syed Muhammad joined the server (192.168.0.1)
+12:33:20 | [info ] | ZATOICHI left the server (188.244.155.38)
+12:33:20 | [info ] | Ҝหฑ∂εקּ left the server (188.244.145.173)
+12:34:11 | [info ] | Connection accepted
+12:34:11 | [info ] | Adding player with ID 1 and guid 607985964554342278, SteamID: STEAM_0:0:64839676
+12:34:11 | [info ] | Michael_Gamer joined the server (152.249.202.127)
+12:35:07 | [info ] | Connection accepted
+12:35:07 | [info ] | Adding player with ID 0 and guid 950259558744413392, SteamID: STEAM_0:1:53215234
+12:35:07 | [info ] | Nuah joined the server (177.95.99.97)
+12:35:48 | [info ] | Michael_Gamer left the server (152.249.202.127)
+12:36:58 | [info ] | Module CommandsController unloaded successfully
+12:36:58 | [info ] | Module Controls unloaded successfully
+12:36:58 | [info ] | Module Estabelecimento unloaded successfully
+12:36:58 | [info ] | Module Fome unloaded successfully
+12:36:58 | [info ] | Module freeroam unloaded successfully
+12:36:58 | [info ] | Module HUD unloaded successfully
+12:36:58 | [info ] | Module Maintenance unloaded successfully
+12:36:59 | [info ] | Module PlayerController unloaded successfully
+12:37:08 | [info ] | Nuah left the server (177.95.99.97)
+12:37:53 | [info ] | Loading module CommandsController
+12:37:53 | [info ] | Module CommandsController loaded successfully
+12:37:53 | [info ] | Loading module Controls
+12:37:53 | [info ] | Module Controls loaded successfully
+12:37:53 | [info ] | Loading module Estabelecimento
+12:37:53 | [info ] | 	Loading script "server\Estabelecimento.lua"
+12:37:53 | [info ] | Module Estabelecimento loaded successfully
+12:37:53 | [info ] | Loading module Fome
+12:37:53 | [info ] | 	Loading script "server\Fome.lua"
+12:37:53 | [info ] | Module Fome loaded successfully
+12:37:53 | [info ] | Loading module freeroam
+12:37:53 | [info ] | 	Loading script "server\freeroam.lua"
+12:37:53 | [info ] | [freeroam] Opening spawns.txt
+12:37:54 | [info ] | [freeroam] Loaded spawns, 0.42 seconds
+12:37:54 | [info ] | Module freeroam loaded successfully
+12:37:54 | [info ] | Loading module HUD
+12:37:54 | [info ] | 	Loading script "server\HUD.lua"
+12:37:54 | [info ] | Module HUD loaded successfully
+12:37:54 | [info ] | Loading module Maintenance
+12:37:54 | [info ] | Module Maintenance loaded successfully
+12:37:54 | [info ] | Loading module PlayerController
+12:37:54 | [info ] | 	Loading script "server\PlayerController.lua"
+12:37:54 | [info ] | Module PlayerController loaded successfully
+12:38:06 | [info ] | Module CommandsController unloaded successfully
+12:38:06 | [info ] | Module Controls unloaded successfully
+12:38:06 | [info ] | Module Estabelecimento unloaded successfully
+12:38:06 | [info ] | Module Fome unloaded successfully
+12:38:06 | [info ] | Module freeroam unloaded successfully
+12:38:06 | [info ] | Module HUD unloaded successfully
+12:38:06 | [info ] | Module Maintenance unloaded successfully
+12:38:07 | [info ] | Module PlayerController unloaded successfully
+12:38:21 | [info ] | Connection accepted
+12:38:22 | [info ] | Adding player with ID 0 and guid 297237612984789117, SteamID: STEAM_0:1:53215234
+12:38:22 | [info ] | Nuah joined the server (177.95.99.97)
+12:38:49 | [info ] | Loading module HUD
+12:38:49 | [info ] | 	Loading script "server\HUD.lua"
+12:38:49 | [info ] | Module HUD loaded successfully
+12:38:59 | [info ] | Module HUD unloaded successfully
+12:38:59 | [info ] | Loading module CommandsController
+12:38:59 | [info ] | Module CommandsController loaded successfully
+12:38:59 | [info ] | Loading module Controls
+12:38:59 | [info ] | Module Controls loaded successfully
+12:38:59 | [info ] | Loading module Estabelecimento
+12:38:59 | [info ] | 	Loading script "server\Estabelecimento.lua"
+12:38:59 | [info ] | Module Estabelecimento loaded successfully
+12:38:59 | [info ] | Loading module Fome
+12:38:59 | [info ] | 	Loading script "server\Fome.lua"
+12:38:59 | [info ] | Module Fome loaded successfully
+12:38:59 | [info ] | Loading module freeroam
+12:38:59 | [info ] | 	Loading script "server\freeroam.lua"
+12:38:59 | [info ] | [freeroam] Opening spawns.txt
+12:38:59 | [info ] | [freeroam] Loaded spawns, 0.41 seconds
+12:38:59 | [info ] | Module freeroam loaded successfully
+12:38:59 | [info ] | Loading module HUD
+12:38:59 | [info ] | 	Loading script "server\HUD.lua"
+12:38:59 | [info ] | Module HUD loaded successfully
+12:38:59 | [info ] | Loading module Maintenance
+12:38:59 | [info ] | Module Maintenance loaded successfully
+12:39:00 | [info ] | Loading module PlayerController
+12:39:00 | [info ] | 	Loading script "server\PlayerController.lua"
+12:39:00 | [info ] | Module PlayerController loaded successfully
+12:39:28 | [info ] | Nuah left the server (177.95.99.97)
+12:40:03 | [info ] | Connection accepted
+12:40:03 | [info ] | Adding player with ID 0 and guid 153122425001993827, SteamID: STEAM_0:1:53215234
+12:40:03 | [info ] | Nuah joined the server (177.95.99.97)
+12:41:07 | [info ] | [chat]: <Syed Muhammad>: desertap2
+12:41:25 | [info ] | [chat]: <Syed Muhammad>:  /tp desertap2
+12:42:44 | [info ] | Nuah left the server (177.95.99.97)
+12:45:34 | [info ] | Connection accepted
+12:45:34 | [info ] | Adding player with ID 0 and guid 207165620839918399, SteamID: STEAM_0:1:53215234
+12:45:34 | [info ] | Nuah joined the server (177.95.99.97)
+12:45:51 | [info ] | [chat]: <Syed Muhammad>:  /tp desertap2
+12:49:34 | [info ] | Syed Muhammad left the server (192.168.0.1)
+12:50:24 | [info ] | Connection accepted
+12:50:24 | [info ] | Adding player with ID 2 and guid 1116892731571778286, SteamID: STEAM_0:1:95860588
+12:50:24 | [info ] | ggwp joined the server (89.31.80.234)
+12:50:37 | [info ] | [chat]: <Nuah>: LIXO
+12:50:50 | [info ] | Nuah left the server (177.95.99.97)
+12:51:01 | [info ] | ggwp left the server (89.31.80.234)
+12:51:19 | [info ] | Connection accepted
+12:51:19 | [info ] | Adding player with ID 2 and guid 94575630523336428, SteamID: STEAM_0:1:53215234
+12:51:19 | [info ] | Nuah joined the server (177.95.99.97)
+12:52:28 | [info ] | Nuah left the server (177.95.99.97)
+12:53:32 | [info ] | Connection accepted
+12:53:32 | [info ] | Adding player with ID 2 and guid 968273935749262164, SteamID: STEAM_0:0:64839676
+12:53:32 | [info ] | Michael_Gamer joined the server (152.249.202.127)
+13:02:45 | [info ] | Michael_Gamer left the server (152.249.202.127)
+13:13:56 | [info ] | Connection accepted
+13:13:56 | [info ] | Adding player with ID 2 and guid 184647600746347719, SteamID: STEAM_0:1:12517720
+13:13:56 | [info ] | 3/\0 joined the server (37.110.11.187)
+13:14:54 | [info ] | 3/\0 left the server (37.110.11.187)
+13:19:35 | [info ] | Connection accepted
+13:19:35 | [info ] | Adding player with ID 2 and guid 855683983018162535, SteamID: STEAM_0:1:154664787
+13:19:35 | [info ] | y-kna joined the server (84.131.211.87)
+13:20:04 | [info ] | Connection accepted
+13:20:04 | [info ] | Adding player with ID 0 and guid 747597555745053049, SteamID: STEAM_0:0:64839676
+13:20:04 | [info ] | Michael_Gamer joined the server (152.249.202.127)
+13:21:07 | [info ] | y-kna left the server (84.131.211.87)
+13:22:01 | [info ] | Michael_Gamer left the server (152.249.202.127)
+13:30:39 | [info ] | Connection accepted
+13:30:40 | [info ] | Adding player with ID 0 and guid 189151185895890857, SteamID: STEAM_0:1:85909513
+13:30:40 | [info ] | roma joined the server (62.205.128.177)
+13:33:22 | [info ] | roma left the server (62.205.128.177)
+13:51:01 | [info ] | Connection accepted
+13:51:01 | [info ] | Adding player with ID 0 and guid 279223200242142833, SteamID: STEAM_0:0:46470973
+13:51:01 | [info ] | Sanka05 joined the server (176.190.49.93)
+13:51:25 | [info ] | Sanka05 left the server (176.190.49.93)
+13:52:03 | [info ] | Connection accepted
+13:52:03 | [info ] | Adding player with ID 0 and guid 662030452821765585, SteamID: STEAM_0:1:77246750
+13:52:03 | [info ] | Kim The Anonymous joined the server (77.170.155.145)
+13:52:38 | [info ] | Connection accepted
+13:52:38 | [info ] | Adding player with ID 2 and guid 1076360313556996746, SteamID: STEAM_0:0:85423787
+13:52:38 | [info ] | [GG] RTheMan joined the server (77.163.20.74)
+13:52:54 | [info ] | Kim The Anonymous left the server (77.170.155.145)
+13:53:16 | [info ] | Connection accepted
+13:53:16 | [info ] | Adding player with ID 0 and guid 662030452821765585, SteamID: STEAM_0:1:77246750
+13:53:16 | [info ] | Kim The Anonymous joined the server (77.170.155.145)
+13:53:39 | [info ] | [chat]: <Kim The Anonymous>: hoi
+14:03:05 | [info ] | [GG] RTheMan left the server (77.163.20.74)
+14:20:53 | [info ] | Connection accepted
+14:20:53 | [info ] | Adding player with ID 2 and guid 135107996099581051, SteamID: STEAM_0:0:61065922
+14:20:53 | [info ] | guga_fischer joined the server (177.82.237.124)
+14:21:04 | [info ] | guga_fischer left the server (177.82.237.124)
+14:21:19 | [info ] | Connection accepted
+14:21:19 | [info ] | Adding player with ID 2 and guid 607985957327851166, SteamID: STEAM_0:0:61065922
+14:21:19 | [info ] | guga_fischer joined the server (177.82.237.124)
+14:21:27 | [info ] | Connection accepted
+14:21:27 | [info ] | Adding player with ID 1 and guid 189151184510424493, SteamID: STEAM_0:0:118732989
+14:21:27 | [info ] | Annarky joined the server (191.177.243.212)
+14:21:40 | [info ] | Annarky left the server (191.177.243.212)
+14:24:26 | [info ] | [chat]: <guga_fischer>: opa
+14:27:18 | [info ] | [chat]: <guga_fischer>: '
+14:29:40 | [info ] | [chat]: <Kim The Anonymous>: hello
+14:29:52 | [info ] | [chat]: <guga_fischer>: oi
+14:31:58 | [info ] | [chat]: <Kim The Anonymous>: do you know how to see the ful map?
+14:32:05 | [info ] | [chat]: <guga_fischer>: no
+14:32:09 | [info ] | [chat]: <Kim The Anonymous>: allright
+14:32:33 | [info ] | Connection accepted
+14:32:33 | [info ] | Adding player with ID 1 and guid 315252018769460196, SteamID: STEAM_0:1:108769121
+14:32:33 | [info ] | Mr.Status joined the server (92.55.17.140)
+14:33:04 | [info ] | [chat]: <Mr.Status>: F
+14:33:08 | [info ] | [chat]: <guga_fischer>: oi
+14:33:26 | [info ] | [chat]: <guga_fischer>: hello
+14:33:53 | [info ] | Mr.Status left the server (92.55.17.140)
+14:33:56 | [info ] | guga_fischer left the server (177.82.237.124)
+14:44:07 | [info ] | Connection accepted
+14:44:07 | [info ] | Adding player with ID 2 and guid 707065162424519002, SteamID: STEAM_0:1:67759232
+14:44:07 | [info ] | SirGoose joined the server (87.208.3.158)
+14:45:18 | [info ] | Connection accepted
+14:45:18 | [info ] | Adding player with ID 1 and guid 18014412031427252, SteamID: STEAM_0:0:87353624
+14:45:18 | [info ] | Trololo joined the server (46.191.149.243)
+14:46:19 | [info ] | Trololo left the server (46.191.149.243)
+14:50:53 | [info ] | Connection accepted
+14:50:53 | [info ] | Adding player with ID 1 and guid 680043561596306835, SteamID: STEAM_0:0:11728421
+14:50:53 | [info ] | Syed Muhammad joined the server (192.168.0.1)
+14:51:45 | [info ] | Module Maintenance unloaded successfully
+14:51:45 | [info ] | Loading module Maintenance
+14:51:45 | [info ] | Module Maintenance loaded successfully
+14:52:34 | [info ] | Module Maintenance unloaded successfully
+14:52:34 | [info ] | Loading module Maintenance
+14:52:34 | [info ] | Module Maintenance loaded successfully
+14:54:02 | [info ] | Syed Muhammad left the server (192.168.0.1)
+15:00:25 | [info ] | Kim The Anonymous left the server (77.170.155.145)
+15:02:29 | [info ] | SirGoose left the server (87.208.3.158)
+15:10:29 | [info ] | Connection accepted
+15:10:29 | [info ] | Adding player with ID 2 and guid 743093960590589779, SteamID: STEAM_0:0:77554032
+15:10:29 | [info ] | sasha-011996 joined the server (5.142.236.27)
+15:13:36 | [info ] | sasha-011996 left the server (5.142.236.27)
+15:20:54 | [info ] | Connection accepted
+15:20:54 | [info ] | Adding player with ID 2 and guid 81064903091495496, SteamID: STEAM_0:1:60300201
+15:20:54 | [info ] | Jason Voorhees  joined the server (181.14.119.145)
+15:21:15 | [info ] | Jason Voorhees  left the server (181.14.119.145)
+15:54:52 | [info ] | Connection accepted
+15:54:52 | [info ] | Adding player with ID 2 and guid 472878046429822724, SteamID: STEAM_0:0:81360855
+15:54:52 | [info ] | Klein joined the server (179.105.100.48)
+15:55:59 | [info ] | Connection accepted
+15:55:59 | [info ] | Adding player with ID 0 and guid 589971551805584138, SteamID: STEAM_0:0:49544430
+15:55:59 | [info ] | Vendo um fusca azul joined the server (187.36.210.83)
+15:56:37 | [info ] | Klein left the server (179.105.100.48)
+15:56:41 | [info ] | Connection accepted
+15:56:41 | [info ] | Adding player with ID 2 and guid 58547075485736987, SteamID: STEAM_0:0:58143361
+15:56:41 | [info ] | Mr. Potato joined the server (80.197.82.123)
+15:57:15 | [info ] | Connection accepted
+15:57:15 | [info ] | Adding player with ID 1 and guid 589971636941877068, SteamID: STEAM_0:0:81360855
+15:57:15 | [info ] | Klein joined the server (179.105.100.48)
+15:57:22 | [info ] | Mr. Potato left the server (80.197.82.123)
+16:00:26 | [info ] | [chat]: <Vendo um fusca azul>: oi
+16:00:30 | [info ] | [chat]: <Klein>: oi
+16:01:45 | [info ] | [chat]: <Klein>: t
+16:13:40 | [info ] | Connection accepted
+16:13:40 | [info ] | Adding player with ID 2 and guid 148618969270822189, SteamID: STEAM_0:0:93652207
+16:13:40 | [info ] | subzero joined the server (189.7.14.35)
+16:14:11 | [info ] | subzero left the server (189.7.14.35)
+16:20:35 | [info ] | Connection accepted
+16:20:35 | [info ] | Adding player with ID 2 and guid 1035827996872904468, SteamID: STEAM_0:1:149449941
+16:20:35 | [info ] | RZKdesign joined the server (88.180.212.200)
+16:21:03 | [info ] | RZKdesign left the server (88.180.212.200)
+16:23:38 | [info ] | Connection accepted
+16:23:38 | [info ] | Adding player with ID 2 and guid 603482972595514293, SteamID: STEAM_0:0:28733741
+16:23:38 | [info ] | A_perry joined the server (79.178.214.127)
+16:24:19 | [info ] | A_perry left the server (79.178.214.127)
+16:26:19 | [info ] | Connection accepted
+16:26:19 | [info ] | Adding player with ID 2 and guid 923237932315142247, SteamID: STEAM_0:1:80144495
+16:26:19 | [info ] | Gamerapprentic∑ joined the server (187.44.159.246)
+16:27:00 | [info ] | Gamerapprentic∑ left the server (187.44.159.246)
+16:30:18 | [info ] | Connection accepted
+16:30:19 | [info ] | Adding player with ID 2 and guid 112590069914583630, SteamID: STEAM_0:0:81103194
+16:30:19 | [info ] | toccolini_j joined the server (189.75.213.69)
+16:37:32 | [info ] | toccolini_j left the server (189.75.213.69)
+17:07:05 | [info ] | Klein left the server (179.105.100.48)
+17:16:31 | [info ] | Vendo um fusca azul left the server (187.36.210.83)
+17:33:29 | [info ] | Connection accepted
+17:33:29 | [info ] | Adding player with ID 0 and guid 400820425324321859, SteamID: STEAM_0:1:101353753
+17:33:29 | [info ] | @AndrewsFeL joined the server (177.156.100.97)
+17:37:51 | [info ] | @AndrewsFeL left the server (177.156.100.97)
+18:18:59 | [info ] | Connection accepted
+18:18:59 | [info ] | Adding player with ID 0 and guid 495396038290559863, SteamID: STEAM_0:1:118409370
+18:18:59 | [info ] | Paint card (O_o) joined the server (181.95.174.21)
+18:19:41 | [info ] | Connection accepted
+18:19:41 | [info ] | Adding player with ID 1 and guid 598978758923597084, SteamID: STEAM_0:1:96103414
+18:19:41 | [info ] | Voyna joined the server (78.127.239.180)
+18:20:29 | [info ] | Paint card (O_o) left the server (181.95.174.21)
+18:22:31 | [info ] | Connection accepted
+18:22:31 | [info ] | Adding player with ID 0 and guid 1035827944865332743, SteamID: STEAM_0:0:69248903
+18:22:31 | [info ] | jorgeangel2002 joined the server (84.123.205.108)
+18:22:42 | [info ] | Connection accepted
+18:22:42 | [info ] | Adding player with ID 2 and guid 815151724210345925, SteamID: STEAM_0:1:89472814
+18:22:42 | [info ] | rafa99970 joined the server (88.11.255.55)
+18:23:20 | [info ] | Voyna left the server (78.127.239.180)
+18:30:29 | [info ] | Connection accepted
+18:30:29 | [info ] | Adding player with ID 1 and guid 234187210015338996, SteamID: STEAM_0:0:70172197
+18:30:29 | [info ] | (LoL)mcandrewplayer3 joined the server (79.109.183.108)
+18:36:10 | [info ] | Connection accepted
+18:36:10 | [info ] | Adding player with ID 3 and guid 220676403386958067, SteamID: STEAM_0:0:63628169
+18:36:10 | [info ] | OzY.Renato joined the server (186.241.38.187)
+18:39:53 | [info ] | OzY.Renato left the server (186.241.38.187)
+18:42:11 | [info ] | Connection accepted
+18:42:11 | [info ] | Adding player with ID 3 and guid 270216594563839724, SteamID: STEAM_0:0:156113259
+18:42:11 | [info ] | paloma95 joined the server (78.130.138.248)
+18:43:31 | [info ] | paloma95 left the server (78.130.138.248)
+18:54:53 | [info ] | [chat]: <rafa99970>: pene
+19:19:52 | [info ] | (LoL)mcandrewplayer3 left the server (79.109.183.108)
+19:22:08 | [info ] | jorgeangel2002 left the server (84.123.205.108)
+19:22:42 | [info ] | rafa99970 left the server (88.11.255.55)
+19:35:30 | [info ] | Connection accepted
+19:35:30 | [info ] | Adding player with ID 2 and guid 193654818308839083, SteamID: STEAM_0:0:69248903
+19:35:30 | [info ] | jorgeangel2002 joined the server (84.123.205.108)
+19:35:41 | [info ] | Connection accepted
+19:35:41 | [info ] | Adding player with ID 0 and guid 531424789327212619, SteamID: STEAM_0:0:70172197
+19:35:41 | [info ] | (LoL)mcandrewplayer3 joined the server (79.109.183.108)
+19:35:43 | [info ] | Connection accepted
+19:35:43 | [info ] | Adding player with ID 1 and guid 1067353307770771433, SteamID: STEAM_0:1:89472814
+19:35:43 | [info ] | rafa99970 joined the server (88.11.255.55)
+19:35:48 | [info ] | [chat]: <rafa99970>: pen :3
+19:35:52 | [info ] | [chat]: <rafa99970>: pene
+19:35:56 | [info ] | [chat]: <rafa99970>: falo
+19:36:37 | [info ] | (LoL)mcandrewplayer3 left the server (79.109.183.108)
+19:36:44 | [info ] | jorgeangel2002 left the server (84.123.205.108)
+19:36:52 | [info ] | rafa99970 left the server (88.11.255.55)
+19:37:43 | [info ] | Connection accepted
+19:37:43 | [info ] | Adding player with ID 1 and guid 85568565523278127, SteamID: STEAM_0:0:84021538
+19:37:43 | [info ] | Misael joined the server (152.249.152.228)
+19:39:59 | [info ] | Misael left the server (152.249.152.228)
+19:46:41 | [info ] | Connection accepted
+19:46:41 | [info ] | Adding player with ID 1 and guid 477381562737993640, SteamID: STEAM_0:0:100408623
+19:46:41 | [info ] | WorthyKombatant joined the server (107.218.64.121)
+19:47:51 | [info ] | WorthyKombatant left the server (107.218.64.121)
+20:08:29 | [info ] | Connection accepted
+20:08:29 | [info ] | Adding player with ID 1 and guid 243194390433088273, SteamID: STEAM_0:0:69268335
+20:08:29 | [info ] | SuperSami joined the server (177.6.32.141)
+20:09:56 | [info ] | Connection accepted
+20:09:56 | [info ] | Adding player with ID 2 and guid 436849520042878244, SteamID: STEAM_0:0:51242297
+20:09:56 | [info ] | Raelpater joined the server (179.176.187.248)
+20:11:08 | [info ] | SuperSami left the server (177.6.32.141)
+20:11:10 | [info ] | Raelpater left the server (179.176.187.248)
+20:27:06 | [info ] | Connection accepted
+20:27:06 | [info ] | Adding player with ID 2 and guid 463870911903910150, SteamID: STEAM_0:0:133282872
+20:27:06 | [info ] | Scurtes joined the server (191.255.181.205)
+20:28:30 | [info ] | Scurtes left the server (191.255.181.205)
+20:32:18 | [info ] | Connection accepted
+20:32:18 | [info ] | Adding player with ID 2 and guid 292734078022999391, SteamID: STEAM_0:0:81360855
+20:32:18 | [info ] | Klein joined the server (179.105.100.48)
+20:33:24 | [info ] | Connection accepted
+20:33:24 | [info ] | Adding player with ID 1 and guid 603482350828486503, SteamID: STEAM_0:0:49544430
+20:33:24 | [info ] | Vendo um fusca azul joined the server (187.36.210.83)
+20:51:03 | [info ] | Connection accepted
+20:51:03 | [info ] | Adding player with ID 0 and guid 882705775975141657, SteamID: STEAM_0:1:86558105
+20:51:03 | [info ] | John Cena joined the server (187.6.199.98)
+20:53:58 | [info ] | Connection accepted
+20:53:58 | [info ] | Adding player with ID 3 and guid 963770346152702349, SteamID: STEAM_0:0:87665868
+20:53:58 | [info ] | Maniac joined the server (178.121.197.54)
+20:56:36 | [info ] | [chat]: <John Cena>: asa
+20:56:41 | [info ] | [chat]: <Vendo um fusca azul>: seu cu
+20:57:11 | [info ] | [chat]: <John Cena>: romero bito
+20:57:27 | [info ] | Maniac left the server (178.121.197.54)
+20:58:25 | [info ] | Connection accepted
+20:58:25 | [info ] | Adding player with ID 3 and guid 252201666263335291, SteamID: STEAM_0:1:64021591
+20:58:25 | [info ] | cheiro de merda joined the server (177.203.58.104)
+21:01:48 | [info ] | John Cena left the server (187.6.199.98)
+21:02:25 | [info ] | Connection accepted
+21:02:25 | [info ] | Adding player with ID 0 and guid 689050749496688337, SteamID: STEAM_0:1:18685618
+21:02:25 | [info ] | Koponen joined the server (78.27.107.211)
+21:03:29 | [info ] | cheiro de merda left the server (177.203.58.104)
+21:03:37 | [info ] | Koponen left the server (78.27.107.211)
+21:27:38 | [info ] | Vendo um fusca azul left the server (187.36.210.83)
+21:28:24 | [info ] | Klein left the server (179.105.100.48)
+21:35:05 | [info ] | Module CommandsController unloaded successfully
+21:35:05 | [info ] | Module Controls unloaded successfully
+21:35:05 | [info ] | Module Estabelecimento unloaded successfully
+21:35:05 | [info ] | Module Fome unloaded successfully
+21:35:05 | [info ] | Module freeroam unloaded successfully
+21:35:05 | [info ] | Module HUD unloaded successfully
+21:35:05 | [info ] | Module Maintenance unloaded successfully
+21:35:05 | [info ] | Module PlayerController unloaded successfully
+21:35:05 | [info ] | Server shutdown
+13:12:42 | [info ] | JCMP Server 0.2.1 (Build 1011)
+13:12:42 | [info ] | Loading configuration
+13:12:42 | [info ] | Succesfully loaded configuration
+13:12:43 | [info ] | No ban list found: cleared bans
+13:12:43 | [info ] | Server started up successfully
+13:12:43 | [info ] | Loading module CommandsController
+13:12:43 | [info ] | Module CommandsController loaded successfully
+13:12:43 | [info ] | Loading module Controls
+13:12:43 | [info ] | Module Controls loaded successfully
+13:12:43 | [info ] | Loading module Estabelecimento
+13:12:43 | [info ] | 	Loading script "server\Estabelecimento.lua"
+13:12:43 | [info ] | Module Estabelecimento loaded successfully
+13:12:43 | [info ] | Loading module Fome
+13:12:43 | [info ] | 	Loading script "server\Fome.lua"
+13:12:43 | [info ] | Module Fome loaded successfully
+13:12:43 | [info ] | Loading module freeroam
+13:12:43 | [info ] | 	Loading script "server\freeroam.lua"
+13:12:43 | [info ] | [freeroam] Opening spawns.txt
+13:12:43 | [info ] | [freeroam] Loaded spawns, 0.42 seconds
+13:12:43 | [info ] | Module freeroam loaded successfully
+13:12:43 | [info ] | Loading module HUD
+13:12:43 | [info ] | 	Loading script "server\HUD.lua"
+13:12:43 | [info ] | Module HUD loaded successfully
+13:12:43 | [info ] | Loading module Maintenance
+13:12:43 | [info ] | Module Maintenance loaded successfully
+13:12:43 | [info ] | Loading module PlayerController
+13:12:43 | [info ] | 	Loading script "server\PlayerController.lua"
+13:12:43 | [info ] | Module PlayerController loaded successfully
+13:16:21 | [info ] | Connection accepted
+13:16:21 | [info ] | Adding player with ID 0 and guid 707066684786339733, SteamID: STEAM_0:0:104176385
+13:16:21 | [info ] | Kubko joined the server (213.81.161.26)
+13:17:52 | [info ] | [chat]: <Kubko>: tr
+13:18:43 | [info ] | [chat]: <Kubko>: RT
+13:18:56 | [info ] | [chat]: <Kubko>: FRDESA
+13:19:04 | [info ] | [chat]: <Kubko>: EEEEEEEEEEEETT
+13:25:30 | [info ] | Kubko left the server (213.81.161.26)
+14:03:16 | [info ] | Connection accepted
+14:03:16 | [info ] | Adding player with ID 0 and guid 977281301587705212, SteamID: STEAM_0:1:129165881
+14:03:16 | [info ] | SİNON [___] joined the server (159.146.29.65)
+14:03:45 | [info ] | Connection accepted
+14:03:46 | [info ] | Adding player with ID 1 and guid 905223544116025063, SteamID: STEAM_0:0:156932063
+14:03:46 | [info ] | deslider joined the server (47.66.221.71)
+14:04:10 | [info ] | SİNON [___] left the server (159.146.29.65)
+14:05:32 | [info ] | deslider left the server (47.66.221.71)
+14:12:06 | [info ] | Connection accepted
+14:12:06 | [info ] | Adding player with ID 1 and guid 882705569405628987, SteamID: STEAM_0:1:88052394
+14:12:06 | [info ] | @TopLine joined the server (5.141.230.20)
+14:13:03 | [info ] | @TopLine left the server (5.141.230.20)
+14:32:03 | [info ] | Connection accepted
+14:32:03 | [info ] | Adding player with ID 1 and guid 171137015857537325, SteamID: STEAM_0:0:80834763
+14:32:03 | [info ] | [  ZG  ] joined the server (177.87.28.190)
+14:43:59 | [info ] | [  ZG  ] left the server (177.87.28.190)
+14:46:07 | [info ] | Connection accepted
+14:46:07 | [info ] | Adding player with ID 1 and guid 126100799852293688, SteamID: STEAM_0:0:155934065
+14:46:07 | [info ] | BizonKürdü joined the server (94.121.37.97)
+14:47:45 | [info ] | BizonKürdü left the server (94.121.37.97)
+15:03:15 | [info ] | Connection accepted
+15:31:06 | [info ] | Connection accepted
+15:31:06 | [info ] | Adding player with ID 1 and guid 743093947937369280, SteamID: STEAM_0:0:63628169
+15:31:06 | [info ] | OzY.Renato joined the server (186.244.42.33)
+15:31:08 | [info ] | Connection accepted
+15:31:08 | [info ] | Adding player with ID 0 and guid 639511219450336554, SteamID: STEAM_0:0:56221721
+15:31:08 | [info ] | DestryR (Elite) joined the server (201.74.229.177)
+15:31:20 | [info ] | DestryR (Elite) left the server (201.74.229.177)
+15:31:41 | [info ] | OzY.Renato left the server (186.244.42.33)
+15:40:01 | [info ] | Connection accepted
+15:40:01 | [info ] | Adding player with ID 1 and guid 1125899910328573203, SteamID: STEAM_0:0:101126589
+15:40:01 | [info ] | tioluiz54 joined the server (201.19.60.120)
+15:41:32 | [info ] | tioluiz54 left the server (201.19.60.120)
+15:47:25 | [info ] | Connection accepted
+15:47:25 | [info ] | Adding player with ID 1 and guid 612489562227595494, SteamID: STEAM_0:0:61065922
+15:47:25 | [info ] | guga_fischer joined the server (177.82.237.124)
+15:48:57 | [info ] | guga_fischer left the server (177.82.237.124)
+16:05:49 | [info ] | Connection accepted
+16:05:49 | [info ] | Adding player with ID 1 and guid 738590362567258608, SteamID: STEAM_0:1:116037691
+16:05:49 | [info ] | RUSSIANSCREAM joined the server (77.222.104.190)
+16:06:15 | [info ] | Connection accepted
+16:06:15 | [info ] | Adding player with ID 0 and guid 567453693655227466, SteamID: STEAM_0:1:128093902
+16:06:15 | [info ] | Harry Potter joined the server (31.163.26.86)
+16:07:37 | [info ] | RUSSIANSCREAM left the server (77.222.104.190)
+16:10:24 | [info ] | Harry Potter left the server (31.163.26.86)
+16:18:36 | [info ] | Connection accepted
+16:18:36 | [info ] | Adding player with ID 0 and guid 477381582860924635, SteamID: STEAM_0:1:70512195
+16:18:36 | [info ] | SBERBANK joined the server (95.71.35.213)
+16:18:40 | [info ] | Connection accepted
+16:18:41 | [info ] | Adding player with ID 1 and guid 612489575437810549, SteamID: STEAM_0:0:71783711
+16:18:41 | [info ] | Fluttershy joined the server (95.71.12.238)
+16:19:45 | [info ] | [chat]: <Fluttershy>: УНРОЕГЛН43 ЫЧЧ
+16:20:38 | [info ] | SBERBANK left the server (95.71.35.213)
+16:20:45 | [info ] | [chat]: <Fluttershy>: перопололд
+16:21:07 | [info ] | [chat]: <Fluttershy>: одщ8пжэюаывсчямлжыв
+16:24:42 | [info ] | Connection accepted
+16:24:42 | [info ] | Adding player with ID 0 and guid 562949971033010789, SteamID: STEAM_0:1:34706081
+16:24:42 | [info ] | TomyVerceti joined the server (179.158.234.129)
+16:25:43 | [info ] | TomyVerceti left the server (179.158.234.129)
+16:26:07 | [info ] | [chat]: <Fluttershy>: п
+16:26:09 | [info ] | [chat]: <Fluttershy>: нг\
+16:26:17 | [info ] | Fluttershy left the server (95.71.12.238)
+16:52:47 | [info ] | Connection accepted
+16:52:47 | [info ] | Adding player with ID 1 and guid 238691061457391555, SteamID: STEAM_0:0:42954892
+16:52:47 | [info ] | Xodeus joined the server (47.55.8.99)
+16:53:28 | [info ] | Xodeus left the server (47.55.8.99)
+16:56:46 | [info ] | Connection accepted
+16:56:46 | [info ] | Adding player with ID 1 and guid 607986445930883895, SteamID: STEAM_0:0:55207864
+16:56:46 | [info ] | Fegeleins_Antics joined the server (73.221.12.254)
+16:57:47 | [info ] | [chat]: <Fegeleins_Antics>: wq 
+17:03:02 | [info ] | Fegeleins_Antics left the server (73.221.12.254)
+17:07:50 | [info ] | Connection accepted
+17:07:50 | [info ] | Adding player with ID 1 and guid 549439157640758328, SteamID: STEAM_0:1:151366825
+17:07:50 | [info ] | samuelalpa joined the server (85.109.42.49)
+17:08:56 | [info ] | samuelalpa left the server (85.109.42.49)
+17:10:34 | [info ] | Connection accepted
+17:10:34 | [info ] | Adding player with ID 1 and guid 954763584753019056, SteamID: STEAM_0:0:78653366
+17:10:34 | [info ] | DerBoss joined the server (31.150.206.110)
+17:10:35 | [info ] | Connection accepted
+17:10:35 | [info ] | Adding player with ID 0 and guid 1080864240529709773, SteamID: STEAM_0:0:147422028
+17:10:35 | [info ] | -INSTiiNCT- joined the server (217.187.236.224)
+17:11:27 | [info ] | -INSTiiNCT- left the server (217.187.236.224)
+17:11:39 | [info ] | DerBoss left the server (31.150.206.110)
+17:24:34 | [info ] | Connection accepted
+17:24:34 | [info ] | Adding player with ID 1 and guid 216172816488118532, SteamID: STEAM_0:0:141888056
+17:24:34 | [info ] | SayMeow joined the server (178.141.103.55)
+17:26:12 | [info ] | Connection accepted
+17:26:12 | [info ] | Adding player with ID 0 and guid 243195256473775601, SteamID: STEAM_0:0:91298702
+17:26:12 | [info ] | MLG 420 BLAZE joined the server (178.141.103.55)
+17:29:17 | [info ] | MLG 420 BLAZE left the server (178.141.103.55)
+17:29:52 | [info ] | Connection accepted
+17:29:52 | [info ] | Adding player with ID 0 and guid 324260049983657533, SteamID: STEAM_0:0:91298702
+17:29:52 | [info ] | MLG 420 BLAZE joined the server (178.141.103.55)
+17:30:22 | [info ] | [chat]: <MLG 420 BLAZE>: пе
+17:34:47 | [info ] | MLG 420 BLAZE left the server (178.141.103.55)
+17:35:06 | [info ] | Connection accepted
+17:35:06 | [info ] | Adding player with ID 0 and guid 1134907983224003500, SteamID: STEAM_0:0:91298702
+17:35:06 | [info ] | MLG 420 BLAZE joined the server (178.141.103.55)
+17:56:07 | [info ] | Connection accepted
+17:56:07 | [info ] | Adding player with ID 2 and guid 689050776669863781, SteamID: STEAM_0:0:113305951
+17:56:07 | [info ] | May joined the server (191.243.94.242)
+17:56:38 | [info ] | [chat]: <May>: n tem paraqueda
+17:56:40 | [info ] | [chat]: <May>: :c
+17:56:52 | [info ] | Connection accepted
+17:56:52 | [info ] | Adding player with ID 3 and guid 247698000718358135, SteamID: STEAM_0:0:112569665
+17:56:52 | [info ] | GbsKiller joined the server (177.93.183.14)
+18:03:33 | [info ] | May left the server (191.243.94.242)
+18:03:41 | [info ] | GbsKiller left the server (177.93.183.14)
+18:04:24 | [info ] | Connection accepted
+18:04:24 | [info ] | Adding player with ID 3 and guid 148618809377949847, SteamID: STEAM_0:0:112569665
+18:04:24 | [info ] | GbsKiller joined the server (177.93.183.14)
+18:04:53 | [info ] | MLG 420 BLAZE left the server (178.141.103.55)
+18:05:08 | [info ] | GbsKiller left the server (177.93.183.14)
+18:05:16 | [info ] | SayMeow left the server (178.141.103.55)
+18:27:52 | [info ] | Connection accepted
+18:27:52 | [info ] | Adding player with ID 1 and guid 860188005233020623, SteamID: STEAM_0:0:122896332
+18:27:52 | [info ] | Black ★Zevs★ joined the server (185.48.36.1)
+18:28:55 | [info ] | Connection accepted
+18:28:55 | [info ] | Adding player with ID 3 and guid 378302369757014454, SteamID: STEAM_0:1:129049635
+18:28:55 | [info ] | WHITE BRATISHKA joined the server (79.139.204.213)
+18:28:56 | [info ] | Connection accepted
+18:28:56 | [info ] | Adding player with ID 0 and guid 391813183494328955, SteamID: STEAM_0:1:80479770
+18:28:56 | [info ] | The_Flying_Spaghetti joined the server (174.50.72.113)
+18:30:01 | [info ] | Black ★Zevs★ left the server (185.48.36.1)
+18:30:12 | [info ] | WHITE BRATISHKA left the server (79.139.204.213)
+18:30:15 | [info ] | Connection accepted
+18:30:16 | [info ] | Adding player with ID 3 and guid 689051536639370973, SteamID: STEAM_0:0:55502143
+18:30:16 | [info ] | IDDX1 {OrcaInquisiti joined the server (97.123.106.133)
+18:31:56 | [info ] | Connection accepted
+18:31:56 | [info ] | Adding player with ID 1 and guid 1089871109982197138, SteamID: STEAM_0:1:75456641
+18:31:56 | [info ] | Anakin Skywalker joined the server (189.58.55.183)
+18:32:42 | [info ] | IDDX1 {OrcaInquisiti left the server (97.123.106.133)
+18:32:50 | [info ] | [chat]: <Anakin Skywalker>: ué
+18:32:55 | [info ] | [chat]: <Anakin Skywalker>: outro server?
+18:32:55 | [info ] | The_Flying_Spaghetti left the server (174.50.72.113)
+18:33:30 | [info ] | Anakin Skywalker left the server (189.58.55.183)
+18:39:59 | [info ] | Connection accepted
+18:39:59 | [info ] | Adding player with ID 1 and guid 436849760154934198, SteamID: STEAM_0:1:75344848
+18:39:59 | [info ] | Silentcreeper7 joined the server (24.225.70.242)
+18:40:01 | [info ] | Connection accepted
+18:40:01 | [info ] | Adding player with ID 0 and guid 842173426165038293, SteamID: STEAM_0:1:74057758
+18:40:01 | [info ] | frodo_baggins joined the server (24.225.70.242)
+18:43:26 | [info ] | Silentcreeper7 left the server (24.225.70.242)
+18:45:40 | [info ] | Connection accepted
+18:45:40 | [info ] | Adding player with ID 1 and guid 351281367597570537, SteamID: STEAM_0:1:75344848
+18:45:40 | [info ] | Silentcreeper7 joined the server (24.225.70.242)
+18:49:32 | [info ] | frodo_baggins left the server (24.225.70.242)
+18:50:21 | [info ] | Connection accepted
+18:50:21 | [info ] | Adding player with ID 0 and guid 1040331810517310263, SteamID: STEAM_0:1:74057758
+18:50:21 | [info ] | frodo_baggins joined the server (24.225.70.242)
+18:57:50 | [info ] | Connection accepted
+18:57:50 | [info ] | Adding player with ID 3 and guid 770115539272986198, SteamID: STEAM_0:0:64839676
+18:57:50 | [info ] | Michael_Gamer joined the server (152.249.202.127)
+18:58:22 | [info ] | Michael_Gamer left the server (152.249.202.127)
+18:59:38 | [info ] | Connection accepted
+18:59:38 | [info ] | Adding player with ID 3 and guid 707065144708854057, SteamID: STEAM_0:0:64839676
+18:59:38 | [info ] | Michael_Gamer joined the server (152.249.202.127)
+19:00:09 | [info ] | Michael_Gamer left the server (152.249.202.127)
+19:13:06 | [info ] | Connection accepted
+19:13:06 | [info ] | Adding player with ID 3 and guid 139611668871355305, SteamID: STEAM_0:1:52774643
+19:13:06 | [info ] | BlackS joined the server (179.180.80.164)
+19:13:12 | [info ] | Connection accepted
+19:13:12 | [info ] | Adding player with ID 2 and guid 1085367512800441568, SteamID: STEAM_0:0:82079158
+19:13:12 | [info ] | Поезд до христа joined the server (178.121.36.18)
+19:13:19 | [info ] | [chat]: <BlackS>: oi
+19:14:37 | [info ] | Поезд до христа left the server (178.121.36.18)
+19:14:46 | [info ] | BlackS left the server (179.180.80.164)
+19:15:18 | [info ] | Connection accepted
+19:15:19 | [info ] | Adding player with ID 3 and guid 180144013612546006, SteamID: STEAM_0:1:124027472
+19:15:19 | [info ] | PAI DO  Z joined the server (189.27.199.18)
+19:16:05 | [info ] | [chat]: <PAI DO  Z>: fala galera 
+19:16:38 | [info ] | [chat]: <PAI DO  Z>: ou oq tem de diferente nesse server ?
+19:19:30 | [info ] | Connection accepted
+19:19:30 | [info ] | Adding player with ID 2 and guid 463870761957152750, SteamID: STEAM_0:1:128238960
+19:19:30 | [info ] | miningclub119 joined the server (174.114.195.14)
+19:19:32 | [info ] | PAI DO  Z left the server (189.27.199.18)
+19:20:19 | [info ] | miningclub119 left the server (174.114.195.14)
+19:25:05 | [info ] | Connection accepted
+19:25:06 | [info ] | Adding player with ID 2 and guid 932245152487742288, SteamID: STEAM_0:0:86154851
+19:25:06 | [info ] | Leok joined the server (189.62.218.206)
+19:25:13 | [info ] | Connection accepted
+19:25:13 | [info ] | Adding player with ID 3 and guid 891712731318585932, SteamID: STEAM_0:1:91831690
+19:25:13 | [info ] | Risadinha joined the server (177.81.125.58)
+19:25:24 | [info ] | Leok left the server (189.62.218.206)
+19:25:30 | [info ] | Risadinha left the server (177.81.125.58)
+19:38:11 | [info ] | Silentcreeper7 left the server (24.225.70.242)
+19:40:36 | [info ] | Connection accepted
+19:40:36 | [info ] | Adding player with ID 1 and guid 216173382072857489, SteamID: STEAM_0:1:75344848
+19:40:36 | [info ] | Silentcreeper7 joined the server (24.225.70.242)
+19:41:14 | [info ] | frodo_baggins left the server (24.225.70.242)
+19:41:17 | [info ] | Silentcreeper7 left the server (24.225.70.242)
+19:41:56 | [info ] | Connection accepted
+19:41:56 | [info ] | Adding player with ID 1 and guid 635007603554304939, SteamID: STEAM_0:1:97685773
+19:41:56 | [info ] | Liviinha joined the server (177.135.3.251)
+19:42:10 | [info ] | Liviinha left the server (177.135.3.251)
+21:21:52 | [info ] | Connection accepted
+21:21:52 | [info ] | Adding player with ID 1 and guid 95251947339, SteamID: STEAM_0:0:41215553
+21:21:52 | [info ] | Inside joined the server (186.205.196.58)
+21:23:02 | [info ] | Inside left the server (186.205.196.58)
+21:50:25 | [info ] | Connection accepted
+21:50:25 | [info ] | Adding player with ID 1 and guid 819655156786985380, SteamID: STEAM_0:1:90074657
+21:50:25 | [info ] | Rafatek joined the server (200.102.23.77)
+21:50:39 | [info ] | Connection accepted
+21:50:39 | [info ] | Adding player with ID 0 and guid 495396206242731627, SteamID: STEAM_0:1:95010567
+21:50:39 | [info ] | XHodForevis joined the server (186.216.123.227)
+21:51:01 | [info ] | [chat]: <XHodForevis>: genteeeeeeeeeeee
+21:51:05 | [info ] | [chat]: <XHodForevis>: como abre o paraquedas
+21:55:59 | [info ] | Connection accepted
+21:56:00 | [info ] | Adding player with ID 3 and guid 486388760055802772, SteamID: STEAM_0:1:86917362
+21:56:00 | [info ] | Thiago joined the server (179.223.186.20)
+21:56:15 | [info ] | Thiago left the server (179.223.186.20)
+21:56:54 | [info ] | Connection accepted
+21:56:54 | [info ] | Adding player with ID 3 and guid 846676738557386514, SteamID: STEAM_0:0:79221751
+21:56:54 | [info ] | ✪ vpkUrso joined the server (177.141.54.163)
+21:57:04 | [info ] | Connection accepted
+21:57:04 | [info ] | Adding player with ID 2 and guid 229683583913659330, SteamID: STEAM_0:1:86917362
+21:57:04 | [info ] | Thiago joined the server (179.223.186.20)
+21:57:47 | [info ] | ✪ vpkUrso left the server (177.141.54.163)
+21:58:35 | [info ] | Thiago left the server (179.223.186.20)
+22:00:27 | [info ] | Connection accepted
+22:00:27 | [info ] | Adding player with ID 2 and guid 846676738557386514, SteamID: STEAM_0:0:79221751
+22:00:27 | [info ] | ✪ vpkUrso joined the server (177.141.54.163)
+22:00:53 | [info ] | Connection accepted
+22:00:53 | [info ] | Adding player with ID 3 and guid 662029146697008154, SteamID: STEAM_0:1:113284639
+22:00:53 | [info ] | Anonymous00 joined the server (191.53.8.109)
+22:00:59 | [info ] | Connection accepted
+22:00:59 | [info ] | Adding player with ID 4 and guid 153122569203180486, SteamID: STEAM_0:0:93569917
+22:00:59 | [info ] | matheusborioli joined the server (191.223.213.58)
+22:01:42 | [info ] | Connection accepted
+22:01:42 | [info ] | Adding player with ID 5 and guid 707065180527156432, SteamID: STEAM_0:1:34706081
+22:01:42 | [info ] | TomyVerceti joined the server (179.158.234.129)
+22:01:54 | [info ] | [chat]: <TomyVerceti>: kd aquele server ?
+22:01:57 | [info ] | [chat]: <matheusborioli>: '-'
+22:02:02 | [info ] | Connection accepted
+22:02:02 | [info ] | Adding player with ID 6 and guid 833165937356295717, SteamID: STEAM_0:0:98882650
+22:02:02 | [info ] | hur dur joined the server (179.228.31.157)
+22:02:30 | [info ] | hur dur left the server (179.228.31.157)
+22:02:32 | [info ] | ✪ vpkUrso left the server (177.141.54.163)
+22:03:31 | [info ] | [chat]: <TomyVerceti>: sa porra morre n
+22:03:34 | [info ] | [chat]: <XHodForevis>: tem tp ?
+22:03:47 | [info ] | Anonymous00 left the server (191.53.8.109)
+22:04:34 | [info ] | matheusborioli left the server (191.223.213.58)
+22:05:12 | [info ] | TomyVerceti left the server (179.158.234.129)
+22:07:54 | [info ] | Connection accepted
+22:07:54 | [info ] | Adding player with ID 5 and guid 243196186028316215, SteamID: STEAM_0:0:66776021
+22:07:54 | [info ] | sergiom879 joined the server (174.25.54.70)
+22:08:19 | [info ] | sergiom879 left the server (174.25.54.70)
+22:11:03 | [info ] | Connection accepted
+22:11:03 | [info ] | Adding player with ID 5 and guid 265712414094815842, SteamID: STEAM_0:1:71889790
+22:11:03 | [info ] | GaGu joined the server (177.92.47.84)
+22:14:22 | [info ] | [chat]: <XHodForevis>: frdesw
+22:17:19 | [info ] | [Console] pessoal, seja l� quem esteja no server
+22:17:22 | [info ] | [Console] terei que fech�-lo agora
+22:17:23 | [info ] | GaGu left the server (177.92.47.84)
+22:17:30 | [info ] | [chat]: <Rafatek>: serio
+22:17:36 | [info ] | Connection accepted
+22:17:36 | [info ] | Adding player with ID 5 and guid 1139410751791403877, SteamID: STEAM_0:0:11728421
+22:17:36 | [info ] | Syed Muhammad joined the server (192.168.0.1)
+22:17:42 | [info ] | [chat]: <Syed Muhammad>: serio, kk
+22:17:48 | [info ] | [chat]: <Syed Muhammad>: curte o face la
+22:17:52 | [info ] | [chat]: <Syed Muhammad>: postaremos o lançamento
+22:18:03 | [info ] | [chat]: <Rafatek>: abre quando mais ou menos?
+22:18:11 | [info ] | [chat]: <Syed Muhammad>: não sei dizer
+22:18:16 | [info ] | [chat]: <Syed Muhammad>: espero que em janeiro/fevereir
+22:18:25 | [info ] | [chat]: <Rafatek>: blz 
+22:18:26 | [info ] | [chat]: <Syed Muhammad>: curta o face la ;)
+22:18:31 | [info ] | [chat]: <Rafatek>: pode deixa
+22:18:32 | [info ] | [chat]: <Syed Muhammad>: saindo o/
+22:18:35 | [info ] | Syed Muhammad left the server (192.168.0.1)
+22:18:36 | [info ] | [chat]: <Rafatek>: flw
+22:18:40 | [info ] | Module CommandsController unloaded successfully
+22:18:40 | [info ] | Module Controls unloaded successfully
+22:18:40 | [info ] | Module Estabelecimento unloaded successfully
+22:18:40 | [info ] | Module Fome unloaded successfully
+22:18:40 | [info ] | Module freeroam unloaded successfully
+22:18:40 | [info ] | Module HUD unloaded successfully
+22:18:40 | [info ] | Module Maintenance unloaded successfully
+22:18:41 | [info ] | Module PlayerController unloaded successfully
+22:18:41 | [info ] | Server shutdown
+11:59:34 | [info ] | JCMP Server 0.2.1 (Build 1011)
+11:59:34 | [info ] | Loading configuration
+11:59:34 | [info ] | Succesfully loaded configuration
+11:59:36 | [info ] | No ban list found: cleared bans
+11:59:36 | [info ] | Server started up successfully
+11:59:36 | [info ] | Loading module CommandsController
+11:59:36 | [info ] | Module CommandsController loaded successfully
+11:59:36 | [info ] | Loading module Controls
+11:59:36 | [info ] | Module Controls loaded successfully
+11:59:36 | [info ] | Loading module Estabelecimento
+11:59:36 | [info ] | 	Loading script "server\Estabelecimento.lua"
+11:59:36 | [info ] | Module Estabelecimento loaded successfully
+11:59:36 | [info ] | Loading module Fome
+11:59:36 | [info ] | 	Loading script "server\Fome.lua"
+11:59:36 | [info ] | Module Fome loaded successfully
+11:59:36 | [info ] | Loading module freeroam
+11:59:36 | [info ] | 	Loading script "server\freeroam.lua"
+11:59:36 | [info ] | [freeroam] Opening spawns.txt
+11:59:36 | [info ] | [freeroam] Loaded spawns, 0.43 seconds
+11:59:36 | [info ] | Module freeroam loaded successfully
+11:59:36 | [info ] | Loading module HUD
+11:59:36 | [info ] | 	Loading script "server\HUD.lua"
+11:59:36 | [info ] | Module HUD loaded successfully
+11:59:36 | [info ] | Loading module Maintenance
+11:59:36 | [info ] | Module Maintenance loaded successfully
+11:59:36 | [info ] | Loading module PlayerController
+11:59:36 | [info ] | 	Loading script "server\PlayerController.lua"
+11:59:36 | [info ] | Module PlayerController loaded successfully
+12:14:45 | [info ] | Connection accepted
+12:14:45 | [info ] | Adding player with ID 0 and guid 1089871126459446241, SteamID: STEAM_0:0:133025756
+12:14:45 | [info ] | Bloody Gamer joined the server (2.135.111.115)
+12:15:08 | [info ] | Bloody Gamer left the server (2.135.111.115)
+12:15:21 | [info ] | Connection accepted
+12:15:21 | [info ] | Adding player with ID 0 and guid 747597793886418638, SteamID: STEAM_0:0:84552510
+12:15:21 | [info ] | Fenix joined the server (31.163.157.84)
+12:16:45 | [info ] | Fenix left the server (31.163.157.84)
+12:18:01 | [info ] | Connection accepted
+12:18:01 | [info ] | Adding player with ID 0 and guid 752101146267365021, SteamID: STEAM_0:0:156714906
+12:18:01 | [info ] | nicolas16a joined the server (78.141.80.148)
+12:18:32 | [info ] | nicolas16a left the server (78.141.80.148)
+12:35:40 | [info ] | Connection accepted
+12:35:40 | [info ] | Adding player with ID 0 and guid 1085367617083965647, SteamID: STEAM_0:0:82022993
+12:35:40 | [info ] | xBuzz joined the server (83.250.140.11)
+12:36:16 | [info ] | Connection accepted
+12:36:16 | [info ] | Adding player with ID 1 and guid 963771172181041321, SteamID: STEAM_0:1:109203073
+12:36:16 | [info ] | Jons joined the server (85.225.34.96)
+12:38:21 | [info ] | xBuzz left the server (83.250.140.11)
+12:38:27 | [info ] | Jons left the server (85.225.34.96)
+12:50:47 | [info ] | Connection accepted
+12:50:47 | [info ] | Adding player with ID 1 and guid 112590004450202073, SteamID: STEAM_0:0:52886184
+12:50:47 | [info ] | Noumenon joined the server (179.125.133.3)
+12:54:00 | [info ] | Connection accepted
+12:54:00 | [info ] | Adding player with ID 0 and guid 833165939748117508, SteamID: STEAM_0:1:104095402
+12:54:00 | [info ] | 407dimas31 joined the server (109.62.238.183)
+12:56:36 | [info ] | 407dimas31 left the server (109.62.238.183)
+12:58:15 | [info ] | Noumenon left the server (179.125.133.3)
+13:29:02 | [info ] | Connection accepted
+13:29:02 | [info ] | Adding player with ID 1 and guid 1026820809852394365, SteamID: STEAM_0:1:54817586
+13:29:02 | [info ] | O Curandeiro Arretad joined the server (177.13.91.106)
+13:29:38 | [info ] | Connection accepted
+13:29:38 | [info ] | Adding player with ID 0 and guid 1017813693738822503, SteamID: STEAM_0:1:114409609
+13:29:38 | [info ] | ATOM joined the server (176.97.139.242)
+13:30:20 | [info ] | O Curandeiro Arretad left the server (177.13.91.106)
+13:33:14 | [info ] | ATOM left the server (176.97.139.242)
+13:33:15 | [info ] | Connection accepted
+13:33:15 | [info ] | Adding player with ID 0 and guid 1017813693738822503, SteamID: STEAM_0:1:114409609
+13:33:15 | [info ] | ATOM joined the server (176.97.139.242)
+13:34:20 | [info ] | Connection accepted
+13:34:20 | [info ] | Adding player with ID 1 and guid 135108002807454767, SteamID: STEAM_0:0:93652207
+13:34:20 | [info ] | subzero joined the server (189.7.14.35)
+13:34:50 | [info ] | [chat]: <subzero>: eita pourra como q usa o paraquedas
+13:34:56 | [info ] | ATOM left the server (176.97.139.242)
+13:35:11 | [info ] | subzero left the server (189.7.14.35)
+13:56:18 | [info ] | Connection accepted
+13:56:18 | [info ] | Adding player with ID 1 and guid 351280803219585582, SteamID: STEAM_0:1:7734775
+13:56:18 | [info ] | twiterist joined the server (109.248.39.160)
+13:57:42 | [info ] | twiterist left the server (109.248.39.160)
+14:16:12 | [info ] | Connection accepted
+14:16:12 | [info ] | Adding player with ID 1 and guid 126100807337490703, SteamID: STEAM_0:1:58506471
+14:16:12 | [info ] | Digit joined the server (177.148.142.205)
+14:17:20 | [info ] | Digit left the server (177.148.142.205)
+14:20:26 | [info ] | Connection accepted
+14:20:26 | [info ] | Adding player with ID 1 and guid 391813172187267226, SteamID: STEAM_0:0:119204771
+14:20:26 | [info ] | Occuvite joined the server (5.251.203.232)
+14:20:40 | [info ] | Connection accepted
+14:20:56 | [info ] | Connection accepted
+14:21:41 | [info ] | Connection accepted
+14:23:35 | [info ] | Occuvite left the server (5.251.203.232)
+14:23:49 | [info ] | Connection accepted
+14:30:32 | [info ] | Connection accepted
+14:30:32 | [info ] | Adding player with ID 1 and guid 472878000421576488, SteamID: STEAM_0:1:50449361
+14:30:32 | [info ] | Che joined the server (187.104.81.64)
+14:30:42 | [info ] | Connection accepted
+14:30:42 | [info ] | Adding player with ID 0 and guid 1044835221824615473, SteamID: STEAM_0:1:48021812
+14:30:42 | [info ] | Palinkas joined the server (191.249.226.155)
+14:30:55 | [info ] | Che left the server (187.104.81.64)
+14:30:59 | [info ] | Palinkas left the server (191.249.226.155)
+14:32:14 | [info ] | Connection accepted
+14:32:14 | [info ] | Adding player with ID 0 and guid 1062849545710164674, SteamID: STEAM_0:0:106775873
+14:32:14 | [info ] | Альтруист joined the server (178.206.160.23)
+14:32:27 | [info ] | Альтруист left the server (178.206.160.23)
+14:39:55 | [info ] | Connection accepted
+14:39:55 | [info ] | Adding player with ID 0 and guid 1067353186271709403, SteamID: STEAM_0:0:89608407
+14:39:55 | [info ] | TheKillerBr joined the server (189.126.183.165)
+14:41:35 | [info ] | TheKillerBr left the server (189.126.183.165)
+14:45:54 | [info ] | Connection accepted
+14:45:54 | [info ] | Adding player with ID 0 and guid 103583122568159378, SteamID: STEAM_0:0:97315422
+14:45:54 | [info ] | ♪ ♫ DJ Vinyl ♪ ♫ joined the server (94.233.11.246)
+14:46:08 | [info ] | ♪ ♫ DJ Vinyl ♪ ♫ left the server (94.233.11.246)
+14:50:33 | [info ] | Connection accepted
+14:50:33 | [info ] | Adding player with ID 0 and guid 229683603249603272, SteamID: STEAM_0:1:59031092
+14:50:33 | [info ] | ☭☣♫zLoiPEcHeNkO♫☣☭ joined the server (91.229.11.22)
+14:51:21 | [info ] | Connection accepted
+14:51:21 | [info ] | Adding player with ID 1 and guid 36029113092874249, SteamID: STEAM_0:0:59783622
+14:51:21 | [info ] | ЕНОТ joined the server (95.153.133.206)
+14:51:55 | [info ] | Connection accepted
+14:51:55 | [info ] | Adding player with ID 2 and guid 774619146559525860, SteamID: STEAM_0:1:59607992
+14:51:55 | [info ] | Minatico joined the server (189.114.165.255)
+14:52:29 | [info ] | [chat]: <Minatico>: qual botão que abre as asinha ?
+14:52:37 | [info ] | [chat]: <☭☣♫zLoiPEcHeNkO♫☣☭>: мы русские
+14:52:38 | [info ] | [chat]: <ЕНОТ>: иди в жопу
+14:52:43 | [info ] | Minatico left the server (189.114.165.255)
+14:53:08 | [info ] | ☭☣♫zLoiPEcHeNkO♫☣☭ left the server (91.229.11.22)
+14:53:58 | [info ] | ЕНОТ left the server (95.153.133.206)
+15:07:11 | [info ] | Connection accepted
+15:07:11 | [info ] | Adding player with ID 1 and guid 756604739619339717, SteamID: STEAM_0:0:43428124
+15:07:11 | [info ] | Orcelino joined the server (177.17.24.7)
+15:09:48 | [info ] | [chat]: <Orcelino>: okodksa
+15:10:36 | [info ] | Connection accepted
+15:10:36 | [info ] | Adding player with ID 0 and guid 45036433513681468, SteamID: STEAM_0:1:47941110
+15:10:36 | [info ] | Sudden_Death joined the server (189.32.188.203)
+15:12:59 | [info ] | Orcelino left the server (177.17.24.7)
+15:13:47 | [info ] | Sudden_Death left the server (189.32.188.203)
+15:21:19 | [info ] | Connection accepted
+15:21:19 | [info ] | Adding player with ID 0 and guid 567453725988933015, SteamID: STEAM_0:0:156999741
+15:21:19 | [info ] | maricelalrojo joined the server (200.117.234.209)
+15:22:51 | [info ] | maricelalrojo left the server (200.117.234.209)
+16:06:37 | [info ] | Connection accepted
+16:06:37 | [info ] | Adding player with ID 0 and guid 905223540328739465, SteamID: STEAM_0:0:37383678
+16:06:37 | [info ] | ze do caldos joined the server (187.104.203.8)
+16:06:38 | [info ] | Connection accepted
+16:06:38 | [info ] | Adding player with ID 1 and guid 630503961423232184, SteamID: STEAM_0:1:105879593
+16:06:38 | [info ] | Risadinha009    (Sen joined the server (187.113.31.89)
+16:07:47 | [info ] | Risadinha009    (Sen left the server (187.113.31.89)
+16:07:49 | [info ] | ze do caldos left the server (187.104.203.8)
+16:11:30 | [info ] | Connection accepted
+16:11:30 | [info ] | Adding player with ID 0 and guid 995295530802467537, SteamID: STEAM_0:0:89224124
+16:11:30 | [info ] | Herfest joined the server (189.38.41.180)
+16:14:23 | [info ] | Herfest left the server (189.38.41.180)
+16:18:23 | [info ] | Connection accepted
+16:18:23 | [info ] | Adding player with ID 0 and guid 202662426976723050, SteamID: STEAM_0:0:55720275
+16:18:23 | [info ] | funga10 joined the server (188.228.4.157)
+16:18:41 | [info ] | Connection accepted
+16:18:41 | [info ] | Adding player with ID 1 and guid 81064990264943218, SteamID: STEAM_0:1:110031634
+16:18:41 | [info ] | MLG DOGE joined the server (24.135.169.200)
+16:18:50 | [info ] | funga10 left the server (188.228.4.157)
+16:19:17 | [info ] | MLG DOGE left the server (24.135.169.200)
+16:31:16 | [info ] | Connection accepted
+16:31:16 | [info ] | Adding player with ID 1 and guid 495396147115660764, SteamID: STEAM_0:0:84114188
+16:31:16 | [info ] | Kirito joined the server (179.98.195.72)
+16:33:38 | [info ] | Connection accepted
+16:33:38 | [info ] | Adding player with ID 0 and guid 684547147611746248, SteamID: STEAM_0:0:56661177
+16:33:38 | [info ] | KillMen joined the server (176.114.224.8)
+16:34:57 | [info ] | KillMen left the server (176.114.224.8)
+16:41:25 | [info ] | Kirito left the server (179.98.195.72)
+16:48:00 | [info ] | Connection accepted
+16:48:00 | [info ] | Adding player with ID 1 and guid 1080863911328184297, SteamID: STEAM_0:0:53086367
+16:48:00 | [info ] | DrDEATHdefy821 joined the server (86.135.115.184)
+16:49:44 | [info ] | Connection accepted
+16:49:44 | [info ] | Adding player with ID 0 and guid 1062849652474161151, SteamID: STEAM_0:1:150582228
+16:49:44 | [info ] | youth joined the server (177.193.12.116)
+16:49:52 | [info ] | [chat]: <youth>: q isso
+16:49:59 | [info ] | youth left the server (177.193.12.116)
+16:50:36 | [info ] | DrDEATHdefy821 left the server (86.135.115.184)
+16:57:19 | [info ] | Connection accepted
+16:57:19 | [info ] | Adding player with ID 1 and guid 612489564294702130, SteamID: STEAM_0:1:30867006
+16:57:19 | [info ] | Sushi Cat[AG] joined the server (98.215.13.15)
+16:59:25 | [info ] | Sushi Cat[AG] left the server (98.215.13.15)
+17:34:47 | [info ] | Connection accepted
+17:34:47 | [info ] | Adding player with ID 1 and guid 824158749206755508, SteamID: STEAM_0:1:103740861
+17:34:47 | [info ] | barbossa2007 joined the server (78.178.37.157)
+17:36:14 | [info ] | barbossa2007 left the server (78.178.37.157)
+18:09:37 | [info ] | Connection accepted
+18:09:37 | [info ] | Adding player with ID 1 and guid 589971567337656663, SteamID: STEAM_0:1:73851938
+18:09:37 | [info ] | Chupakabra joined the server (176.98.148.255)
+18:09:51 | [info ] | [chat]: <Chupakabra>: ОВЕН
+18:09:54 | [info ] | Chupakabra left the server (176.98.148.255)
+18:14:16 | [info ] | Connection accepted
+18:14:16 | [info ] | Adding player with ID 1 and guid 752101138968639075, SteamID: STEAM_0:0:56661177
+18:14:16 | [info ] | KillMen joined the server (176.114.224.8)
+18:15:13 | [info ] | KillMen left the server (176.114.224.8)
+18:20:23 | [info ] | Connection accepted
+18:20:24 | [info ] | Adding player with ID 1 and guid 626000796179860104, SteamID: STEAM_0:1:154152510
+18:20:24 | [info ] | Thall3s joined the server (186.225.13.191)
+18:20:33 | [info ] | Connection accepted
+18:20:33 | [info ] | Adding player with ID 0 and guid 22519232851161169, SteamID: STEAM_0:1:123241897
+18:20:33 | [info ] | EX.eric joined the server (187.85.148.230)
+18:20:39 | [info ] | Thall3s left the server (186.225.13.191)
+18:21:15 | [info ] | EX.eric left the server (187.85.148.230)
+18:32:13 | [info ] | Module CommandsController unloaded successfully
+18:32:13 | [info ] | Module Controls unloaded successfully
+18:32:13 | [info ] | Module Estabelecimento unloaded successfully
+18:32:13 | [info ] | Module Fome unloaded successfully
+18:32:13 | [info ] | Module freeroam unloaded successfully
+18:32:13 | [info ] | Module HUD unloaded successfully
+18:32:13 | [info ] | Module Maintenance unloaded successfully
+18:32:13 | [info ] | Module PlayerController unloaded successfully
+18:32:14 | [info ] | Server shutdown
