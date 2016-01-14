@@ -1,0 +1,249 @@
+<!-- EVENT overall_footer_content_after -->
+
+	</div> <!-- page-body id in header -->
+  </div> <!-- content-forum in header -->
+ </div> <!-- container in header -->
+
+<!-- EVENT overall_footer_page_body_after -->
+
+<!-- IF not S_USER_LOGGED_IN and not S_IS_BOT and SCRIPT_NAME == "index" -->
+    <!-- INCLUDE addons/sitesplat_login_body.html -->
+<!-- ENDIF -->
+
+	<section class="section-page">
+        <div id="rtblock" class="container">
+            <!-- IF .fltl --><!-- EVENT fltl --><!-- ELSE --><!-- INCLUDE addons/recent_topics_body.html --><!-- ENDIF -->
+        </div>
+    </section>
+
+<!-- EVENT call_to_action_before -->	
+  <!-- IF FLATBOOTS_MINI_CMS_ENABLED -->
+     <!-- EVENT call_to_action_body_instead -->
+  <!-- ELSE --> 
+	<!-- INCLUDE addons/call_to_action_body.html -->
+  <!-- ENDIF -->
+<!-- EVENT call_to_action_after -->  
+	
+	<!-- IF FLATBOOTS_MINI_CMS_ENABLED -->
+		<!-- EVENT prefooter_instead -->
+	<!-- ELSE -->
+    <section class="section-pre-footer">
+		<div class="container center">
+			<div class="row">
+				<div class="col-sm-5 twitter">
+					<div class="thumb"><i class="fa fa-paw"></i></div>
+					<div class="text">
+						<h3>Sobre</h3>
+						<p>
+						JC:RP é um poderoso servidor de Roleplay para Just Cause 2. 
+						Inaugurado em meados de 2014, agregou aspectos de antigos servidores de SA-MP e MTA, como novos lançamentos de GTA:V e Just Cause 3.
+						
+						</p>
+						<a href="/viewtopic.php?f=4&p=5"><strong>Saiba Mais</strong></a>
+					</div>
+				</div>
+				<div class="col-sm-5 col-sm-offset-2 twitter">
+					<div class="thumb"><i class="fa fa-twitter"></i></div>
+					<div class="text">
+						<h3><a href="https://twitter.com/justcauserp">{L_JOIN_US_TWITTER}&nbsp;<small>@justcauserp</small></a></h3>
+						 <div id="twitter-feed"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		 <div class="section-bg"></div>
+	</section>
+	<!-- ENDIF -->
+    
+	<footer class="burned-asphalt"> <!-- Footer block -->
+		<div class="midnight-" id="sub-footer">
+			<div class="container">
+				<div class="row bottomLinks">
+				
+					<div class="col-sm-6 sm-direction">
+					 <nav>
+					<!-- IF FLATBOOTS_MINI_CMS_ENABLED -->
+						<!-- EVENT footer_links_instead -->
+					<!-- ELSE -->
+						<ul class="list-inline footer-nav">
+						 <li><a href="{U_PRIVACY}" title="">{L_PRIVACY}</a></li>
+						 <li><a href="{U_DMCA}" title="">{L_DMCA}</a></li>
+						 <li><a href="{U_TERMS_USE}" title="">{L_TERMS}</a></li>
+						 <!-- EVENT overall_footer_teamlink_before -->
+						 <!-- IF U_CONTACT_US -->
+						 <li><a href="{U_CONTACT_US}" title="">{L_CONTACT_US}</a></li>
+						 <!-- ENDIF -->
+						 <!-- EVENT overall_footer_teamlink_after -->
+						</ul>
+					<!-- ENDIF -->	
+					 </nav>
+					</div>
+						
+					<div class="col-sm-6 sm-direction">	
+						<div class="clearfix socialbar">
+						<!-- IF FLATBOOTS_MINI_CMS_ENABLED -->
+								<!-- EVENT footer_social_instead -->
+						<!-- ELSE -->
+							<div class="social-network">
+								<a class="facebook-color" title="Facebook" href="https://facebook.com/jc2rp"><i class="fa fa-facebook"></i></a>
+								<a class="twitter-color" title="Twitter" href="https://twitter.com/justcauserp"><i class="fa fa-twitter"></i></a>
+								<a class="steam-color" title="Steam" href="http://steamcommunity.com/groups/justcauserp"><i class="fa fa-steam icon-steam"></i></a>
+								<a class="youtube-color" title="Youtube" href="https://www.youtube.com/channel/UCqgaQygsMtsuO-JmyjCX_pA"><i class="fa fa-youtube icon-youtube"></i></a>
+								<!-- <a class="github-color" title="Github" href="#2"><i class="fa fa-github"></i></a> -->
+								<!-- <a class="behance-color" title="Behance" href="#3"><i class="fa fa-behance"></i></a> -->
+								<!-- <a class="dropbox-color" title="Dropbox" href="#4"><i class="fa fa-dropbox"></i></a> -->
+								<!-- <a class="pinterest-color" title="Pinterest" href="#5"><i class="fa fa-pinterest"></i></a> -->
+								<!-- <a class="bitbucket-color" title="Bitbucket" href="#8"><i class="fa fa-bitbucket"></i></a> -->
+								<!-- <a class="envato-color" title="Envato" href="http://themeforest.net/user/ThemeSplat/portfolio?ref=ThemeSplat"><i class="icon-moon-envatoleaf"></i></a> -->
+								<a class="rss-color hidden-xs" title="rss" href="{U_FEED}"><i class="fa fa-rss"></i></a>
+							</div>
+						<!-- ENDIF -->	
+						</div>
+					</div>	
+					
+					<div class="col-sm-6 sm-direction">
+					 <p class="copyrights">
+					  <!-- EVENT overall_footer_copyright_prepend -->
+					  <small>{L_HANDCRAFTED}</small>&nbsp;<i class="fa fa-heart text-flatboots-red"></i>&nbsp;<small>{L_AND}</small>&nbsp;<i class="fa fa-coffee"></i>&nbsp;<small>{L_BY}<a href="http://www.sitesplat.com/" title="SiteSplat.com" target="_blank">&nbsp;{L_SITESPLAT}</a></small>
+					  <!-- EVENT overall_footer_copyright_append -->
+					 </p>
+					</div>
+					
+					<div class="col-sm-6 sm-direction">
+					  <p class="debug-output">
+					  <!-- EVENT overall_footer_timezone_before -->
+						<small>&#45;&nbsp;{S_TIMEZONE}&nbsp;&#45;</small>
+					  <!-- EVENT overall_footer_timezone_after -->
+						<!-- IF DEBUG_OUTPUT --> <small>{DEBUG_OUTPUT}</small><!-- ENDIF -->
+						<!-- {L_FLATBOOTS_VERSION} -->
+					  </p>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</footer>
+
+<a id="totop" class="top-flat" href="" onclick="return false;" style="display:none;"></a>
+
+<div class="hidden"><!-- IF not S_IS_BOT -->{RUN_CRON_TASK}<!-- ENDIF --></div> 
+
+<!-- injected via core and ajax JS for the return confirmation actions -->
+   <div id="page-footer">
+	<div id="darkenwrapper" data-ajax-error-title="{L_AJAX_ERROR_TITLE}" data-ajax-error-text="{L_AJAX_ERROR_TEXT}" data-ajax-error-text-abort="{L_AJAX_ERROR_TEXT_ABORT}" data-ajax-error-text-timeout="{L_AJAX_ERROR_TEXT_TIMEOUT}" data-ajax-error-text-parsererror="{L_AJAX_ERROR_TEXT_PARSERERROR}">
+		<div id="darken">&nbsp;</div>
+	</div>
+
+	<div id="phpbb_alert" class="alert alert-default phpbb_alert" data-l-err="{L_ERROR}" data-l-timeout-processing-req="{L_TIMEOUT_PROCESSING_REQ}">
+		<button type="button" class="close alert_close" data-dismiss="alert"><span class="awe-remove-circle"></span></button>
+		<h3 class="alert_title">&nbsp;</h3>
+		 <p class="alert_text"></p>
+	</div>
+	
+	<div id="phpbb_confirm" class="alert alert-default phpbb_alert">
+		<button type="button" class="close alert_close" data-dismiss="alert"><span class="awe-remove-circle"></span></button>
+		<div class="alert_text"></div>
+	</div>
+  </div>	
+<!-- injected via core and ajax JS for the return confirmation actions -->
+
+<!-- IF S_USER_LOGGED_IN and (SCRIPT_NAME == "viewforum" or SCRIPT_NAME == "viewtopic") -->
+	<div class="modal fade" id="BreadcrumbMap" tabindex="-1" role="dialog" aria-labelledby="BreadcrumbsLabel">
+	  <div class="modal-dialog" role="document">
+		<div class="modal-content">
+		  <div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="awe-remove-circle"></span></button>
+			<h4 class="modal-title" id="BreadcrumbsLabel">{L_NAVIGATION}</h4>
+		  </div>
+		  <div class="modal-body file-tree">
+		   <ul>
+			<li class="root"><a href="{U_INDEX}">{L_INDEX}</a></li>
+			<!-- BEGIN navlinks -->
+			   <li><a href="{navlinks.U_VIEW_FORUM}">{navlinks.FORUM_NAME}</a></li>
+			<!-- END navlinks -->
+		   </ul>
+		    <i class="icon-compass fa fa-compass"></i>
+		  </div>
+		  <div class="modal-footer">
+		  </div>
+		</div>
+	  </div>
+	</div>
+	<!-- ENDIF -->
+
+	<!-- IF ENABLE_POPUP_LOGIN -->
+		<div class="modal fade" id="modal-login" tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+						<h3 class="modal-title">{SITENAME}&nbsp;{L_LOGIN}</h3>
+					</div>
+					<div class="modal-body">
+						<form method="post" action="{S_LOGIN_ACTION}">
+							<fieldset>
+								<label for="username" class="control-label">{L_USERNAME}{L_COLON}</label>
+								<div class="input-icon left">
+									<i class="fa fa-user"></i>
+									<input class="form-control" type="text" name="username" id="username" placeholder="{L_USERNAME}">
+								</div>
+
+								<label for="password" class="control-label">{L_PASSWORD}{L_COLON}</label>
+								<div class="input-icon left">
+									<i class="fa fa-key"></i>
+									<input class="form-control" type="password" name="password" id="password" placeholder="{L_PASSWORD}">
+								</div>
+								<!-- IF S_AUTOLOGIN_ENABLED -->
+									<div class="controls controls-row">
+										<div class="radio"><input type="checkbox" name="autologin" id="autologin-pop"><label for="autologin-pop">{L_LOG_ME_IN}</label></div>
+									</div>
+								<!-- ENDIF -->
+								<button type="submit" class="btn btn-default" id="load" name="login" value="{L_LOGIN}" data-loading-text="{L_LOADING_LOG_IN} <i class='fa fa-spin fa-spinner fa-lg icon-white'></i>">{L_LOGIN}</button>
+								{S_LOGIN_REDIRECT}
+							</fieldset>
+						</form> 
+					</div>
+					<div class="modal-footer">
+					</div>
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
+	<!-- ENDIF -->
+
+<script>
+// this loads jquery asyncrounously & in parallel
+head.load("//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js", "{T_THEME_PATH}/vendors/bootstrap/js/bootstrap.min.js", "{T_THEME_PATH}/vendors/core.min.js?assets_version={T_ASSETS_VERSION}", "{T_THEME_PATH}/vendors/forum_fn.min.js?assets_version={T_ASSETS_VERSION}", "{T_THEME_PATH}/vendors/ajax.min.js?assets_version={T_ASSETS_VERSION}");
+</script>
+
+<!-- we use this event to load the JS scripts properly via the extension system -->
+<!-- EVENT overall_footer_after -->
+
+<!-- injected via a module or an include -->
+<script>
+// some function that depends on bootstrap and jquery
+head.ready(function () {
+	$('.footable').footable();$(".selectpicker").selectpicker();$(".selectpicker").tooltip("disable");var totop=$("#totop");totop.click(function(){$("html, body").stop(true,true).animate({scrollTop:0},500);return false});$(window).scroll(function(){if($(this).scrollTop()>600){totop.fadeIn()}else{totop.fadeOut()}});$("button[data-loading-text], input[data-loading-text], .btn-load").click(function(){var e=$(this);e.button("loading");setTimeout(function(){e.button("reset")},3e3)});
+	$("input").iCheck({checkboxClass:"icheckbox_flat-aero",radioClass:"iradio_flat-aero"});$(".btn-search").click(function(){$(".search-input").toggleClass("open").find("input").focus()});$(".close").click(function(){$(this).prev("input").val("").parents(".search-input").removeClass("open")});$(".nav-tog").click(function(){if($(this).hasClass("neutro")){$(this).removeClass("neutro").addClass("open")}else{$(this).removeClass("open").addClass("neutro")}});
+	$('input[data-reset-on-edit]').on('keyup', function() {$(this.getAttribute('data-reset-on-edit')).val('');});
+	function isTouchDevice(){return true==("ontouchstart"in window||window.DocumentTouch&&document instanceof DocumentTouch);}if(isTouchDevice()===false){jQuery(function(e){e("a").tooltip({html:true,container:"body"})});}	
+    $('#notification_list_button').click(function(){setTimeout(function(){$(".nano").nanoScroller();},0);});	
+});
+// some function that depends on bootstrap and jquery
+head.load("{T_THEME_PATH}/vendors/twitterFetcher.min.js");
+head.ready('twitterFetcher.min.js',function(twit){var twit={"id":'<!-- IF FLATBOOTS_MINI_CMS_ENABLED -->{TWITTER_ID}<!-- ELSE -->685811826672693248<!-- ENDIF -->',"domId":'twitter-feed',"maxTweets":1,"showUser":false,"showImages":true,"enableLinks":true};twitterFetcher.fetch(twit);});
+</script>
+<!-- injected via a module or an include -->
+
+{$SCRIPTS}
+
+<!-- IF S_PLUPLOAD -->
+<!-- // lets load the plupload crap super huge files becuase... wait for it wait for it. "swear here" -->
+<!-- INCLUDE plupload.html -->
+<!-- ENDIF -->
+
+<!-- EVENT overall_footer_body_after -->
+
+<!-- Google Analytics: change UA-XXXXXXXX-X to be your site's ID. -->
+{GOOGLE_ANALYTICS}
+</body>
+</html>
