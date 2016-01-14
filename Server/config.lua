@@ -24,10 +24,10 @@ Server =
     Timeout                     = 10000,
     -- The name of the server, as seen by players and the server browser.
     -- Default value: "JC2-MP Server"
-    Name                        = "Just Cause Role Play - Under Maintenance",
+    Name                        = "Just Cause: Role Play - Em construção.",
     -- The server description, as seen by players and the server browser.
     -- Default value: "No description available"
-    Description                 = "Servidor de Role Play",
+    Description                 = "Servidor de Role Play, em construção.",
     -- The server password.
     -- Default value: ""
     Password                    = "",
@@ -101,7 +101,7 @@ Vehicle =
     -- Default value (in seconds): 10
     -- For instant respawn: 0
     -- For no respawning: nil
-    DeathRespawnTime            = 10,
+    DeathRespawnTime            = 900,
     -- Controls whether to remove the vehicle if respawning is turned off,
     -- and the vehicle dies.
     -- Default value: false

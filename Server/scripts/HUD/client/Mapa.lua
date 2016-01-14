@@ -6,9 +6,9 @@ function Mapa:__init()
 
 	self.mapaImagem = Image.Create(AssetLocation.Resource, "JCMap")
 
-
+	self.imageSize = Vector2(5000, 5000)
 	self.tamanhoMapa = Vector2(32768, 32768)
-	self.proporcao = self.tamanhoMapa.x / 5000--self.mapaImagem:GetSize().x
+	self.proporcao = self.tamanhoMapa.x / self.imageSize.x--self.mapaImagem:GetSize().x
 	
 	self.spots = {}
 	
@@ -27,25 +27,22 @@ function Mapa:Render()
 
 	self.mapaImagem:SetAlpha(0.9)
 	if self.arrastando then
-		self.mapaPosition = (Mouse:GetPosition() / self.zoom - (self.arrastando.posicaoInicialMouse / self.zoom - self.arrastando.posicaoInicialMapa))
+		self.mapaPosition = self.mapaPosition + (Mouse:GetPosition() - self.arrastando.posicaoInicialMouse) / self.zoom
+		self.arrastando.posicaoInicialMouse = Mouse:GetPosition()
+
+		local maxi = 2200-- / self.zoom
+		self.mapaPosition = Vector2(math.min(maxi, math.max(-maxi, self.mapaPosition.x)), math.min(maxi, math.max(-maxi, self.mapaPosition.y))) 
 	end
 	
-	Render:FillArea(Vector2(0, 0), Render.Size, Color(5, 37, 48))
-	self.mapaImagem:SetPosition(self.mapaPosition - self.mapaImagem:GetSize() / 2)
-	
-	local transform2 = Transform2()
-	transform2:Translate(Render.Size / 2)
-	transform2:Scale(self.zoom)
-	Render:SetTransform(transform2)
+	Render:FillArea(Vector2(0, 0), Render.Size, Color(1, 39, 51))
+	self.mapaImagem:SetPosition(Render.Size / 2 - self.mapaImagem:GetSize() / 2 + self.mapaPosition * self.zoom)
 	
 	self.mapaImagem:Draw()
-	
-	Render:ResetTransform()
-	
+
 	self:RenderSpots()
 	
-	Render:DrawText(Render.Size / 2, tostring(self.mapaPosition) .. " " .. tostring(self.zoom) .. " " .. tostring(self.mapaImagem:GetPosition()) .. " " .. tostring(Render.Size ), Color(255, 255, 255))
-	Render:DrawText(Render.Size / 3, tostring(self:Vector3ToMapa(Vector3(0, 0, 0))), Color(255, 255, 255))
+	-- Render:DrawText(Render.Size / 2, tostring(self.mapaPosition) .. " " .. tostring(self.zoom) .. " " .. tostring(self.mapaImagem:GetPosition()) .. " " .. tostring(Render.Size ), Color(255, 255, 255))
+	-- Render:DrawText(Render.Size / 3, tostring(self:Vector3ToMapa(Vector3(0, 0, 0))), Color(255, 255, 255))
 end
 
 
@@ -94,13 +91,17 @@ end
 
 function Mapa:Zoom(delta)
 	self.zoom = math.min(1.3, math.max(0.2, self.zoom + delta / 30))
+	self:UpdateMapa()
+end
+
+
+function Mapa:UpdateMapa()
+	self.mapaImagem:SetSize(self.imageSize * self.zoom)
+	self.proporcao = self.tamanhoMapa.x / math.ceil(self.mapaImagem:GetSize().x)
 end
 
 
 function Mapa:RenderSpots()
-	local transform2 = Transform2()
-	transform2:Translate(Render.Size / 2)
-	Render:SetTransform(transform2)
 	for i = #self.spots, 1, -1 do
 		
 		local spot = self.spots[i]
@@ -109,22 +110,22 @@ function Mapa:RenderSpots()
 			
 			local posMapa = self:Vector3ToMapa(pos)
 
-			spot:Render(posMapa, 0.9)
+			spot:Render(posMapa, math.sqrt(self.zoom, 2), 0.9)
 		end
 	end
-	
-	Render:ResetTransform()
 end
 
 
 function Mapa:Vector3ToMapa(position)
-	position = Vector2(position.x, position.z)
-	return (position / self.proporcao + self.mapaPosition) * self.zoom
+	position = Vector2(position.x, position.z) + self.tamanhoMapa / 2
+	
+	local posicaoFinal = position / self.proporcao + self.mapaImagem:GetPosition()
+	
+	return posicaoFinal	
 end
 
 
 function Mapa:MapaToVector3(position)
-
 	position = Vector3(position.x, 0, position.y)
 	return (position * self.proporcao) * self.zoom
 end
@@ -133,7 +134,9 @@ end
 function Mapa:CenterMapa()
 	local position = LocalPlayer:GetPosition()
 	position = Vector2(position.x, position.z)
-	self.mapaPosition = -(position / self.proporcao) * self.zoom
+	self.zoom = 1
+	self:UpdateMapa()
+	self.mapaPosition = -(position / self.proporcao)
 end
 
 
