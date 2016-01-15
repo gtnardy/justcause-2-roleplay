@@ -61,4 +61,10 @@ a.forumtitle, a.topictitle {
 .youtube-color {
     background-color: #CD332D;
 }
+
+.btn-playnow {
+   pointer-events: none;
+   opacity: 0.8;
+}
+
 /* ===[ CSS HOOK BOTTOM ]=== */
