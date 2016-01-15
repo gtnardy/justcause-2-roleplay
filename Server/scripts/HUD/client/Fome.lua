@@ -66,15 +66,19 @@ end
 function Fome:Render(posicao, tamanho)
 	
 	if self.fome and self.sede then
+	
+		posicao = posicao - Vector2(0, tamanho.y + 10)
 		-- Fome
-		posicao = posicao + Vector2(0, tamanho.y + 2)
-		Render:FillArea(posicao, tamanho + Vector2(0, 6), Color(0, 0, 0, 100))
+		Render:FillArea(posicao - Vector2(2, 2), tamanho + Vector2(4, 6), Color(0, 0, 0, 100))
 			
 		local tamBarraFome = self.fome / 100 * tamanho.x
-		Render:FillArea(posicao + Vector2(2, 3), Vector2(tamBarraFome, tamanho.y) - Vector2(4, 6), Color(243, 156, 18, 200))
+		Render:FillArea(posicao, tamanho - Vector2(0, 5), Color(243, 156, 18, 50))
+		Render:FillArea(posicao, Vector2(tamBarraFome, tamanho.y) - Vector2(0, 5), Color(243, 156, 18, 200))
 			
 		-- Sede
+		posicao = posicao + Vector2(0, 7)
 		local tamBarraSede = self.sede / 100 * tamanho.x
-		Render:FillArea(posicao + Vector2(2, tamanho.y), Vector2(tamBarraSede, tamanho.y) - Vector2(4, 6), Color(52, 152, 219, 200))
+		Render:FillArea(posicao, tamanho - Vector2(0, 5), Color(52, 152, 219, 50))
+		Render:FillArea(posicao, Vector2(tamBarraSede, tamanho.y) - Vector2(0, 5), Color(52, 152, 219, 200))
 	end
 end

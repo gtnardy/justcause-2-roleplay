@@ -1,10 +1,10 @@
 class 'HUD'
 
 function HUD:__init()
-
-	self.raioHUD = 70
-	self.bordaHUD = Vector2(80, 50)
 	
+	self.escalaHUD = 1
+	self.confortoHUD = Vector2(80, 25)
+
 	self:AtualizarPosicoes()
 	
 	self.spots = {}
@@ -35,7 +35,7 @@ function HUD:AtualizarSpots(args)
 			if (spot.Spot) then
 				image = Image.Create(AssetLocation.Resource, spot.Spot)
 			end
-			table.insert(self.spots, Spot({name = spot.Nome, position = self:StringToVector3(spot.Posicao), image = image}))
+			table.insert(self.spots, Spot({name = spot.Nome, position = self:StringToVector3(spot.Posicao), image = image, description = spot.TipoDescricao}))
 		end
 	end
 	
@@ -54,8 +54,6 @@ end
 
 function HUD:ModuleLoad()
 
-	self.Velocimetro = Velocimetro()
-	self.Armometro = Armometro()
 	self.Minimapa = Minimapa()
 	self.Status = Status()
 	self.Fome = Fome()
@@ -67,47 +65,37 @@ end
 
 
 function HUD:AtualizarPosicoes()
-
-	self.posicaoVelocimetro = Vector2(self.raioHUD + self.bordaHUD.x, Render.Height - self.raioHUD - self.bordaHUD.y)
-	self.posicaoArmometro = Vector2(Render.Width - self.raioHUD - self.bordaHUD.x, Render.Height - self.raioHUD - self.bordaHUD.y)
-	self.posicaoMinimapa = Vector2(self.bordaHUD.x, Render.Height - self.bordaHUD.y - self.raioHUD * 2)
+	self.tamanhoMinimapa = Vector2(200, 150) * self.escalaHUD
+	self.posicaoMinimapa = Vector2(self.confortoHUD.x, Render.Height - self.confortoHUD.y - self.tamanhoMinimapa.y - 10)
 end
 
 
 function HUD:Render()
 	
-	-- Aim
+	-- Crosshair
 	if LocalPlayer:GetUpperBodyState() ==  AnimationState.UbSAiming or LocalPlayer:GetBaseState() == AnimationState.SIdleFixedMg or LocalPlayer:GetBaseState() == AnimationState.SIdleVehicleMg then
 		Render:FillCircle(Render.Size / 2, 2, Color(255, 255, 255, 125))
 	end	
 	self:AtualizarPosicoes()
 	
-	Render:SetFont(AssetLocation.SystemFont, "Impact")
+	--Render:SetFont(AssetLocation.SystemFont, "Impact")
 	
 	Game:FireEvent("gui.minimap.hide")
 	Game:FireEvent("gui.hud.hide")
 	
 	if self.Menu:GetActive() then return end
-	
-	if self.Velocimetro and LocalPlayer:InVehicle() then
-		--self.Velocimetro:Render(self.posicaoVelocimetro, self.raioHUD)
-	end
-	
-	if self.Armometro and IsValid(LocalPlayer:GetEquippedWeapon().id) and LocalPlayer:GetEquippedWeapon().id != 0 then
-		--self.Armometro:Render(self.posicaoArmometro, self.raioHUD)
-	end
-	
+
 	if self.Minimapa then
-		Render:FillArea(self.posicaoMinimapa - Vector2(2, 2), Vector2(self.raioHUD, self.raioHUD / 1.2)*2.5 + Vector2(4, 4), Color(0, 0, 0, 100))
-		self.Minimapa:Render(self.posicaoMinimapa, Vector2(self.raioHUD, self.raioHUD / 1.2)*2.5)
+		Render:FillArea(self.posicaoMinimapa - Vector2(2, 2), self.tamanhoMinimapa + Vector2(4, 4), Color(0, 0, 0, 100))
+		self.Minimapa:Render(self.posicaoMinimapa, self.tamanhoMinimapa)
 	end
 	
 	if self.Status then
-		self.Status:Render(self.posicaoMinimapa + Vector2(0, self.raioHUD / 1.2)*2.5 + Vector2(-2, 3), Vector2(self.raioHUD * 2.5, 9) + Vector2(4, 0))
+		self.Status:Render(self.posicaoMinimapa + Vector2(0, self.tamanhoMinimapa.y + 6), Vector2(self.tamanhoMinimapa.x + 4, 10))
 	end
 	
 	if self.Fome then
-		--self.Fome:Render(self.posicaoMinimapa + Vector2(0, self.raioHUD / 1.2)*2.5 + Vector2(-2, 2), Vector2(self.raioHUD * 2.5, 9) + Vector2(4, 0))
+		self.Fome:Render(self.posicaoMinimapa, Vector2(self.tamanhoMinimapa.x, 9))
 	end
 end
 

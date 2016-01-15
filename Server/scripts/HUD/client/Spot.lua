@@ -6,6 +6,7 @@ function Spot:__init(args)
 	self.image = args.image
 	self.position = args.position
 	self.fixed = args.fixed
+	self.description = args.description
 	
 	if self.image then
 		self.imageSize = self.image:GetSize()
@@ -17,7 +18,7 @@ function Spot:Render(position, zoom, alpha)
 	
 	if self.image then
 	
-		self.image:SetSize(self.imageSize * zoom)
+		self.image:SetSize(self.imageSize * math.sqrt(zoom, 2))
 		self.image:SetPosition(position - self.image:GetSize() / 2)
 		if alpha then
 			self.image:SetAlpha(alpha)
@@ -105,7 +106,7 @@ function SpotWaypoint:Render(position, zoom, alpha)
 	local pos, bool = Waypoint:GetPosition()
 	if not bool then return end
 	
-	self.image:SetSize(self.imageSize * zoom)
+	self.image:SetSize(self.imageSize * math.sqrt(zoom, 2))
 	self.image:SetPosition(position - self.image:GetSize() / 2)
 	self.image:SetAlpha(0.9)
 	self.image:Draw()
