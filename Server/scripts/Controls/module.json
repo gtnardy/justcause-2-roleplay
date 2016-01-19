@@ -4,5 +4,8 @@
     "author_url": "",
     "description": "Auto-generated",
     "name": "Controls"
+  },
+  "resources": {
+	"Sniper_Reticle": "http://i.imgur.com/EICuCjp.png"
   }
 }
