@@ -7,12 +7,12 @@ function CustomChat:__init()
 	self.margin = Vector2(80, 20)
 	self.textSize = 16
 	self.textColorDefault = Color(255, 255, 255)
-	--self.scroll = 0
 	
 	self.visible = true
 	self.typing = false
 	self.messages = {}
 	
+	self.timerDelay = Timer()
 	self.timerFade = Timer()
 	
 	self.TextBox = TextBox.Create() 
@@ -22,8 +22,7 @@ function CustomChat:__init()
 	Events:Subscribe("ChatPrint", self, self.ChatPrint)
 	Events:Subscribe("PrintChat", self, self.PrintChat)
 	Events:Subscribe("LocalPlayerInput", self, self.LocalPlayerInput)
-	Events:Subscribe("KeyDown", self, self.KeyDown)
-	--Events:Subscribe("MouseScroll", self, self.MouseScroll)
+	Events:Subscribe("KeyUp", self, self.KeyUp)
 	
 	Network:Subscribe("PlayerChat", self, self.PlayerChat)
 	Network:Subscribe("ChatPrint", self, self.ChatPrint)
@@ -97,10 +96,6 @@ function CustomChat:PrintChat(texts)
 		-- end
 	-- end
 	
-	for _, word in pairs(arrayWords) do
-		--Chat:Print(tostring(word.text), word.color)
-	end
-	
 	self:CalculateLines(arrayWords)
 	
 	self.timerFade:Restart()
@@ -162,9 +157,9 @@ function CustomChat:Split(str)
 end
 
 
-function CustomChat:KeyDown(args)
+function CustomChat:KeyUp(args)
 
-	if args.key == VirtualKey.Return and self.visible and self:GetGameState() then
+	if args.key == string.byte("T") and self.visible and self:GetGameState() then
 
 		self.timerFade:Restart()
 		Chat:SetActive(false)
@@ -207,12 +202,6 @@ function CustomChat:LocalPlayerInput(args)
 end
 
 
--- function CustomChat:MouseScroll(args)
-
-	-- self.scroll = math.max(math.min(self.scroll + args.delta * 12, #self.messages * self.margin.y - self.windowSize.y), 0)
--- end
-
-
 function CustomChat:Render()
 
 	if (self.visible and self.timerFade:GetSeconds() < 30 and self:GetGameState()) then
@@ -222,7 +211,6 @@ function CustomChat:Render()
 		Render:SetClip(true, self.windowPosition, self.windowSize)
 		
 		local linePosition = self.windowPosition + Vector2(self.windowSize.x , 0) - Vector2(0, #self.messages * self.margin.y - self.windowSize.y)
-		--Render:FillArea(self.windowPosition, self.windowSize, Color(0, 0, 0, 50))
 		for m, message in pairs(self.messages) do
 			
 			for t = #message, 1, -1 do
