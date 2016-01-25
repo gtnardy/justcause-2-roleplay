@@ -1,17 +1,19 @@
 class 'PlayerController'
 
 function PlayerController:__init()
-
-	Network:Subscribe("UpdatePlayerData", self, self.UpdatePlayerData)
+	
+	Events:Subscribe("PlayerJoin", self, self.PlayerJoin)
+	Events:Subscribe("PlayerQuit", self, self.PlayerQuit)
 end
 
 
-function PlayerController:UpdatePlayerData(values)
+function PlayerController:PlayerJoin(args)
+	Events:Fire("AddNotificationAlert", {message = tostring(args.player) .. " entrou no servidor!"})
+end
 
-	for key, value in pairs(values) do
 
-		LocalPlayer:SetValue(key, value)
-	end
+function PlayerController:PlayerQuit(args)
+	Events:Fire("AddNotificationAlert", {message = tostring(args.player) .. " saiu do servidor!"})
 end
 
 
