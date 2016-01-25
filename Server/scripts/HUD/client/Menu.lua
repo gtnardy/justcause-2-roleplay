@@ -47,7 +47,7 @@ end
 
 
 function Menu:KeyUp(args)
-	if args.key == VirtualKey.F1 then
+	if args.key == VirtualKey.F1 or args.key == string.byte("M") then
 		self:Toogle()
 	end
 end

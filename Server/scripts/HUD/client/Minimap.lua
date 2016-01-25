@@ -10,29 +10,7 @@ function Minimapa:__init()
 	
 	self.zoom = 1
 	
-	self.spots = {}
-	self.spotsRender = {}
-	
-	Events:Subscribe("PostTick", self, self.PostTick)
-	self.timer = Timer()
-	self.lastUpdatePosition = nil
-end
-
-
-function Minimapa:PostTick()
-	if (self.timer:GetSeconds() > 2) then
-		if (not self.lastUpdatePosition or Vector3.Distance(self.lastUpdatePosition, LocalPlayer:GetPosition()) >= 200) then
-			self.lastUpdatePosition = LocalPlayer:GetPosition()
-			self.spotsRender = {}
-			for i, v in ipairs(self.spots) do
-			
-				if Vector3.Distance(v:GetPosition(), self.lastUpdatePosition) < 1700 then
-					table.insert(self.spotsRender, v)
-				end
-			end
-		end
-		self.timer:Restart()
-	end
+	self.spotsNear = {}
 end
 
 
@@ -61,10 +39,10 @@ end
 
 
 function Minimapa:RenderSpots(posicao, tamanho)
-	
-	for i = #self.spotsRender, 1, -1 do
+
+	for i = #self.spotsNear, 1, -1 do
 			
-		local spot = self.spotsRender[i]
+		local spot = self.spotsNear[i]
 		if (spot) then 			
 			local pos = spot:GetPosition()
 			
@@ -78,9 +56,7 @@ end
 
 
 function Minimapa:RenderStreamablePlayers(posicao, tamanho)
-	
 	for player, _ in Client:GetStreamedPlayers() do
-			
 		local posMinimapa = self:Vector3ToMinimap(player:GetPosition(), posicao, tamanho)
 		Render:FillCircle(posMinimapa, 3, player:GetColor())		
 	end
@@ -88,7 +64,6 @@ end
 
 
 function Minimapa:GetMinimapPosition(posicao, tamanho)
-
 	local posPlayer = LocalPlayer:GetPosition()
 	local posPlayerV2Bruta = Vector2(posPlayer.x, posPlayer.z) + self.tamanhoMapa / 2
 	

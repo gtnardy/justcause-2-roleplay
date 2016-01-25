@@ -6,16 +6,17 @@
     "name": "HUD"
   },
   "resources": {
-	"JCMap": "http://i.imgur.com/tHINtlw.jpg",
 	"Player_Spot": "http://i.imgur.com/Yawg8n4.png",
 	"Waypoint_Spot": "https://i.imgur.com/4B34G7j.png",
 	"Village_Spot": "http://i.imgur.com/dpsirR7.png",
 	"City_Spot": "http://i.imgur.com/ymE5Yvc.png",
 	"Airport_Spot": "http://i.imgur.com/pUNafL1.png",
 	"Port_Spot": "http://imgur.com/6MRXs90",
-	"Stronghold_Spot": "http://i.imgur.com/6crur7s.png",
+	"Stronghold_Spot": "http://i.imgur.com/ixttPfn.png",
+	"Military_Spot": "http://i.imgur.com/6crur7s.png",
 	"Radio_Spot": "http://i.imgur.com/gOF0CNt.png",
-	"Oil_Spot": "http://i.imgur.com/BwdGcKW.png",
+	"Oil_Spot": "http://i.imgur.com/6MRXs90.png",
+	"Fuel_Spot": "http://i.imgur.com/iqSAmjz.png",
 	
 	"Pistol_Weapon": "http://i.imgur.com/OiMhyOZ.png",
 	"Revolver_Weapon": "http://i.imgur.com/72LyJN6.png",
@@ -32,6 +33,10 @@
 	"Minigun_Weapon": "http://i.imgur.com/R6mIbuU.png",
 	"Bomb_Weapon": "http://i.imgur.com/kNC82DP.png",
 	"Machinegun_Weapon": "http://i.imgur.com/Z9D1C83.png",
-	"Granadier_Weapon": "http://i.imgur.com/npXQ2HQ.png"
+	"Granadier_Weapon": "http://i.imgur.com/npXQ2HQ.png",
+	
+	"JCMap": "http://i.imgur.com/tHINtlw.jpg",
+	
+	"Blood_Screen": "http://i.imgur.com/CoXaqeZ.png"
   }
 }

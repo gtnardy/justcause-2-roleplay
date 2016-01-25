@@ -62,13 +62,13 @@ function Mapa:RenderSpotHover()
 
 	
 	local title = string.upper(self.spotHover.name)
-	Render:FillArea(pos - Vector2(Render:GetTextWidth(title, self.spotHoverSize) / 2 + 6, 6), Render:GetTextSize(title, self.spotHoverSize) + Vector2(13, 9), Color(0, 0, 0, 150))
+	Render:FillArea(pos - Vector2(Render:GetTextWidth(title, self.spotHoverSize) / 2 + 6, 3), Render:GetTextSize(title, self.spotHoverSize) + Vector2(13, 6), Color(0, 0, 0, 150))
 	Render:DrawText(pos - Vector2(Render:GetTextWidth(title, self.spotHoverSize) / 2, 0), title, Color(248, 204, 64), self.spotHoverSize)
 	
 	if self.spotHover.description then
-		pos = pos + Vector2(0, Render:GetTextHeight(title, self.spotHoverSize) + 15)
+		pos = pos + Vector2(0, Render:GetTextHeight(title, self.spotHoverSize) + 10)
 		local description = self.spotHover.description
-		Render:FillArea(pos - Vector2(Render:GetTextWidth(description, self.spotHoverSize - 4) / 2 + 6, 6), Render:GetTextSize(description, self.spotHoverSize - 4) + Vector2(13, 9), Color(0, 0, 0, 150))
+		Render:FillArea(pos - Vector2(Render:GetTextWidth(description, self.spotHoverSize - 4) / 2 + 6, 3), Render:GetTextSize(description, self.spotHoverSize - 4) + Vector2(13, 6), Color(0, 0, 0, 150))
 		Render:DrawText(pos - Vector2(Render:GetTextWidth(description, self.spotHoverSize - 4) / 2, 0), description, Color(255, 255, 255), self.spotHoverSize - 4)
 	end
 end
@@ -116,6 +116,7 @@ function Mapa:MouseUp(args)
 	else
 		if args.button == 3 then -- Middle Click
 			local way, isset = Waypoint:GetPosition()
+
 			if isset then
 				Waypoint:Remove()
 			else
@@ -165,9 +166,12 @@ function Mapa:RenderSpots()
 			local pos = spot:GetPosition()
 			
 			local posMapa = self:Vector3ToMapa(pos)
-
-			spot:Render(posMapa, math.sqrt(self.zoom, 2), 0.9)
-			self:CheckSpotHover(spot, posMapa)
+			local radius = tonumber(spot.radius)
+			if not radius or (1000 - (self.zoom * 1800)  <= radius) then
+				
+				spot:Render(posMapa, math.sqrt(self.zoom, 2), 0.9)
+				self:CheckSpotHover(spot, posMapa)
+			end
 		end
 	end
 end
@@ -214,5 +218,4 @@ function Mapa:SetActive(bool)
 	if bool then
 		self:CenterMapa()
 	end
-	Chat:SetEnabled(not bool)
 end

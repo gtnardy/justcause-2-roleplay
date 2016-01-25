@@ -16,7 +16,7 @@ end
 
 
 function HUD:ModuleLoad()
-	self.spots = SQL:Query("SELECT e.Id, e.Posicao, et.Spot, et.Descricao AS 'TipoDescricao', e.Nome FROM Estabelecimento e LEFT JOIN EstabelecimentoTipo et on e.Tipo = et.Id"):Execute()
+	self.spots = SQL:Query("SELECT e.Id, e.Posicao, et.Spot, et.Descricao AS 'TipoDescricao', e.Nome, et.Raio FROM Estabelecimento e LEFT JOIN EstabelecimentoTipo et on e.Tipo = et.Id"):Execute()
 end
 
 

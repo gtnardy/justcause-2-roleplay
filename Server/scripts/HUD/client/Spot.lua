@@ -1,12 +1,15 @@
 class 'Spot'
 
 function Spot:__init(args)
-
+	
+	self.id = args.id
 	self.name = args.name
 	self.image = args.image
 	self.position = args.position
 	self.fixed = args.fixed
 	self.description = args.description
+	self.spotType = args.spotType
+	self.radius = args.radius
 	
 	if self.image then
 		self.imageSize = self.image:GetSize()
@@ -54,9 +57,6 @@ end
 
 
 function SpotPlayer:Render(position, zoom)
-	
-	--self.image:SetSize(self.imageSize * zoom)
-
 	local t2 = Transform2()
 	t2:Translate(position)		
 	t2:Rotate(-LocalPlayer:GetAngle().yaw)
