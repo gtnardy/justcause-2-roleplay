@@ -18,7 +18,8 @@ function Estabelecimento:ServerStart()
 	SQL:Execute("CREATE TABLE IF NOT EXISTS EstabelecimentoTipo(" ..
 		"Id INTEGER PRIMARY KEY AUTOINCREMENT," ..
 		"Descricao INTEGER NOT NULL," ..
-		"Spot VARCHAR(30))")
+		"Spot VARCHAR(30)," ..
+		"Raio INTEGER NOT NULL)")
 end
 
 
