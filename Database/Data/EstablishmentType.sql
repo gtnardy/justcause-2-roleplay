@@ -1,0 +1,11 @@
+INSERT INTO EstablishmentType (Id, Description, Spot, Radius) VALUES (1, "Vila", "Village_Spot", 300);
+INSERT INTO EstablishmentType (Id, Description, Spot, Radius) VALUES (2, "Cidade", "City_Spot", 1000);
+INSERT INTO EstablishmentType (Id, Description, Spot, Radius) VALUES (3, "Aeroporto", "Airport_Spot", 700);
+INSERT INTO EstablishmentType (Id, Description, Spot, Radius) VALUES (4, "Porto", "Port_Spot", 300);
+INSERT INTO EstablishmentType (Id, Description, Spot, Radius) VALUES (5, "Base Militar", "Military_Spot", 500);
+INSERT INTO EstablishmentType (Id, Description, Spot, Radius) VALUES (6, "Fortaleza Militar", "Stronghold_Spot", 800);
+INSERT INTO EstablishmentType (Id, Description, Spot, Radius) VALUES (7, "Posto Avançado", "Radio_Spot", 300);
+INSERT INTO EstablishmentType (Id, Description, Spot, Radius) VALUES (8, "Plataforma Petrolífera", "Oil_Spot", 300);
+INSERT INTO EstablishmentType (Id, Description, Spot, Radius) VALUES (9, "Posto de Combustível", "Fuel_Spot", 20);
+INSERT INTO EstablishmentType (Id, Description, Spot, Radius) VALUES (10, "Loja de Roupas", "ClothingShop_Spot", 5);
+INSERT INTO EstablishmentType (Id, Description, Spot, Radius) VALUES (11, "Loja de Alimentos", "FoodStore_Spot", 5);
