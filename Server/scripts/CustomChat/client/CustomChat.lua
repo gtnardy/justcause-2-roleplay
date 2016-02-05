@@ -8,16 +8,17 @@ function CustomChat:__init()
 	self.textSize = 16
 	self.textColorDefault = Color(255, 255, 255)
 	
-	self.visible = true
 	self.typing = false
 	self.messages = {}
 	
-	self.timerDelay = Timer()
+	self.GUIStateObject = SharedObject.Create("GUIState")
+	
 	self.timerFade = Timer()
 	
 	self.TextBox = TextBox.Create() 
 	self:Configure()
 	
+	Events:Subscribe("ModuleUnload", self, self.ModuleUnload)
 	Events:Subscribe("PostRender", self, self.Render)
 	Events:Subscribe("ChatPrint", self, self.ChatPrint)
 	Events:Subscribe("PrintChat", self, self.PrintChat)
@@ -66,6 +67,7 @@ function CustomChat:Configure()
 	self.TextBox:Subscribe("EscPressed", self, self.TextBox_Close)
 	self.TextBox:Subscribe("ReturnPressed", self, self.TextBox_ReturnPressed)
 	self.TextBox:Subscribe("TabPressed", self, self.TextBox_Close)
+	self.TextBox:Subscribe("Blur", self, self.Blur)
 end
 
 
@@ -159,17 +161,30 @@ end
 
 function CustomChat:KeyUp(args)
 
-	if args.key == string.byte("T") and self.visible and self:GetGameState() then
+	if args.key == string.byte("T") then
+		if Game:GetGUIState() != GUIState.Menu and Game:GetGUIState() != GUIState.PDA and Game:GetGUIState() != GUIState.Loading  and Game:GetGUIState() != GUIState.Chat then
+			self:SetActive(true)
+			return false
+		elseif Game:GetGUIState() == GUIState.Chat then
+			self.TextBox:Focus()
+		end
+	end
+end
 
+
+function CustomChat:SetActive(bool)
+	
+	self.GUIStateObject:SetValue(tostring(GUIState.Chat), bool)
+	self.typing = bool
+	Mouse:SetVisible(bool)
+	self.TextBox:SetVisible(bool)
+	
+	if bool then
+		self.TextBox:SetText("")
 		self.timerFade:Restart()
 		Chat:SetActive(false)
 		Chat:SetEnabled(false)
-		self.typing = true
 		self.TextBox:Focus()
-		self.TextBox:Show()
-		Mouse:SetVisible(true)
-		self.TextBox:SetText("")
-		return false
 	end
 end
 
@@ -181,21 +196,21 @@ function CustomChat:TextBox_ReturnPressed()
 
 		self:ChatSend(text)
 	end
-	self:TextBox_Close()
+	self:SetActive(false)
 end
 
 
 function CustomChat:TextBox_Close()
-	
-	self.TextBox:SetText("")
-	self.typing = false
-	self.TextBox:SetVisible(false)
-	Mouse:SetVisible(false)
+	self:SetActive(false)
+end
+
+
+function CustomChat:Blur()
+	self:SetActive(false)
 end
 
 
 function CustomChat:LocalPlayerInput(args)
-
 	if self.typing then
 		return false
 	end
@@ -204,7 +219,7 @@ end
 
 function CustomChat:Render()
 
-	if (self.visible and self.timerFade:GetSeconds() < 30 and self:GetGameState()) then
+	if (self.timerFade:GetSeconds() < 30 ) then
 		self.windowPosition = Vector2(Render.Width - self.windowSize.x - self.margin.x, Render.Height / 3)
 		
 		self.TextBox:SetPosition(Vector2(Render.Width - self.margin.x - self.TextBox:GetWidth(), self.windowPosition.y + self.windowSize.y))
@@ -238,11 +253,9 @@ function CustomChat:AppendTextPosition(linePosition, text)
 end
 
 
-function CustomChat:GetGameState()
-	if(Game:GetState() != GUIState.PDA and Game:GetState() != GUIState.Loading and Game:GetState() != GUIState.Menu) then
-		return true
-	end
-	return false
+function CustomChat:ModuleUnload()
+	Chat:SetEnabled(true)
+	self.GUIStateObject:SetValue(tostring(GUIState.Chat), false)
 end
 
 
