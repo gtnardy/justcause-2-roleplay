@@ -7,22 +7,22 @@ function Radio:__init()
 	self.timer = Timer()
 	
 	self.musics = {
+		{bank_id = 25, sound_id = 89, position = LocalPlayer:GetPosition()}, -- country			
 		{bank_id = 25, sound_id = 43, position = LocalPlayer:GetPosition()}, -- title
 		{bank_id = 25, sound_id = 51, position = LocalPlayer:GetPosition()}, -- hino eletro
+		{bank_id = 25, sound_id = 88, position = LocalPlayer:GetPosition()}, -- old west
+		{bank_id = 25, sound_id = 54, position = LocalPlayer:GetPosition()}, -- hino harp
 		{bank_id = 25, sound_id = 48, position = LocalPlayer:GetPosition()}, -- hino
 		{bank_id = 25, sound_id = 53, position = LocalPlayer:GetPosition()}, -- hino militar
-		{bank_id = 25, sound_id = 52, position = LocalPlayer:GetPosition()}, -- calm
 		{bank_id = 25, sound_id = 59, position = LocalPlayer:GetPosition()}, -- rico 
-		{bank_id = 25, sound_id = 54, position = LocalPlayer:GetPosition()}, -- hino harp
 		{bank_id = 25, sound_id = 60, position = LocalPlayer:GetPosition()}, -- rico 
-		{bank_id = 25, sound_id = 68, position = LocalPlayer:GetPosition()}, -- rico main
 		{bank_id = 25, sound_id = 55, position = LocalPlayer:GetPosition()}, -- hino flute
+		{bank_id = 25, sound_id = 52, position = LocalPlayer:GetPosition()}, -- calm
 		{bank_id = 25, sound_id = 69, position = LocalPlayer:GetPosition()}, -- rico
+		{bank_id = 25, sound_id = 68, position = LocalPlayer:GetPosition()}, -- rico main
 		{bank_id = 25, sound_id = 86, position = LocalPlayer:GetPosition()}, -- country
 		{bank_id = 25, sound_id = 87, position = LocalPlayer:GetPosition()}, -- 
-		{bank_id = 25, sound_id = 88, position = LocalPlayer:GetPosition()}, -- old west
 		{bank_id = 25, sound_id = 94, position = LocalPlayer:GetPosition()}, -- hino faccao
-		{bank_id = 25, sound_id = 89, position = LocalPlayer:GetPosition()}, -- country
 		{bank_id = 25, sound_id = 95, position = LocalPlayer:GetPosition()}, -- hino faccao assobio
 		{bank_id = 25, sound_id = 99, position = LocalPlayer:GetPosition()}, -- hino faccao grito
 		{bank_id = 25, sound_id = 105, position = LocalPlayer:GetPosition()}, -- 
@@ -43,7 +43,7 @@ function Radio:__init()
 		{bank_id = 25, sound_id = 173, position = LocalPlayer:GetPosition()}, -- hindu flute
 		{bank_id = 25, sound_id = 174, position = LocalPlayer:GetPosition()}, -- viola
 		{bank_id = 25, sound_id = 178, position = LocalPlayer:GetPosition()}, -- rico parachute
-		{bank_id = 25, sound_id = 148, position = LocalPlayer:GetPosition()} -- mile club
+		{bank_id = 25, sound_id = 148, position = LocalPlayer:GetPosition()}, -- mile club
 	}
 	
 
@@ -108,7 +108,7 @@ end
 
 function Radio:Render()
 	if self.active and self.musicaAtual then
-		self.musicaAtual:SetPosition(Camera:GetPosition())
+		self.musicaAtual:SetPosition(Camera:GetPosition() + Vector3(0, -1, 0))
 		if not self.musicaAtual:IsPlaying() then
 			self:NextMusic()
 			self:TurnOn()
@@ -124,6 +124,7 @@ end
 function Radio:PostTick()
 	if not self.active and self.timer:GetSeconds() > 10 then
 		self.musicaAtual:SetParameter(0, 0)
+		self.musicaAtual:SetParameter(1, 0)
 		self.timer:Restart()
 	end
 end
