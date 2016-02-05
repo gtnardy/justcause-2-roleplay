@@ -11,12 +11,13 @@
 	"Village_Spot": "http://i.imgur.com/dpsirR7.png",
 	"City_Spot": "http://i.imgur.com/ymE5Yvc.png",
 	"Airport_Spot": "http://i.imgur.com/pUNafL1.png",
-	"Port_Spot": "http://imgur.com/6MRXs90",
 	"Stronghold_Spot": "http://i.imgur.com/ixttPfn.png",
 	"Military_Spot": "http://i.imgur.com/6crur7s.png",
 	"Radio_Spot": "http://i.imgur.com/gOF0CNt.png",
 	"Oil_Spot": "http://i.imgur.com/6MRXs90.png",
 	"Fuel_Spot": "http://i.imgur.com/iqSAmjz.png",
+	"Port_Spot": "http://i.imgur.com/6MRXs90.png",
+	"ClothingShop_Spot": "http://i.imgur.com/6MRXs90.png",
 	
 	"Pistol_Weapon": "http://i.imgur.com/OiMhyOZ.png",
 	"Revolver_Weapon": "http://i.imgur.com/72LyJN6.png",
@@ -36,6 +37,8 @@
 	"Granadier_Weapon": "http://i.imgur.com/npXQ2HQ.png",
 	
 	"JCMap": "http://i.imgur.com/tHINtlw.jpg",
+	
+	"Level_Background": "http://i.imgur.com/UG7Eojs.png",
 	
 	"Blood_Screen": "http://i.imgur.com/CoXaqeZ.png"
   }

@@ -9,12 +9,12 @@ function HUD:__init()
 	
 	self.spotsNear = {}
 	self.lastUpdatePosition = nil
+	self.images = {}
 	
 	self.waypointsScreen = {}
 	
 	self.Velocimetro = nil
 	self.Armometro = nil
-	self.Languages = nil
 	self.Minimapa = nil
 	self.HealthBar = nil
 	self.Status = nil
@@ -24,7 +24,14 @@ function HUD:__init()
 	self.NotificationAlert = nil
 	self.Checkpoint = nil
 	self.Nametags = nil
-
+	self.Objective = nil
+	self.Weapons = nil
+	self.Dinheiro = nil
+	self.Experiencia = nil
+	
+	self.Languages = Languages()
+	self:SetLanguages()
+	
 	self.timer = Timer()
 	
 	Events:Subscribe("PostTick", self, self.PostTick)	
@@ -46,13 +53,25 @@ function HUD:AtualizarSpots(args)
 			local spot = args.spots[i]
 			local image = nil
 			if (spot.Spot) then
-				image = Image.Create(AssetLocation.Resource, spot.Spot)
+				image = self:CreateImage(spot.Spot)
 			end
-			table.insert(self.spots, Spot({id = spot.Id, name = spot.Nome, position = self:StringToVector3(spot.Posicao), image = image, description = spot.TipoDescricao, spotType = spot.Spot, radius = tonumber(spot.Raio)}))
+			table.insert(self.spots, Spot({id = spot.Id, name = spot.Name, position = self:StringToVector3(spot.Position), image = image, description = spot.DescriptionType, spotType = spot.Spot, radius = tonumber(spot.Radius)}))
 		end
 	end
 	
 	self.Menu.mapa.spots = self.spots
+end
+
+
+function HUD:CreateImage(name)
+	if not self.images[name] then
+		self.images[name] = Image.Create(AssetLocation.Resource, name)
+	end
+	return self.images[name]
+	-- local image = Image.Create(AssetLocation.Disk, name..".png")
+	-- if image:GetFailed() then
+		-- image = Image.Create(AssetLocation.Resource, name)
+	-- end
 end
 
 
@@ -101,9 +120,12 @@ function HUD:ModuleLoad()
 	self.Alert = Alert()
 	self.InformationAlert = InformationAlert()
 	self.NotificationAlert = NotificationAlert()
-	self.Languages = Languages()
 	self.Checkpoint = Checkpoint()
 	self.Nametags = Nametags()
+	self.Objective = Objective()
+	self.Weapons = Weapons()
+	self.Dinheiro = Dinheiro()
+	self.Experiencia = Experiencia()
 	
 	self:AddSpot(SpotPlayer())
 	self:AddSpot(SpotWaypoint())
@@ -118,7 +140,7 @@ function HUD:AtualizarPosicoes()
 	self.tamanhoMinimapa = Vector2(225, 150) * self.escalaHUD
 	self.posicaoMinimapa = Vector2(self.confortoHUD.x, Render.Height - self.confortoHUD.y - self.tamanhoMinimapa.y - 10)
 	self.posicaoCurrentSpots = self.confortoHUD
-	self.InformationAlert.width = self.tamanhoMinimapa.x
+	self.NotificationAlert.width = self.tamanhoMinimapa.x
 end
 
 
@@ -155,11 +177,12 @@ function HUD:Render()
 	end
 	
 	self:RenderWaypointsScreen()
-	
-	if self.InformationAlert and self.InformationAlert:HasMessage() then
-		self.InformationAlert:Render(self.confortoHUD)
-	elseif self.Checkpoint then
-		self.Checkpoint:Render(self.posicaoCurrentSpots)
+	if Game:GetGUIState() != GUIState.ContextMenu then
+		if self.InformationAlert and self.InformationAlert:HasMessage() then
+			self.InformationAlert:Render(self.confortoHUD)
+		elseif self.Checkpoint then
+			self.Checkpoint:Render(self.posicaoCurrentSpots)
+		end
 	end
 	
 	if self.NotificationAlert then
@@ -168,6 +191,21 @@ function HUD:Render()
 	
 	if self.Nametags then
 		self.Nametags:Render()
+	end
+	
+	if self.Objective then
+		self.Objective:Render()
+	end
+	
+	local positionUpperRight = Vector2(Render.Width - self.confortoHUD.x, self.confortoHUD.y)
+	if self.Dinheiro then
+		self.Dinheiro:Render(positionUpperRight)
+	end
+	
+	positionUpperRight.x = positionUpperRight.x - 30
+	
+	if self.Experiencia then
+		self.Experiencia:Render(positionUpperRight )
 	end
 end
 
@@ -201,18 +239,20 @@ function HUD:RenderAlert()
 end
 
 
-function HUD:GetGameState()
-	if(Game:GetState() != GUIState.PDA and Game:GetState() != GUIState.Loading and Game:GetState() != GUIState.Menu) then
-		return true
-	end
-	return false
-end
-
-
 function HUD:StringToVector3(str)
 
 	local v = tostring(str):split(", ")
 	return Vector3(tonumber(v[1]), tonumber(v[3]), tonumber(v[5]))
+end
+
+
+function HUD:SetLanguages()
+	self.Languages:SetLanguage("PLAYER_STARVING", {["en"] = "You are starving!", ["pt"] = "Você está morrendo de Fome!"})
+	self.Languages:SetLanguage("PLAYER_DYING_THIRST", {["en"] = "You are dying of thirst!", ["pt"] = "Você está morrendo de Sede!"})
+	self.Languages:SetLanguage("PLAYER_OUT_FUEL", {["en"] = "You are out of fuel!", ["pt"] = "Você está sem combustível!"})
+	self.Languages:SetLanguage("LABEL_HUNGER", {["en"] = "Hunger", ["pt"] = "Fome"})
+	self.Languages:SetLanguage("LABEL_THIRST", {["en"] = "Thirst", ["pt"] = "Sede"})
+	self.Languages:SetLanguage("LABEL_FUEL", {["en"] = "Fuel", ["pt"] = "Combustivel"})
 end
 
 

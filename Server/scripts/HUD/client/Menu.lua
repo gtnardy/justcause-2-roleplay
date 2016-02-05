@@ -8,6 +8,8 @@ function Menu:__init()
 	self.mapa = Mapa()
 	self:AddTela(self.mapa)
 	
+	self.GUIStateObject = SharedObject.Create("GUIState")
+		
 	Events:Subscribe("PostRender", self, self.Render)
 	Events:Subscribe("KeyUp", self, self.KeyUp)
 	Events:Subscribe("LocalPlayerInput", self, self.LocalPlayerInput)
@@ -27,6 +29,7 @@ end
 
 
 function Menu:SetActive(bool)
+	self.GUIStateObject:SetValue(tostring(GUIState.PDA), bool)
 	self.active = bool
 	Mouse:SetVisible(bool)
 	if bool then
@@ -59,7 +62,7 @@ end
 
 
 function Menu:Render(args)
-	if (self.active and (Game:GetState() != GUIState.Loading and Game:GetState() != GUIState.PDA and Game:GetState() != GUIState.Menu)) then
+	if (self.active and Game:GetGUIState() == GUIState.PDA) then
 
 		for _, botao in ipairs(self.botoes) do
 			if botao.tela then

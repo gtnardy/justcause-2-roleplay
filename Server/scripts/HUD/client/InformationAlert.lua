@@ -4,7 +4,7 @@ function InformationAlert:__init()
 	
 	self.textSize = 16
 	self.margin = Vector2(10, 10)
-	self.width = 295
+	self.width = 360
 	
 	self.messages = {}
 	self.timer = Timer()
@@ -12,9 +12,13 @@ function InformationAlert:__init()
 	self.label = Label.Create()
 	self:ConfigureLabel()
 	
-	Events:Subscribe("RemoveInformationAlert", self, self.RemoveInformationAlert)
+	Network:Subscribe("AddInformationAlert", self, self.AddInformationAlert)
 	Events:Subscribe("AddInformationAlert", self, self.AddInformationAlert)
-	Events:Subscribe("PostTick", self, self.PostTick)
+	
+	Network:Subscribe("RemoveInformationAlert", self, self.RemoveInformationAlert)
+	Events:Subscribe("RemoveInformationAlert", self, self.RemoveInformationAlert)	
+	
+	Events:Subscribe("PreTick", self, self.PreTick)
 end
 
 
@@ -64,8 +68,8 @@ end
 function InformationAlert:NextMessage()
 	if self.messages[1] then
 		self.label:SetText(self.messages[1].message)
+		self.label:SetWidth(math.min(self.width, Render:GetTextWidth(self.label:GetText(), self.textSize))- self.margin.x * 2)
 		self.label:SizeToContents()
-		self.label:SetWidth(math.min(self.width, Render:GetTextWidth(self.label:GetText(), self.textSize) - self.margin.x * 2))
 		ClientSound.Play(AssetLocation.Game, {bank_id = 11, sound_id = 2, position = LocalPlayer:GetPosition(), angle = Angle(), timeout = 10, variable_id_focus = 0})
 	end
 end
@@ -77,14 +81,20 @@ end
 
 
 function InformationAlert:ConfigureLabel()
+	self.label:Hide()
 	self.label:SetFont(AssetLocation.Disk, "Archivo.ttf")
 	self.label:SetWrap(true)
 	self.label:SetTextSize(self.textSize)
+	self.label:Subscribe("PostRender", self, self.LabelPostRender)
+end
+
+
+function InformationAlert:LabelPostRender()
 	self.label:Hide()
 end
 
 
-function InformationAlert:PostTick()
+function InformationAlert:PreTick()
 	if self.timer:GetSeconds() >= 1 then
 
 		if self.messages[1] and self.messages[1].duration then
@@ -94,17 +104,16 @@ function InformationAlert:PostTick()
 				self:RemoveMessage()
 			end
 		end
-		
 		self.timer:Restart()
 	end
 end
 
 
 function InformationAlert:Render(position)
-	
 	if not self.messages[1] then return end
+
+	self.label:Show()	
 	self.label:SetPosition(position + self.margin)
 
 	Render:FillArea(position, self.label:GetSize() + self.margin * 2, Color(0, 0, 0, 150))
-	self.label:Show()	
 end

@@ -29,6 +29,7 @@ function NotificationAlert:AddMessage(message)
 	label:SetTextSize(self.textSize)
 	label:SetText(message)
 	label:SizeToContents()	
+	label:SetHeight(label:GetHeight() + 5)
 	label:Hide()
 
 	table.insert(self.messages, {label = label, duration = self.duration})
