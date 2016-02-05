@@ -24,7 +24,8 @@ function Combustivel:__init()
 	self.precoLitro = 2
 	self.quantidadeLitros = 10
 	
-	self.Languages = nil
+	self.Languages = Languages()
+	self:SetLanguages()
 end
 
 
@@ -59,7 +60,7 @@ function Combustivel:AbastecerRequest()
 		if LocalPlayer:GetMoney() > self.precoLitro * litros then
 			Network:Send("AbastecerRequest", {litros = litros})
 		else
-			Events:Fire("AddInformationAlert", {id = "PLAYER_INSUFFICIENT_MONEY", message = self.Languages.PLAYER_INSUFFICIENT_MONEY, duration = 5, priority = true})
+			Events:Fire("AddInformationAlert", {id = "PLAYER_INSUFFICIENT_MONEY_COMBUSTIVEL", message = self.Languages.PLAYER_INSUFFICIENT_MONEY, duration = 5, priority = true})
 		end
 	else
 		Events:Fire("AddInformationAlert", {id = "PLAYER_FUEL_TANK_FULL", message = self.Languages.PLAYER_FUEL_TANK_FULL, duration = 5, priority = true})
@@ -81,13 +82,12 @@ end
 
 
 function Combustivel:ModuleLoad()
-	self.Languages = Languages()
 	self.Combustivel = LocalPlayer:GetValue("Combustivel")
 end
 
 
-function Combustivel:NetworkObjectValueChange(args)	
-	if args.object == LocalPlayer and args.key == "Combustivel" then
+function Combustivel:NetworkObjectValueChange(args)
+	if args.object.__type == "LocalPlayer" and args.object == LocalPlayer and args.key == "Combustivel" then
 		self.Combustivel = args.value
 	end
 end
@@ -146,10 +146,16 @@ function Combustivel:SemCombustivel()
 end
 
 
-
 function Combustivel:SaveData()
 	Network:Send("SaveData", {combustivel = self.Combustivel})
 	self.timerSave:Restart()
+end
+
+
+function Combustivel:SetLanguages()
+	self.Languages:SetLanguage("PLAYER_ENTER_FUEL_STATION", {["en"] = "Press F to fuel 10 liters.", ["pt"] = "Pressione F para abastecer 10 litros."})
+	self.Languages:SetLanguage("PLAYER_INSUFFICIENT_MONEY", {["en"] = "You do not have enough money.", ["pt"] = "Você não possui dinheiro suficiente."})
+	self.Languages:SetLanguage("PLAYER_FUEL_TANK_FULL", {["en"] = "Your fuel tank is full.", ["pt"] = "O seu tanque de combustível está cheio."})
 end
 
 Combustivel = Combustivel()
