@@ -24,13 +24,13 @@ Server =
     Timeout                     = 10000,
     -- The name of the server, as seen by players and the server browser.
     -- Default value: "JC2-MP Server"
-    Name                        = "Just Cause: Role Play - Em construção.",
+    Name                        = "Just Cause: Role Play - http://justcauserp.com",
     -- The server description, as seen by players and the server browser.
     -- Default value: "No description available"
-    Description                 = "Servidor de Role Play, em construção.",
+    Description                 = "Servidor de Role Play, em construção. http://justcauserp.com",
     -- The server password.
     -- Default value: ""
-    Password                    = "",
+    Password                    = "dev",
 
     -- Controls whether the server announces its presence to the master server 
     -- and therefore to the server browser.
@@ -101,7 +101,7 @@ Vehicle =
     -- Default value (in seconds): 10
     -- For instant respawn: 0
     -- For no respawning: nil
-    DeathRespawnTime            = 900,
+    DeathRespawnTime            = 20,
     -- Controls whether to remove the vehicle if respawning is turned off,
     -- and the vehicle dies.
     -- Default value: false
@@ -112,7 +112,7 @@ Vehicle =
     -- Default value (in seconds): 45
     -- For instant respawn: 0
     -- For no respawning: nil
-    UnoccupiedRespawnTime       = 45,
+    UnoccupiedRespawnTime       = 900,
     -- Controls whether to remove the vehicle if respawning is turned off,
     -- and the vehicle is left unoccupied.
     -- Default value: false
@@ -130,7 +130,7 @@ Player =
     -- to handle spawns, such as the freeroam script, then this spawn position
     -- will be used.
     -- Default value: Vector3( -6550, 209, -3290 )
-    SpawnPosition               = Vector3( -6031, 218, -3792 )
+    SpawnPosition               = Vector3( -6731, 220, -3590 )
 }
 
 --[[
