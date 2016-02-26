@@ -8,9 +8,9 @@ function WaypointScreen:__init(args)
 end
 
 
-function WaypointScreen:Render(margin)
+function WaypointScreen:Render()
 
-	margin = margin + Vector2(20, 20)
+	local margin = CONFORTOHUD + Vector2(20, 20)
 	DrawImage(WorldToScreen(self.position, margin), margin, self.color, nil, self.name)
 end
 

@@ -58,19 +58,23 @@ function InformationAlert:RemoveMessage(id)
 			end
 		end
 	else
+		id = self.messages[1].id
 		table.remove(self.messages, 1)
 	end
 	self.label:Hide()
 	self:NextMessage()
+	Events:Fire("RemovedInformationAlert", {id = id})
 end
 
 
 function InformationAlert:NextMessage()
 	if self.messages[1] then
+		Render:SetFont(AssetLocation.Disk, "Archivo.ttf")
 		self.label:SetText(self.messages[1].message)
-		self.label:SetWidth(math.min(self.width, Render:GetTextWidth(self.label:GetText(), self.textSize))- self.margin.x * 2)
+		self.label:SetWidth(math.min(self.width, Render:GetTextWidth(self.messages[1].message, self.textSize)))
 		self.label:SizeToContents()
-		ClientSound.Play(AssetLocation.Game, {bank_id = 11, sound_id = 2, position = LocalPlayer:GetPosition(), angle = Angle(), timeout = 10, variable_id_focus = 0})
+		ClientSound.Play(AssetLocation.Game, {bank_id = 11, sound_id = 2, position = Camera:GetPosition(), angle = Angle(), timeout = 10, variable_id_focus = 0})
+		Events:Fire("AddedInformationAlert", {id = self.messages[1].id})
 	end
 end
 

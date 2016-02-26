@@ -6,6 +6,7 @@ function Status:__init()
 	self.Sede = 100
 	self.Combustivel = 100
 	
+	Events:Subscribe("UpdateDataStatus", self, self.UpdateData)
 	Events:Subscribe("ModulesLoad", self, self.UpdateData)
 	Events:Subscribe("PostTick", self, self.PostTick)
 	Events:Subscribe("UpdateDataHUD", self, self.UpdateDataHUD)

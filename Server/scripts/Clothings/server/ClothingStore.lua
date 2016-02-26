@@ -10,8 +10,8 @@ function ClothingStore:__init()
 	Network:Subscribe("BuyClothing", self, self.BuyClothing)
 	Network:Subscribe("EquipClothing", self, self.EquipClothing)
 	
-	Events:Subscribe("ClientModuleLoad", self, self.ClientModuleLoad)
 	Events:Subscribe("ModuleLoad", self, self.ModuleLoad)
+	Events:Subscribe("ClientModuleLoad", self, self.ClientModuleLoad)
 	Events:Subscribe("ServerStart", self, self.ServerStart)
 end
 
@@ -112,8 +112,6 @@ end
 
 function ClothingStore:ModuleLoad()
 
-	self:SetLanguages()
-
 	local query = SQL:Query("SELECT DISTINCT(IdEstablishment) FROM EstablishmentClothing")
 	local establishments = query:Execute()
 	
@@ -138,14 +136,6 @@ function ClothingStore:ModuleLoad()
 		end
 	end
 	
-	self:UpdatePlayers()
-end
-
-
-function ClothingStore:UpdatePlayers()
-	for player in Server:GetPlayers() do
-		self:UpdatePlayer(player)
-	end
 end
 
 
@@ -185,9 +175,5 @@ function ClothingStore:ServerStart()
 		"PRIMARY KEY (IdEstablishment, IdClothing, ClothingType))")
 end
 
-
-function ClothingStore:SetLanguages()
-	self.Languages = Languages()
-end
 
 ClothingStore = ClothingStore()

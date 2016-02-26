@@ -49,16 +49,23 @@ end
 
 
 function CustomChat:PlayerChat(args)
-	local playerName = {text = tostring(args.player), color = args.player:GetColor()}
+	local playerName = {text = args.player:GetCustomName(), color = args.player:GetColor()}
 	local texto = {text = ": "..args.text, color = Color(255, 255, 255)}
 	self:PrintChat({playerName, texto})
 end
 
 
 function CustomChat:ChatSend(text)
-	Events:Fire("PlayerChat", {player = LocalPlayer, text = text})
-	Events:Fire("LocalPlayerChat", {text = text})
-	Network:Send("PlayerChat", {player = LocalPlayer, text = text})
+	if text:sub(1, 1) == "/" then
+		local texts = text:split(" ")
+		local command = texts[1]:sub(2)
+		table.remove(texts, 1)
+		Events:Fire("PlayerChatCommand", {command = command, args = texts})
+	else
+		Events:Fire("PlayerChat", {player = LocalPlayer, text = text})
+		Events:Fire("LocalPlayerChat", {text = text})
+		Network:Send("PlayerChat", {player = LocalPlayer, text = text})
+	end
 end
 
 
@@ -173,6 +180,8 @@ end
 
 
 function CustomChat:SetActive(bool)
+	
+	if bool and Game:GetGUIState() != GUIState.Game then return end
 	
 	self.GUIStateObject:SetValue(tostring(GUIState.Chat), bool)
 	self.typing = bool

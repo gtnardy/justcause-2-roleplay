@@ -11,16 +11,16 @@ end
 
 
 function Languages:ObjectValueChange(args)
-	if args.object.__type == "Player" and args.object == LocalPlayer and args.key == "Language" then
+	if args.object.__type == "LocalPlayer" and args.object == LocalPlayer and args.key == "Language" then
 		self.language = LocalPlayer:GetValue("Language")
 		self:UpdateValues()
 	end
 end
 
 
-function Languages:SetLanguage(alias, languages)
-	self.alias.alias = languages
-	self[alias] = languages[self.language]
+function Languages:SetLanguage(als, languages)
+	self.alias[als] = languages
+	self[als] = languages[self.language]
 end
 
 

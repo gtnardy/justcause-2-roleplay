@@ -14,6 +14,7 @@ function ClothingStore:__init()
 	Network:Subscribe("UpdateClothingsAcquired", self, self.UpdateClothingsAcquired)
 	
 	Events:Subscribe("Render", self, self.Render)
+	Events:Subscribe("CalcView", self, self.CalcView)
 	Events:Subscribe("ModuleLoad", self, self.ModuleLoad)
 	Events:Subscribe("LocalPlayerExitSpot", self, self.LocalPlayerExitSpot)
 	Events:Subscribe("LocalPlayerEnterSpot", self, self.LocalPlayerEnterSpot)
@@ -23,13 +24,14 @@ end
 
 
 function ClothingStore:SetActive(bool)
-
 	self.active = bool
 	if bool then
 		self:ConfigureContextMenu()
-		self.ContextMenu:SetActive(true)
+		self.active = self.ContextMenu:SetActive(true)
 	else
-		self.ContextMenu:SetActive(false)
+		if self.ContextMenu then
+			self.ContextMenu:SetActive(false)
+		end
 		self.ContextMenu = nil
 		Network:Send("ExitClothingStore")
 	end
@@ -40,6 +42,19 @@ function ClothingStore:Render()
 	if self.active and self.ContextMenu and not self.ContextMenu.active then
 		self:SetActive(false)
 	end
+end
+
+
+function ClothingStore:CalcView()
+	-- --if self.active then
+
+			-- local angle = LocalPlayer:GetAngle()
+			-- local cam_pos = LocalPlayer:GetPosition() + Vector3(0, 1.5, 0)
+			-- local t = Vector3( 0, 0, -1.5 )
+			-- cam_pos = cam_pos + ( angle * t )			
+			-- Camera:SetPosition(cam_pos)
+
+	--end
 end
 
 
@@ -54,7 +69,7 @@ function ClothingStore:ConfigureContextMenu()
 	if not clothingsPlayer then clothingsPlayer = {} end
 	
 	for clothingType, clothings in pairs(self.naLoja.clothingTypes) do
-		local itemClothing = ContextMenuItem({text = self.Languages["LABEL_"..clothingType], active = true})
+		local itemClothing = ContextMenuItem({text = self.Languages["LABEL_"..clothingType]})
 		self.ContextMenu.list:AddItem(itemClothing)
 		
 		itemClothing.list = ContextMenuList({subtitle =  string.upper(self.Languages["LABEL_"..clothingType])})
@@ -90,7 +105,7 @@ function ClothingStore:ConfigureContextMenu()
 			
 			local item = ContextMenuItem({
 				text = clothingData.name,
-				textRight = "R$ " .. clothingData.value,
+				textRight = (equipped or acquired) and "" or "R$ " .. clothingData.value,
 				data = data,
 				legend = legend,
 				enabled = enabled,
@@ -127,7 +142,7 @@ end
 function ClothingStore:BuyClothing(list, item)
 
 	local data = item.data
-	if LocalPlayer:GetMoney() < data.value then
+	if not (data.acquired or data.equipped) and LocalPlayer:GetMoney() < data.value then
 		item.legend:SetTempText(self.Languages.PLAYER_INSUFFICIENT_MONEY)
 		return
 	end
@@ -149,6 +164,7 @@ function ClothingStore:BuyClothing(list, item)
 	item.legend:SetText(self.Languages.PLAYER_EQUIPPED_ITEM)
 	data.acquired = true
 	data.equipped = true
+	item.textRight = ""
 	item.imageRight = EQUIPPED_IMAGE
 	item.imageRight_white = EQUIPPED_WHITE_IMAGE
 end
@@ -190,7 +206,7 @@ end
 
 
 function ClothingStore:LocalPlayerEnterSpot(args)
-	if args.spotType == "ClothingShop_Spot" then
+	if args.spotType == "CLOTHINGSTORE_SPOT" then
 		self.naLoja = self:GetShop(args)
 		Events:Fire("AddInformationAlert", {id = "PLAYER_ENTER_CLOTHING_SHOP", message = self.Languages.PLAYER_ENTER_CLOTHING_SHOP, priority = true})
 	end
@@ -198,7 +214,7 @@ end
 
 
 function ClothingStore:LocalPlayerExitSpot(args)
-	if args.spotType == "ClothingShop_Spot" then
+	if args.spotType == "CLOTHINGSTORE_SPOT" then
 		self.naLoja = false
 		Events:Fire("RemoveInformationAlert", {id = "PLAYER_ENTER_CLOTHING_SHOP"})
 	end
@@ -207,7 +223,7 @@ end
 
 function ClothingStore:SetLanguages()
 	self.Languages = Languages()
-	self.Languages:SetLanguage("PLAYER_ENTER_CLOTHING_SHOP", {["en"] = "Press F to acess the Clothing Shop.", ["pt"] = "Pressione F para acessar a Loja de Roupas."})
+	self.Languages:SetLanguage("PLAYER_ENTER_CLOTHING_SHOP", {["en"] = "Press F to access the Clothing Shop.", ["pt"] = "Pressione F para acessar a Loja de Roupas."})
 	self.Languages:SetLanguage("PLAYER_INSUFFICIENT_MONEY", {["en"] = "You do not have enough money.", ["pt"] = "Você não tem dinheiro suficiente."})
 	self.Languages:SetLanguage("LABEL_CATEGORIES", {["en"] = "Categories", ["pt"] = "Categorias"})
 	self.Languages:SetLanguage("LABEL_SKIN", {["en"] = "Skins", ["pt"] = "Roupas"})

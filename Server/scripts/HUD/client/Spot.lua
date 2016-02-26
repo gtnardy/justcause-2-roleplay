@@ -49,7 +49,7 @@ class 'SpotPlayer'
 function SpotPlayer:__init()
 
 	self.name = "VOCÊ"
-	self.image = Image.Create(AssetLocation.Resource, "Player_Spot")
+	self.image = Image.Create(AssetLocation.Resource, "PLAYER_SPOT")
 	self.fixed = false
 	
 	self.imageSize = self.image:GetSize()
@@ -94,7 +94,7 @@ class 'SpotWaypoint'
 function SpotWaypoint:__init()
 
 	self.name = "WAYPOINT"
-	self.image = Image.Create(AssetLocation.Resource, "Waypoint_Spot")
+	self.image = Image.Create(AssetLocation.Resource, "WAYPOINT_SPOT")
 	self.fixed = true
 	
 	self.imageSize = self.image:GetSize()

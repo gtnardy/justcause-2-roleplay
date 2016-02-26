@@ -9,10 +9,10 @@ function Menu:__init()
 	self:AddTela(self.mapa)
 	
 	self.GUIStateObject = SharedObject.Create("GUIState")
-		
-	Events:Subscribe("PostRender", self, self.Render)
+	
 	Events:Subscribe("KeyUp", self, self.KeyUp)
 	Events:Subscribe("LocalPlayerInput", self, self.LocalPlayerInput)
+	Events:Subscribe("ModuleUnload", self, self.ModuleUnload)
 end
 
 
@@ -29,6 +29,7 @@ end
 
 
 function Menu:SetActive(bool)
+	if bool and Game:GetGUIState() != GUIState.Game then return end
 	self.GUIStateObject:SetValue(tostring(GUIState.PDA), bool)
 	self.active = bool
 	Mouse:SetVisible(bool)
@@ -51,6 +52,7 @@ end
 
 function Menu:KeyUp(args)
 	if args.key == VirtualKey.F1 or args.key == string.byte("M") then
+		if Game:GetGUIState() == GUIState.Menu then return end
 		self:Toogle()
 	end
 end
@@ -61,17 +63,22 @@ function Menu:LocalPlayerInput(args)
 end
 
 
-function Menu:Render(args)
+function Menu:Render()
 	if (self.active and Game:GetGUIState() == GUIState.PDA) then
-
+		local position = CONFORTOHUD + Vector2(0, 70)
 		for _, botao in ipairs(self.botoes) do
 			if botao.tela then
 				botao.tela:Render()
 			end
-			botao:Render(Vector2(100 + botao.tamanhoBotao.x * _ + 10, 100))
+			
+			position.x = position.x + 10 + botao:Render(position)
 		end
-		Render:ResetFont()
 	end
+end
+
+
+function Menu:ModuleUnload()
+	self.GUIStateObject:SetValue(tostring(GUIState.PDA), false)
 end
 
 
@@ -84,21 +91,14 @@ function Botao:__init(args)
 	self.texto = string.upper(args.tela.nome)
 	self.sizeTexto = 18
 	
-	self.tamanhoTexto = Render:GetTextSize(self.texto, self.sizeTexto)
-	self.tamanhoBotao = self.tamanhoTexto + Vector2(10, 10)
-	self.posicaoTexto = self.tamanhoBotao / 2 - self.tamanhoTexto / 2
-	
 	self.cor = Color(255, 255, 255)
 end
 
 
 function Botao:SetActive(bool)
 	self.active = bool
-	if bool then
-		self.cor = Color(255, 255, 0)
-	else
-		self.cor = Color(255, 255, 255)
-	end
+	self.cor = bool and Color(222, 184, 34) or Color(255, 255, 255)
+
 	self:SetTelaActive(bool)
 end
 
@@ -115,13 +115,18 @@ end
 
 
 function Botao:Render(posicao)
+	local tamanhoTexto = Render:GetTextSize(self.texto, self.sizeTexto)
+	local tamanhoBotao = tamanhoTexto + Vector2(10, 10)
+	local posicaoTexto = tamanhoBotao / 2 - tamanhoTexto / 2
+	
 	if self.active then
-		Render:FillArea(posicao - Vector2(10, 6), Vector2(self.tamanhoBotao.x + 20, 2), self.cor)
-		Render:FillArea(posicao + Vector2(-10, self.tamanhoBotao.y), Vector2(self.tamanhoBotao.x + 20, 2), self.cor)
-		Render:FillArea(posicao - Vector2(10, 6), Vector2(2, self.tamanhoBotao.y + 8), self.cor)
-		Render:FillArea(posicao + Vector2(self.tamanhoBotao.x + 10, -6), Vector2(2, self.tamanhoBotao.y + 8), self.cor)
+		Render:FillArea(posicao - Vector2(10, 6), Vector2(tamanhoBotao.x + 20, 2), self.cor)
+		Render:FillArea(posicao + Vector2(-10, tamanhoBotao.y), Vector2(tamanhoBotao.x + 20, 2), self.cor)
+		Render:FillArea(posicao - Vector2(10, 6), Vector2(2, tamanhoBotao.y + 8), self.cor)
+		Render:FillArea(posicao + Vector2(tamanhoBotao.x + 10, -6), Vector2(2, tamanhoBotao.y + 8), self.cor)
 	end
-	DrawTextShadow(posicao + self.posicaoTexto, self.texto, self.cor, self.sizeTexto)
+	DrawTextShadow(posicao + posicaoTexto, self.texto, self.cor, self.sizeTexto)
+	return tamanhoBotao.x
 end
 
 

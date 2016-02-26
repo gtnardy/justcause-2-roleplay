@@ -3,7 +3,7 @@ class 'HUD'
 function HUD:__init()
 	
 	self.escalaHUD = 1
-	self.confortoHUD = Vector2(80, 45)
+	CONFORTOHUD = Vector2(80, 45)
 	
 	self.spots = {}
 	
@@ -32,19 +32,27 @@ function HUD:__init()
 	self.Languages = Languages()
 	self:SetLanguages()
 	
+	self.requestingAtualizarSpots = false
 	self.timer = Timer()
 	
 	Events:Subscribe("PostTick", self, self.PostTick)	
 	
 	Events:Subscribe("Render", self, self.Render) 
 	Events:Subscribe("ModuleLoad", self, self.ModuleLoad) 
+	Events:Subscribe("GameLoad", self, self.RequestAtualizarSpots) 
 	
 	Network:Subscribe("AtualizarSpots", self, self.AtualizarSpots)
 end
 
 
+function HUD:RequestAtualizarSpots()
+	self.requestingAtualizarSpots = true
+	Network:Send("RequestAtualizarSpots")
+end
+
+
 function HUD:AtualizarSpots(args)
-	
+	self.requestingAtualizarSpots = false
 	if args.spots then
 		self.spots = {}
 		self:AddSpot(SpotPlayer())
@@ -55,7 +63,7 @@ function HUD:AtualizarSpots(args)
 			if (spot.Spot) then
 				image = self:CreateImage(spot.Spot)
 			end
-			table.insert(self.spots, Spot({id = spot.Id, name = spot.Name, position = self:StringToVector3(spot.Position), image = image, description = spot.DescriptionType, spotType = spot.Spot, radius = tonumber(spot.Radius)}))
+			table.insert(self.spots, Spot({id = spot.Id, name = spot.Name, position = self:StringToVector3(spot.Position), image = image, description = self.Languages[spot.Spot.."_DESCRIPTION"], spotType = spot.Spot, radius = tonumber(spot.Radius)}))
 		end
 	end
 	
@@ -133,28 +141,46 @@ function HUD:ModuleLoad()
 	self:AddWaypointScreen(WaypointScreenMap())
 	
 	self:AtualizarPosicoes()
+	
+	self:RequestAtualizarSpots()
 end
 
 
 function HUD:AtualizarPosicoes()
 	self.tamanhoMinimapa = Vector2(225, 150) * self.escalaHUD
-	self.posicaoMinimapa = Vector2(self.confortoHUD.x, Render.Height - self.confortoHUD.y - self.tamanhoMinimapa.y - 10)
-	self.posicaoCurrentSpots = self.confortoHUD
-	self.NotificationAlert.width = self.tamanhoMinimapa.x
+	self.posicaoMinimapa = Vector2(CONFORTOHUD.x, Render.Height - CONFORTOHUD.y - self.tamanhoMinimapa.y - 10)
+	self.posicaoCurrentSpots = CONFORTOHUD
+	self.NotificationAlert.width = self.tamanhoMinimapa.x - 16
 end
 
 
 function HUD:Render()
-
 	self:AtualizarPosicoes()
 	
 	Game:FireEvent("gui.minimap.hide")
 	Game:FireEvent("gui.hud.hide")
 	
+	if Game:GetHUDHidden() then return end
+	
 	Render:SetFont(AssetLocation.Disk, "Archivo.ttf")
 	
 	if self.BloodScreen then
 		self.BloodScreen:Render()
+	end
+	
+	if self.Menu:GetActive() then
+		self.Menu:Render()
+	end
+	
+	local positionUpperRight = Vector2(Render.Width - CONFORTOHUD.x, CONFORTOHUD.y)
+	if self.Dinheiro then
+		self.Dinheiro:Render(positionUpperRight)
+	end
+	
+	positionUpperRight.x = positionUpperRight.x - 30
+	
+	if self.Experiencia then
+		self.Experiencia:Render(positionUpperRight )
 	end
 	
 	if self.Menu:GetActive() then return end
@@ -168,21 +194,24 @@ function HUD:Render()
 		self.HealthBar:Render(self.posicaoMinimapa + Vector2(0, self.tamanhoMinimapa.y), Vector2(self.tamanhoMinimapa.x + 4, 11))
 	end
 	
-	if self.Status then
-		self.Status:Render(Vector2(Render.Width - self.confortoHUD.x - 160, Render.Height - self.confortoHUD.y), Vector2(160, 24), self.Languages)
-	end
-	
 	if self.Alert then
 		self:RenderAlert()
 	end
 	
+	local statusHeight = Render.Height - CONFORTOHUD.y
 	self:RenderWaypointsScreen()
 	if Game:GetGUIState() != GUIState.ContextMenu then
 		if self.InformationAlert and self.InformationAlert:HasMessage() then
-			self.InformationAlert:Render(self.confortoHUD)
+			self.InformationAlert:Render(CONFORTOHUD)
 		elseif self.Checkpoint then
 			self.Checkpoint:Render(self.posicaoCurrentSpots)
 		end
+	else
+		statusHeight = statusHeight - 40
+	end
+	
+	if self.Status then
+		self.Status:Render(Vector2(Render.Width - CONFORTOHUD.x - 160, statusHeight), Vector2(160, 24), self.Languages)
 	end
 	
 	if self.NotificationAlert then
@@ -190,22 +219,11 @@ function HUD:Render()
 	end
 	
 	if self.Nametags then
-		self.Nametags:Render()
+		--self.Nametags:Render()
 	end
 	
 	if self.Objective then
-		self.Objective:Render()
-	end
-	
-	local positionUpperRight = Vector2(Render.Width - self.confortoHUD.x, self.confortoHUD.y)
-	if self.Dinheiro then
-		self.Dinheiro:Render(positionUpperRight)
-	end
-	
-	positionUpperRight.x = positionUpperRight.x - 30
-	
-	if self.Experiencia then
-		self.Experiencia:Render(positionUpperRight )
+		self.Objective:Render(Vector2(Render.Width / 2, Render.Height - CONFORTOHUD.y))
 	end
 end
 
@@ -213,7 +231,7 @@ end
 function HUD:RenderWaypointsScreen()
 
 	for _, waypointScreen in pairs(self.waypointsScreen) do
-		waypointScreen:Render(self.confortoHUD)
+		waypointScreen:Render(CONFORTOHUD)
 	end
 end
 
@@ -240,7 +258,6 @@ end
 
 
 function HUD:StringToVector3(str)
-
 	local v = tostring(str):split(", ")
 	return Vector3(tonumber(v[1]), tonumber(v[3]), tonumber(v[5]))
 end
@@ -253,6 +270,16 @@ function HUD:SetLanguages()
 	self.Languages:SetLanguage("LABEL_HUNGER", {["en"] = "Hunger", ["pt"] = "Fome"})
 	self.Languages:SetLanguage("LABEL_THIRST", {["en"] = "Thirst", ["pt"] = "Sede"})
 	self.Languages:SetLanguage("LABEL_FUEL", {["en"] = "Fuel", ["pt"] = "Combustivel"})
+	self.Languages:SetLanguage("VILLAGE_SPOT_DESCRIPTION", {["en"] = "Village", ["pt"] = "Vila"})
+	self.Languages:SetLanguage("STRONGHOLD_SPOT_DESCRIPTION", {["en"] = "Stronghold", ["pt"] = "Fortaleza Militar"})
+	self.Languages:SetLanguage("RADIO_SPOT_DESCRIPTION", {["en"] = "Radio", ["pt"] = "Posto Avançado"})
+	self.Languages:SetLanguage("PORT_SPOT_DESCRIPTION", {["en"] = "Port", ["pt"] = "Porto"})
+	self.Languages:SetLanguage("OIL_SPOT_DESCRIPTION", {["en"] = "Oil Rig", ["pt"] = "Plataforma Petrolífera"})
+	self.Languages:SetLanguage("MILITARY_SPOT_DESCRIPTION", {["en"] = "Military Base", ["pt"] = "Base Militar"})
+	self.Languages:SetLanguage("FUEL_SPOT_DESCRIPTION", {["en"] = "Gas Station", ["pt"] = "Posto de Combustível"})
+	self.Languages:SetLanguage("CLOTHINGSHOP_SPOT_DESCRIPTION", {["en"] = "Clothing Store", ["pt"] = "Loja de Roupas"})
+	self.Languages:SetLanguage("CITY_SPOT_DESCRIPTION", {["en"] = "City", ["pt"] = "Cidade"})
+	self.Languages:SetLanguage("AIRPORT_SPOT_DESCRIPTION", {["en"] = "Airport", ["pt"] = "Aeroporto"})
 end
 
 

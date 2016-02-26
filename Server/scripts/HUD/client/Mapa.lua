@@ -24,13 +24,12 @@ function Mapa:__init()
 	Events:Subscribe("MouseDown", self, self.MouseDown)
 	Events:Subscribe("MouseUp", self, self.MouseUp)
 	Events:Subscribe("MouseScroll", self, self.MouseScroll)
-	
 end
 
 
 function Mapa:Render()
 
-	self.mapaImagem:SetAlpha(0.9)
+	self.mapaImagem:SetAlpha(0.7)
 	if self.arrastando then
 		self.mapaPosition = self.mapaPosition + (Mouse:GetPosition() - self.arrastando.posicaoInicialMouse) / self.zoom
 		self.arrastando.posicaoInicialMouse = Mouse:GetPosition()
@@ -46,13 +45,9 @@ function Mapa:Render()
 
 	self:RenderSpots()
 	
-	Render:SetFont(AssetLocation.Disk, "Archivo.ttf")
-	
 	self:RenderSpotHover()
 	
 	self:RenderHUD()
-	
-	Render:ResetFont()
 end
 
 
@@ -75,22 +70,22 @@ end
 
 
 function Mapa:RenderHUD()
-	local pos = Vector2(Render.Width - 50, Render.Height / 3)
+	local pos = Vector2(Render.Width - CONFORTOHUD.x, Render.Height / 3)
 	local text = "WAYPOINT"
 	local textSize = 16
 	
-	Render:FillArea(pos - Vector2(30 + Render:GetTextWidth(text, textSize) + 10, 10), Render:GetTextSize(text, textSize) + Vector2(60, 20), Color(0, 0, 0, 150))
-	Render:DrawText(pos - Vector2(30 + Render:GetTextWidth(text, textSize), 0), text, Color(255,255,255), textSize)
+	Render:FillArea(pos - Vector2(50 + Render:GetTextWidth(text, textSize) + 10, 10), Render:GetTextSize(text, textSize) + Vector2(60, 20), Color(0, 0, 0, 150))
+	Render:DrawText(pos - Vector2(50 + Render:GetTextWidth(text, textSize), 0), text, Color(255,255,255), textSize)
 		
-	self.mouseMImagem:SetPosition(pos - Vector2(5, Render:GetTextHeight(text, textSize) / 2 - 2))
+	self.mouseMImagem:SetPosition(pos - Vector2(25, Render:GetTextHeight(text, textSize) / 2 - 2))
 	self.mouseMImagem:Draw()
 	
 	text = "ZOOM"
 	pos = pos + Vector2(0, Render:GetTextHeight(text, textSize) + 25)
-	Render:FillArea(pos - Vector2(30 + Render:GetTextWidth(text, textSize) + 10, 10), Render:GetTextSize(text, textSize) + Vector2(60, 20), Color(0, 0, 0, 150))
-	Render:DrawText(pos - Vector2(30 + Render:GetTextWidth(text, textSize), 0), text, Color(255,255,255), textSize)
+	Render:FillArea(pos - Vector2(50 + Render:GetTextWidth(text, textSize) + 10, 10), Render:GetTextSize(text, textSize) + Vector2(60, 20), Color(0, 0, 0, 150))
+	Render:DrawText(pos - Vector2(50 + Render:GetTextWidth(text, textSize), 0), text, Color(255,255,255), textSize)
 		
-	self.mouseSImagem:SetPosition(pos - Vector2(5, Render:GetTextHeight(text, textSize) / 2 - 2))
+	self.mouseSImagem:SetPosition(pos - Vector2(25, Render:GetTextHeight(text, textSize) / 2 - 2))
 	self.mouseSImagem:Draw()
 end
 

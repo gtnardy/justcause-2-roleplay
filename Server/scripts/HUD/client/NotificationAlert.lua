@@ -4,7 +4,6 @@ function NotificationAlert:__init()
 	
 	self.textSize = 14
 	self.margin = Vector2(10, 10)
-	self.width = 209
 	
 	self.duration = 20
 	self.messages = {}
@@ -33,7 +32,7 @@ function NotificationAlert:AddMessage(message)
 	label:Hide()
 
 	table.insert(self.messages, {label = label, duration = self.duration})
-	ClientSound.Play(AssetLocation.Game, {bank_id = 11, sound_id = 2, position = LocalPlayer:GetPosition(), angle = Angle(), timeout = 10, variable_id_focus = 0})
+	ClientSound.Play(AssetLocation.Game, {bank_id = 11, sound_id = 2, position = Camera:GetPosition(), angle = Angle(), timeout = 10, variable_id_focus = 0})
 end
 
 

@@ -21,7 +21,7 @@ function Nametags:RenderNametag(player)
 	local screenPosition, onScreen = Render:WorldToScreen(playerPosition) 
 	if not onScreen then return end
 	
-	local playerName = player:GetName()
+	local playerName = player:GetCustomName()
 	local playerColor = player:GetColor()
 	playerColor.a = 200
 	local distance = Vector3.Distance(LocalPlayer:GetPosition(), playerPosition)

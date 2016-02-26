@@ -30,7 +30,7 @@ end
 
 
 function Combustivel:LocalPlayerEnterSpot(args)
-	if args.spotType == "Fuel_Spot" then
+	if args.spotType == "FUEL_SPOT" then
 		self.noPosto = true
 		Events:Fire("AddInformationAlert", {id = "PLAYER_ENTER_FUEL_STATION", message = self.Languages.PLAYER_ENTER_FUEL_STATION, priority = true})
 	end
@@ -38,7 +38,7 @@ end
 
 
 function Combustivel:LocalPlayerExitSpot(args)
-	if args.spotType == "Fuel_Spot" then
+	if args.spotType == "FUEL_SPOT" then
 		self.noPosto = false
 		Events:Fire("RemoveInformationAlert", {id = "PLAYER_ENTER_FUEL_STATION"})
 	end

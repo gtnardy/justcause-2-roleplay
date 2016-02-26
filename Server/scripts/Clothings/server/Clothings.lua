@@ -2,9 +2,8 @@ class 'Clothings'
 
 function Clothings:__init()
 	
-	Events:Subscribe("ModuleLoad", self, self.ModuleLoad)
 	Events:Subscribe("ServerStart", self, self.ServerStart)
-	Events:Subscribe("PlayerJoin", self, self.PlayerJoin)
+	Events:Subscribe("ClientModuleLoad", self, self.ClientModuleLoad)
 end
 
 		
@@ -27,15 +26,8 @@ function Clothings:UpdatePlayer(player)
 end
 
 
-function Clothings:PlayerJoin(args)
+function Clothings:ClientModuleLoad(args)
 	self:UpdatePlayer(args.player)
-end
-
-
-function Clothings:ModuleLoad()
-	for player in Server:GetPlayers() do
-		self:UpdatePlayer(player)
-	end
 end
 
 

@@ -53,8 +53,19 @@ function Radio:__init()
 	Events:Subscribe("LocalPlayerExitVehicle", self, self.LocalPlayerExitVehicle)
 	Events:Subscribe("ModuleUnload", self, self.ModuleUnload)
 	Events:Subscribe("ModuleLoad", self, self.ModuleLoad)
+	Events:Subscribe("KeyUp", self, self.KeyUp)
+
+end
+
+
+function Radio:KeyUp(args)
 	
-	self:NextMusic()
+	if self.active and args.key == string.byte(";") then
+		self.active = false
+		self.musicaAtual:SetParameter(0, 0)
+		self.musicaAtual:SetParameter(1, 0)
+	end
+
 end
 
 
@@ -122,10 +133,9 @@ end
 
 
 function Radio:PostTick()
-	if not self.active and self.timer:GetSeconds() > 10 then
+	if self.musicaAtual and not self.active and self.timer:GetSeconds() > 10 then
 		self.musicaAtual:SetParameter(0, 0)
 		self.musicaAtual:SetParameter(1, 0)
-		self.timer:Restart()
 	end
 end
 

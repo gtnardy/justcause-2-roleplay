@@ -130,7 +130,7 @@ Player =
     -- to handle spawns, such as the freeroam script, then this spawn position
     -- will be used.
     -- Default value: Vector3( -6550, 209, -3290 )
-    SpawnPosition               = Vector3( -6731, 220, -3590 )
+    SpawnPosition               = Vector3( -6728.92, 225, -3589.9 )
 }
 
 --[[
@@ -172,7 +172,7 @@ World =
 {
     -- The default time of day at world creation.
     -- Default value (in hours): 0.0
-    Time                        = 0.0,
+    Time                        = 14,
 
     -- The increment added to the time of day each second.
     -- Default value (in minutes): 1

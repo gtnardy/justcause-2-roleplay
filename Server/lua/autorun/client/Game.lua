@@ -7,29 +7,20 @@ function GUIStateHandler:__init()
 	self.state = GUIState.Loading
 	self.states = {}
 	
-	--self.toUpdate = false
-	--self.timerUpdateState = Timer()
+	self.HUDHidden = false
+	
 	
 	Events:Subscribe("SharedObjectValueChange", self, self.SharedObjectValueChange)
 	Events:Subscribe("ModuleLoad", self, self.ModuleLoad)
-	--Events:Subscribe("PostTick", self, self.PostTick)
+	Events:Subscribe("UpdateHUDState", self, self.UpdateHUDState)
 end
 
-
--- function GUIStateHandler:PostTick()
-	-- if self.toUpdate and self.timerUpdateState:GetSeconds() > 0.2 then
-		-- self.toUpdate = false
-		-- self:UpdateState()
-	-- end
--- end
 
 
 function GUIStateHandler:SharedObjectValueChange(args)
 	if args.object.__type == "SharedObject" and args.object:GetName() == "GUIState" then
 		self.states[tonumber(args.key)] = args.value
 		self:UpdateState()
-		--self.timerUpdateState:Restart()
-		--self.toUpdate = true
 	end
 end
 
@@ -55,6 +46,8 @@ function GUIStateHandler:UpdateState()
 	local upd = GUIState.Loading
 	if self.states[GUIState.Menu] then
 		upd = GUIState.Menu
+	elseif self.states[GUIState.ConfirmationScreen] then
+		upd = GUIState.ConfirmationScreen
 	elseif self.states[GUIState.PDA] then
 		upd = GUIState.PDA
 	elseif self.states[GUIState.Chat] then
@@ -68,10 +61,29 @@ function GUIStateHandler:UpdateState()
 end
 
 
+function GUIStateHandler:UpdateHUDState(bool)
+
+	self.HUDHidden = bool
+end
+
+
+function Game:SetHUDHidden(bool)
+	Events:Fire("UpdateHUDState", bool)
+end
+
+
+function GUIStateHandler:GetHUDHidden()
+	return self.HUDHidden
+end
+
+
 function GUIStateHandler:ModuleLoad()
 	GUIState.ContextMenu = 6
 	GUIState.Chat = 7
+	GUIState.ConfirmationScreen = 8
+	GUIState.Cellphone = 9
 	function Game:GetGUIState(...) return GUIStateHandler:GetState(...) end
+	function Game:GetHUDHidden(...) return GUIStateHandler:GetHUDHidden(...) end
 	self:UpdateStates()
 end
 
