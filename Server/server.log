@@ -58194,3 +58194,1790 @@
 09:26:20 | [info ] | Module Tutorial unloaded successfully
 09:26:20 | [info ] | Module Vehicles unloaded successfully
 09:26:20 | [info ] | Server shutdown
+20:38:02 | [info ] | JCMP Server 0.2.2 (Build 1014)
+20:38:02 | [info ] | Loading configuration
+20:38:02 | [info ] | Succesfully loaded configuration
+20:38:03 | [info ] | No ban list found: cleared bans
+20:38:03 | [info ] | Server started up successfully
+20:38:03 | [info ] | Loading module Admin
+20:38:03 | [info ] | 	Loading script "server\Admin.lua"
+20:38:04 | [info ] | Module Admin loaded successfully
+20:38:04 | [info ] | Loading module Bank
+20:38:04 | [info ] | 	Loading script "server\Bank.lua"
+20:38:04 | [info ] | Module Bank loaded successfully
+20:38:04 | [info ] | Loading module closehud
+20:38:04 | [info ] | Module closehud loaded successfully
+20:38:04 | [info ] | Loading module Clothings
+20:38:04 | [info ] | 	Loading script "shared\ClothingsList.lua"
+20:38:04 | [info ] | 	Loading script "server\ClothingStore.lua"
+20:38:04 | [info ] | 	Loading script "server\Clothings.lua"
+20:38:04 | [info ] | Module Clothings loaded successfully
+20:38:04 | [info ] | Loading module Combustivel
+20:38:04 | [info ] | 	Loading script "server\Combustivel.lua"
+20:38:04 | [info ] | Module Combustivel loaded successfully
+20:38:04 | [info ] | Loading module CommandsController
+20:38:04 | [info ] | Module CommandsController loaded successfully
+20:38:04 | [info ] | Loading module Controls
+20:38:04 | [info ] | Module Controls loaded successfully
+20:38:04 | [info ] | Loading module CustomChat
+20:38:04 | [info ] | 	Loading script "server\CustomChat.lua"
+20:38:04 | [info ] | Module CustomChat loaded successfully
+20:38:04 | [info ] | Loading module Employments
+20:38:04 | [info ] | 	Loading script "server\Employments.lua"
+20:38:04 | [info ] | Module Employments loaded successfully
+20:38:04 | [info ] | Loading module Establishment
+20:38:04 | [info ] | 	Loading script "server\Establishment.lua"
+20:38:04 | [info ] | Module Establishment loaded successfully
+20:38:04 | [info ] | Loading module Feeding
+20:38:04 | [info ] | 	Loading script "shared\FeedingList.lua"
+20:38:04 | [info ] | 	Loading script "server\Feeding.lua"
+20:38:04 | [info ] | 	Loading script "server\FeedingStore.lua"
+20:38:04 | [info ] | Module Feeding loaded successfully
+20:38:04 | [info ] | Loading module HUD
+20:38:04 | [info ] | 	Loading script "server\HUD.lua"
+20:38:04 | [info ] | 	Loading script "server\InformationAlert.lua"
+20:38:04 | [info ] | 	Loading script "server\NotificationAlert.lua"
+20:38:05 | [info ] | Module HUD loaded successfully
+20:38:05 | [info ] | Loading module Inventory
+20:38:05 | [info ] | 	Loading script "shared\InventoryGPSList.lua"
+20:38:05 | [info ] | 	Loading script "server\Inventory.lua"
+20:38:05 | [info ] | Module Inventory loaded successfully
+20:38:05 | [info ] | Loading module Jobs
+20:38:05 | [info ] | 	Loading script "shared\JobsList.lua"
+20:38:05 | [info ] | 	Loading script "server\Jobs.lua"
+20:38:05 | [info ] | Module Jobs loaded successfully
+20:38:05 | [info ] | Loading module Level
+20:38:05 | [info ] | 	Loading script "server\Level.lua"
+20:38:05 | [info ] | Module Level loaded successfully
+20:38:05 | [info ] | Loading module Objects
+20:38:05 | [info ] | 	Loading script "server\Objects.lua"
+20:38:05 | [info ] | Module Objects loaded successfully
+20:38:05 | [info ] | Loading module physgun
+20:38:05 | [info ] | 	Loading script "shared\settings.lua"
+20:38:05 | [info ] | 	Loading script "shared\util.lua"
+20:38:05 | [info ] | 	Loading script "server\physgun_init.lua"
+20:38:05 | [info ] | Module physgun loaded successfully
+20:38:05 | [info ] | Loading module PlayerController
+20:38:05 | [info ] | 	Loading script "server\PlayerController.lua"
+20:38:05 | [info ] | Module PlayerController loaded successfully
+20:38:05 | [info ] | Loading module Radio
+20:38:05 | [info ] | Module Radio loaded successfully
+20:38:05 | [info ] | Loading module Tutorial
+20:38:05 | [info ] | 	Loading script "server\Tutorial.lua"
+20:38:05 | [info ] | Module Tutorial loaded successfully
+20:38:05 | [info ] | Loading module Vehicles
+20:38:05 | [info ] | 	Loading script "server\Vehicles.lua"
+20:38:06 | [info ] | Module Vehicles loaded successfully
+20:38:52 | [info ] | Module Admin unloaded successfully
+20:38:52 | [info ] | Module Bank unloaded successfully
+20:38:52 | [info ] | Module closehud unloaded successfully
+20:38:52 | [info ] | Module Clothings unloaded successfully
+20:38:52 | [info ] | Module Combustivel unloaded successfully
+20:38:52 | [info ] | Module CommandsController unloaded successfully
+20:38:52 | [info ] | Module Controls unloaded successfully
+20:38:52 | [info ] | Module CustomChat unloaded successfully
+20:38:52 | [info ] | Module Employments unloaded successfully
+20:38:52 | [info ] | Module Establishment unloaded successfully
+20:38:52 | [info ] | Module Feeding unloaded successfully
+20:38:52 | [info ] | Module HUD unloaded successfully
+20:38:52 | [info ] | Module Inventory unloaded successfully
+20:38:52 | [info ] | Module Jobs unloaded successfully
+20:38:52 | [info ] | Module Level unloaded successfully
+20:38:52 | [info ] | Module Objects unloaded successfully
+20:38:52 | [info ] | Module physgun unloaded successfully
+20:38:52 | [info ] | Module PlayerController unloaded successfully
+20:38:52 | [info ] | Module Radio unloaded successfully
+20:38:52 | [info ] | Module Tutorial unloaded successfully
+20:38:52 | [info ] | Module Vehicles unloaded successfully
+20:38:52 | [info ] | Server shutdown
+20:39:01 | [info ] | JCMP Server 0.2.2 (Build 1014)
+20:39:01 | [info ] | Loading configuration
+20:39:01 | [info ] | Succesfully loaded configuration
+20:39:01 | [error] | Unhandled exception during server startup: RakNet UDP startup failed: SOCKET_PORT_ALREADY_IN_USE (5)
+20:39:01 | [info ] | Press any key to continue..
+20:39:06 | [info ] | JCMP Server 0.2.2 (Build 1014)
+20:39:06 | [info ] | Loading configuration
+20:39:06 | [info ] | Succesfully loaded configuration
+20:39:06 | [error] | Unhandled exception during server startup: RakNet UDP startup failed: SOCKET_PORT_ALREADY_IN_USE (5)
+20:39:06 | [info ] | Press any key to continue..
+20:39:17 | [info ] | JCMP Server 0.2.2 (Build 1014)
+20:39:17 | [info ] | Loading configuration
+20:39:17 | [info ] | Succesfully loaded configuration
+20:39:18 | [error] | Unhandled exception during server startup: RakNet UDP startup failed: SOCKET_PORT_ALREADY_IN_USE (5)
+20:39:18 | [info ] | Press any key to continue..
+12:52:30 | [info ] | JCMP Server 0.2.2 (Build 1014)
+12:52:30 | [info ] | Loading configuration
+12:52:30 | [info ] | Succesfully loaded configuration
+12:52:31 | [info ] | No ban list found: cleared bans
+12:52:31 | [info ] | Server started up successfully
+12:52:31 | [info ] | Loading module Admin
+12:52:31 | [info ] | 	Loading script "server\Admin.lua"
+12:52:31 | [info ] | Module Admin loaded successfully
+12:52:31 | [info ] | Loading module Bank
+12:52:31 | [info ] | 	Loading script "server\Bank.lua"
+12:52:31 | [info ] | Module Bank loaded successfully
+12:52:31 | [info ] | Loading module closehud
+12:52:31 | [info ] | Module closehud loaded successfully
+12:52:31 | [info ] | Loading module Clothings
+12:52:31 | [info ] | 	Loading script "shared\ClothingsList.lua"
+12:52:31 | [info ] | 	Loading script "server\ClothingStore.lua"
+12:52:31 | [info ] | 	Loading script "server\Clothings.lua"
+12:52:31 | [info ] | Module Clothings loaded successfully
+12:52:31 | [info ] | Loading module Combustivel
+12:52:31 | [info ] | 	Loading script "server\Combustivel.lua"
+12:52:31 | [info ] | Module Combustivel loaded successfully
+12:52:31 | [info ] | Loading module CommandsController
+12:52:31 | [info ] | Module CommandsController loaded successfully
+12:52:31 | [info ] | Loading module Controls
+12:52:31 | [info ] | Module Controls loaded successfully
+12:52:31 | [info ] | Loading module CustomChat
+12:52:31 | [info ] | 	Loading script "server\CustomChat.lua"
+12:52:31 | [info ] | Module CustomChat loaded successfully
+12:52:31 | [info ] | Loading module Employments
+12:52:31 | [info ] | 	Loading script "server\Employments.lua"
+12:52:31 | [info ] | Module Employments loaded successfully
+12:52:31 | [info ] | Loading module Establishment
+12:52:31 | [info ] | 	Loading script "server\Establishment.lua"
+12:52:31 | [info ] | Module Establishment loaded successfully
+12:52:31 | [info ] | Loading module Feeding
+12:52:31 | [info ] | 	Loading script "shared\FeedingList.lua"
+12:52:31 | [info ] | 	Loading script "server\Feeding.lua"
+12:52:31 | [info ] | 	Loading script "server\FeedingStore.lua"
+12:52:31 | [info ] | Module Feeding loaded successfully
+12:52:31 | [info ] | Loading module HUD
+12:52:31 | [info ] | 	Loading script "server\HUD.lua"
+12:52:31 | [info ] | 	Loading script "server\InformationAlert.lua"
+12:52:32 | [info ] | 	Loading script "server\NotificationAlert.lua"
+12:52:32 | [info ] | Module HUD loaded successfully
+12:52:32 | [info ] | Loading module Inventory
+12:52:32 | [info ] | 	Loading script "shared\InventoryGPSList.lua"
+12:52:32 | [info ] | 	Loading script "server\Inventory.lua"
+12:52:32 | [info ] | Module Inventory loaded successfully
+12:52:32 | [info ] | Loading module Jobs
+12:52:32 | [info ] | 	Loading script "shared\JobsList.lua"
+12:52:32 | [info ] | 	Loading script "server\Jobs.lua"
+12:52:32 | [info ] | Module Jobs loaded successfully
+12:52:32 | [info ] | Loading module Level
+12:52:32 | [info ] | 	Loading script "server\Level.lua"
+12:52:32 | [info ] | Module Level loaded successfully
+12:52:32 | [info ] | Loading module Objects
+12:52:32 | [info ] | 	Loading script "server\Objects.lua"
+12:52:32 | [info ] | Module Objects loaded successfully
+12:52:32 | [info ] | Loading module physgun
+12:52:32 | [info ] | 	Loading script "shared\settings.lua"
+12:52:32 | [info ] | 	Loading script "shared\util.lua"
+12:52:32 | [info ] | 	Loading script "server\physgun_init.lua"
+12:52:32 | [info ] | Module physgun loaded successfully
+12:52:32 | [info ] | Loading module PlayerController
+12:52:32 | [info ] | 	Loading script "server\PlayerController.lua"
+12:52:32 | [info ] | Module PlayerController loaded successfully
+12:52:32 | [info ] | Loading module Radio
+12:52:32 | [info ] | Module Radio loaded successfully
+12:52:32 | [info ] | Loading module Tutorial
+12:52:32 | [info ] | 	Loading script "server\Tutorial.lua"
+12:52:32 | [info ] | Module Tutorial loaded successfully
+12:52:32 | [info ] | Loading module Vehicles
+12:52:32 | [info ] | 	Loading script "server\Vehicles.lua"
+12:52:33 | [info ] | Module Vehicles loaded successfully
+12:52:59 | [info ] | Connection accepted
+12:52:59 | [info ] | Adding player with ID 0 and guid 472877963173223342, SteamID: STEAM_0:0:11728421
+12:52:59 | [info ] | Saede Morramade joined the server (127.0.0.1)
+12:55:09 | [info ] | Saede Morramade left the server (127.0.0.1)
+12:55:31 | [info ] | Module Admin unloaded successfully
+12:55:31 | [info ] | Module Bank unloaded successfully
+12:55:31 | [info ] | Module closehud unloaded successfully
+12:55:31 | [info ] | Module Clothings unloaded successfully
+12:55:31 | [info ] | Module Combustivel unloaded successfully
+12:55:31 | [info ] | Module CommandsController unloaded successfully
+12:55:31 | [info ] | Module Controls unloaded successfully
+12:55:31 | [info ] | Module CustomChat unloaded successfully
+12:55:31 | [info ] | Module Employments unloaded successfully
+12:55:31 | [info ] | Module Establishment unloaded successfully
+12:55:31 | [info ] | Module Feeding unloaded successfully
+12:55:31 | [info ] | Module HUD unloaded successfully
+12:55:31 | [info ] | Module Inventory unloaded successfully
+12:55:31 | [info ] | Module Jobs unloaded successfully
+12:55:31 | [info ] | Module Level unloaded successfully
+12:55:31 | [info ] | Module Objects unloaded successfully
+12:55:31 | [info ] | Module physgun unloaded successfully
+12:55:31 | [info ] | Module PlayerController unloaded successfully
+12:55:31 | [info ] | Module Radio unloaded successfully
+12:55:31 | [info ] | Module Tutorial unloaded successfully
+12:55:31 | [info ] | Module Vehicles unloaded successfully
+12:55:32 | [info ] | Server shutdown
+07:59:05 | [info ] | JCMP Server 0.2.2 (Build 1014)
+07:59:05 | [info ] | Loading configuration
+07:59:05 | [error] | Failed to load Lua: 
+07:59:05 | [error] |   D:\just-cause-2-role-play\Server\config.lua:17: unfinished string near '",'
+07:59:05 | [info ] | No ban list found: cleared bans
+07:59:05 | [info ] | Server started up successfully
+07:59:05 | [info ] | Loading module Admin
+07:59:05 | [info ] | 	Loading script "server\Admin.lua"
+07:59:05 | [info ] | Module Admin loaded successfully
+07:59:05 | [info ] | Loading module Bank
+07:59:05 | [info ] | 	Loading script "server\Bank.lua"
+07:59:05 | [info ] | Module Bank loaded successfully
+07:59:05 | [info ] | Loading module closehud
+07:59:05 | [info ] | Module closehud loaded successfully
+07:59:05 | [info ] | Loading module Clothings
+07:59:05 | [info ] | 	Loading script "shared\ClothingsList.lua"
+07:59:05 | [info ] | 	Loading script "server\ClothingStore.lua"
+07:59:05 | [info ] | 	Loading script "server\Clothings.lua"
+07:59:05 | [info ] | Module Clothings loaded successfully
+07:59:05 | [info ] | Loading module Combustivel
+07:59:05 | [info ] | 	Loading script "server\Combustivel.lua"
+07:59:05 | [error] | Failed to run file Combustivel.lua in module Combustivel: 
+07:59:05 | [error] |   ...e-play\Server\scripts\Combustivel\server\Combustivel.lua:10: attempt to call global 'Languages' (a nil value)
+07:59:05 | [error] |   Callstack:
+07:59:05 | [error] |     API function: in global Languages
+07:59:05 | [error] |     server\Combustivel.lua:10: in function <server\Combustivel.lua:3>
+07:59:05 | [error] |     API function: in global Combustivel
+07:59:05 | [error] |     server\Combustivel.lua:35: in main chunk
+07:59:05 | [info ] | Module Combustivel loaded with errors
+07:59:05 | [info ] | Loading module CommandsController
+07:59:05 | [info ] | Module CommandsController loaded successfully
+07:59:05 | [info ] | Loading module Controls
+07:59:05 | [info ] | Module Controls loaded successfully
+07:59:05 | [info ] | Loading module CustomChat
+07:59:05 | [info ] | 	Loading script "server\CustomChat.lua"
+07:59:05 | [info ] | Module CustomChat loaded successfully
+07:59:06 | [info ] | Loading module Employments
+07:59:06 | [info ] | 	Loading script "server\Employments.lua"
+07:59:06 | [info ] | Module Employments loaded successfully
+07:59:06 | [info ] | Loading module Establishment
+07:59:06 | [info ] | 	Loading script "server\Establishment.lua"
+07:59:06 | [info ] | Module Establishment loaded successfully
+07:59:06 | [info ] | Loading module Feeding
+07:59:06 | [info ] | 	Loading script "shared\FeedingList.lua"
+07:59:06 | [info ] | 	Loading script "server\Feeding.lua"
+07:59:06 | [info ] | 	Loading script "server\FeedingStore.lua"
+07:59:06 | [error] | Failed to run file FeedingStore.lua in module Feeding: 
+07:59:06 | [error] |   ...-role-play\Server\scripts\Feeding\shared\FeedingList.lua:16: attempt to call global 'Languages' (a nil value)
+07:59:06 | [error] |   Callstack:
+07:59:06 | [error] |     API function: in global Languages
+07:59:06 | [error] |     shared\FeedingList.lua:16: in method SetLanguages
+07:59:06 | [error] |     shared\FeedingList.lua:5: in function <shared\FeedingList.lua:3>
+07:59:06 | [error] |     API function: in global FeedingList
+07:59:06 | [error] |     server\FeedingStore.lua:6: in function <server\FeedingStore.lua:3>
+07:59:06 | [error] |     API function: in global FeedingStore
+07:59:06 | [error] |     server\FeedingStore.lua:92: in main chunk
+07:59:06 | [info ] | Module Feeding loaded with errors
+07:59:06 | [info ] | Loading module HUD
+07:59:06 | [info ] | 	Loading script "server\HUD.lua"
+07:59:06 | [info ] | 	Loading script "server\InformationAlert.lua"
+07:59:06 | [info ] | 	Loading script "server\NotificationAlert.lua"
+07:59:06 | [info ] | Module HUD loaded successfully
+07:59:06 | [info ] | Loading module Inventory
+07:59:06 | [info ] | 	Loading script "shared\InventoryGPSList.lua"
+07:59:06 | [info ] | 	Loading script "server\Inventory.lua"
+07:59:06 | [error] | Failed to run file Inventory.lua in module Inventory: 
+07:59:06 | [error] |   ...lay\Server\scripts\Inventory\shared\InventoryGPSList.lua:17: attempt to call global 'Languages' (a nil value)
+07:59:06 | [error] |   Callstack:
+07:59:06 | [error] |     API function: in global Languages
+07:59:06 | [error] |     shared\InventoryGPSList.lua:17: in method SetLanguages
+07:59:06 | [error] |     shared\InventoryGPSList.lua:4: in function <shared\InventoryGPSList.lua:3>
+07:59:06 | [error] |     API function: in global InventoryGPSList
+07:59:06 | [error] |     server\Inventory.lua:5: in function <server\Inventory.lua:3>
+07:59:06 | [error] |     API function: in global Inventory
+07:59:06 | [error] |     server\Inventory.lua:64: in main chunk
+07:59:06 | [info ] | Module Inventory loaded with errors
+07:59:06 | [info ] | Loading module Jobs
+07:59:06 | [info ] | 	Loading script "shared\JobsList.lua"
+07:59:06 | [info ] | 	Loading script "server\Jobs.lua"
+07:59:06 | [info ] | Module Jobs loaded successfully
+07:59:06 | [info ] | Loading module Level
+07:59:06 | [info ] | 	Loading script "server\Level.lua"
+07:59:06 | [info ] | Module Level loaded successfully
+07:59:06 | [info ] | Loading module Objects
+07:59:06 | [info ] | 	Loading script "server\Objects.lua"
+07:59:06 | [info ] | Module Objects loaded successfully
+07:59:06 | [info ] | Loading module physgun
+07:59:06 | [info ] | 	Loading script "shared\settings.lua"
+07:59:06 | [info ] | 	Loading script "shared\util.lua"
+07:59:06 | [info ] | 	Loading script "server\physgun_init.lua"
+07:59:06 | [info ] | Module physgun loaded successfully
+07:59:06 | [info ] | Loading module PlayerController
+07:59:06 | [info ] | 	Loading script "server\PlayerController.lua"
+07:59:06 | [info ] | Module PlayerController loaded successfully
+07:59:06 | [info ] | Loading module Radio
+07:59:06 | [info ] | Module Radio loaded successfully
+07:59:06 | [info ] | Loading module Tutorial
+07:59:06 | [info ] | 	Loading script "server\Tutorial.lua"
+07:59:06 | [info ] | Module Tutorial loaded successfully
+07:59:06 | [info ] | Loading module Vehicles
+07:59:06 | [info ] | 	Loading script "server\Vehicles.lua"
+07:59:06 | [info ] | Module Vehicles loaded successfully
+07:59:21 | [info ] | JCMP Server 0.2.2 (Build 1014)
+07:59:21 | [info ] | Loading configuration
+07:59:21 | [info ] | Succesfully loaded configuration
+07:59:22 | [info ] | No ban list found: cleared bans
+07:59:22 | [info ] | Server started up successfully
+07:59:22 | [info ] | Loading module Admin
+07:59:22 | [info ] | 	Loading script "server\Admin.lua"
+07:59:22 | [info ] | Module Admin loaded successfully
+07:59:22 | [info ] | Loading module Bank
+07:59:22 | [info ] | 	Loading script "server\Bank.lua"
+07:59:22 | [info ] | Module Bank loaded successfully
+07:59:22 | [info ] | Loading module closehud
+07:59:22 | [info ] | Module closehud loaded successfully
+07:59:22 | [info ] | Loading module Clothings
+07:59:22 | [info ] | 	Loading script "shared\ClothingsList.lua"
+07:59:22 | [info ] | 	Loading script "server\ClothingStore.lua"
+07:59:22 | [info ] | 	Loading script "server\Clothings.lua"
+07:59:22 | [info ] | Module Clothings loaded successfully
+07:59:22 | [info ] | Loading module Combustivel
+07:59:22 | [info ] | 	Loading script "server\Combustivel.lua"
+07:59:22 | [info ] | Module Combustivel loaded successfully
+07:59:22 | [info ] | Loading module CommandsController
+07:59:22 | [info ] | Module CommandsController loaded successfully
+07:59:22 | [info ] | Loading module Controls
+07:59:22 | [info ] | Module Controls loaded successfully
+07:59:22 | [info ] | Loading module CustomChat
+07:59:22 | [info ] | 	Loading script "server\CustomChat.lua"
+07:59:22 | [info ] | Module CustomChat loaded successfully
+07:59:22 | [info ] | Loading module Employments
+07:59:22 | [info ] | 	Loading script "server\Employments.lua"
+07:59:22 | [info ] | Module Employments loaded successfully
+07:59:22 | [info ] | Loading module Establishment
+07:59:22 | [info ] | 	Loading script "server\Establishment.lua"
+07:59:22 | [info ] | Module Establishment loaded successfully
+07:59:22 | [info ] | Loading module Feeding
+07:59:22 | [info ] | 	Loading script "shared\FeedingList.lua"
+07:59:22 | [info ] | 	Loading script "server\Feeding.lua"
+07:59:22 | [info ] | 	Loading script "server\FeedingStore.lua"
+07:59:22 | [info ] | Module Feeding loaded successfully
+07:59:22 | [info ] | Loading module HUD
+07:59:22 | [info ] | 	Loading script "server\HUD.lua"
+07:59:22 | [info ] | 	Loading script "server\InformationAlert.lua"
+07:59:22 | [info ] | 	Loading script "server\NotificationAlert.lua"
+07:59:22 | [info ] | Module HUD loaded successfully
+07:59:22 | [info ] | Loading module Inventory
+07:59:22 | [info ] | 	Loading script "shared\InventoryGPSList.lua"
+07:59:22 | [info ] | 	Loading script "server\Inventory.lua"
+07:59:22 | [info ] | Module Inventory loaded successfully
+07:59:22 | [info ] | Loading module Jobs
+07:59:22 | [info ] | 	Loading script "shared\JobsList.lua"
+07:59:22 | [info ] | 	Loading script "server\Jobs.lua"
+07:59:22 | [info ] | Module Jobs loaded successfully
+07:59:22 | [info ] | Loading module Level
+07:59:22 | [info ] | 	Loading script "server\Level.lua"
+07:59:22 | [info ] | Module Level loaded successfully
+07:59:22 | [info ] | Loading module Objects
+07:59:22 | [info ] | 	Loading script "server\Objects.lua"
+07:59:22 | [info ] | Module Objects loaded successfully
+07:59:22 | [info ] | Loading module physgun
+07:59:22 | [info ] | 	Loading script "shared\settings.lua"
+07:59:22 | [info ] | 	Loading script "shared\util.lua"
+07:59:22 | [info ] | 	Loading script "server\physgun_init.lua"
+07:59:22 | [info ] | Module physgun loaded successfully
+07:59:22 | [info ] | Loading module PlayerController
+07:59:22 | [info ] | 	Loading script "server\PlayerController.lua"
+07:59:22 | [info ] | Module PlayerController loaded successfully
+07:59:22 | [info ] | Loading module Radio
+07:59:22 | [info ] | Module Radio loaded successfully
+07:59:22 | [info ] | Loading module Tutorial
+07:59:22 | [info ] | 	Loading script "server\Tutorial.lua"
+07:59:22 | [info ] | Module Tutorial loaded successfully
+07:59:22 | [info ] | Loading module Vehicles
+07:59:22 | [info ] | 	Loading script "server\Vehicles.lua"
+07:59:23 | [info ] | Module Vehicles loaded successfully
+07:59:40 | [info ] | Connection accepted
+07:59:40 | [info ] | Adding player with ID 0 and guid 1139410710155531476, SteamID: STEAM_0:0:11728421
+07:59:40 | [info ] | Saede Morramade joined the server (127.0.0.1)
+08:00:09 | [info ] | Module Radio unloaded successfully
+08:13:52 | [info ] | Saede Morramade left the server (127.0.0.1)
+08:15:02 | [info ] | Module Admin unloaded successfully
+08:15:02 | [info ] | Module Bank unloaded successfully
+08:15:02 | [info ] | Module closehud unloaded successfully
+08:15:02 | [info ] | Module Clothings unloaded successfully
+08:15:02 | [info ] | Module Combustivel unloaded successfully
+08:15:02 | [info ] | Module CommandsController unloaded successfully
+08:15:02 | [info ] | Module Controls unloaded successfully
+08:15:02 | [info ] | Module CustomChat unloaded successfully
+08:15:02 | [info ] | Module Employments unloaded successfully
+08:15:02 | [info ] | Module Establishment unloaded successfully
+08:15:02 | [info ] | Module Feeding unloaded successfully
+08:15:02 | [info ] | Module HUD unloaded successfully
+08:15:02 | [info ] | Module Inventory unloaded successfully
+08:15:02 | [info ] | Module Jobs unloaded successfully
+08:15:02 | [info ] | Module Level unloaded successfully
+08:15:02 | [info ] | Module Objects unloaded successfully
+08:15:02 | [info ] | Module physgun unloaded successfully
+08:15:02 | [info ] | Module PlayerController unloaded successfully
+08:15:02 | [info ] | Module Tutorial unloaded successfully
+08:15:02 | [info ] | Module Vehicles unloaded successfully
+08:15:03 | [info ] | Server shutdown
+19:43:03 | [info ] | JCMP Server 0.2.2 (Build 1014)
+19:43:03 | [info ] | Loading configuration
+19:43:03 | [info ] | Succesfully loaded configuration
+19:43:05 | [info ] | No ban list found: cleared bans
+19:43:05 | [info ] | Server started up successfully
+19:43:05 | [info ] | Loading module Admin
+19:43:05 | [info ] | 	Loading script "server\Admin.lua"
+19:43:05 | [info ] | Module Admin loaded successfully
+19:43:05 | [info ] | Loading module Bank
+19:43:05 | [info ] | 	Loading script "server\Bank.lua"
+19:43:05 | [info ] | Module Bank loaded successfully
+19:43:05 | [info ] | Loading module closehud
+19:43:05 | [info ] | Module closehud loaded successfully
+19:43:05 | [info ] | Loading module Clothings
+19:43:05 | [info ] | 	Loading script "shared\ClothingsList.lua"
+19:43:05 | [info ] | 	Loading script "server\ClothingStore.lua"
+19:43:05 | [info ] | 	Loading script "server\Clothings.lua"
+19:43:05 | [info ] | Module Clothings loaded successfully
+19:43:05 | [info ] | Loading module Combustivel
+19:43:05 | [info ] | 	Loading script "server\Combustivel.lua"
+19:43:05 | [info ] | Module Combustivel loaded successfully
+19:43:05 | [info ] | Loading module CommandsController
+19:43:05 | [info ] | Module CommandsController loaded successfully
+19:43:05 | [info ] | Loading module Controls
+19:43:05 | [info ] | Module Controls loaded successfully
+19:43:05 | [info ] | Loading module CustomChat
+19:43:05 | [info ] | 	Loading script "server\CustomChat.lua"
+19:43:05 | [info ] | Module CustomChat loaded successfully
+19:43:05 | [info ] | Loading module Employments
+19:43:05 | [info ] | 	Loading script "server\Employments.lua"
+19:43:05 | [info ] | Module Employments loaded successfully
+19:43:05 | [info ] | Loading module Establishment
+19:43:05 | [info ] | 	Loading script "server\Establishment.lua"
+19:43:05 | [info ] | Module Establishment loaded successfully
+19:43:05 | [info ] | Loading module Feeding
+19:43:05 | [info ] | 	Loading script "shared\FeedingList.lua"
+19:43:05 | [info ] | 	Loading script "server\Feeding.lua"
+19:43:05 | [info ] | 	Loading script "server\FeedingStore.lua"
+19:43:05 | [info ] | Module Feeding loaded successfully
+19:43:05 | [info ] | Loading module HUD
+19:43:05 | [info ] | 	Loading script "server\HUD.lua"
+19:43:05 | [info ] | 	Loading script "server\InformationAlert.lua"
+19:43:05 | [info ] | 	Loading script "server\NotificationAlert.lua"
+19:43:05 | [info ] | Module HUD loaded successfully
+19:43:05 | [info ] | Loading module Inventory
+19:43:05 | [info ] | 	Loading script "shared\InventoryGPSList.lua"
+19:43:05 | [info ] | 	Loading script "server\Inventory.lua"
+19:43:05 | [info ] | Module Inventory loaded successfully
+19:43:05 | [info ] | Loading module Jobs
+19:43:05 | [info ] | 	Loading script "shared\JobsList.lua"
+19:43:05 | [info ] | 	Loading script "server\Jobs.lua"
+19:43:05 | [info ] | Module Jobs loaded successfully
+19:43:05 | [info ] | Loading module Level
+19:43:05 | [info ] | 	Loading script "server\Level.lua"
+19:43:05 | [info ] | Module Level loaded successfully
+19:43:05 | [info ] | Loading module Objects
+19:43:05 | [info ] | 	Loading script "server\Objects.lua"
+19:43:05 | [info ] | Module Objects loaded successfully
+19:43:05 | [info ] | Loading module physgun
+19:43:05 | [info ] | 	Loading script "shared\settings.lua"
+19:43:05 | [info ] | 	Loading script "shared\util.lua"
+19:43:05 | [info ] | 	Loading script "server\physgun_init.lua"
+19:43:05 | [info ] | Module physgun loaded successfully
+19:43:05 | [info ] | Loading module PlayerController
+19:43:05 | [info ] | 	Loading script "server\PlayerController.lua"
+19:43:05 | [info ] | Module PlayerController loaded successfully
+19:43:05 | [info ] | Loading module Radio
+19:43:05 | [info ] | Module Radio loaded successfully
+19:43:05 | [info ] | Loading module Tutorial
+19:43:05 | [info ] | 	Loading script "server\Tutorial.lua"
+19:43:05 | [info ] | Module Tutorial loaded successfully
+19:43:05 | [info ] | Loading module Vehicles
+19:43:05 | [info ] | 	Loading script "server\Vehicles.lua"
+19:43:06 | [info ] | Module Vehicles loaded successfully
+19:44:53 | [info ] | Connection accepted
+19:44:53 | [info ] | Adding player with ID 0 and guid 1049338722193276351, SteamID: STEAM_0:0:11728421
+19:44:53 | [info ] | SyedMuhammad joined the server (187.66.89.65)
+19:45:26 | [info ] | Module Radio unloaded successfully
+19:45:47 | [info ] | Module Feeding unloaded successfully
+19:47:19 | [info ] | SyedMuhammad left the server (187.66.89.65)
+19:47:22 | [info ] | Connection accepted
+19:47:22 | [info ] | Adding player with ID 0 and guid 1049338722193276351, SteamID: STEAM_0:0:11728421
+19:47:22 | [info ] | SyedMuhammad joined the server (187.66.89.65)
+19:47:33 | [info ] | SyedMuhammad left the server (187.66.89.65)
+19:48:25 | [info ] | Connection accepted
+19:48:25 | [info ] | Adding player with ID 0 and guid 918734334398226971, SteamID: STEAM_0:0:11728421
+19:48:25 | [info ] | SyedMuhammad joined the server (187.66.89.65)
+19:48:50 | [info ] | Module HUD unloaded successfully
+19:48:50 | [info ] | Loading module HUD
+19:48:50 | [info ] | 	Loading script "server\HUD.lua"
+19:48:50 | [info ] | 	Loading script "server\InformationAlert.lua"
+19:48:50 | [info ] | 	Loading script "server\NotificationAlert.lua"
+19:48:50 | [info ] | Module HUD loaded successfully
+19:49:33 | [info ] | Module PlayerController unloaded successfully
+19:49:33 | [info ] | Loading module PlayerController
+19:49:33 | [info ] | 	Loading script "server\PlayerController.lua"
+19:49:33 | [info ] | Module PlayerController loaded successfully
+19:51:20 | [info ] | Module HUD unloaded successfully
+19:51:20 | [info ] | Loading module HUD
+19:51:20 | [info ] | 	Loading script "server\HUD.lua"
+19:51:20 | [info ] | 	Loading script "server\InformationAlert.lua"
+19:51:20 | [info ] | 	Loading script "server\NotificationAlert.lua"
+19:51:20 | [info ] | Module HUD loaded successfully
+20:07:29 | [info ] | SyedMuhammad left the server (187.66.89.65)
+20:09:38 | [info ] | Module Admin unloaded successfully
+20:09:38 | [info ] | Module Bank unloaded successfully
+20:09:38 | [info ] | Module closehud unloaded successfully
+20:09:38 | [info ] | Module Clothings unloaded successfully
+20:09:38 | [info ] | Module Combustivel unloaded successfully
+20:09:38 | [info ] | Module CommandsController unloaded successfully
+20:09:38 | [info ] | Module Controls unloaded successfully
+20:09:38 | [info ] | Module CustomChat unloaded successfully
+20:09:38 | [info ] | Module Employments unloaded successfully
+20:09:38 | [info ] | Module Establishment unloaded successfully
+20:09:38 | [info ] | Module HUD unloaded successfully
+20:09:38 | [info ] | Module Inventory unloaded successfully
+20:09:38 | [info ] | Module Jobs unloaded successfully
+20:09:38 | [info ] | Module Level unloaded successfully
+20:09:38 | [info ] | Module Objects unloaded successfully
+20:09:38 | [info ] | Module physgun unloaded successfully
+20:09:38 | [info ] | Module PlayerController unloaded successfully
+20:09:38 | [info ] | Module Tutorial unloaded successfully
+20:09:39 | [info ] | Module Vehicles unloaded successfully
+20:09:39 | [info ] | Server shutdown
+14:44:04 | [info ] | JCMP Server 0.2.2 (Build 1014)
+14:44:04 | [info ] | Loading configuration
+14:44:04 | [info ] | Succesfully loaded configuration
+14:44:05 | [info ] | No ban list found: cleared bans
+14:44:05 | [info ] | Server started up successfully
+14:44:05 | [info ] | Loading module Admin
+14:44:05 | [info ] | 	Loading script "server\Admin.lua"
+14:44:05 | [info ] | Module Admin loaded successfully
+14:44:05 | [info ] | Loading module Bank
+14:44:05 | [info ] | 	Loading script "server\Bank.lua"
+14:44:05 | [info ] | Module Bank loaded successfully
+14:44:05 | [info ] | Loading module closehud
+14:44:05 | [info ] | Module closehud loaded successfully
+14:44:05 | [info ] | Loading module Clothings
+14:44:05 | [info ] | 	Loading script "shared\ClothingsList.lua"
+14:44:05 | [info ] | 	Loading script "server\ClothingStore.lua"
+14:44:05 | [info ] | 	Loading script "server\Clothings.lua"
+14:44:05 | [info ] | Module Clothings loaded successfully
+14:44:05 | [info ] | Loading module Combustivel
+14:44:05 | [info ] | 	Loading script "server\Combustivel.lua"
+14:44:05 | [info ] | Module Combustivel loaded successfully
+14:44:05 | [info ] | Loading module CommandsController
+14:44:05 | [info ] | Module CommandsController loaded successfully
+14:44:05 | [info ] | Loading module Controls
+14:44:05 | [info ] | Module Controls loaded successfully
+14:44:05 | [info ] | Loading module CustomChat
+14:44:05 | [info ] | 	Loading script "server\CustomChat.lua"
+14:44:05 | [info ] | Module CustomChat loaded successfully
+14:44:05 | [info ] | Loading module Employments
+14:44:05 | [info ] | 	Loading script "server\Employments.lua"
+14:44:05 | [info ] | Module Employments loaded successfully
+14:44:05 | [info ] | Loading module Establishment
+14:44:05 | [info ] | 	Loading script "server\Establishment.lua"
+14:44:05 | [info ] | Module Establishment loaded successfully
+14:44:05 | [info ] | Loading module Feeding
+14:44:05 | [info ] | 	Loading script "shared\FeedingList.lua"
+14:44:05 | [info ] | 	Loading script "server\Feeding.lua"
+14:44:05 | [info ] | 	Loading script "server\FeedingStore.lua"
+14:44:05 | [info ] | Module Feeding loaded successfully
+14:44:05 | [info ] | Loading module HUD
+14:44:05 | [info ] | 	Loading script "server\HUD.lua"
+14:44:05 | [info ] | 	Loading script "server\InformationAlert.lua"
+14:44:05 | [info ] | 	Loading script "server\NotificationAlert.lua"
+14:44:06 | [info ] | Module HUD loaded successfully
+14:44:06 | [info ] | Loading module Inventory
+14:44:06 | [info ] | 	Loading script "shared\InventoryGPSList.lua"
+14:44:06 | [info ] | 	Loading script "server\Inventory.lua"
+14:44:06 | [info ] | Module Inventory loaded successfully
+14:44:06 | [info ] | Loading module Jobs
+14:44:06 | [info ] | 	Loading script "shared\JobsList.lua"
+14:44:06 | [info ] | 	Loading script "server\Jobs.lua"
+14:44:06 | [info ] | Module Jobs loaded successfully
+14:44:06 | [info ] | Loading module Level
+14:44:06 | [info ] | 	Loading script "server\Level.lua"
+14:44:06 | [info ] | Module Level loaded successfully
+14:44:06 | [info ] | Loading module Objects
+14:44:06 | [info ] | 	Loading script "server\Objects.lua"
+14:44:06 | [info ] | Module Objects loaded successfully
+14:44:06 | [info ] | Loading module physgun
+14:44:06 | [info ] | 	Loading script "shared\settings.lua"
+14:44:06 | [info ] | 	Loading script "shared\util.lua"
+14:44:06 | [info ] | 	Loading script "server\physgun_init.lua"
+14:44:06 | [info ] | Module physgun loaded successfully
+14:44:06 | [info ] | Loading module PlayerController
+14:44:06 | [info ] | 	Loading script "server\PlayerController.lua"
+14:44:06 | [info ] | Module PlayerController loaded successfully
+14:44:06 | [info ] | Loading module Radio
+14:44:06 | [info ] | Module Radio loaded successfully
+14:44:06 | [info ] | Loading module Tutorial
+14:44:06 | [info ] | 	Loading script "server\Tutorial.lua"
+14:44:06 | [info ] | Module Tutorial loaded successfully
+14:44:06 | [info ] | Loading module Vehicles
+14:44:06 | [info ] | 	Loading script "server\Vehicles.lua"
+14:44:06 | [info ] | Module Vehicles loaded successfully
+14:44:23 | [info ] | Connection accepted
+14:44:23 | [info ] | Adding player with ID 0 and guid 999799125504631466, SteamID: STEAM_0:0:11728421
+14:44:23 | [info ] | UltraLord joined the server (127.0.0.1)
+14:44:51 | [info ] | Module Jobs unloaded successfully
+14:44:51 | [info ] | Loading module Jobs
+14:44:51 | [info ] | 	Loading script "shared\JobsList.lua"
+14:44:51 | [info ] | 	Loading script "server\Jobs.lua"
+14:44:51 | [info ] | Module Jobs loaded successfully
+14:45:06 | [info ] | Module Feeding unloaded successfully
+14:59:42 | [info ] | Module Jobs unloaded successfully
+14:59:42 | [info ] | Loading module Jobs
+14:59:42 | [info ] | 	Loading script "shared\JobsList.lua"
+14:59:42 | [info ] | 	Loading script "server\Jobs.lua"
+14:59:42 | [info ] | Module Jobs loaded successfully
+15:02:04 | [info ] | Module Jobs unloaded successfully
+15:02:04 | [info ] | Loading module Jobs
+15:02:04 | [info ] | 	Loading script "shared\JobsList.lua"
+15:02:04 | [info ] | 	Loading script "server\Jobs.lua"
+15:02:04 | [info ] | Module Jobs loaded successfully
+15:02:28 | [info ] | Module Jobs unloaded successfully
+15:02:28 | [info ] | Loading module Jobs
+15:02:28 | [info ] | 	Loading script "shared\JobsList.lua"
+15:02:28 | [info ] | 	Loading script "server\Jobs.lua"
+15:02:28 | [info ] | Module Jobs loaded successfully
+15:03:09 | [info ] | Module Jobs unloaded successfully
+15:03:09 | [info ] | Loading module Jobs
+15:03:09 | [info ] | 	Loading script "shared\JobsList.lua"
+15:03:09 | [info ] | 	Loading script "server\Jobs.lua"
+15:03:09 | [info ] | Module Jobs loaded successfully
+15:03:21 | [info ] | UltraLord left the server (127.0.0.1)
+15:03:23 | [info ] | Module Admin unloaded successfully
+15:03:23 | [info ] | Module Bank unloaded successfully
+15:03:23 | [info ] | Module closehud unloaded successfully
+15:03:23 | [info ] | Module Clothings unloaded successfully
+15:03:23 | [info ] | Module Combustivel unloaded successfully
+15:03:23 | [info ] | Module CommandsController unloaded successfully
+15:03:23 | [info ] | Module Controls unloaded successfully
+15:03:23 | [info ] | Module CustomChat unloaded successfully
+15:03:23 | [info ] | Module Employments unloaded successfully
+15:03:23 | [info ] | Module Establishment unloaded successfully
+15:03:23 | [info ] | Module HUD unloaded successfully
+15:03:23 | [info ] | Module Inventory unloaded successfully
+15:03:23 | [info ] | Module Jobs unloaded successfully
+15:03:23 | [info ] | Module Level unloaded successfully
+15:03:23 | [info ] | Module Objects unloaded successfully
+15:03:23 | [info ] | Module physgun unloaded successfully
+15:03:23 | [info ] | Module PlayerController unloaded successfully
+15:03:23 | [info ] | Module Radio unloaded successfully
+15:03:23 | [info ] | Module Tutorial unloaded successfully
+15:03:23 | [info ] | Module Vehicles unloaded successfully
+15:03:23 | [info ] | Server shutdown
+21:00:25 | [info ] | JCMP Server 0.2.2 (Build 1014)
+21:00:25 | [info ] | Loading configuration
+21:00:25 | [info ] | Succesfully loaded configuration
+21:00:25 | [info ] | No ban list found: cleared bans
+21:00:25 | [info ] | Server started up successfully
+21:00:25 | [info ] | Loading module Admin
+21:00:25 | [info ] | 	Loading script "server\Admin.lua"
+21:00:25 | [info ] | Module Admin loaded successfully
+21:00:25 | [info ] | Loading module Bank
+21:00:25 | [info ] | 	Loading script "server\Bank.lua"
+21:00:25 | [info ] | Module Bank loaded successfully
+21:00:25 | [info ] | Loading module closehud
+21:00:25 | [info ] | Module closehud loaded successfully
+21:00:25 | [info ] | Loading module Clothings
+21:00:25 | [info ] | 	Loading script "shared\ClothingsList.lua"
+21:00:25 | [info ] | 	Loading script "server\ClothingStore.lua"
+21:00:25 | [info ] | 	Loading script "server\Clothings.lua"
+21:00:25 | [info ] | Module Clothings loaded successfully
+21:00:26 | [info ] | Loading module Combustivel
+21:00:26 | [info ] | 	Loading script "server\Combustivel.lua"
+21:00:26 | [info ] | Module Combustivel loaded successfully
+21:00:26 | [info ] | Loading module CommandsController
+21:00:26 | [info ] | Module CommandsController loaded successfully
+21:00:26 | [info ] | Loading module Controls
+21:00:26 | [info ] | Module Controls loaded successfully
+21:00:26 | [info ] | Loading module CustomChat
+21:00:26 | [info ] | 	Loading script "server\CustomChat.lua"
+21:00:26 | [info ] | Module CustomChat loaded successfully
+21:00:26 | [info ] | Loading module Employments
+21:00:26 | [info ] | 	Loading script "server\Employments.lua"
+21:00:26 | [info ] | Module Employments loaded successfully
+21:00:26 | [info ] | Loading module Establishment
+21:00:26 | [info ] | 	Loading script "server\Establishment.lua"
+21:00:26 | [info ] | Module Establishment loaded successfully
+21:00:26 | [info ] | Loading module Feeding
+21:00:26 | [info ] | 	Loading script "shared\FeedingList.lua"
+21:00:26 | [info ] | 	Loading script "server\Feeding.lua"
+21:00:26 | [info ] | 	Loading script "server\FeedingStore.lua"
+21:00:26 | [info ] | Module Feeding loaded successfully
+21:00:26 | [info ] | Loading module HUD
+21:00:26 | [info ] | 	Loading script "server\HUD.lua"
+21:00:26 | [info ] | 	Loading script "server\InformationAlert.lua"
+21:00:26 | [info ] | 	Loading script "server\NotificationAlert.lua"
+21:00:26 | [info ] | Module HUD loaded successfully
+21:00:26 | [info ] | Loading module Inventory
+21:00:26 | [info ] | 	Loading script "shared\InventoryGPSList.lua"
+21:00:26 | [info ] | 	Loading script "server\Inventory.lua"
+21:00:26 | [info ] | Module Inventory loaded successfully
+21:00:26 | [info ] | Loading module Jobs
+21:00:26 | [info ] | 	Loading script "shared\JobsList.lua"
+21:00:26 | [info ] | 	Loading script "server\Jobs.lua"
+21:00:26 | [info ] | Module Jobs loaded successfully
+21:00:26 | [info ] | Loading module Level
+21:00:26 | [info ] | 	Loading script "server\Level.lua"
+21:00:26 | [info ] | Module Level loaded successfully
+21:00:26 | [info ] | Loading module Objects
+21:00:26 | [info ] | 	Loading script "server\Objects.lua"
+21:00:26 | [info ] | Module Objects loaded successfully
+21:00:26 | [info ] | Loading module physgun
+21:00:26 | [info ] | 	Loading script "shared\settings.lua"
+21:00:26 | [info ] | 	Loading script "shared\util.lua"
+21:00:26 | [info ] | 	Loading script "server\physgun_init.lua"
+21:00:26 | [info ] | Module physgun loaded successfully
+21:00:26 | [info ] | Loading module PlayerController
+21:00:26 | [info ] | 	Loading script "server\PlayerController.lua"
+21:00:26 | [info ] | Module PlayerController loaded successfully
+21:00:26 | [info ] | Loading module Radio
+21:00:26 | [info ] | Module Radio loaded successfully
+21:00:26 | [info ] | Loading module Tutorial
+21:00:26 | [info ] | 	Loading script "server\Tutorial.lua"
+21:00:26 | [info ] | Module Tutorial loaded successfully
+21:00:26 | [info ] | Loading module Vehicles
+21:00:26 | [info ] | 	Loading script "server\Vehicles.lua"
+21:00:26 | [info ] | Module Vehicles loaded successfully
+21:00:36 | [info ] | Connection accepted
+21:00:36 | [info ] | Adding player with ID 0 and guid 986288349190161603, SteamID: STEAM_0:0:11728421
+21:00:36 | [info ] | UltraLord joined the server (127.0.0.1)
+21:01:34 | [info ] | Module Jobs unloaded successfully
+21:01:34 | [info ] | Loading module Jobs
+21:01:34 | [info ] | 	Loading script "shared\JobsList.lua"
+21:01:34 | [info ] | 	Loading script "server\Jobs.lua"
+21:01:34 | [error] | Lua error in module Jobs when running event ModuleLoad: 
+21:01:34 | [error] |   ...st-cause-2-role-play\Server\scripts\jobs\server\Jobs.lua:28: attempt to index field '?' (a nil value)
+21:01:34 | [error] |   Callstack:
+21:01:34 | [error] |     API function: in metamethod __index
+21:01:34 | [error] |     server\Jobs.lua:28: in function <server\Jobs.lua:18>
+21:01:34 | [info ] | Module Jobs loaded successfully
+21:02:12 | [info ] | Module Feeding unloaded successfully
+21:02:52 | [info ] | Module Jobs unloaded successfully
+21:02:52 | [info ] | Loading module Jobs
+21:02:52 | [info ] | 	Loading script "shared\JobsList.lua"
+21:02:52 | [info ] | 	Loading script "server\Jobs.lua"
+21:02:52 | [error] | Lua error in module Jobs when running event ModuleLoad: 
+21:02:52 | [error] |   ...st-cause-2-role-play\Server\scripts\jobs\server\Jobs.lua:28: attempt to index field '?' (a nil value)
+21:02:52 | [error] |   Callstack:
+21:02:52 | [error] |     API function: in metamethod __index
+21:02:52 | [error] |     server\Jobs.lua:28: in function <server\Jobs.lua:18>
+21:02:52 | [info ] | Module Jobs loaded successfully
+21:03:44 | [info ] | Module Jobs unloaded successfully
+21:03:44 | [info ] | Loading module Jobs
+21:03:44 | [info ] | 	Loading script "shared\JobsList.lua"
+21:03:44 | [info ] | 	Loading script "server\Jobs.lua"
+21:03:44 | [info ] | Module Jobs loaded successfully
+21:06:48 | [info ] | Module Jobs unloaded successfully
+21:06:48 | [info ] | Loading module Jobs
+21:06:48 | [info ] | 	Loading script "shared\JobsList.lua"
+21:06:48 | [info ] | 	Loading script "server\Jobs.lua"
+21:06:48 | [info ] | Module Jobs loaded successfully
+21:10:41 | [info ] | Module Jobs unloaded successfully
+21:10:41 | [info ] | Loading module Jobs
+21:10:41 | [info ] | 	Loading script "shared\JobsList.lua"
+21:10:41 | [info ] | 	Loading script "server\Jobs.lua"
+21:10:41 | [info ] | Module Jobs loaded successfully
+21:11:18 | [info ] | Module Jobs unloaded successfully
+21:11:18 | [info ] | Loading module Jobs
+21:11:18 | [info ] | 	Loading script "shared\JobsList.lua"
+21:11:18 | [info ] | 	Loading script "server\Jobs.lua"
+21:11:18 | [info ] | Module Jobs loaded successfully
+21:11:42 | [info ] | Module Jobs unloaded successfully
+21:11:42 | [info ] | Loading module Jobs
+21:11:42 | [info ] | 	Loading script "shared\JobsList.lua"
+21:11:42 | [info ] | 	Loading script "server\Jobs.lua"
+21:11:42 | [info ] | Module Jobs loaded successfully
+21:16:12 | [info ] | Module Jobs unloaded successfully
+21:16:12 | [info ] | Loading module Jobs
+21:16:12 | [info ] | 	Loading script "shared\JobsList.lua"
+21:16:12 | [info ] | 	Loading script "server\Jobs.lua"
+21:16:12 | [info ] | Module Jobs loaded successfully
+21:17:40 | [info ] | Module Jobs unloaded successfully
+21:17:40 | [info ] | Loading module Jobs
+21:17:40 | [info ] | 	Loading script "shared\JobsList.lua"
+21:17:40 | [info ] | 	Loading script "server\Jobs.lua"
+21:17:40 | [info ] | Module Jobs loaded successfully
+21:20:21 | [info ] | Module Jobs unloaded successfully
+21:20:21 | [info ] | Loading module Jobs
+21:20:21 | [info ] | 	Loading script "shared\JobsList.lua"
+21:20:21 | [info ] | 	Loading script "server\Jobs.lua"
+21:20:21 | [info ] | Module Jobs loaded successfully
+21:22:39 | [info ] | Module Jobs unloaded successfully
+21:22:39 | [info ] | Loading module Jobs
+21:22:39 | [info ] | 	Loading script "shared\JobsList.lua"
+21:22:39 | [info ] | 	Loading script "server\Jobs.lua"
+21:22:39 | [info ] | Module Jobs loaded successfully
+21:40:21 | [info ] | Module Jobs unloaded successfully
+21:40:21 | [info ] | Loading module Jobs
+21:40:21 | [info ] | 	Loading script "shared\JobsList.lua"
+21:40:21 | [error] | Failed to load Lua in module Jobs: 
+21:40:21 | [error] |   ...ause-2-role-play\Server\scripts\jobs\shared\JobsList.lua:11: '}' expected (to close '{' at line 8) near '['
+21:40:21 | [info ] | 	Loading script "server\Jobs.lua"
+21:40:21 | [error] | Lua error in module Jobs when running event ModuleLoad: 
+21:40:21 | [error] |   ...st-cause-2-role-play\Server\scripts\jobs\server\Jobs.lua:24: attempt to call global 'JobCategoriesList' (a nil value)
+21:40:21 | [error] |   Callstack:
+21:40:21 | [error] |     API function: in global JobCategoriesList
+21:40:21 | [error] |     server\Jobs.lua:24: in function <server\Jobs.lua:23>
+21:40:21 | [info ] | Module Jobs loaded with errors
+21:40:29 | [info ] | Module Jobs unloaded successfully
+21:40:29 | [info ] | Loading module Jobs
+21:40:29 | [info ] | 	Loading script "shared\JobsList.lua"
+21:40:29 | [info ] | 	Loading script "server\Jobs.lua"
+21:40:29 | [info ] | Module Jobs loaded successfully
+21:44:45 | [info ] | Module Jobs unloaded successfully
+21:44:45 | [info ] | Loading module Jobs
+21:44:45 | [info ] | 	Loading script "shared\JobsList.lua"
+21:44:45 | [info ] | 	Loading script "server\Jobs.lua"
+21:44:45 | [info ] | Module Jobs loaded successfully
+21:48:04 | [info ] | Module Objects unloaded successfully
+21:48:47 | [info ] | Module Jobs unloaded successfully
+21:48:47 | [info ] | Loading module Jobs
+21:48:47 | [info ] | 	Loading script "shared\JobsList.lua"
+21:48:47 | [info ] | 	Loading script "server\Jobs.lua"
+21:48:47 | [info ] | Module Jobs loaded successfully
+21:49:01 | [info ] | Module Jobs unloaded successfully
+21:49:01 | [info ] | Loading module Jobs
+21:49:01 | [info ] | 	Loading script "shared\JobsList.lua"
+21:49:01 | [info ] | 	Loading script "server\Jobs.lua"
+21:49:01 | [info ] | Module Jobs loaded successfully
+21:49:24 | [info ] | Module Jobs unloaded successfully
+21:49:24 | [info ] | Loading module Jobs
+21:49:24 | [info ] | 	Loading script "shared\JobsList.lua"
+21:49:24 | [info ] | 	Loading script "server\Jobs.lua"
+21:49:24 | [info ] | Module Jobs loaded successfully
+21:51:05 | [info ] | Module Jobs unloaded successfully
+21:51:05 | [info ] | Loading module Jobs
+21:51:05 | [info ] | 	Loading script "shared\JobsList.lua"
+21:51:05 | [info ] | 	Loading script "server\Jobs.lua"
+21:51:05 | [info ] | Module Jobs loaded successfully
+21:52:10 | [info ] | Module Jobs unloaded successfully
+21:52:10 | [info ] | Loading module Jobs
+21:52:10 | [info ] | 	Loading script "shared\JobsList.lua"
+21:52:10 | [info ] | 	Loading script "server\Jobs.lua"
+21:52:10 | [info ] | Module Jobs loaded successfully
+21:52:44 | [info ] | Module Jobs unloaded successfully
+21:52:44 | [info ] | Loading module Jobs
+21:52:44 | [info ] | 	Loading script "shared\JobsList.lua"
+21:52:44 | [info ] | 	Loading script "server\Jobs.lua"
+21:52:44 | [info ] | Module Jobs loaded successfully
+21:54:27 | [info ] | Module Jobs unloaded successfully
+21:54:27 | [info ] | Loading module Jobs
+21:54:27 | [info ] | 	Loading script "shared\JobsList.lua"
+21:54:27 | [info ] | 	Loading script "server\Jobs.lua"
+21:54:27 | [info ] | Module Jobs loaded successfully
+21:54:52 | [info ] | Module Jobs unloaded successfully
+21:54:52 | [info ] | Loading module Jobs
+21:54:52 | [info ] | 	Loading script "shared\JobsList.lua"
+21:54:52 | [info ] | 	Loading script "server\Jobs.lua"
+21:54:52 | [info ] | Module Jobs loaded successfully
+21:55:10 | [info ] | Module Jobs unloaded successfully
+21:55:10 | [info ] | Loading module Jobs
+21:55:10 | [info ] | 	Loading script "shared\JobsList.lua"
+21:55:10 | [info ] | 	Loading script "server\Jobs.lua"
+21:55:10 | [info ] | Module Jobs loaded successfully
+21:55:23 | [info ] | Module Jobs unloaded successfully
+21:55:23 | [info ] | Loading module Jobs
+21:55:23 | [info ] | 	Loading script "shared\JobsList.lua"
+21:55:23 | [info ] | 	Loading script "server\Jobs.lua"
+21:55:23 | [info ] | Module Jobs loaded successfully
+21:55:48 | [info ] | Module Jobs unloaded successfully
+21:55:48 | [info ] | Loading module Jobs
+21:55:48 | [info ] | 	Loading script "shared\JobsList.lua"
+21:55:48 | [info ] | 	Loading script "server\Jobs.lua"
+21:55:48 | [info ] | Module Jobs loaded successfully
+21:56:58 | [info ] | Module Jobs unloaded successfully
+21:56:58 | [info ] | Loading module Jobs
+21:56:58 | [info ] | 	Loading script "shared\JobsList.lua"
+21:56:58 | [info ] | 	Loading script "server\Jobs.lua"
+21:56:58 | [info ] | Module Jobs loaded successfully
+21:57:16 | [info ] | Module Jobs unloaded successfully
+21:57:16 | [info ] | Loading module Jobs
+21:57:16 | [info ] | 	Loading script "shared\JobsList.lua"
+21:57:16 | [info ] | 	Loading script "server\Jobs.lua"
+21:57:16 | [info ] | Module Jobs loaded successfully
+21:57:34 | [info ] | Module Jobs unloaded successfully
+21:57:34 | [info ] | Loading module Jobs
+21:57:34 | [info ] | 	Loading script "shared\JobsList.lua"
+21:57:34 | [info ] | 	Loading script "server\Jobs.lua"
+21:57:34 | [info ] | Module Jobs loaded successfully
+21:59:47 | [info ] | Module Jobs unloaded successfully
+21:59:47 | [info ] | Loading module Jobs
+21:59:47 | [info ] | 	Loading script "shared\JobsList.lua"
+21:59:47 | [info ] | 	Loading script "server\Jobs.lua"
+21:59:47 | [info ] | Module Jobs loaded successfully
+22:00:10 | [info ] | Module Jobs unloaded successfully
+22:00:10 | [info ] | Loading module Jobs
+22:00:10 | [info ] | 	Loading script "shared\JobsList.lua"
+22:00:10 | [info ] | 	Loading script "server\Jobs.lua"
+22:00:10 | [info ] | Module Jobs loaded successfully
+22:00:22 | [info ] | UltraLord left the server (127.0.0.1)
+22:00:26 | [info ] | Module Admin unloaded successfully
+22:00:26 | [info ] | Module Bank unloaded successfully
+22:00:26 | [info ] | Module closehud unloaded successfully
+22:00:26 | [info ] | Module Clothings unloaded successfully
+22:00:26 | [info ] | Module Combustivel unloaded successfully
+22:00:26 | [info ] | Module CommandsController unloaded successfully
+22:00:26 | [info ] | Module Controls unloaded successfully
+22:00:26 | [info ] | Module CustomChat unloaded successfully
+22:00:26 | [info ] | Module Employments unloaded successfully
+22:00:26 | [info ] | Module Establishment unloaded successfully
+22:00:26 | [info ] | Module HUD unloaded successfully
+22:00:26 | [info ] | Module Inventory unloaded successfully
+22:00:26 | [info ] | Module Jobs unloaded successfully
+22:00:26 | [info ] | Module Level unloaded successfully
+22:00:26 | [info ] | Module physgun unloaded successfully
+22:00:26 | [info ] | Module PlayerController unloaded successfully
+22:00:26 | [info ] | Module Radio unloaded successfully
+22:00:26 | [info ] | Module Tutorial unloaded successfully
+22:00:26 | [info ] | Module Vehicles unloaded successfully
+22:00:26 | [info ] | Server shutdown
+08:42:11 | [info ] | JCMP Server 0.2.2 (Build 1014)
+08:42:11 | [info ] | Loading configuration
+08:42:11 | [info ] | Succesfully loaded configuration
+08:42:12 | [info ] | No ban list found: cleared bans
+08:42:12 | [info ] | Server started up successfully
+08:42:12 | [info ] | Loading module Admin
+08:42:12 | [info ] | 	Loading script "server\Admin.lua"
+08:42:12 | [info ] | Module Admin loaded successfully
+08:42:12 | [info ] | Loading module Bank
+08:42:12 | [info ] | 	Loading script "server\Bank.lua"
+08:42:12 | [info ] | Module Bank loaded successfully
+08:42:12 | [info ] | Loading module closehud
+08:42:12 | [info ] | Module closehud loaded successfully
+08:42:12 | [info ] | Loading module Clothings
+08:42:12 | [info ] | 	Loading script "shared\ClothingsList.lua"
+08:42:12 | [info ] | 	Loading script "server\ClothingStore.lua"
+08:42:12 | [info ] | 	Loading script "server\Clothings.lua"
+08:42:12 | [info ] | Module Clothings loaded successfully
+08:42:12 | [info ] | Loading module Combustivel
+08:42:12 | [info ] | 	Loading script "server\Combustivel.lua"
+08:42:12 | [info ] | Module Combustivel loaded successfully
+08:42:12 | [info ] | Loading module CommandsController
+08:42:12 | [info ] | Module CommandsController loaded successfully
+08:42:12 | [info ] | Loading module Controls
+08:42:12 | [info ] | Module Controls loaded successfully
+08:42:12 | [info ] | Loading module CustomChat
+08:42:12 | [info ] | 	Loading script "server\CustomChat.lua"
+08:42:12 | [info ] | Module CustomChat loaded successfully
+08:42:12 | [info ] | Loading module Employments
+08:42:12 | [info ] | 	Loading script "server\Employments.lua"
+08:42:12 | [info ] | Module Employments loaded successfully
+08:42:12 | [info ] | Loading module Establishment
+08:42:12 | [info ] | 	Loading script "server\Establishment.lua"
+08:42:12 | [info ] | Module Establishment loaded successfully
+08:42:12 | [info ] | Loading module Feeding
+08:42:12 | [info ] | 	Loading script "shared\FeedingList.lua"
+08:42:12 | [info ] | 	Loading script "server\Feeding.lua"
+08:42:12 | [info ] | 	Loading script "server\FeedingStore.lua"
+08:42:12 | [info ] | Module Feeding loaded successfully
+08:42:12 | [info ] | Loading module HUD
+08:42:12 | [info ] | 	Loading script "server\HUD.lua"
+08:42:12 | [info ] | 	Loading script "server\InformationAlert.lua"
+08:42:12 | [info ] | 	Loading script "server\NotificationAlert.lua"
+08:42:13 | [info ] | Module HUD loaded successfully
+08:42:13 | [info ] | Loading module Inventory
+08:42:13 | [info ] | 	Loading script "shared\InventoryGPSList.lua"
+08:42:13 | [info ] | 	Loading script "server\Inventory.lua"
+08:42:13 | [info ] | Module Inventory loaded successfully
+08:42:13 | [info ] | Loading module Jobs
+08:42:13 | [info ] | 	Loading script "shared\JobsList.lua"
+08:42:13 | [info ] | 	Loading script "server\Jobs.lua"
+08:42:13 | [info ] | Module Jobs loaded successfully
+08:42:13 | [info ] | Loading module Level
+08:42:13 | [info ] | 	Loading script "server\Level.lua"
+08:42:13 | [info ] | Module Level loaded successfully
+08:42:13 | [info ] | Loading module Objects
+08:42:13 | [info ] | 	Loading script "server\Objects.lua"
+08:42:13 | [info ] | Module Objects loaded successfully
+08:42:13 | [info ] | Loading module physgun
+08:42:13 | [info ] | 	Loading script "shared\settings.lua"
+08:42:13 | [info ] | 	Loading script "shared\util.lua"
+08:42:13 | [info ] | 	Loading script "server\physgun_init.lua"
+08:42:13 | [info ] | Module physgun loaded successfully
+08:42:13 | [info ] | Loading module PlayerController
+08:42:13 | [info ] | 	Loading script "server\PlayerController.lua"
+08:42:13 | [info ] | Module PlayerController loaded successfully
+08:42:13 | [info ] | Loading module Radio
+08:42:13 | [info ] | Module Radio loaded successfully
+08:42:13 | [info ] | Loading module Tutorial
+08:42:13 | [info ] | 	Loading script "server\Tutorial.lua"
+08:42:13 | [info ] | Module Tutorial loaded successfully
+08:42:13 | [info ] | Loading module Vehicles
+08:42:13 | [info ] | 	Loading script "server\Vehicles.lua"
+08:42:13 | [info ] | Module Vehicles loaded successfully
+08:42:19 | [info ] | Connection accepted
+08:42:19 | [info ] | Adding player with ID 0 and guid 1143914309509780702, SteamID: STEAM_0:0:11728421
+08:42:19 | [info ] | UltraLord joined the server (187.66.89.65)
+08:42:48 | [info ] | Module Feeding unloaded successfully
+08:50:30 | [info ] | Module Admin unloaded successfully
+08:50:30 | [info ] | Module Bank unloaded successfully
+08:50:30 | [info ] | Module closehud unloaded successfully
+08:50:30 | [info ] | Module Clothings unloaded successfully
+08:50:30 | [info ] | Module Combustivel unloaded successfully
+08:50:30 | [info ] | Module CommandsController unloaded successfully
+08:50:30 | [info ] | Module Controls unloaded successfully
+08:50:30 | [info ] | Module CustomChat unloaded successfully
+08:50:30 | [info ] | Module Employments unloaded successfully
+08:50:30 | [info ] | Module Establishment unloaded successfully
+08:50:30 | [info ] | Module HUD unloaded successfully
+08:50:30 | [info ] | Module Inventory unloaded successfully
+08:50:30 | [info ] | Module Jobs unloaded successfully
+08:50:30 | [info ] | Module Level unloaded successfully
+08:50:30 | [info ] | Module Objects unloaded successfully
+08:50:30 | [info ] | Module physgun unloaded successfully
+08:50:30 | [info ] | Module PlayerController unloaded successfully
+08:50:30 | [info ] | Module Radio unloaded successfully
+08:50:30 | [info ] | Module Tutorial unloaded successfully
+08:50:30 | [info ] | Module Vehicles unloaded successfully
+08:50:30 | [info ] | Server shutdown
+20:37:30 | [info ] | JCMP Server 0.2.2 (Build 1014)
+20:37:30 | [info ] | Loading configuration
+20:37:30 | [info ] | Succesfully loaded configuration
+20:37:31 | [info ] | No ban list found: cleared bans
+20:37:31 | [info ] | Server started up successfully
+20:37:31 | [info ] | Loading module Admin
+20:37:31 | [info ] | 	Loading script "server\Admin.lua"
+20:37:31 | [info ] | Module Admin loaded successfully
+20:37:31 | [info ] | Loading module Bank
+20:37:31 | [info ] | 	Loading script "server\Bank.lua"
+20:37:31 | [info ] | Module Bank loaded successfully
+20:37:31 | [info ] | Loading module closehud
+20:37:31 | [info ] | Module closehud loaded successfully
+20:37:31 | [info ] | Loading module Clothings
+20:37:31 | [info ] | 	Loading script "shared\ClothingsList.lua"
+20:37:31 | [info ] | 	Loading script "server\ClothingStore.lua"
+20:37:31 | [info ] | 	Loading script "server\Clothings.lua"
+20:37:31 | [info ] | Module Clothings loaded successfully
+20:37:31 | [info ] | Loading module Combustivel
+20:37:31 | [info ] | 	Loading script "server\Combustivel.lua"
+20:37:31 | [info ] | Module Combustivel loaded successfully
+20:37:31 | [info ] | Loading module CommandsController
+20:37:31 | [info ] | Module CommandsController loaded successfully
+20:37:31 | [info ] | Loading module Controls
+20:37:31 | [info ] | Module Controls loaded successfully
+20:37:31 | [info ] | Loading module CustomChat
+20:37:31 | [info ] | 	Loading script "server\CustomChat.lua"
+20:37:31 | [info ] | Module CustomChat loaded successfully
+20:37:31 | [info ] | Loading module Employments
+20:37:31 | [info ] | 	Loading script "server\Employments.lua"
+20:37:31 | [info ] | Module Employments loaded successfully
+20:37:31 | [info ] | Loading module Establishment
+20:37:31 | [info ] | 	Loading script "server\Establishment.lua"
+20:37:31 | [info ] | Module Establishment loaded successfully
+20:37:31 | [info ] | Loading module Feeding
+20:37:31 | [info ] | 	Loading script "shared\FeedingList.lua"
+20:37:31 | [info ] | 	Loading script "server\Feeding.lua"
+20:37:31 | [info ] | 	Loading script "server\FeedingStore.lua"
+20:37:31 | [info ] | Module Feeding loaded successfully
+20:37:31 | [info ] | Loading module HUD
+20:37:31 | [info ] | 	Loading script "server\HUD.lua"
+20:37:31 | [info ] | 	Loading script "server\InformationAlert.lua"
+20:37:31 | [info ] | 	Loading script "server\NotificationAlert.lua"
+20:37:31 | [info ] | Module HUD loaded successfully
+20:37:31 | [info ] | Loading module Inventory
+20:37:31 | [info ] | 	Loading script "shared\InventoryGPSList.lua"
+20:37:31 | [info ] | 	Loading script "server\Inventory.lua"
+20:37:31 | [info ] | Module Inventory loaded successfully
+20:37:31 | [info ] | Loading module Jobs
+20:37:31 | [info ] | 	Loading script "shared\JobsList.lua"
+20:37:31 | [info ] | 	Loading script "server\Jobs.lua"
+20:37:31 | [error] | Lua error in module Jobs when running event ModuleLoad: 
+20:37:31 | [error] |   ...st-cause-2-role-play\Server\scripts\Jobs\server\Jobs.lua:37: attempt to index field 'jobs' (a nil value)
+20:37:31 | [error] |   Callstack:
+20:37:31 | [error] |     API function: in metamethod __newindex
+20:37:31 | [error] |     server\Jobs.lua:37: in function <server\Jobs.lua:24>
+20:37:31 | [info ] | Module Jobs loaded successfully
+20:37:31 | [info ] | Loading module Level
+20:37:31 | [info ] | 	Loading script "server\Level.lua"
+20:37:31 | [info ] | Module Level loaded successfully
+20:37:31 | [info ] | Loading module Objects
+20:37:31 | [info ] | 	Loading script "server\Objects.lua"
+20:37:31 | [info ] | Module Objects loaded successfully
+20:37:31 | [info ] | Loading module physgun
+20:37:31 | [info ] | 	Loading script "shared\settings.lua"
+20:37:31 | [info ] | 	Loading script "shared\util.lua"
+20:37:31 | [info ] | 	Loading script "server\physgun_init.lua"
+20:37:32 | [info ] | Module physgun loaded successfully
+20:37:32 | [info ] | Loading module PlayerController
+20:37:32 | [info ] | 	Loading script "server\PlayerController.lua"
+20:37:32 | [info ] | Module PlayerController loaded successfully
+20:37:32 | [info ] | Loading module Radio
+20:37:32 | [info ] | Module Radio loaded successfully
+20:37:32 | [info ] | Loading module Tutorial
+20:37:32 | [info ] | 	Loading script "server\Tutorial.lua"
+20:37:32 | [info ] | Module Tutorial loaded successfully
+20:37:32 | [info ] | Loading module Vehicles
+20:37:32 | [info ] | 	Loading script "server\Vehicles.lua"
+20:37:32 | [info ] | Module Vehicles loaded successfully
+20:38:12 | [info ] | Connection accepted
+20:38:12 | [info ] | Adding player with ID 0 and guid 1148417928968766251, SteamID: STEAM_0:0:11728421
+20:38:12 | [info ] | UltraLord joined the server (187.66.89.65)
+20:39:04 | [info ] | Module Jobs unloaded successfully
+20:39:04 | [info ] | Loading module Jobs
+20:39:04 | [info ] | 	Loading script "shared\JobsList.lua"
+20:39:04 | [info ] | 	Loading script "server\Jobs.lua"
+20:39:04 | [error] | Lua error in module Jobs when running event ModuleLoad: 
+20:39:04 | [error] |   ...st-cause-2-role-play\Server\scripts\jobs\server\Jobs.lua:37: attempt to index field 'jobs' (a nil value)
+20:39:04 | [error] |   Callstack:
+20:39:04 | [error] |     API function: in metamethod __newindex
+20:39:04 | [error] |     server\Jobs.lua:37: in function <server\Jobs.lua:24>
+20:39:04 | [info ] | Module Jobs loaded successfully
+20:39:34 | [info ] | Module Feeding unloaded successfully
+20:39:54 | [info ] | Module Jobs unloaded successfully
+20:39:54 | [info ] | Loading module Jobs
+20:39:54 | [info ] | 	Loading script "shared\JobsList.lua"
+20:39:55 | [info ] | 	Loading script "server\Jobs.lua"
+20:39:55 | [error] | Lua error in module Jobs when running event ModuleLoad: 
+20:39:55 | [error] |   ...st-cause-2-role-play\Server\scripts\jobs\server\Jobs.lua:37: attempt to index field 'jobs' (a nil value)
+20:39:55 | [error] |   Callstack:
+20:39:55 | [error] |     API function: in metamethod __newindex
+20:39:55 | [error] |     server\Jobs.lua:37: in function <server\Jobs.lua:24>
+20:39:55 | [info ] | Module Jobs loaded successfully
+20:40:49 | [info ] | Module Jobs unloaded successfully
+20:40:49 | [info ] | Loading module Jobs
+20:40:49 | [info ] | 	Loading script "shared\JobsList.lua"
+20:40:49 | [info ] | 	Loading script "server\Jobs.lua"
+20:40:49 | [info ] | Module Jobs loaded successfully
+20:40:51 | [info ] | Module Jobs unloaded successfully
+20:40:51 | [info ] | Loading module Jobs
+20:40:51 | [info ] | 	Loading script "shared\JobsList.lua"
+20:40:51 | [info ] | 	Loading script "server\Jobs.lua"
+20:40:51 | [info ] | Module Jobs loaded successfully
+20:42:48 | [info ] | Module Jobs unloaded successfully
+20:42:48 | [info ] | Loading module Jobs
+20:42:48 | [info ] | 	Loading script "shared\JobsList.lua"
+20:42:48 | [info ] | 	Loading script "server\Jobs.lua"
+20:42:48 | [info ] | Module Jobs loaded successfully
+20:53:13 | [info ] | Module Jobs unloaded successfully
+20:53:13 | [info ] | Loading module Jobs
+20:53:13 | [info ] | 	Loading script "shared\JobsList.lua"
+20:53:13 | [info ] | 	Loading script "server\Jobs.lua"
+20:53:13 | [info ] | Module Jobs loaded successfully
+20:53:16 | [info ] | Module Jobs unloaded successfully
+20:53:16 | [info ] | Loading module Jobs
+20:53:16 | [info ] | 	Loading script "shared\JobsList.lua"
+20:53:16 | [info ] | 	Loading script "server\Jobs.lua"
+20:53:16 | [info ] | Module Jobs loaded successfully
+20:55:55 | [info ] | Module Jobs unloaded successfully
+20:55:55 | [info ] | Loading module Jobs
+20:55:55 | [info ] | 	Loading script "shared\JobsList.lua"
+20:55:55 | [info ] | 	Loading script "server\Jobs.lua"
+20:55:55 | [info ] | Module Jobs loaded successfully
+20:57:50 | [info ] | Module HUD unloaded successfully
+20:57:50 | [info ] | Loading module HUD
+20:57:50 | [info ] | 	Loading script "server\HUD.lua"
+20:57:50 | [info ] | 	Loading script "server\InformationAlert.lua"
+20:57:50 | [info ] | 	Loading script "server\NotificationAlert.lua"
+20:57:51 | [info ] | Module HUD loaded successfully
+21:03:01 | [info ] | UltraLord left the server (187.66.89.65)
+21:03:03 | [info ] | Module Admin unloaded successfully
+21:03:03 | [info ] | Module Bank unloaded successfully
+21:03:03 | [info ] | Module closehud unloaded successfully
+21:03:03 | [info ] | Module Clothings unloaded successfully
+21:03:03 | [info ] | Module Combustivel unloaded successfully
+21:03:03 | [info ] | Module CommandsController unloaded successfully
+21:03:03 | [info ] | Module Controls unloaded successfully
+21:03:03 | [info ] | Module CustomChat unloaded successfully
+21:03:03 | [info ] | Module Employments unloaded successfully
+21:03:03 | [info ] | Module Establishment unloaded successfully
+21:03:03 | [info ] | Module HUD unloaded successfully
+21:03:03 | [info ] | Module Inventory unloaded successfully
+21:03:03 | [info ] | Module Jobs unloaded successfully
+21:03:03 | [info ] | Module Level unloaded successfully
+21:03:03 | [info ] | Module Objects unloaded successfully
+21:03:03 | [info ] | Module physgun unloaded successfully
+21:03:03 | [info ] | Module PlayerController unloaded successfully
+21:03:03 | [info ] | Module Radio unloaded successfully
+21:03:03 | [info ] | Module Tutorial unloaded successfully
+21:03:04 | [info ] | Module Vehicles unloaded successfully
+21:03:04 | [info ] | Server shutdown
+10:22:51 | [info ] | JCMP Server 0.2.2 (Build 1014)
+10:22:51 | [info ] | Loading configuration
+10:22:51 | [info ] | Succesfully loaded configuration
+10:22:52 | [info ] | No ban list found: cleared bans
+10:22:52 | [info ] | Server started up successfully
+10:22:52 | [info ] | Loading module Admin
+10:22:52 | [info ] | 	Loading script "server\Admin.lua"
+10:22:52 | [info ] | Module Admin loaded successfully
+10:22:52 | [info ] | Loading module Bank
+10:22:52 | [info ] | 	Loading script "server\Bank.lua"
+10:22:52 | [info ] | Module Bank loaded successfully
+10:22:52 | [info ] | Loading module closehud
+10:22:52 | [info ] | Module closehud loaded successfully
+10:22:52 | [info ] | Loading module Clothings
+10:22:52 | [info ] | 	Loading script "shared\ClothingsList.lua"
+10:22:52 | [info ] | 	Loading script "server\ClothingStore.lua"
+10:22:52 | [info ] | 	Loading script "server\Clothings.lua"
+10:22:52 | [info ] | Module Clothings loaded successfully
+10:22:52 | [info ] | Loading module Combustivel
+10:22:52 | [info ] | 	Loading script "server\Combustivel.lua"
+10:22:52 | [info ] | Module Combustivel loaded successfully
+10:22:52 | [info ] | Loading module CommandsController
+10:22:52 | [info ] | Module CommandsController loaded successfully
+10:22:52 | [info ] | Loading module Controls
+10:22:52 | [info ] | Module Controls loaded successfully
+10:22:52 | [info ] | Loading module CustomChat
+10:22:52 | [info ] | 	Loading script "server\CustomChat.lua"
+10:22:52 | [info ] | Module CustomChat loaded successfully
+10:22:52 | [info ] | Loading module Employments
+10:22:52 | [info ] | 	Loading script "server\Employments.lua"
+10:22:52 | [info ] | Module Employments loaded successfully
+10:22:52 | [info ] | Loading module Establishment
+10:22:52 | [info ] | 	Loading script "server\Establishment.lua"
+10:22:52 | [info ] | Module Establishment loaded successfully
+10:22:53 | [info ] | Loading module Feeding
+10:22:53 | [info ] | 	Loading script "shared\FeedingList.lua"
+10:22:53 | [info ] | 	Loading script "server\Feeding.lua"
+10:22:53 | [info ] | 	Loading script "server\FeedingStore.lua"
+10:22:53 | [info ] | Module Feeding loaded successfully
+10:22:53 | [info ] | Loading module HUD
+10:22:53 | [info ] | 	Loading script "server\HUD.lua"
+10:22:53 | [info ] | 	Loading script "server\InformationAlert.lua"
+10:22:53 | [info ] | 	Loading script "server\NotificationAlert.lua"
+10:22:53 | [info ] | Module HUD loaded successfully
+10:22:53 | [info ] | Loading module Inventory
+10:22:53 | [info ] | 	Loading script "shared\InventoryGPSList.lua"
+10:22:53 | [info ] | 	Loading script "server\Inventory.lua"
+10:22:53 | [info ] | Module Inventory loaded successfully
+10:22:53 | [info ] | Loading module Jobs
+10:22:53 | [info ] | 	Loading script "shared\JobsList.lua"
+10:22:53 | [info ] | 	Loading script "server\Jobs.lua"
+10:22:53 | [info ] | Module Jobs loaded successfully
+10:22:53 | [info ] | Loading module Level
+10:22:53 | [info ] | 	Loading script "server\Level.lua"
+10:22:53 | [info ] | Module Level loaded successfully
+10:22:53 | [info ] | Loading module Objects
+10:22:53 | [info ] | 	Loading script "server\Objects.lua"
+10:22:53 | [info ] | Module Objects loaded successfully
+10:22:53 | [info ] | Loading module physgun
+10:22:53 | [info ] | 	Loading script "shared\settings.lua"
+10:22:53 | [info ] | 	Loading script "shared\util.lua"
+10:22:53 | [info ] | 	Loading script "server\physgun_init.lua"
+10:22:53 | [info ] | Module physgun loaded successfully
+10:22:53 | [info ] | Loading module PlayerController
+10:22:53 | [info ] | 	Loading script "server\PlayerController.lua"
+10:22:53 | [info ] | Module PlayerController loaded successfully
+10:22:53 | [info ] | Loading module Radio
+10:22:53 | [info ] | Module Radio loaded successfully
+10:22:53 | [info ] | Loading module Tutorial
+10:22:53 | [info ] | 	Loading script "server\Tutorial.lua"
+10:22:53 | [info ] | Module Tutorial loaded successfully
+10:22:53 | [info ] | Loading module Vehicles
+10:22:53 | [info ] | 	Loading script "server\Vehicles.lua"
+10:22:53 | [info ] | Module Vehicles loaded successfully
+10:23:04 | [info ] | Connection accepted
+10:23:04 | [info ] | Adding player with ID 0 and guid 135107994692167059, SteamID: STEAM_0:0:11728421
+10:23:04 | [info ] | UltraLord joined the server (187.66.89.65)
+10:24:26 | [info ] | Module Feeding unloaded successfully
+10:38:08 | [info ] | Failed to load module job: Module can't be loaded because the path does not exist
+10:38:09 | [info ] | Module Jobs unloaded successfully
+10:38:09 | [info ] | Loading module Jobs
+10:38:09 | [info ] | 	Loading script "shared\JobsList.lua"
+10:38:09 | [info ] | 	Loading script "server\Jobs.lua"
+10:38:09 | [info ] | Module Jobs loaded successfully
+10:40:53 | [info ] | Module Jobs unloaded successfully
+10:40:53 | [info ] | Loading module Jobs
+10:40:53 | [info ] | 	Loading script "shared\JobsList.lua"
+10:40:53 | [info ] | 	Loading script "server\Jobs.lua"
+10:40:53 | [info ] | Module Jobs loaded successfully
+10:41:04 | [info ] | Module Jobs unloaded successfully
+10:41:04 | [info ] | Loading module Jobs
+10:41:04 | [info ] | 	Loading script "shared\JobsList.lua"
+10:41:04 | [info ] | 	Loading script "server\Jobs.lua"
+10:41:04 | [info ] | Module Jobs loaded successfully
+10:41:12 | [info ] | Module Jobs unloaded successfully
+10:41:12 | [info ] | Loading module Jobs
+10:41:12 | [info ] | 	Loading script "shared\JobsList.lua"
+10:41:12 | [info ] | 	Loading script "server\Jobs.lua"
+10:41:12 | [info ] | Module Jobs loaded successfully
+10:42:41 | [info ] | Module Jobs unloaded successfully
+10:42:41 | [info ] | Loading module Jobs
+10:42:41 | [info ] | 	Loading script "shared\JobsList.lua"
+10:42:41 | [info ] | 	Loading script "server\Jobs.lua"
+10:42:41 | [info ] | Module Jobs loaded successfully
+10:43:16 | [info ] | Module Jobs unloaded successfully
+10:43:16 | [info ] | Loading module Jobs
+10:43:16 | [info ] | 	Loading script "shared\JobsList.lua"
+10:43:16 | [info ] | 	Loading script "server\Jobs.lua"
+10:43:16 | [info ] | Module Jobs loaded successfully
+10:43:33 | [info ] | Module Jobs unloaded successfully
+10:43:33 | [info ] | Loading module Jobs
+10:43:33 | [info ] | 	Loading script "shared\JobsList.lua"
+10:43:34 | [info ] | 	Loading script "server\Jobs.lua"
+10:43:34 | [info ] | Module Jobs loaded successfully
+10:43:53 | [info ] | Module Jobs unloaded successfully
+10:43:53 | [info ] | Loading module Jobs
+10:43:53 | [info ] | 	Loading script "shared\JobsList.lua"
+10:43:53 | [info ] | 	Loading script "server\Jobs.lua"
+10:43:53 | [info ] | Module Jobs loaded successfully
+10:54:20 | [info ] | UltraLord left the server (187.66.89.65)
+10:57:33 | [info ] | Module Admin unloaded successfully
+10:57:33 | [info ] | Module Bank unloaded successfully
+10:57:33 | [info ] | Module closehud unloaded successfully
+10:57:33 | [info ] | Module Clothings unloaded successfully
+10:57:33 | [info ] | Module Combustivel unloaded successfully
+10:57:33 | [info ] | Module CommandsController unloaded successfully
+10:57:33 | [info ] | Module Controls unloaded successfully
+10:57:33 | [info ] | Module CustomChat unloaded successfully
+10:57:33 | [info ] | Module Employments unloaded successfully
+10:57:33 | [info ] | Module Establishment unloaded successfully
+10:57:33 | [info ] | Module HUD unloaded successfully
+10:57:33 | [info ] | Module Inventory unloaded successfully
+10:57:33 | [info ] | Module Jobs unloaded successfully
+10:57:33 | [info ] | Module Level unloaded successfully
+10:57:33 | [info ] | Module Objects unloaded successfully
+10:57:33 | [info ] | Module physgun unloaded successfully
+10:57:33 | [info ] | Module PlayerController unloaded successfully
+10:57:33 | [info ] | Module Radio unloaded successfully
+10:57:33 | [info ] | Module Tutorial unloaded successfully
+10:57:33 | [info ] | Module Vehicles unloaded successfully
+10:57:33 | [info ] | Server shutdown
+20:37:12 | [info ] | JCMP Server 0.2.2 (Build 1014)
+20:37:12 | [info ] | Loading configuration
+20:37:12 | [info ] | Succesfully loaded configuration
+20:37:13 | [info ] | No ban list found: cleared bans
+20:37:13 | [info ] | Server started up successfully
+20:37:13 | [info ] | Loading module Admin
+20:37:13 | [info ] | 	Loading script "server\Admin.lua"
+20:37:13 | [info ] | Module Admin loaded successfully
+20:37:13 | [info ] | Loading module Bank
+20:37:13 | [info ] | 	Loading script "server\Bank.lua"
+20:37:13 | [info ] | Module Bank loaded successfully
+20:37:13 | [info ] | Loading module closehud
+20:37:13 | [info ] | Module closehud loaded successfully
+20:37:13 | [info ] | Loading module Clothings
+20:37:13 | [info ] | 	Loading script "shared\ClothingsList.lua"
+20:37:13 | [info ] | 	Loading script "server\ClothingStore.lua"
+20:37:13 | [info ] | 	Loading script "server\Clothings.lua"
+20:37:13 | [info ] | Module Clothings loaded successfully
+20:37:13 | [info ] | Loading module Combustivel
+20:37:13 | [info ] | 	Loading script "server\Combustivel.lua"
+20:37:13 | [info ] | Module Combustivel loaded successfully
+20:37:13 | [info ] | Loading module CommandsController
+20:37:13 | [info ] | Module CommandsController loaded successfully
+20:37:13 | [info ] | Loading module Controls
+20:37:13 | [info ] | Module Controls loaded successfully
+20:37:13 | [info ] | Loading module CustomChat
+20:37:13 | [info ] | 	Loading script "server\CustomChat.lua"
+20:37:13 | [info ] | Module CustomChat loaded successfully
+20:37:13 | [info ] | Loading module Employments
+20:37:13 | [info ] | 	Loading script "server\Employments.lua"
+20:37:13 | [info ] | Module Employments loaded successfully
+20:37:13 | [info ] | Loading module Establishment
+20:37:13 | [info ] | 	Loading script "server\Establishment.lua"
+20:37:13 | [info ] | Module Establishment loaded successfully
+20:37:13 | [info ] | Loading module Feeding
+20:37:13 | [info ] | 	Loading script "shared\FeedingList.lua"
+20:37:13 | [info ] | 	Loading script "server\Feeding.lua"
+20:37:13 | [info ] | 	Loading script "server\FeedingStore.lua"
+20:37:13 | [info ] | Module Feeding loaded successfully
+20:37:13 | [info ] | Loading module HUD
+20:37:13 | [info ] | 	Loading script "server\HUD.lua"
+20:37:13 | [info ] | 	Loading script "server\InformationAlert.lua"
+20:37:13 | [info ] | 	Loading script "server\NotificationAlert.lua"
+20:37:13 | [info ] | Module HUD loaded successfully
+20:37:13 | [info ] | Loading module Inventory
+20:37:13 | [info ] | 	Loading script "shared\InventoryGPSList.lua"
+20:37:13 | [info ] | 	Loading script "server\Inventory.lua"
+20:37:13 | [info ] | Module Inventory loaded successfully
+20:37:13 | [info ] | Loading module Jobs
+20:37:13 | [info ] | 	Loading script "shared\JobsList.lua"
+20:37:13 | [info ] | 	Loading script "server\Jobs.lua"
+20:37:13 | [info ] | Module Jobs loaded successfully
+20:37:13 | [info ] | Loading module Level
+20:37:13 | [info ] | 	Loading script "server\Level.lua"
+20:37:13 | [info ] | Module Level loaded successfully
+20:37:13 | [info ] | Loading module Objects
+20:37:13 | [info ] | 	Loading script "server\Objects.lua"
+20:37:13 | [info ] | Module Objects loaded successfully
+20:37:13 | [info ] | Loading module physgun
+20:37:13 | [info ] | 	Loading script "shared\settings.lua"
+20:37:13 | [info ] | 	Loading script "shared\util.lua"
+20:37:13 | [info ] | 	Loading script "server\physgun_init.lua"
+20:37:13 | [info ] | Module physgun loaded successfully
+20:37:13 | [info ] | Loading module PlayerController
+20:37:13 | [info ] | 	Loading script "server\PlayerController.lua"
+20:37:13 | [info ] | Module PlayerController loaded successfully
+20:37:13 | [info ] | Loading module Radio
+20:37:13 | [info ] | Module Radio loaded successfully
+20:37:13 | [info ] | Loading module Tutorial
+20:37:13 | [info ] | 	Loading script "server\Tutorial.lua"
+20:37:13 | [info ] | Module Tutorial loaded successfully
+20:37:13 | [info ] | Loading module Vehicles
+20:37:13 | [info ] | 	Loading script "server\Vehicles.lua"
+20:37:14 | [info ] | Module Vehicles loaded successfully
+20:37:25 | [info ] | Connection accepted
+20:37:25 | [info ] | Adding player with ID 0 and guid 1080863915107179412, SteamID: STEAM_0:0:11728421
+20:37:25 | [info ] | UltraLord joined the server (191.189.97.154)
+20:38:47 | [info ] | Module Feeding unloaded successfully
+21:08:15 | [info ] | Failed to load module job: Module can't be loaded because the path does not exist
+21:08:15 | [info ] | Module Jobs unloaded successfully
+21:08:15 | [info ] | Loading module Jobs
+21:08:15 | [info ] | 	Loading script "shared\JobsList.lua"
+21:08:15 | [info ] | 	Loading script "server\Jobs.lua"
+21:08:15 | [error] | Lua error in module Jobs when running event ModuleLoad: 
+21:08:15 | [error] |   No matching overload found, candidates:
+21:08:15 | [error] |     void Vector3:__init(number, number, number)
+21:08:15 | [error] |     void Vector3:__init()
+21:08:15 | [error] |   Callstack:
+21:08:15 | [error] |     API function: in global Vector3
+21:08:15 | [error] |     ..\..\lua\autorun\shared\Vector.lua:3: in field ParseString
+21:08:15 | [error] |     server\Jobs.lua:49: in function <server\Jobs.lua:36>
+21:08:15 | [info ] | Module Jobs loaded successfully
+21:08:20 | [info ] | Module Jobs unloaded successfully
+21:08:20 | [info ] | Loading module Jobs
+21:08:20 | [info ] | 	Loading script "shared\JobsList.lua"
+21:08:20 | [info ] | 	Loading script "server\Jobs.lua"
+21:08:20 | [error] | Lua error in module Jobs when running event ModuleLoad: 
+21:08:20 | [error] |   No matching overload found, candidates:
+21:08:20 | [error] |     void Vector3:__init(number, number, number)
+21:08:20 | [error] |     void Vector3:__init()
+21:08:20 | [error] |   Callstack:
+21:08:20 | [error] |     API function: in global Vector3
+21:08:20 | [error] |     ..\..\lua\autorun\shared\Vector.lua:3: in field ParseString
+21:08:20 | [error] |     server\Jobs.lua:49: in function <server\Jobs.lua:36>
+21:08:20 | [info ] | Module Jobs loaded successfully
+21:11:08 | [info ] | Module Jobs unloaded successfully
+21:11:08 | [info ] | Loading module Jobs
+21:11:08 | [info ] | 	Loading script "shared\JobsList.lua"
+21:11:08 | [info ] | 	Loading script "server\Jobs.lua"
+21:11:08 | [error] | Lua error in module Jobs when running event ModuleLoad: 
+21:11:08 | [error] |   No matching overload found, candidates:
+21:11:08 | [error] |     void Vector3:__init(number, number, number)
+21:11:08 | [error] |     void Vector3:__init()
+21:11:08 | [error] |   Callstack:
+21:11:08 | [error] |     API function: in global Vector3
+21:11:08 | [error] |     ..\..\lua\autorun\shared\Vector.lua:3: in field ParseString
+21:11:08 | [error] |     server\Jobs.lua:49: in function <server\Jobs.lua:36>
+21:11:08 | [info ] | Module Jobs loaded successfully
+21:11:09 | [info ] | Module Jobs unloaded successfully
+21:11:09 | [info ] | Loading module Jobs
+21:11:09 | [info ] | 	Loading script "shared\JobsList.lua"
+21:11:09 | [info ] | 	Loading script "server\Jobs.lua"
+21:11:09 | [error] | Lua error in module Jobs when running event ModuleLoad: 
+21:11:09 | [error] |   No matching overload found, candidates:
+21:11:09 | [error] |     void Vector3:__init(number, number, number)
+21:11:09 | [error] |     void Vector3:__init()
+21:11:09 | [error] |   Callstack:
+21:11:09 | [error] |     API function: in global Vector3
+21:11:09 | [error] |     ..\..\lua\autorun\shared\Vector.lua:3: in field ParseString
+21:11:09 | [error] |     server\Jobs.lua:49: in function <server\Jobs.lua:36>
+21:11:09 | [info ] | Module Jobs loaded successfully
+21:11:16 | [info ] | Module Jobs unloaded successfully
+21:11:16 | [info ] | Loading module Jobs
+21:11:16 | [info ] | 	Loading script "shared\JobsList.lua"
+21:11:16 | [info ] | 	Loading script "server\Jobs.lua"
+21:11:16 | [error] | Lua error in module Jobs when running event ModuleLoad: 
+21:11:16 | [error] |   No matching overload found, candidates:
+21:11:16 | [error] |     void Vector3:__init(number, number, number)
+21:11:16 | [error] |     void Vector3:__init()
+21:11:16 | [error] |   Callstack:
+21:11:16 | [error] |     API function: in global Vector3
+21:11:16 | [error] |     ..\..\lua\autorun\shared\Vector.lua:3: in field ParseString
+21:11:16 | [error] |     server\Jobs.lua:49: in function <server\Jobs.lua:36>
+21:11:16 | [info ] | Module Jobs loaded successfully
+21:11:25 | [info ] | Module Jobs unloaded successfully
+21:11:25 | [info ] | Loading module Jobs
+21:11:25 | [info ] | 	Loading script "shared\JobsList.lua"
+21:11:25 | [info ] | 	Loading script "server\Jobs.lua"
+21:11:25 | [error] | Lua error in module Jobs when running event ModuleLoad: 
+21:11:25 | [error] |   No matching overload found, candidates:
+21:11:25 | [error] |     void Vector3:__init(number, number, number)
+21:11:25 | [error] |     void Vector3:__init()
+21:11:25 | [error] |   Callstack:
+21:11:25 | [error] |     API function: in global Vector3
+21:11:25 | [error] |     ..\..\lua\autorun\shared\Vector.lua:3: in field ParseString
+21:11:25 | [error] |     server\Jobs.lua:49: in function <server\Jobs.lua:36>
+21:11:25 | [info ] | Module Jobs loaded successfully
+21:11:50 | [info ] | Module Jobs unloaded successfully
+21:11:50 | [info ] | Loading module Jobs
+21:11:50 | [info ] | 	Loading script "shared\JobsList.lua"
+21:11:50 | [info ] | 	Loading script "server\Jobs.lua"
+21:11:50 | [error] | Lua error in module Jobs when running event ModuleLoad: 
+21:11:50 | [error] |   No matching overload found, candidates:
+21:11:50 | [error] |     void Vector3:__init(number, number, number)
+21:11:50 | [error] |     void Vector3:__init()
+21:11:50 | [error] |   Callstack:
+21:11:50 | [error] |     API function: in global Vector3
+21:11:50 | [error] |     ..\..\lua\autorun\shared\Vector.lua:3: in method ParseString
+21:11:50 | [error] |     server\Jobs.lua:49: in function <server\Jobs.lua:36>
+21:11:50 | [info ] | Module Jobs loaded successfully
+21:13:40 | [info ] | Module Jobs unloaded successfully
+21:13:40 | [info ] | Loading module Jobs
+21:13:40 | [info ] | 	Loading script "shared\JobsList.lua"
+21:13:40 | [info ] | 	Loading script "server\Jobs.lua"
+21:13:40 | [error] | Lua error in module Jobs when running event ModuleLoad: 
+21:13:40 | [error] |   No matching overload found, candidates:
+21:13:40 | [error] |     void Vector3:__init(number, number, number)
+21:13:40 | [error] |     void Vector3:__init()
+21:13:40 | [error] |   Callstack:
+21:13:40 | [error] |     API function: in global Vector3
+21:13:40 | [error] |     ..\..\lua\autorun\shared\Vector.lua:3: in field ParseString
+21:13:40 | [error] |     server\Jobs.lua:49: in function <server\Jobs.lua:36>
+21:13:40 | [info ] | Module Jobs loaded successfully
+21:13:59 | [info ] | Module Jobs unloaded successfully
+21:13:59 | [info ] | Loading module Jobs
+21:13:59 | [info ] | 	Loading script "shared\JobsList.lua"
+21:13:59 | [info ] | 	Loading script "server\Jobs.lua"
+21:13:59 | [info ] | nil
+21:13:59 | [error] | Lua error in module Jobs when running event ModuleLoad: 
+21:13:59 | [error] |   No matching overload found, candidates:
+21:13:59 | [error] |     void ConsoleManager:Print(string)
+21:13:59 | [error] |     void ConsoleManager:Print(string, Color)
+21:13:59 | [error] |   Callstack:
+21:13:59 | [error] |     API function: in method Print
+21:13:59 | [error] |     ..\..\lua\autorun\shared\Vector.lua:4: in field ParseString
+21:13:59 | [error] |     server\Jobs.lua:49: in function <server\Jobs.lua:36>
+21:13:59 | [info ] | Module Jobs loaded successfully
+21:14:02 | [info ] | Module Jobs unloaded successfully
+21:14:02 | [info ] | Loading module Jobs
+21:14:02 | [info ] | 	Loading script "shared\JobsList.lua"
+21:14:02 | [info ] | 	Loading script "server\Jobs.lua"
+21:14:02 | [info ] | nil
+21:14:02 | [error] | Lua error in module Jobs when running event ModuleLoad: 
+21:14:02 | [error] |   No matching overload found, candidates:
+21:14:02 | [error] |     void ConsoleManager:Print(string)
+21:14:02 | [error] |     void ConsoleManager:Print(string, Color)
+21:14:02 | [error] |   Callstack:
+21:14:02 | [error] |     API function: in method Print
+21:14:02 | [error] |     ..\..\lua\autorun\shared\Vector.lua:4: in field ParseString
+21:14:02 | [error] |     server\Jobs.lua:49: in function <server\Jobs.lua:36>
+21:14:02 | [info ] | Module Jobs loaded successfully
+21:14:26 | [info ] | Module Jobs unloaded successfully
+21:14:26 | [info ] | Loading module Jobs
+21:14:26 | [info ] | 	Loading script "shared\JobsList.lua"
+21:14:26 | [info ] | 	Loading script "server\Jobs.lua"
+21:14:26 | [info ] | 16000
+21:14:26 | [info ] | 200
+21:14:26 | [info ] | 16000
+21:14:26 | [info ] | 16000
+21:14:26 | [info ] | 200
+21:14:26 | [info ] | 16000
+21:14:26 | [info ] | Module Jobs loaded successfully
+21:14:51 | [info ] | Module Jobs unloaded successfully
+21:14:51 | [info ] | Loading module Jobs
+21:14:51 | [info ] | 	Loading script "shared\JobsList.lua"
+21:14:51 | [info ] | 	Loading script "server\Jobs.lua"
+21:14:51 | [info ] | Module Jobs loaded successfully
+21:15:01 | [error] | Lua error in module Jobs when running event ChangeJob: 
+21:15:01 | [error] |   Runtime Error: no such column: IdEmployment
+21:15:01 | [error] |   Callstack:
+21:15:01 | [error] |     API function: in method Query
+21:15:01 | [error] |     server\Jobs.lua:17: in function <server\Jobs.lua:16>
+21:15:01 | [error] |   Callstack:
+21:15:01 | [error] |     API function: in method Query
+21:15:01 | [error] |     server\Jobs.lua:17: in function <server\Jobs.lua:16>
+21:15:01 | [error] |   Arguments:
+21:15:01 | [error] |     idJob: 1
+21:15:10 | [info ] | UltraLord left the server (191.189.97.154)
+21:16:28 | [info ] | Module Admin unloaded successfully
+21:16:28 | [info ] | Module Bank unloaded successfully
+21:16:28 | [info ] | Module closehud unloaded successfully
+21:16:28 | [info ] | Module Clothings unloaded successfully
+21:16:28 | [info ] | Module Combustivel unloaded successfully
+21:16:28 | [info ] | Module CommandsController unloaded successfully
+21:16:28 | [info ] | Module Controls unloaded successfully
+21:16:28 | [info ] | Module CustomChat unloaded successfully
+21:16:28 | [info ] | Module Employments unloaded successfully
+21:16:28 | [info ] | Module Establishment unloaded successfully
+21:16:28 | [info ] | Module HUD unloaded successfully
+21:16:28 | [info ] | Module Inventory unloaded successfully
+21:16:28 | [info ] | Module Jobs unloaded successfully
+21:16:28 | [info ] | Module Level unloaded successfully
+21:16:28 | [info ] | Module Objects unloaded successfully
+21:16:28 | [info ] | Module physgun unloaded successfully
+21:16:28 | [info ] | Module PlayerController unloaded successfully
+21:16:28 | [info ] | Module Radio unloaded successfully
+21:16:28 | [info ] | Module Tutorial unloaded successfully
+21:16:29 | [info ] | Module Vehicles unloaded successfully
+21:16:29 | [info ] | Server shutdown
+21:14:33 | [info ] | JCMP Server 0.2.2 (Build 1014)
+21:14:33 | [info ] | Loading configuration
+21:14:33 | [info ] | Succesfully loaded configuration
+21:14:33 | [info ] | No ban list found: cleared bans
+21:14:33 | [info ] | Server started up successfully
+21:14:33 | [info ] | Loading module Admin
+21:14:33 | [info ] | 	Loading script "server\Admin.lua"
+21:14:33 | [info ] | Module Admin loaded successfully
+21:14:33 | [info ] | Loading module Bank
+21:14:33 | [info ] | 	Loading script "server\Bank.lua"
+21:14:33 | [info ] | Module Bank loaded successfully
+21:14:33 | [info ] | Loading module closehud
+21:14:33 | [info ] | Module closehud loaded successfully
+21:14:33 | [info ] | Loading module Clothings
+21:14:33 | [info ] | 	Loading script "shared\ClothingsList.lua"
+21:14:33 | [info ] | 	Loading script "server\ClothingStore.lua"
+21:14:33 | [info ] | 	Loading script "server\Clothings.lua"
+21:14:33 | [info ] | Module Clothings loaded successfully
+21:14:33 | [info ] | Loading module Combustivel
+21:14:34 | [info ] | 	Loading script "server\Combustivel.lua"
+21:14:34 | [info ] | Module Combustivel loaded successfully
+21:14:34 | [info ] | Loading module CommandsController
+21:14:34 | [info ] | Module CommandsController loaded successfully
+21:14:34 | [info ] | Loading module Controls
+21:14:34 | [info ] | Module Controls loaded successfully
+21:14:34 | [info ] | Loading module CustomChat
+21:14:34 | [info ] | 	Loading script "server\CustomChat.lua"
+21:14:34 | [info ] | Module CustomChat loaded successfully
+21:14:34 | [info ] | Loading module Employments
+21:14:34 | [info ] | 	Loading script "server\Employments.lua"
+21:14:34 | [info ] | Module Employments loaded successfully
+21:14:34 | [info ] | Loading module Establishment
+21:14:34 | [info ] | 	Loading script "server\Establishment.lua"
+21:14:34 | [info ] | Module Establishment loaded successfully
+21:14:34 | [info ] | Loading module Feeding
+21:14:34 | [info ] | 	Loading script "shared\FeedingList.lua"
+21:14:34 | [info ] | 	Loading script "server\Feeding.lua"
+21:14:34 | [info ] | 	Loading script "server\FeedingStore.lua"
+21:14:34 | [info ] | Module Feeding loaded successfully
+21:14:34 | [info ] | Loading module HUD
+21:14:34 | [info ] | 	Loading script "server\HUD.lua"
+21:14:34 | [info ] | 	Loading script "server\InformationAlert.lua"
+21:14:34 | [info ] | 	Loading script "server\NotificationAlert.lua"
+21:14:34 | [info ] | Module HUD loaded successfully
+21:14:34 | [info ] | Loading module Inventory
+21:14:34 | [info ] | 	Loading script "shared\InventoryGPSList.lua"
+21:14:34 | [info ] | 	Loading script "server\Inventory.lua"
+21:14:34 | [info ] | Module Inventory loaded successfully
+21:14:34 | [info ] | Loading module Jobs
+21:14:34 | [info ] | 	Loading script "shared\JobsList.lua"
+21:14:34 | [info ] | 	Loading script "server\Jobs.lua"
+21:14:34 | [info ] | Module Jobs loaded successfully
+21:14:34 | [info ] | Loading module Level
+21:14:34 | [info ] | 	Loading script "server\Level.lua"
+21:14:34 | [info ] | Module Level loaded successfully
+21:14:34 | [info ] | Loading module Objects
+21:14:34 | [info ] | 	Loading script "server\Objects.lua"
+21:14:34 | [info ] | Module Objects loaded successfully
+21:14:34 | [info ] | Loading module physgun
+21:14:34 | [info ] | 	Loading script "shared\settings.lua"
+21:14:34 | [info ] | 	Loading script "shared\util.lua"
+21:14:34 | [info ] | 	Loading script "server\physgun_init.lua"
+21:14:34 | [info ] | Module physgun loaded successfully
+21:14:34 | [info ] | Loading module PlayerController
+21:14:34 | [info ] | 	Loading script "server\PlayerController.lua"
+21:14:34 | [info ] | Module PlayerController loaded successfully
+21:14:34 | [info ] | Loading module Radio
+21:14:34 | [info ] | Module Radio loaded successfully
+21:14:34 | [info ] | Loading module Tutorial
+21:14:34 | [info ] | 	Loading script "server\Tutorial.lua"
+21:14:34 | [info ] | Module Tutorial loaded successfully
+21:14:34 | [info ] | Loading module Vehicles
+21:14:34 | [info ] | 	Loading script "server\Vehicles.lua"
+21:14:35 | [info ] | Module Vehicles loaded successfully
+21:14:41 | [info ] | Connection accepted
+21:14:41 | [info ] | Adding player with ID 0 and guid 639511164474382046, SteamID: STEAM_0:0:11728421
+21:14:41 | [info ] | SaledMohamed joined the server (191.189.97.154)
+21:15:47 | [info ] | Module Feeding unloaded successfully
+21:16:34 | [info ] | Module Radio unloaded successfully
+21:17:58 | [info ] | Module Admin unloaded successfully
+21:17:58 | [info ] | Module Bank unloaded successfully
+21:17:58 | [info ] | Module closehud unloaded successfully
+21:17:58 | [info ] | Module Clothings unloaded successfully
+21:17:58 | [info ] | Module Combustivel unloaded successfully
+21:17:58 | [info ] | Module CommandsController unloaded successfully
+21:17:58 | [info ] | Module Controls unloaded successfully
+21:17:58 | [info ] | Module CustomChat unloaded successfully
+21:17:58 | [info ] | Module Employments unloaded successfully
+21:17:58 | [info ] | Module Establishment unloaded successfully
+21:17:58 | [info ] | Module HUD unloaded successfully
+21:17:58 | [info ] | Module Inventory unloaded successfully
+21:17:58 | [info ] | Module Jobs unloaded successfully
+21:17:58 | [info ] | Module Level unloaded successfully
+21:17:58 | [info ] | Module Objects unloaded successfully
+21:17:58 | [info ] | Module physgun unloaded successfully
+21:17:58 | [info ] | Module PlayerController unloaded successfully
+21:17:58 | [info ] | Module Tutorial unloaded successfully
+21:17:58 | [info ] | Module Vehicles unloaded successfully
+21:17:58 | [info ] | Server shutdown
+14:22:46 | [info ] | JCMP Server 0.2.2 (Build 1014)
+14:22:46 | [info ] | Loading configuration
+14:22:46 | [info ] | Succesfully loaded configuration
+14:22:47 | [info ] | No ban list found: cleared bans
+14:22:47 | [info ] | Server started up successfully
+14:22:47 | [info ] | Loading module Admin
+14:22:47 | [info ] | 	Loading script "server\Admin.lua"
+14:22:47 | [info ] | Module Admin loaded successfully
+14:22:47 | [info ] | Loading module Bank
+14:22:47 | [info ] | 	Loading script "server\Bank.lua"
+14:22:47 | [info ] | Module Bank loaded successfully
+14:22:47 | [info ] | Loading module closehud
+14:22:47 | [info ] | Module closehud loaded successfully
+14:22:47 | [info ] | Loading module Clothings
+14:22:47 | [info ] | 	Loading script "shared\ClothingsList.lua"
+14:22:47 | [info ] | 	Loading script "server\ClothingStore.lua"
+14:22:47 | [info ] | 	Loading script "server\Clothings.lua"
+14:22:47 | [info ] | Module Clothings loaded successfully
+14:22:47 | [info ] | Loading module Combustivel
+14:22:47 | [info ] | 	Loading script "server\Combustivel.lua"
+14:22:47 | [info ] | Module Combustivel loaded successfully
+14:22:47 | [info ] | Loading module CommandsController
+14:22:47 | [info ] | Module CommandsController loaded successfully
+14:22:47 | [info ] | Loading module Controls
+14:22:47 | [info ] | Module Controls loaded successfully
+14:22:47 | [info ] | Loading module CustomChat
+14:22:47 | [info ] | 	Loading script "server\CustomChat.lua"
+14:22:47 | [info ] | Module CustomChat loaded successfully
+14:22:47 | [info ] | Loading module Employments
+14:22:47 | [info ] | 	Loading script "server\Employments.lua"
+14:22:47 | [info ] | Module Employments loaded successfully
+14:22:47 | [info ] | Loading module Establishment
+14:22:47 | [info ] | 	Loading script "server\Establishment.lua"
+14:22:47 | [info ] | Module Establishment loaded successfully
+14:22:47 | [info ] | Loading module Feeding
+14:22:47 | [info ] | 	Loading script "shared\FeedingList.lua"
+14:22:47 | [info ] | 	Loading script "server\Feeding.lua"
+14:22:47 | [info ] | 	Loading script "server\FeedingStore.lua"
+14:22:47 | [info ] | Module Feeding loaded successfully
+14:22:47 | [info ] | Loading module HUD
+14:22:47 | [info ] | 	Loading script "server\HUD.lua"
+14:22:47 | [info ] | 	Loading script "server\InformationAlert.lua"
+14:22:47 | [info ] | 	Loading script "server\NotificationAlert.lua"
+14:22:47 | [info ] | Module HUD loaded successfully
+14:22:47 | [info ] | Loading module Inventory
+14:22:47 | [info ] | 	Loading script "shared\InventoryGPSList.lua"
+14:22:47 | [info ] | 	Loading script "server\Inventory.lua"
+14:22:47 | [info ] | Module Inventory loaded successfully
+14:22:47 | [info ] | Loading module Jobs
+14:22:47 | [info ] | 	Loading script "shared\JobsList.lua"
+14:22:47 | [info ] | 	Loading script "server\Jobs.lua"
+14:22:48 | [info ] | Module Jobs loaded successfully
+14:22:48 | [info ] | Loading module Level
+14:22:48 | [info ] | 	Loading script "server\Level.lua"
+14:22:48 | [info ] | Module Level loaded successfully
+14:22:48 | [info ] | Loading module Objects
+14:22:48 | [info ] | 	Loading script "server\Objects.lua"
+14:22:48 | [info ] | Module Objects loaded successfully
+14:22:48 | [info ] | Loading module physgun
+14:22:48 | [info ] | 	Loading script "shared\settings.lua"
+14:22:48 | [info ] | 	Loading script "shared\util.lua"
+14:22:48 | [info ] | 	Loading script "server\physgun_init.lua"
+14:22:48 | [info ] | Module physgun loaded successfully
+14:22:48 | [info ] | Loading module PlayerController
+14:22:48 | [info ] | 	Loading script "server\PlayerController.lua"
+14:22:48 | [info ] | Module PlayerController loaded successfully
+14:22:48 | [info ] | Loading module Radio
+14:22:48 | [info ] | Module Radio loaded successfully
+14:22:48 | [info ] | Loading module Tutorial
+14:22:48 | [info ] | 	Loading script "server\Tutorial.lua"
+14:22:48 | [info ] | Module Tutorial loaded successfully
+14:22:48 | [info ] | Loading module Vehicles
+14:22:48 | [info ] | 	Loading script "server\Vehicles.lua"
+14:22:48 | [info ] | Module Vehicles loaded successfully
+14:22:59 | [info ] | Connection accepted
+14:22:59 | [info ] | Adding player with ID 0 and guid 945755923350542414, SteamID: STEAM_0:0:11728421
+14:22:59 | [info ] | SaledMohamed joined the server (191.189.97.154)
+14:24:21 | [info ] | Module Feeding unloaded successfully
+14:36:27 | [info ] | Module Radio unloaded successfully
+16:01:57 | [info ] | Module Admin unloaded successfully
+16:01:57 | [info ] | Module Bank unloaded successfully
+16:01:57 | [info ] | Module closehud unloaded successfully
+16:01:57 | [info ] | Module Clothings unloaded successfully
+16:01:57 | [info ] | Module Combustivel unloaded successfully
+16:01:57 | [info ] | Module CommandsController unloaded successfully
+16:01:57 | [info ] | Module Controls unloaded successfully
+16:01:57 | [info ] | Module CustomChat unloaded successfully
+16:01:57 | [info ] | Module Employments unloaded successfully
+16:01:57 | [info ] | Module Establishment unloaded successfully
+16:01:57 | [info ] | Module HUD unloaded successfully
+16:01:57 | [info ] | Module Inventory unloaded successfully
+16:01:57 | [info ] | Module Jobs unloaded successfully
+16:01:57 | [info ] | Module Level unloaded successfully
+16:01:57 | [info ] | Module Objects unloaded successfully
+16:01:57 | [info ] | Module physgun unloaded successfully
+16:01:57 | [info ] | Module PlayerController unloaded successfully
+16:01:57 | [info ] | Module Tutorial unloaded successfully
+16:01:57 | [info ] | Module Vehicles unloaded successfully
+16:01:58 | [info ] | Server shutdown

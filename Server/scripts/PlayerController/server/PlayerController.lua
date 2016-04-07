@@ -46,14 +46,14 @@ end
 
 
 function PlayerController:UpdatePlayer(player)
-	local query = SQL:Query("SELECT Nome, NivelUsuario, Dinheiro, DinheiroBanco, IdEmployment, Nivel, Experiencia, UltimaPosicao, Fome, Sede, Combustivel FROM Player WHERE Id = ?")
+	local query = SQL:Query("SELECT Nome, NivelUsuario, Dinheiro, DinheiroBanco, IdJob, Nivel, Experiencia, UltimaPosicao, Fome, Sede, Combustivel FROM Player WHERE Id = ?")
 	query:Bind(1, player:GetSteamId().id)
 	local result = query:Execute()
 	if (#result > 0) then
 	
 		player:SetMoney(tonumber(result[1].Dinheiro))
 		
-		player:SetNetworkValue("IdEmployment", tonumber(result[1].IdEmployment))
+		player:SetNetworkValue("IdJob", tonumber(result[1].IdJob))
 		player:SetNetworkValue("Name", result[1].Nome)
 		player:SetNetworkValue("MoneyBank", tonumber(result[1].DinheiroBanco))
 		player:SetNetworkValue("NivelUsuario", tonumber(result[1].NivelUsuario))
@@ -67,7 +67,7 @@ function PlayerController:UpdatePlayer(player)
 		return true
 	else
 		player:SetModelId(24)
-		player:SetNetworkValue("IdEmployment", 1)
+		player:SetNetworkValue("IdJob", 1)
 		player:SetNetworkValue("NivelUsuario", 0)
 		player:SetNetworkValue("Level", 1)
 		player:SetNetworkValue("Experience", 0)
@@ -156,7 +156,7 @@ function PlayerController:ServerStart()
 		"Experiencia INTEGER NOT NULL DEFAULT 0," ..
 		"Dinheiro INTEGER NOT NULL," ..
 		"DinheiroBanco INTEGER NOT NULL DEFAULT 0," ..
-		"IdEmployment INTEGER NOT NULL DEFAULT 1," ..
+		"IdJob INTEGER NOT NULL DEFAULT 1," ..
 		"Idioma INTEGER NOT NULL DEFAULT 0," ..
 		"DataEntrada DATETIME NOT NULL," ..
 		"DataUltimaEntrada DATETIME NOT NULL," ..

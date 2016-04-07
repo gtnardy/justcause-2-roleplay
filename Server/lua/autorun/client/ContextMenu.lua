@@ -278,9 +278,9 @@ function ContextMenuItem:__init(args)
 	self.image = args.image
 	self.data = args.data
 	self.listInLine = args.listInLine != nil and args.listInLine or false
-	self.enabled = args.enabled != nil and args.enabled or true
+	if args.enabled != nil then self.enabled = args.enabled else self.enabled = true end
 	
-	self.legend = ContextMenuLegend({text = args.legend})
+	self.legend = ContextMenuLegend({text = args.legend, textNotActive = args.textLegendNotActive})
 	self.statistics = ContextMenuStatistics({statistics = args.statistics})
 	self.tutorial = ContextMenuTutorial()
 	
@@ -322,7 +322,7 @@ function ContextMenuItem:Press()
 	if self.enabled then
 		self.pressEvent()
 	elseif self.legend.textNotActive then
-		self.legend:SetText(self.legend.textNotActive)
+		self.legend:SetTempText(self.legend.textNotActive)
 	end
 	return true
 end
@@ -376,6 +376,7 @@ function ContextMenuLegend:__init(args)
 	self.margin = Vector2(10, 10)
 	
 	self.text = nil
+	self.textNotActive = args.textNotActive
 	
 	self.label = Label.Create()
 	self.label:Hide()

@@ -30,7 +30,7 @@ function Inventory:ModuleLoad()
 		query:Bind(1, id)
 		local resultEstablishment = query:Execute()
 		for _, establishment in ipairs(resultEstablishment) do
-			table.insert(positions, self:StringToVector3(establishment.Position))
+			table.insert(positions, Vector3.ParseString(establishment.Position))
 		end
 		table.insert(self.GPS, {name = name, positions = positions})
 	end
@@ -52,12 +52,6 @@ function Inventory:UpdatePlayer(player)
 	end
 
 	Network:Send(player, "UpdateData", {GPS = self.GPS, inventoryItems = inventory})
-end
-
-
-function Inventory:StringToVector3(str)
-	local v = tostring(str):split(", ")
-	return Vector3(tonumber(v[1]), tonumber(v[3]), tonumber(v[5]))
 end
 
 

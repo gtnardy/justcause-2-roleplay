@@ -63,7 +63,7 @@ function HUD:AtualizarSpots(args)
 			if (spot.Spot) then
 				image = self:CreateImage(spot.Spot)
 			end
-			table.insert(self.spots, Spot({id = spot.Id, name = spot.Name, position = self:StringToVector3(spot.Position), image = image, description = self.Languages[spot.Spot.."_DESCRIPTION"], spotType = spot.Spot, radius = tonumber(spot.Radius)}))
+			table.insert(self.spots, Spot({id = spot.Id, name = spot.Name, position = Vector3.ParseString(spot.Position), image = image, description = self.Languages[spot.Spot.."_DESCRIPTION"], spotType = spot.Spot, radius = tonumber(spot.Radius)}))
 		end
 	end
 	
@@ -201,10 +201,12 @@ function HUD:Render()
 	local statusHeight = Render.Height - CONFORTOHUD.y
 	self:RenderWaypointsScreen()
 	if Game:GetGUIState() != GUIState.ContextMenu then
-		if self.InformationAlert and self.InformationAlert:HasMessage() then
-			self.InformationAlert:Render(CONFORTOHUD)
-		elseif self.Checkpoint then
-			self.Checkpoint:Render(self.posicaoCurrentSpots)
+		if Game:GetGUIState() != GUIState.ConfirmationScreen then
+			if self.InformationAlert and self.InformationAlert:HasMessage() then
+				self.InformationAlert:Render(CONFORTOHUD)
+			elseif self.Checkpoint then
+				self.Checkpoint:Render(self.posicaoCurrentSpots)
+			end
 		end
 	else
 		statusHeight = statusHeight - 40
@@ -254,12 +256,6 @@ function HUD:RenderAlert()
 		local position = Render.Size / 2 - Render:GetTextSize(message, 20) / 2 + Vector2(0, 150)
 		self.Alert:Render(position, message, Color.White, 20)
 	end
-end
-
-
-function HUD:StringToVector3(str)
-	local v = tostring(str):split(", ")
-	return Vector3(tonumber(v[1]), tonumber(v[3]), tonumber(v[5]))
 end
 
 

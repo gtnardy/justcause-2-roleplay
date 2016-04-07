@@ -1,8 +1,6 @@
 class 'Checkpoint'
 
 function Checkpoint:__init()
-
-
 	self.currentSpots = {}
 	self.spotsNear = {}
 	
@@ -12,11 +10,18 @@ function Checkpoint:__init()
 	self.timerRender = Timer()
 	
 	Events:Subscribe("PostTick", self, self.PostTick)
+	Events:Subscribe("GameRender", self, self.GameRender)
+end
+
+
+function Checkpoint:GameRender()
+	for _, spot in pairs(self.spotsNear) do
+		if not spot.image then break end
+	end
 end
 
 
 function Checkpoint:PostTick()
-
 	if self.timer:GetSeconds() > 1 then
 		for id, spot in pairs(self.currentSpots) do
 			if Vector3.Distance(spot.position, LocalPlayer:GetPosition()) > spot.radius then
