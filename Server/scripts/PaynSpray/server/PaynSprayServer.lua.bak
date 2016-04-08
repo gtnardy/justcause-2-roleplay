@@ -1,0 +1,39 @@
+class 'PaynSprayServer'
+
+function PaynSprayServer:__init()
+
+	Events:Subscribe("PlayerExitCheckpoint", self, self.PlayerExitCheckpoint)
+	Events:Subscribe("PlayerEnterCheckpoint", self, self.PlayerEnterCheckpoint)
+	
+	Network:Subscribe("AtualizarVeiculo", self, self.AtualizarVeiculo)
+	
+end
+
+
+function PaynSprayServer:AtualizarVeiculo(args, player)
+
+	Events:Fire("AtualizarVeiculo", {veiculo = player:GetVehicle()})
+end
+
+
+function PaynSprayServer:PlayerEnterCheckpoint(args)
+
+	if args.checkpoint:GetType() == 10 then
+	
+		Network:Send(args.player, "EntrouPaynSpray", true)
+	end
+	
+end
+
+
+function PaynSprayServer:PlayerExitCheckpoint(args)
+
+	if args.checkpoint:GetType() == 10 then
+	
+		Network:Send(args.player, "EntrouPaynSpray", false)
+	end
+	
+end
+
+
+paynSprayServer = PaynSprayServer()

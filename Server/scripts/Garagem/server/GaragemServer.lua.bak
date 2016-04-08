@@ -1,0 +1,517 @@
+class 'GaragemServer'
+
+function GaragemServer:__init()
+	
+	self.posicaoGaragem = Vector3(-12048,203,-5348)
+	self.posicaoVeiculosGaragem = Vector3(-12048, 203, -5364)
+	self.anguloVeiculosGaragem = Angle(-2.120992, -0, 0)
+	
+	-- veiculo
+	self.veiculos = {}
+	self.playerColisao = {}
+	
+	self.mundosGaragem = {}
+	
+	self.timer = Timer()
+	
+	Events:Subscribe("PostTick", self, self.PostTick)
+	
+	Events:Subscribe("AtualizarVeiculo", self, self.AtualizarVeiculo)
+	
+	Events:Subscribe("ModuleUnload", self, self.ModuleUnload)
+	Events:Subscribe("ClientModuleLoad", self, self.ClientModuleLoad)
+	Events:Subscribe("PlayerQuit", self, self.PlayerQuit)
+	
+	Events:Subscribe("EntrarGaragem", self, self.EntrarGaragem)
+	Network:Subscribe("EntrarGaragem", self, self.EntrarGaragem)
+	
+	Network:Subscribe("TrancarVeiculoGaragem", self, self.TrancarVeiculoGaragem)
+	Network:Subscribe("LiberarVeiculoGaragem", self, self.LiberarVeiculoGaragem)
+	Network:Subscribe("DirigirVeiculoGaragem", self, self.DirigirVeiculoGaragem)
+
+end
+
+
+function GaragemServer:PostTick()
+
+	if self.timer:GetSeconds() >= 1 then
+	
+		for _, array in pairs(self.playerColisao) do
+		
+			array.tempo = array.tempo - 1
+			if array.tempo <= 0 then
+			
+				array.player:EnableCollision(CollisionGroup.Vehicle)
+			end
+
+		end
+		self.timer:Restart()
+	end
+
+end
+
+
+function GaragemServer:AtualizarVeiculo(args)
+
+	for _, dados in pairs(self.veiculos) do
+		
+		if dados.veiculo == args.veiculo then
+			local veiculo = self:GetPlayerVeiculo(dados.idPlayerVeiculo)
+			dados.utensilhos = veiculos.utensilhos
+			Network:Broadcast("AtualizarVeiculo", {id = _, veiculo = dados})
+		end
+	
+	end
+
+end
+
+
+function GaragemServer:PlayerQuit(args)
+
+	self:RemoverVeiculo(args.player)
+	
+end
+
+
+function GaragemServer:ModuleUnload(args)
+	
+	for _, array in pairs(self.veiculos) do
+	
+		self:RemoverVeiculo(array.motorista)
+
+	end	
+
+	for _, array in pairs(self.playerColisao) do
+	
+		array.player:EnableCollision(CollisionGroup.Vehicle)
+
+	end
+	
+end
+
+
+function GaragemServer:ClientModuleLoad(args)
+	
+	self:AtualizarPlayer(args.player)
+	self:AtualizarVeiculoPlayer(args.player)
+	
+end
+
+
+function GaragemServer:AtualizarVeiculoPlayer(player)
+
+	self:RemoverVeiculo(player)
+	
+	local query = SQL:Query("SELECT idPlayerVeiculo FROM PlayerVeiculo WHERE idPlayer = ? AND naGaragem = 0")
+	query:Bind(1, player:GetSteamId().id)
+	local result = query:Execute()
+	if #result > 0 then
+		
+		local idPlayerVeiculo = tonumber(result[1].idPlayerVeiculo)
+		
+		local array = self:GetPlayerVeiculo(idPlayerVeiculo)
+		local veiculo = self:SpawnarVeiculo(array.argsVeiculo)
+		self:NovoVeiculo(idPlayerVeiculo, veiculo, player:GetSteamId().id, player, array.utensilhos)
+	end
+	
+end
+
+
+function GaragemServer:GetPlayerVeiculo(idPlayerVeiculo)
+
+	local query = SQL:Query("SELECT * FROM PlayerVeiculo WHERE idPlayerVeiculo = ?")
+	query:Bind(1, idPlayerVeiculo)
+	local result = query:Execute()
+	if #result > 0 then
+			
+		local linha = result[1]
+		
+		local posicao = posicao
+		local angulo = angulo
+
+		if not(posicao and angulo) then
+			posicao = self:StringToVector3(linha.ultimaPosicao)
+			angulo = self:StringToAngle(linha.ultimoAngulo)
+		end
+
+		local argsVeiculo ={
+			model_id = tonumber(linha.idVeiculo),
+			position = posicao,
+			angle = angulo,
+			template = linha.template,
+			health = tonumber(linha.vida),
+			tone1 = self:StringToColor(linha.cor),
+		}
+		
+		local utensilhos = {
+			placa = linha.placa,
+			corNeon = self:StringToColor(linha.corNeon),
+		}
+		
+		local infos = {
+			liberado = tonumber(linha.liberado),
+			trancado = tonumber(linha.trancado),
+			naGaragem = tonumber(linha.naGaragem),
+		}
+		
+		return {argsVeiculo = argsVeiculo, utensilhos = utensilhos, infos = infos}
+	end
+	
+end
+
+
+function GaragemServer:GetPlayerVeiculos(idSteam)
+
+	local query = SQL:Query("SELECT idPlayerVeiculo, idVeiculo FROM PlayerVeiculo WHERE idPlayer = ?")
+	query:Bind(1, idSteam)
+	local result = query:Execute()
+
+	return result
+
+end
+
+
+function GaragemServer:DirigirVeiculoGaragem(args, player)
+
+	local playerCasa = self:GetPlayerCasa(player)
+		
+	if not playerCasa then
+		Chat:Send(player, "Voce nao e morador de nenhuma casa!", Color(255,0,0))
+		return
+	end
+	
+	local array = self:GetPlayerVeiculo(args.idPlayerVeiculo)
+	if tonumber(playerCasa.nivelMorador) > tonumber(array.infos.liberado) then
+		Chat:Send(player, "Voce nao possui permissao para dirigir esse veiculo!", Color(255,0,0))
+
+		return
+	end
+	
+	local posicaoSpawn = self:StringToVector3(playerCasa.posicaoSpawn)
+	local anguloSpawn = self:StringToAngle(playerCasa.anguloSpawn)
+
+	self:RemoverVeiculoById(args.idPlayerVeiculo)
+	self:RemoverVeiculo(player)
+	
+	if tonumber(playerCasa.nivelMorador) == 1 then
+	
+		local command = SQL:Command("UPDATE PlayerVeiculo SET naGaragem = 1, ultimaPosicao = '', ultimoAngulo = '' WHERE idPlayer = ?")
+		command:Bind(1, player:GetSteamId().id)
+		command:Execute()
+		
+		local command = SQL:Command("UPDATE PlayerVeiculo SET naGaragem = 0, ultimaPosicao = ?, ultimoAngulo = ? WHERE idPlayer = ? AND idPlayerVeiculo = ?")
+		command:Bind(1, playerCasa.posicaoSpawn)
+		command:Bind(2, playerCasa.anguloSpawn)
+		command:Bind(3, player:GetSteamId().id)
+		command:Bind(4, args.idPlayerVeiculo)
+		command:Execute()
+		
+	end
+	
+	
+	array.argsVeiculo.position = posicaoSpawn
+	array.argsVeiculo.angle = anguloSpawn
+	
+	local veiculo = self:SpawnarVeiculo(array.argsVeiculo)
+	
+	self:NovoVeiculo(args.idPlayerVeiculo, veiculo, player:GetSteamId().id, player, array.utensilhos)	
+	
+	self:EntrarGaragem({player = player, boolean = false})
+	self:DisableCollision(player)
+	
+	player:EnterVehicle(veiculo, 0)
+	
+end
+
+
+function GaragemServer:DisableCollision(player)
+
+	player:DisableCollision(CollisionGroup.Vehicle)
+	self.playerColisao[player:GetId()] = {player = player, tempo = 8}
+
+end
+
+
+function GaragemServer:LiberarVeiculoGaragem(args, player)
+
+	local playerCasa = self:GetPlayerCasa(player)
+		
+	if not playerCasa then
+		Chat:Send(player, "Voce nao e morador de nenhuma casa!", Color(255,0,0))
+		return
+	end
+	
+	local nivelMorador = tonumber(playerCasa.nivelMorador)
+	if nivelMorador != 1 then
+		Chat:Send(player, "Voce nao possui permissao para isso!", Color(255,0,0))
+		return
+	end
+	
+	local command = SQL:Command("UPDATE PlayerVeiculo SET liberado = ? WHERE idPlayerVeiculo = ? AND idPlayer = ?")
+	command:Bind(1, args.nivel)
+	command:Bind(2, args.idPlayerVeiculo)
+	command:Bind(3, player:GetSteamId().id)
+	command:Execute()
+
+	Chat:Send(player, "Voce alterou o nivel minimo para um morador poder dirigir para ".. args.nivel .."!", Color(255,255,200))
+end
+
+
+function GaragemServer:TrancarVeiculoGaragem(args, player)
+
+	local playerCasa = self:GetPlayerCasa(player)
+		
+	if not playerCasa then
+		Chat:Send(player, "Voce nao e morador de nenhuma casa!", Color(255,0,0))
+		return
+	end
+	
+	local nivelMorador = tonumber(playerCasa.nivelMorador)
+	if nivelMorador != 1 then
+		Chat:Send(player, "Voce nao possui permissao para isso!", Color(255,0,0))
+		return
+	end
+	
+	local command = SQL:Command("UPDATE PlayerVeiculo SET trancado = ? WHERE idPlayerVeiculo = ? AND idPlayer = ?")
+	command:Bind(1, args.trancado)
+	command:Bind(2, args.idPlayerVeiculo)
+	command:Bind(3, player:GetSteamId().id)
+	command:Execute()
+	
+	if args.trancado == 1 then
+		Chat:Send(player, "Voce trancou seu veiculo com sucesso!", Color(255,255,200))
+	else
+		Chat:Send(player, "Voce destrancou seu veiculo com sucesso!", Color(255,255,200))
+	end
+end
+
+
+function GaragemServer:NovoVeiculo(idPlayerVeiculo, veiculo, idDono, motorista, utensilhos)
+	
+	local array = {idPlayerVeiculo = idPlayerVeiculo, veiculo = veiculo, veiculoId = veiculo:GetId(), idDono = idDono, motorista = motorista, utensilhos = utensilhos}
+	self.veiculos[veiculo:GetId()] = array
+	Network:Broadcast("AtualizarVeiculo", {id = veiculo:GetId(), veiculo = array})
+	
+end
+
+
+function GaragemServer:RemoverVeiculoById(idPlayerVeiculo)
+
+	for _, array in pairs(self.veiculos) do
+	
+		if array.idPlayerVeiculo == idPlayerVeiculo then
+		
+			if IsValid(array.veiculo) then
+
+				local command = SQL:Command("UPDATE PlayerVeiculo SET ultimaPosicao = ?, ultimoAngulo = ?, vida = ? WHERE idPlayerVeiculo = ?")
+				command:Bind(1, tostring(array.veiculo:GetPosition()))
+				command:Bind(2, tostring(array.veiculo:GetAngle()))
+				command:Bind(3, array.veiculo:GetHealth())
+				command:Bind(4, array.idPlayerVeiculo)
+				command:Execute()	
+				
+				array.veiculo:Remove()				
+			end
+			self.veiculos[_] = nil
+			Network:Broadcast("AtualizarVeiculo", {id = _, veiculo = nil})
+		end
+	
+	end
+end
+
+
+function GaragemServer:RemoverVeiculo(motorista)
+	
+	for _, dados in pairs(self.veiculos) do
+	
+		if dados.motorista == motorista then
+
+			if IsValid(array.veiculo) then
+
+				local command = SQL:Command("UPDATE PlayerVeiculo SET ultimaPosicao = ?, ultimoAngulo = ?, vida = ? WHERE idPlayerVeiculo = ?")
+				command:Bind(1, tostring(array.veiculo:GetPosition()))
+				command:Bind(2, tostring(array.veiculo:GetAngle()))
+				command:Bind(3, array.veiculo:GetHealth())
+				command:Bind(4, array.idPlayerVeiculo)
+				command:Execute()	
+					
+				array.veiculo:Remove()				
+			end
+			
+			self.veiculos[_] = nil
+			Network:Broadcast("AtualizarVeiculo", {id = _, veiculo = nil})
+		end
+
+	end
+	
+end
+
+
+function GaragemServer:SpawnarVeiculo(spawnArgs)
+
+	spawnArgs.tone2 = spawnArgs.tone1
+	local veiculo = Vehicle.Create(spawnArgs)
+	veiculo:SetDeathRemove(false) 
+	veiculo:SetUnoccupiedRespawnTime(-1) 
+	return veiculo
+	
+end
+
+
+function GaragemServer:AtualizarPlayer(player)
+
+	Network:Send(player, "AtualizarVeiculos", {veiculos = self.veiculos})
+	
+end
+
+
+function GaragemServer:EntrarGaragem(args)
+	-- player, boolean
+	if args.boolean then
+		local playerCasa = self:GetPlayerCasa(args.player)
+		
+		if not playerCasa then
+			Chat:Send(args.player, "Voce nao e morador de nenhuma casa!", Color(255,0,0))
+			return
+		end
+		
+		local nivelMorador = tonumber(playerCasa.nivelMorador)
+
+		local idDono = self:GetSteamIdDonoCasa(playerCasa.idCasa)
+		
+		local veiculos = {} -- idveiculo, comQuem
+
+		local world = World.Create()
+		world:SetTime(DefaultWorld:GetTime())
+		table.insert(self.mundosGaragem, {mundo = world, player = args.player, ultimaPosicao = args.player:GetPosition()})
+		args.player:SetWorld(world)
+		args.player:SetPosition(self.posicaoGaragem)
+		
+		local result = self:GetPlayerVeiculos(idDono)
+		-- local query = SQL:Query("SELECT * FROM PlayerVeiculo pv INNER JOIN Veiculo v ON v.idVeiculo = pv.idVeiculo WHERE idPlayer = ? ")
+		-- query:Bind(1, idDono)
+		-- local result = query:Execute()
+		for _, linha in ipairs(result) do
+			
+
+			local comQuem = nil
+			for _, array in pairs(self.veiculos) do
+
+				if tonumber(array.idPlayerVeiculo) == tonumber(linha.idPlayerVeiculo) then
+						
+					if array.motorista != args.player then
+						comQuem = array.motorista
+					end
+					
+				end
+
+			end
+			
+			local arrayVeiculo = self:GetPlayerVeiculo(tonumber(linha.idPlayerVeiculo))
+			
+			if (not comQuem or (comQuem and nivelMorador == 1)) and (nivelMorador <= arrayVeiculo.infos.liberado) then
+			
+
+				local argsVeiculo = arrayVeiculo.argsVeiculo
+				
+				argsVeiculo.position = self.posicaoVeiculosGaragem + Vector3(-1.35, 0, 4) * _
+				argsVeiculo.angle = self.anguloVeiculosGaragem
+				argsVeiculo.health = math.max(0.2, tonumber(argsVeiculo.health))
+				argsVeiculo.world = world
+				
+				local veiculo = self:SpawnarVeiculo(argsVeiculo)
+				
+				local query = SQL:Query("SELECT preco FROM Veiculo WHERE idVeiculo = ?")
+				query:Bind(1, argsVeiculo.model_id)
+				local preco = tonumber(query:Execute()[1].preco)
+				
+				table.insert(veiculos, {veiculoId = veiculo:GetId(), comQuem = comQuem, idPlayerVeiculo = linha.idPlayerVeiculo, liberado = arrayVeiculo.infos.liberado, trancado = arrayVeiculo.infos.trancado, preco = preco, utensilhos = arrayVeiculo.utensilhos})
+			end
+			
+		end
+		
+		
+		Network:Send(args.player, "EntrouGaragem", {nivelMorador = nivelMorador, veiculos = veiculos})
+	else
+	
+		for _, array in ipairs(self.mundosGaragem) do
+			if array.player == args.player then
+				args.player:SetWorld(DefaultWorld)
+				args.player:SetPosition(array.ultimaPosicao)
+				if IsValid(array.mundo) then
+					array.mundo:Remove()
+				end
+				break
+			end
+		end
+		--remover colisao
+		Network:Send(args.player, "EntrouGaragem", false)
+	end
+
+end
+
+
+function GaragemServer:GetSteamIdDonoCasa(idCasa)
+
+	local query = SQL:Query("SELECT idPlayer FROM PlayerCasa WHERE idCasa = ? AND nivelMorador = 1")
+	query:Bind(1, idCasa)
+	local result = query:Execute()
+	if #result > 0 then
+		return result[1].idPlayer
+	else
+		return false
+	end
+	
+end
+
+
+function GaragemServer:GetPlayerCasa(player)
+
+	local query = SQL:Query("SELECT * FROM PlayerCasa pc INNER JOIN Casa c ON pc.idCasa = c.idCasa WHERE idPlayer = ?")
+	query:Bind(1, player:GetSteamId().id)
+	local result = query:Execute()
+	if #result > 0 then
+		return result[1]
+	else
+		return false
+	end
+	
+end
+
+
+function GaragemServer:StringToVector3(str)
+
+	local v = tostring(str):split(", ")
+	if (tonumber(v[1]) and tonumber(v[3]) and tonumber(v[5])) then
+		return Vector3(tonumber(v[1]), tonumber(v[3]), tonumber(v[5]))
+	else
+		return nil
+	end
+	
+end
+
+
+function GaragemServer:StringToAngle(str)
+
+	local v = tostring(str):split(", ")
+	if (tonumber(v[1]) and tonumber(v[3]) and tonumber(v[5])) then
+		return Angle(tonumber(v[1]), tonumber(v[3]), tonumber(v[5]))
+	else
+		return nil
+	end
+	
+end
+
+
+function GaragemServer:StringToColor(str)
+
+	local v = tostring(str):split(", ")
+	if (tonumber(v[1]) and tonumber(v[3]) and tonumber(v[5])) then
+		return Color(tonumber(v[1]), tonumber(v[3]), tonumber(v[5]))
+	else
+		return nil
+	end
+	
+end
+
+garagem = GaragemServer()

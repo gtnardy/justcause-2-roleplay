@@ -1,0 +1,276 @@
+class 'GerenciadorVeiculos'
+
+function GerenciadorVeiculos:__init()
+
+	self.veiculos = {}
+	self.veiculosStreamed = {}
+	
+	Events:Subscribe("EntitySpawn", self, self.EntitySpawn)
+	Events:Subscribe("EntityDespawn", self, self.EntityDespawn)
+	
+	Events:Subscribe("Render", self, self.Render)
+	Events:Subscribe("ModuleUnload", self, self.ModuleUnload)
+	
+	Network:Subscribe("AtualizarVeiculos", self, self.AtualizarVeiculos)
+	Network:Subscribe("AtualizarVeiculo", self, self.AtualizarVeiculo)
+	
+	Events:Subscribe("AtualizarUtensilhoVeiculo", self, self.AtualizarUtensilhoVeiculo)
+	Events:Subscribe("AtualizarVeiculo", self, self.AtualizarVeiculo)
+end
+
+
+function GerenciadorVeiculos:ModuleUnload()
+
+	for _, dados in pairs(self.veiculosStreamed) do
+	
+		if dados.utensilhos.neon then
+			dados.utensilhos.neon:Remove()
+		end
+	
+	end
+
+end
+
+
+function GerenciadorVeiculos:EntitySpawn(args)
+
+	if args.entity.__type == "Vehicle" then
+		local v = args.entity
+
+		self:NovoVeiculoStreamed(v)
+
+	end
+
+end
+
+
+function GerenciadorVeiculos:EntityDespawn(args)
+
+	if args.entity.__type == "Vehicle" then
+	
+		local v = args.entity
+		self:LimparVeiculoStreamed(v:GetId())
+	end
+
+end
+
+
+function GerenciadorVeiculos:RemoverVeiculo(index)
+
+	self.veiculos[index] = nil
+
+end
+
+
+function GerenciadorVeiculos:AdicionarVeiculo(index, args)
+
+	self.veiculos[index] = args
+
+end
+
+
+function GerenciadorVeiculos:AtualizarUtensilhoVeiculo(args)
+
+	if self.veiculos[args.id] then
+		self.veiculos[args.id][utensilho] = args.valor
+	else
+		Console:Print("Veiculo nao encontrado para atualizar utensilho")
+	end
+	
+	if IsValid(args.veiculo) then
+		self:NovoVeiculoStreamed(args.veiculo)
+	end
+
+end
+
+
+function GerenciadorVeiculos:AtualizarVeiculo(args)
+
+	self.veiculos[args.id] = args.veiculo
+
+end
+
+
+function GerenciadorVeiculos:AtualizarVeiculos(args)
+
+	self.veiculos = args.veiculos
+
+end
+
+
+function GerenciadorVeiculos:NovoVeiculoStreamed(veiculo)
+
+	self:LimparVeiculoStreamed(veiculo:GetId())
+	local dados = self.veiculos[veiculo:GetId()]
+
+	if dados then
+		
+		dados.veiculo = veiculo
+			
+		if dados.utensilhos.corNeon then
+			dados.utensilhos.neon = ClientLight.Create({
+				position = veiculo:GetPosition(),
+				color = dados.utensilhos.corNeon,
+				constant_attenuation = 10,
+				linear_attenuation = 1,
+				quadratic_attenuation = 0.1,
+				multiplier = 10.0,
+				radius = 3.5						
+			})
+		end
+		self.veiculosStreamed[veiculo:GetId()] = dados
+		
+		return
+			
+	end
+
+
+end
+
+
+function GerenciadorVeiculos:LimparVeiculoStreamed(veiculoId)
+
+	local array = self.veiculosStreamed[veiculoId]
+	if array then
+		if array.utensilhos.neon then
+			array.utensilhos.neon:Remove()
+			array.utensilhos.neon = nil
+		end
+		array.veiculo = nil
+		self.veiculosStreamed[veiculoId] = nil
+	end
+	
+end
+
+function GerenciadorVeiculos:Render()
+
+	if Game:GetState() ~= GUIState.Game then
+        return
+    end
+	
+	local sorted_vehicles = {}
+	
+	for _, dados in pairs(self.veiculosStreamed) do
+	
+		local v = dados.veiculo
+		if IsValid(v) then
+            local pos = v:GetPosition()
+			local aim = self:AimingAt(pos)
+			
+			if aim < 0.2 then
+			
+				table.insert(sorted_vehicles, {
+					dados = dados,
+					distancia = LocalPlayer:GetPosition():Distance(pos),
+					aim = aim,
+				})
+				
+				table.sort(sorted_vehicles, 
+					function(a, b) 
+						return (a.distancia > b.distancia) 
+					end
+				)
+				
+				for _, veiculo_data in ipairs(sorted_vehicles) do
+					self:DrawVeiculo(veiculo_data)
+				end
+				
+			end
+		end
+		
+	end
+
+end
+
+
+function GerenciadorVeiculos:DrawVeiculo(veiculo_data)
+	
+	local dados = veiculo_data.dados
+	local veiculo = dados.veiculo
+	local aim = veiculo_data.aim
+	local distancia = veiculo_data.distancia
+	
+	local escala = self:CalculateAlpha(
+		distancia, 
+        50,--self.vehicle_bias, 
+        750,--self.vehicle_max, 
+        500
+	) --self.vehicle_limit)
+	
+	local alpha = math.max(0, escala * 255 * (1.0 - (aim * 10)))
+	
+	local cor = math.lerp(Color( 200, 200, 200 ), Color(255,255,255), 0.3)
+	
+	
+	local texto = dados.utensilhos.placa
+	if texto then
+		self:DrawPlaca(veiculo:GetPosition() + Vector3(0, 1, 0), texto, cor, escala, alpha)
+	end
+	
+	if dados.utensilhos.neon then
+		self:AtualizarNeon(veiculo:GetPosition() + Vector3(0, 1, 0), dados.utensilhos.neon)
+	end
+end
+
+
+function GerenciadorVeiculos:AtualizarNeon(posicao, clientLight)
+	
+	clientLight:SetPosition(posicao)
+end
+
+
+function GerenciadorVeiculos:DrawPlaca(pos, texto, cor, escala, alpha)
+
+	local pos_2d, success = Render:WorldToScreen(pos)
+	if not success then return end
+	
+    local width = Render:GetTextWidth(texto, TextSize.Default, escala)
+    local height = Render:GetTextHeight(texto, TextSize.Default, escala)
+	
+	pos_2d = pos_2d - Vector2(width / 2, height / 2)
+	
+	self:DrawText(pos_2d, texto, cor, escala, alpha)
+	
+end
+
+
+function GerenciadorVeiculos:DrawText(pos, text, cor, escala, alpha)
+
+    local col = cor
+    col.a = alpha
+
+    Render:DrawText( pos + Vector2( 1, 1 ), text, 
+        Color( 20, 20, 20, alpha * 0.6 ), TextSize.Default, escala)
+    Render:DrawText( pos + Vector2( 2, 2 ), text, 
+        Color( 20, 20, 20, alpha * 0.3 ), TextSize.Default, escala)
+
+    Render:DrawText( pos, text, col, TextSize.Default, escala)
+	
+end
+
+
+function GerenciadorVeiculos:CalculateAlpha( dist, bias, max, limit )
+    if dist > limit then return nil end
+
+    local alpha = 1
+
+    if dist > bias then
+        alpha =  1.0 - ( dist - bias ) /
+                       ( max  - bias )
+    end
+
+    return alpha
+end
+
+
+function GerenciadorVeiculos:AimingAt( pos )
+    local cam_pos   = Camera:GetPosition()
+    local cam_dir   = Camera:GetAngle() * Vector3( 0, 0, -1 )
+
+    local pos_dir   = (pos - cam_pos):Normalized()
+    local diff      = (pos_dir - cam_dir):LengthSqr()
+
+    return diff
+end
+
+gerenciadorVeiculos = GerenciadorVeiculos()

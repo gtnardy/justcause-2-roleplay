@@ -1,0 +1,404 @@
+1|0|Pekan Air Hangat|-5223.815,-5302.416
+2|0|Pekan Gua Cina |10773.954,-9569.014
+3|0|Kampung Nipah|13124.675,708.278
+4|1|Kem Pekan Selamat|-9200.997,9402.407
+5|0|Kampung Padi Hilang|12360.205,-831.962
+6|1|Kem Komander Sutherland|-8991.835,2778.364
+7|0|Kampung Lembah Danau|8133.466,14090.725
+8|1|Kem Komander Williamson|12478.09,11761.695
+9|0|Bandar Pekan Lama|12361.105,1202.909
+10|0|Tanjung Rumah Api|-2781.222,4619.154
+11|3|Kepulauan Selatan Gamma|3556.932,9509.767
+12|4|Kampung Padang Luas|10852.907,-8672.375
+13|3|Kepulauan Selatan Beta|5438.822,12977.3
+14|1|Wajah Ramah Fortress|13899.995,14070.955
+15|1|Kem Lembah Hutan|11258.971,13630.595
+16|1|Kem Gunung Belakang Patah|5577.048,-213.293
+17|1|Kem Gunung Kudus|6806.524,-3414.826
+18|7|Pelabuhan Saudagar Harbor|-14890.6,-2955.4
+19|3|Tanah Raya Timur Beta|11548.95,-2086.653
+20|3|Kepulauan Senjakala Beta|-13967.685,12083.405
+21|0|Panau Falls Casino|2040.26,1430.549
+22|0|Tasik Kasuari|1588.134,6728.971
+23|1|Kem Sungai Cerah|-9476.136,5555.423
+24|0|Bandar Baru Cina|816.525,1476.666
+25|1|Hutan Besar|7587.087,13649.43
+26|1|Gunung Condong|9389.67,9249.668
+27|0|Telok Berlian|7676.85,12427.355
+28|0|Bandar Bukit Rata|7417.485,-5564.924
+29|3|Tanah Raya Timur Zeta|2554.524,2871.774
+30|1|Bukit Dengkang|-4815.786,-6366.179
+31|0|Kampung Monyet Merah|4223.233,10028.09
+32|0|Bandar Mutiara Hitam|-1908.575,-5481.161
+33|0|Tanjung Intan|-5857.58,-12606.055
+34|1|Pekan Rama-Rama|-6422.018,-6551.527
+35|0|Pekan Desa|-5380.238,-8773.943
+36|0|Pekan Pondok Getah|1115.978,1096.975
+37|0|Kampung Langit Berasap|10511.464,-9692.684
+38|1|Bukit Bura|2680.096,-7315.382
+39|0|Bandar Batu Besar|-12308.105,13965.43
+40|0|Bandar Lubuk Paya|-3708.06,9576.812
+41|5|Panau International Airport|-6679.214,-3452.18
+42|4|Port Gurun Lautan Lama|-13527.69,6204.144
+43|1|Kem Kapitan Luk Ya Sian|82.723,-6246.345
+44|7|Gunung Gila Pangkat Facility|563.9,-7284.1
+45|0|Kampung Padi|8303.687,1527.238
+46|0|Teluk Putih|5325.106,9762.222
+47|5|Lembah Delima|9597.23,3852.329
+48|0|Pekan Buaya Tidur|-1870.263,-4844.73
+49|0|Kampung Nahkoda|11853.005,-7379.888
+50|0|Kampung Papan Tanda|2621.479,4891.794
+51|5|Gunung Lapik|3873.3,6255.428
+52|3|Banjaran Berawan Besar Eta|785.044,-5161.302
+53|0|Kampung Nipah Besar|8914.961,2910.917
+54|1|Gunung Tasik Facility|3162,-3777
+55|1|Gunung Pawang Tua|10953.602,2116.22
+56|7|Lembah Firdaus Compound|2686,9496
+57|0|Pekan Lengkong|8389.458,4211.794
+58|1|Gunung Hutan Merah|-9855.735,-952.22
+59|3|Kepulauan Senjakala Alpha|-1209.724,10470.302
+60|0|Kampung Sawah Basah|-12038.115,15012.775
+61|3|Kepulauan Selatan Alpha|1922.635,10401.485
+62|0|Lengkok Sungai Gambler's Den|-7752,6758
+63|0|Gunung Hotel Ski Resort|8182,-1591
+64|0|Kampung Orkid Riak|1317.852,9020.856
+65|0|Kampung Pantai Kelabu|7753.346,2965.453
+66|0|Pekan Hutan Buluh|11153.786,-9934.53
+67|0|Bandar Arang Batu Besar|8379.073,10808.627
+68|0|Kampung Pantai Berangin|11505.947,-4120.002
+69|7|Kem Gunung Gurun Supply Depot|-10683.9,11069
+70|6|Pelantar Gas Pandak Panay|-7491.192,-15063.015
+71|0|Kampung Jelantur|-6336.474,-6018.936
+72|0|Sungai Tapai|4042.488,8644.414
+73|0|Kampung Sawah Kecil|2993.554,2053.585
+74|0|Kampung Batang Reput|936.996,383.284
+75|0|Kampung Kerang Hitam|-4019.18,-7094.96
+76|2|Bandar Baru Nipah|-495.687,-11975.99
+77|1|Kem General Hong|-3326.776,-9462.098
+78|0|Kampung Kepulauan Selatan|2212.357,6970.952
+79|2|Panau City - Financial District|-10307.9,-3048.3
+80|0|Bukit Berlian|-913.069,-10301.903
+81|0|Bandar Pertama|235.469,114.583
+82|1|Kampung Batu Tiga|-5861.11,2470.724
+83|0|Sawah Bukit Luas|9286.349,2528.218
+84|0|Jalan Lompat|3334.33,-424.535
+85|0|Bandar Gereja Gurun|-10434.178,9471.164
+86|0|Bandar Lembah Raja|7252.918,10989.227
+87|0|Kampung Bukit Sawah|8805.099,2138.888
+88|0|Kampung Cicak Hitam|-11926.845,13960.225
+89|4|Pasir Putih|-3474.355,2483.277
+90|4|Pulau Ketam Kecil|11717.746,-5081.258
+91|0|Kampung Penggali|5462.822,-5319.186
+92|0|Bandar Serigala Kelabu|13882.9,2295.101
+93|0|Kampung Tanjung Luas|2410.537,4471.895
+94|0|Kampung Tanah Runtuh|11452.608,2290.301
+95|0|Kampung Dataran Nipah|-9913.493,3421.013
+96|3|Kepulauan Pelaut Gamma|12510.86,-6874.024
+97|0|Kampung Tokong Tua|-5928.064,-10417.944
+98|0|Kuala Merah|-7177.402,-7449.794
+99|1|Kem Rajang Floodgates|-7933,4708
+100|4|Kem Port Pelangi|-10826.217,11955.754
+101|2|Pekan Teluk Tengah|592.77,-2596.51
+102|0|Kampung Kosa Besar|9821.446,3555.444
+103|0|Port Rajang Selatan|-8025.336,7729.742
+104|3|Tanah Raya Barat Alpha|-5187.963,-6603.727
+105|0|Kota Kersik|-5643.615,3488.905
+106|1|Kem Singa Menerkam|2956.973,-10241.903
+107|5|Banjaran Gundin|-7479.844,-13181.125
+108|0|Kampung Monyet Lena|4784.135,5589.2
+109|3|Tanah Raya Timur Eta|6103.662,2519.366
+110|2|Panau City - Docks District|-15317.3,-2818.8
+111|0|Pekan Kuil|7064.128,12008.97
+112|0|Kampung Jalan Gunung|3458.859,1891.236
+113|0|Desa Kuda Lari|10838.053,3655.867
+114|0|Kampung Lembah Padi|9343.372,2855.23
+115|0|Pekan Kemilau|11184.458,-8230.353
+116|0|Pekan Hutan Lama|-6912.506,-2108.678
+117|0|Pantai Kelapa Resort|8222,10168
+118|1|Pulau Dongeng|5679.268,10330.568
+119|1|Fasility Gunung Hutan Tinggi|12898.54,12961.51
+120|1|Sungai Curah|-5289.369,6718.742
+121|3|Tanah Raya Timur Alpha|6729.152,440.54
+122|6|Pelantar Gas Telok Beting Timur|15529.265,-4301.914
+123|0|Kampung Desa Lena|-11673.24,14406.72
+124|1|Kem General Abidin|-14184.565,13447.245
+125|1|Hutan Dalam|6796.834,10729.491
+126|0|Mile High Club|13200,-4947
+127|0|Pulau Delima|3454.901,10944.264
+128|3|Kepulauan Selatan Delta|2108.768,12061.175
+129|4|Kem Helang Merah|-3403.719,-6237.162
+130|0|Kampung Relau Merah|-10902.865,3426.536
+131|3|Teluk Panau Tengah Delta|-3126.43,7558.478
+132|0|Kampung Negeri Sawah|12680.285,-2409.249
+133|4|Port Kepulauan Pelaut|9674.423,-11575.064
+134|0|Pekan Jati Besar|1786.868,-483.55
+135|1|Pulau Ketam Besar|3909.155,10208.508
+136|3|Kepulauan Pelaut Beta|7259.926,-10853.717
+137|1|Kem Jalan Pelabuhan Lama|NULL
+138|1|Kem Jalan Padang Tembak|9379.898,13679.045
+139|0|Bandar Bukit Kuprum Lama|-3067.094,8490
+140|0|Pekan Jalan Pokok|-6865.306,9501.643
+141|1|Sungai Remaja|-6577.753,5207.88
+142|0|Three Kings Hotel|-12605.84,15105.395
+143|2|Pekan Kesuma|5293.956,13911.45
+144|0|Kampung Kilang Papan|-11044.124,15148.705
+145|1|Kem Gunung Raya|4794.432,-4826.094
+146|1|Negeri Cabang|4407.596,4390.3
+147|1|Kampung Lima Batu|-10517.666,8550.396
+148|0|Negeri Selatan|7786.656,3797.354
+149|0|Pekan Sri Vijaya|-12445.555,13433.355
+150|3|Gurun Lautan Lama Gamma|-11856.958,8791.397
+151|0|Bandar Pantai Luas|NULL
+152|6|Pelantar Gas Tiang Geneng|15038.095,-9067.704
+153|1|Kampung Curah Dalam|-2726.45,-8696.523
+154|3|Kepulauan Selatan Kappa|7058.275,12359.855
+155|0|Bandar Sungai Rajang|-7761.409,4168.099
+156|6|Pelantar Minyak Gerudi Besar|-15582.5,6110.2
+157|2|Pekan Lalang Liar|-311.53,-12995.375
+158|0|Pekan Tanjung|1200.151,7069.814
+159|0|Kampung Sawah Luas|2899.82,5546.956
+160|0|Tanjung Putih|-13521.06,5056.886
+161|0|Kampung Bunga Kertas|-3182.029,-13096.705
+162|1|Kastelo Singa Military Base|4707.2,-6873
+163|0|Tasik Cerah|-4935.818,3079.382
+164|2|Kota Pantai Kuala|328.262,-12571.225
+165|1|Kem Jalan Padang Luas|9058.038,14907.05
+166|0|Kampung Tanjung Hijau|8195.883,10453.134
+167|1|PAN MILSAT|7001.656,709.908
+168|4|Port Kuala Besar|-424.417,-3608.321
+169|4|Kuala Cengkih|7194.38,-11996.955
+170|0|Pekan Katak Melompat|10845.01,-6447.484
+171|1|Telok Ayer Batang|502.67,5150.218
+172|4|Kem Pulau Kerbau|10359.557,10737.744
+173|0|Pekan Pakis|12543.805,-1769.399
+174|1|PBC Tower|-499.83,-12066.93
+175|0|Sawah Gunung Barat|6779.199,2673.534
+176|2|Pekan Buah Melambak|992.374,-1639.186
+177|0|Kota Istana Purba|2974.588,-4913.334
+178|2|Panau City - Residential District|-12686,-884.7
+179|1|Negeri Cengkih|-2789.956,6557.829
+180|0|Koji Kuasa Panau Utara|5353.253,-10085.594
+181|0|Bandar Koperasi|-3968.115,-12176.28
+182|4|Kampung Bunga Mawar|13544.47,3277.788
+183|0|Kampung Perigi Hitam|12406.19,-7488.332
+184|0|Kuala Rajang|-1712.563,9342.265
+185|3|Banjaran Berawan Besar Zeta|5479.398,-2208.319
+186|3|Banjaran Berawan Besar Gamma|-1998.272,-7077.782
+187|0|Kampung Karang|NULL
+188|1|Tanjung Besar|8739.013,-9105.356
+189|5|Tanah Lebar|-274.975,6992.088
+190|0|Lembah Cerah|-9524.74,9260.574
+191|0|Pekan Belalang|-1787.695,12092.445
+192|1|Kem Kapitan Mohideen|871.383,4754.132
+193|3|Teluk Panau Tengah Beta|-4545.522,4392.459
+194|0|Pulau Penjala|-4874.995,-3894.922
+195|0|Kuala Geneng|6818.034,4757.981
+196|0|Kampung Tasik Lembah|-14019.675,14799.19
+197|0|Kampung Ketam Laut|-7828.254,-2353.174
+198|3|Kepulauan Selatan Lambda|-639.578,7821.112
+199|3|Tanah Raya Timur Kappa|12052.085,29.437
+200|1|Kem Tentera Timur|-5546.4,-9399.377
+201|4|Kem Port Rodrigo|-4472.834,11686.517
+202|1|Kem Lubang Dalam|5439.239,922.365
+203|0|Pekan Batu Karang|-14110.4,15093.47
+204|0|Tasik Jernih|-393.759,5774.829
+205|0|Kampung Sawah Kuala|8139.951,1704.762
+206|3|Banjaran Berawan Besar Epsilon|9726.382,-6997.683
+207|4|Pulau Berapi|-1582.082,1088.241
+208|1|Bukit Marmar Pecah |-4450.236,-10700.986
+209|1|Kem Gunung Dataran Tinggi|-1244.838,-7050.694
+210|0|Pekan Badak Bermandi|1700.772,5187.616
+211|3|Tanah Raya Timur Gamma|10811.18,3198.594
+212|1|Kem Serigala Kelabu|2766.124,-663.738
+213|4|Kem Pulau Kerbau|10054.49,10667.76
+214|0|Kampung Lada Pecah|6395.182,11028.169
+215|0|Bandar Jeti Batu|7314.546,3241.953
+216|0|Kampung Tok Dalang|-8827.202,7932.594
+217|0|Kampung Teratai Putih|-7156.817,-6301.96
+218|1|Negeri Gandin|-6350.901,-12047.36
+219|1|Kem Sungai Sejuk|654.478,-3789.652
+220|5|Pulau Dayang Terlena|-11989.15,4588.765
+221|1|Bukit Ketot|8094.883,-5983.078
+222|4|Kem Pulau Kerbau|10343.188,10974.392
+223|0|Bandar Baru Bukit Kuprum|5334.133,-4151.974
+224|3|Communication Outpost #12|10421.99,10668.634
+225|3|Kepulauan Selatan Epsilon|11289,13033.845
+226|3|Kepulauan Selatan Theta|6656.296,14522.635
+227|0|Pulau Naga|-659.072,11490.355
+228|0|Bandar Besar|-401.914,-4515.931
+229|1|Bukit Rendah|92.534,-8932.374
+230|0|Bandar Jernih|5475.944,13390.82
+231|0|Bandar Selekeh|-7244.559,-5035.674
+232|7|Pemainan Racun Facility|-3492.9,8803.1
+233|7|Kampung Bahari Village|-6953.5,-9778.7
+234|1|Kem Gereja Merah|13752.95,11233.23
+235|6|Pelantar Gas Telok Panau|-4903.538,-1407.073
+236|3|Tanah Raya Timur Mu|5593.725,7281.173
+237|0|Bandar Jarandua|NULL
+238|0|Sungai Madu Leleh|-9956.799,5158.316
+239|7|Emas Hitam Oil Refinery|11575.8,-9373.4
+240|3|Communication Outpost #14|6015.579,-171.622
+241|0|Kampung Nelayan-Nelayan|773.718,-12035.925
+242|0|Kampung Sekam Padi|7945.482,9609.656
+243|0|Kuala Cherah|7510.135,11678.366
+244|0|Kampung Pemalas|11709.51,-8343.934
+245|1|Gunung Rata|924.583,11737.995
+246|0|Gunung Jarandua|11816.31,-6851.871
+247|0|Tasik Permata|-11790.965,6007.336
+248|0|Bandar Baru Indah|-2398.829,13150.055
+249|3|Banjaran Berawan Besar Delta|4008.256,-6495.772
+250|0|Pekan Pinggir Jalan|2133.464,2700.16
+251|3|Gurun Lautan Lama Alpha|-11082.224,9140.17
+252|0|Bandar Kayu Manis|6619.232,-2746.801
+253|0|Sawah Gunung Timur|6931.111,2736.619
+254|0|Bandar Pantai Sunyi|8341.559,3336.307
+255|1|Kampung Kala Merah|-5665.907,5610.157
+256|0|Seabreeze Sawmill|-1053.621,9600.208
+257|1|Loji Bahan Bakar Fossil|9474.005,-10218.062
+258|2|Kampung Nur Cahaya |-7093.993,5489.502
+259|0|Pekan Buah Melimpah|-1643.359,-5401.628
+260|1|Gunung Merah Radar Facility |-8990.2,11380.9
+261|1|Kem General Yahya|11998.4,14960.505
+262|1|Kem Jalan Gurun|-9054.22,7472.32
+263|3|Kepulauan Selatan Zeta|14752.32,12383.58
+264|0|Kota Tinggi|4652.605,-1338.791
+265|6|Pelantar Gas Kepulauan Pelaut|10001.38,-14184.295
+266|1|Negeri Gunung Berawn|7871.936,8626.694
+267|3|Gurun Lautan Lama Beta|-10462.47,5090.851
+268|4|Kem Komodor Da Silva|-7753.036,-7063.57
+269|1|Kem Jurang Gurun|-5588.716,4757.38
+270|3|Kepulauan Selatan Mu|2415.332,8814.703
+271|0|Pekan Putra Gunung|2225.704,10009.907
+272|1|Pulau Ombak Merah|-3003.279,13891.95
+273|0|Kampung Gunung Merah|-7547.22,9756.52
+274|4|Kampung Ayer Lama|-7819.672,2712.498
+275|3|Kepulauan Pelaut Alpha|7337.628,-12406.615
+276|0|Bandar Tokong Kecil|9266.482,-11125.834
+277|0|Kampung Redup|3109.61,-8101.061
+278|4|Pulau Kait|7091.152,-11604.247
+279|0|Kampung Danau Lengkong|-5990.191,9892.606
+280|0|Loji Kuasa Pantai Tokong|2131.992,3803.612
+281|7|Awan Cendawan Power Plant|9068.7,1609.8
+282|0|Pekan Batang Kelepek|5243.97,-3326.918
+283|1|Kampung Rencong Berkarat|4220.564,-2890.082
+284|0|Kampung Sawah Hutan|-2878.476,9884.483
+285|0|Kampung Jejambat Besar|2935.583,10176.681
+286|0|Pekan Merdeka Silam|781.789,836.437
+287|1|Kem Sungai Floodgates|-8024.5,3217.7
+288|0|Rumah Hartawan|176.798,-13070.195
+289|0|Bandar Gunung Belakang Patah|5992.379,274.578
+290|0|Kampung Pokok Ru|9993.748,-10941.262
+291|0|Kampung Tokong Purba|-9459.551,7592.238
+292|0|Kampung Anjing Gila|-5856.503,682.145
+293|1|Bukit Tinggi|3592.982,-5239.613
+294|1|Kuala Jernih|-6417.322,4009.942
+295|5|Paya Luas|11725.362,-10508.22
+296|0|Kampung Cahaya Bulan|4265.187,243.423
+297|0|Sungai Cerah|-5299.122,12166.195
+298|1|Kuala Gandin|5471.562,3269.715
+299|1|Fasility Gunung Timur|14234.035,12495.615
+300|3|Tanah Raya Timur Theta|4587.299,3042.282
+301|3|Tanah Raya Timur Iota|9228.054,-3960.116
+302|1|Negeri Tenggara|9063.07,3894.033
+303|4|Pulau Berendam|9482.891,-12994.42
+304|0|Kampung Sri Puteri|-5185.996,-7302.858
+305|0|Kampung Tanah Besar|11975.625,-7808.306
+306|1|Paya Dalam|3755.406,2359.934
+307|3|Teluk Panau Tengah Gamma|-3652.036,9971.661
+308|0|Bandar Kolam Dalam|9816.846,-9737.025
+309|0|Kampung Ekor Bengkok|-8841.91,12322.025
+310|6|Pelantar Gas Panau Utara|-4785.412,-15354.84
+311|6|Pelantar Gas Panau Barat|-15216.645,6909.17
+312|0|Bandar Lengkok Sungai|-8185.024,6493.513
+313|0|Kampung Tanah Bernilai|11124.187,3066.936
+314|0|Kampung Tokong Dalam|3635.558,-345.558
+315|1|Pulau Tiga Gunung|-1963.658,9839.04
+316|1|Kem General Vikneshwaran|1134.659,499.453
+317|5|Kem Jalan Merpati|-7076.11,10672.583
+318|3|Banjaran Berawan Besar Alpha|7293.794,-7611.658
+319|3|Banjaran Berawan Besar Theta|9209.789,-5394.577
+320|5|Sungai Cengkih Besar|4304.362,-10661.01
+321|0|Pekan Sempit|-10860.302,14587.62
+322|5|Kampung Tujuh Telaga|759.126,27.927
+323|0|Kampung Lembah Gurun|-8412.112,9188.856
+324|0|Pekan Ayer Gilang|1269.954,-1040.575
+325|1|Sungai Geneng|-2247.652,11354.074
+326|0|Pekan Tupai Merah|10866.849,-848.768
+327|0|Kampung Pohon Reput|-6864.158,1895.749
+328|0|Kampung Perigi Lumpur|-10106.426,10416.944
+329|0|Kampung Sawah Hijau|9570.756,3320.86
+330|3|Tanah Raya Timur Delta|9098.496,-333.74
+331|1|Pulau Panau Kecil|11188.744,-7557.742
+332|0|Kampung Bunga Raya|-5197.78,8236.973
+333|6|Pelantar Gas Panau Timur|13100.36,4874.752
+334|0|Pekan Dusun Rambutan|1013.008,10090.294
+335|1|Kem Kuala Rajang|-8092.282,4184.261
+336|1|Lembah Genting Tinggi|-639.526,-8705.588
+337|0|Kampung Datuk Tua|7159.217,9841.577
+338|6|Pelantar Gas Panau Selatan|13471.46,8372.382
+339|1|Kem Harimau Putih|11192.384,844.816
+340|0|Pekan Labah Hitam|7280.17,-1202.248
+341|0|Kampung Tiga Kelapa|-6480.84,-9356.48
+342|0|Paya Keras|2142.627,-9323.178
+343|6|Pelantar Gas Ledakan Besar|13414.185,-13477.235
+344|1|Tanah Luas|-7459.42,-8505.319
+345|1|Kem Harimau Bintang|12206.345,14070.855
+346|0|Rajang Temple|-4325,6871
+347|3|Kepulauan Selatan Iota|7946.94,10964.148
+348|0|Kampung Padang Hijau|7904.425,3543.137
+349|0|Pekan Tasik Luas|10134.665,2729.784
+350|1|Kem Kucing Belang Hitam|4662.24,-2490.802
+351|0|Kota Buluh|8428.572,-12945.125
+352|0|Bandar Kayu Buaya|1303.849,814.984
+353|1|Bandar Lombong Besi|12497.35,-8535.85
+354|1|Pekan Keris Perak|-5949.24,6420.956
+355|0|Port Rodrigo|-1089.755,6300.693
+356|0|Bandar Dataran Sawah|10718.421,322.978
+357|3|Kepulauan Selatan Eta|9849.024,12289.92
+358|0|Kampung Tiang Emas|1223.809,-355.62
+359|0|Kampung Kayu Keras|7999.231,11535.228
+360|1|Kem Jalan Kilang Lama|2893.218,-2211.939
+361|5|Kem Udara Wau Pantas|5837.631,6712.739
+362|3|Teluk Panau Tengah Alpha|343.926,6006.675
+363|5|Sungai Jernih|-4246.934,8668.032
+364|0|Bandar Gunung Raya|4749.843,-4269.825
+365|0|Kampung Sirip Tajam|-6952.864,-11327.2
+366|1|Hutan Nenas|7765.727,14767.06
+367|0|Bandar Suralaya|-1907.276,-9326.548
+368|3|Banjaran Berawan Besar Iota|1399.669,-7049.8
+369|1|Kem Hang Johan|9979.253,14212.7
+370|3|Tanah Raya Timur Epsilon|14212.42,821.098
+371|5|Teluk Permata|-6877.426,-10742.518
+372|0|Bandar Jarandua|NULL
+373|0|Pekan Permatang Berbatu|-11481.067,15208.5
+374|0|Kampung Pantai Bersih|NULL
+375|0|Kampung Sawah Lembah|7493.915,2196.42
+376|1|Pekan Ular Sawa|-12760.145,3721.606
+377|0|Pekan Kuala Kering|1734.927,7498.79
+378|2|Panau City - Park District|-12667.9,-4854.4
+379|0|Pekan Juku-Juku|-1412.91,-13374.33
+380|3|Tanah Raya Timur Lambda|12034.27,-1240.828
+381|7|Kem Hutan Supply Depot|-3003,12749
+382|4|Kem Kuala Utara|13819.385,10730.421
+383|1|Pekan Hujung|-11182.698,7169.248
+384|6|Pelantar Gas Telok Beting Barat|13453.155,-5343.229
+385|0|Pekan Cahaya Matahari|11419.485,-6937.45
+386|0|Kampung Tukang Besi|12390.605,-1712.205
+387|0|Bandar Bukit Tahan|8997.426,-10876.932
+388|3|Banjaran Berawan Besar Beta|-1737.412,-11602.074
+389|0|Pekan Jambatan Batu|-12802.355,8298.319
+390|1|Pasir Hitam|1706.155,2251.488
+391|0|Kampung Kolam Gelap|-3281.472,14893.43
+392|0|Kota Kuala Delima|11085.25,-2753.758
+393|1|Cape Carnival|13800.7,-2092.692
+394|0|Kampung Sawah Pantai|5267.428,5446.414
+395|0|Pekan Selamat|-8934,9433
+396|1|Pulau Ombak Ribut|8156.926,2190.051
+397|0|Pekan Rusa Besar |3019.902,1669.456
+398|0|Kampung Hutan Hijau|1779.532,2741.069
+399|0|Pekan Bukit Nenas|-4350.118,-5989.084
+400|0|Bukit Matahari|-3383.386,-9136.606
+401|0|Pekan Rusa Pantas|-3799.248,-6012.968
+402|0|Kampung Pasir Panjang|-11543.041,3150.402
+403|0|Bandar Padang Besar|13445.915,778.074
+404|3|Gurun Lautan Lama Delta|-9000.657,7062.604
