@@ -60093,3 +60093,195 @@
 19:35:43 | [info ] | Module Tutorial unloaded successfully
 19:35:43 | [info ] | Module Vehicles unloaded successfully
 19:35:43 | [info ] | Server shutdown
+07:54:52 | [info ] | JCMP Server 0.2.2 (Build 1014)
+07:54:52 | [info ] | Loading configuration
+07:54:52 | [info ] | Succesfully loaded configuration
+07:54:53 | [info ] | No ban list found: cleared bans
+07:54:53 | [info ] | Server started up successfully
+07:54:53 | [info ] | Loading module Admin
+07:54:54 | [info ] | 	Loading script "server\Admin.lua"
+07:54:54 | [info ] | Module Admin loaded successfully
+07:54:54 | [info ] | Loading module Bank
+07:54:54 | [info ] | 	Loading script "server\Bank.lua"
+07:54:54 | [info ] | Module Bank loaded successfully
+07:54:54 | [info ] | Loading module closehud
+07:54:54 | [info ] | Module closehud loaded successfully
+07:54:54 | [info ] | Loading module Clothings
+07:54:54 | [info ] | 	Loading script "shared\ClothingsList.lua"
+07:54:54 | [info ] | 	Loading script "server\ClothingStore.lua"
+07:54:54 | [info ] | 	Loading script "server\Clothings.lua"
+07:54:54 | [info ] | Module Clothings loaded successfully
+07:54:54 | [info ] | Loading module Combustivel
+07:54:54 | [info ] | 	Loading script "server\Combustivel.lua"
+07:54:54 | [info ] | Module Combustivel loaded successfully
+07:54:54 | [info ] | Loading module CommandsController
+07:54:54 | [info ] | Module CommandsController loaded successfully
+07:54:54 | [info ] | Loading module Controls
+07:54:54 | [info ] | Module Controls loaded successfully
+07:54:54 | [info ] | Loading module CustomChat
+07:54:54 | [info ] | 	Loading script "server\CustomChat.lua"
+07:54:54 | [info ] | Module CustomChat loaded successfully
+07:54:54 | [info ] | Loading module Establishment
+07:54:54 | [info ] | 	Loading script "server\Establishment.lua"
+07:54:54 | [info ] | Module Establishment loaded successfully
+07:54:54 | [info ] | Loading module Feeding
+07:54:54 | [info ] | 	Loading script "shared\FeedingList.lua"
+07:54:54 | [info ] | 	Loading script "server\Feeding.lua"
+07:54:54 | [info ] | 	Loading script "server\FeedingStore.lua"
+07:54:54 | [info ] | Module Feeding loaded successfully
+07:54:54 | [info ] | Loading module HUD
+07:54:54 | [info ] | 	Loading script "server\HUD.lua"
+07:54:54 | [info ] | 	Loading script "server\InformationAlert.lua"
+07:54:54 | [info ] | 	Loading script "server\NotificationAlert.lua"
+07:54:54 | [info ] | Module HUD loaded successfully
+07:54:54 | [info ] | Loading module Inventory
+07:54:54 | [info ] | 	Loading script "shared\InventoryGPSList.lua"
+07:54:54 | [info ] | 	Loading script "server\Inventory.lua"
+07:54:54 | [info ] | Module Inventory loaded successfully
+07:54:54 | [info ] | Loading module JobCabby
+07:54:54 | [info ] | 	Loading script "server\JobTaxiDriver.lua"
+07:54:54 | [info ] | Module JobCabby loaded successfully
+07:54:54 | [info ] | Loading module Jobs
+07:54:54 | [info ] | 	Loading script "shared\JobsList.lua"
+07:54:54 | [info ] | 	Loading script "server\Jobs.lua"
+07:54:54 | [info ] | Module Jobs loaded successfully
+07:54:54 | [info ] | Loading module Level
+07:54:54 | [info ] | 	Loading script "server\Level.lua"
+07:54:54 | [info ] | Module Level loaded successfully
+07:54:54 | [info ] | Loading module Objects
+07:54:54 | [info ] | 	Loading script "server\Objects.lua"
+07:54:54 | [info ] | Module Objects loaded successfully
+07:54:54 | [info ] | Loading module physgun
+07:54:54 | [info ] | 	Loading script "shared\settings.lua"
+07:54:54 | [info ] | 	Loading script "shared\util.lua"
+07:54:54 | [info ] | 	Loading script "server\physgun_init.lua"
+07:54:54 | [info ] | Module physgun loaded successfully
+07:54:54 | [info ] | Loading module PlayerController
+07:54:54 | [info ] | 	Loading script "server\PlayerController.lua"
+07:54:54 | [info ] | Module PlayerController loaded successfully
+07:54:54 | [info ] | Loading module Radio
+07:54:54 | [info ] | Module Radio loaded successfully
+07:54:54 | [info ] | Loading module Tutorial
+07:54:54 | [info ] | 	Loading script "server\Tutorial.lua"
+07:54:54 | [info ] | Module Tutorial loaded successfully
+07:54:54 | [info ] | Loading module Vehicles
+07:54:54 | [info ] | 	Loading script "server\Vehicles.lua"
+07:54:55 | [info ] | Module Vehicles loaded successfully
+07:55:19 | [info ] | Module Admin unloaded successfully
+07:55:19 | [info ] | Module Bank unloaded successfully
+07:55:19 | [info ] | Module closehud unloaded successfully
+07:55:19 | [info ] | Module Clothings unloaded successfully
+07:55:19 | [info ] | Module Combustivel unloaded successfully
+07:55:19 | [info ] | Module CommandsController unloaded successfully
+07:55:19 | [info ] | Module Controls unloaded successfully
+07:55:19 | [info ] | Module CustomChat unloaded successfully
+07:55:19 | [info ] | Module Establishment unloaded successfully
+07:55:19 | [info ] | Module Feeding unloaded successfully
+07:55:19 | [info ] | Module HUD unloaded successfully
+07:55:19 | [info ] | Module Inventory unloaded successfully
+07:55:19 | [info ] | Module JobCabby unloaded successfully
+07:55:19 | [info ] | Module Jobs unloaded successfully
+07:55:19 | [info ] | Module Level unloaded successfully
+07:55:19 | [info ] | Module Objects unloaded successfully
+07:55:19 | [info ] | Module physgun unloaded successfully
+07:55:19 | [info ] | Module PlayerController unloaded successfully
+07:55:19 | [info ] | Module Radio unloaded successfully
+07:55:19 | [info ] | Module Tutorial unloaded successfully
+07:55:19 | [info ] | Module Vehicles unloaded successfully
+07:55:19 | [info ] | Server shutdown
+07:56:36 | [info ] | JCMP Server 0.2.2 (Build 1014)
+07:56:36 | [info ] | Loading configuration
+07:56:36 | [info ] | Succesfully loaded configuration
+07:56:36 | [info ] | No ban list found: cleared bans
+07:56:36 | [info ] | Server started up successfully
+07:56:36 | [info ] | Loading module Admin
+07:56:36 | [info ] | 	Loading script "server\Admin.lua"
+07:56:36 | [info ] | Module Admin loaded successfully
+07:56:36 | [info ] | Loading module Bank
+07:56:36 | [info ] | 	Loading script "server\Bank.lua"
+07:56:36 | [info ] | Module Bank loaded successfully
+07:56:36 | [info ] | Loading module closehud
+07:56:36 | [info ] | Module closehud loaded successfully
+07:56:36 | [info ] | Loading module Clothings
+07:56:36 | [info ] | 	Loading script "shared\ClothingsList.lua"
+07:56:36 | [info ] | 	Loading script "server\ClothingStore.lua"
+07:56:36 | [info ] | 	Loading script "server\Clothings.lua"
+07:56:36 | [info ] | Module Clothings loaded successfully
+07:56:36 | [info ] | Loading module Combustivel
+07:56:36 | [info ] | 	Loading script "server\Combustivel.lua"
+07:56:36 | [info ] | Module Combustivel loaded successfully
+07:56:36 | [info ] | Loading module CommandsController
+07:56:36 | [info ] | Module CommandsController loaded successfully
+07:56:36 | [info ] | Loading module Controls
+07:56:36 | [info ] | Module Controls loaded successfully
+07:56:36 | [info ] | Loading module CustomChat
+07:56:36 | [info ] | 	Loading script "server\CustomChat.lua"
+07:56:36 | [info ] | Module CustomChat loaded successfully
+07:56:36 | [info ] | Loading module Establishment
+07:56:36 | [info ] | 	Loading script "server\Establishment.lua"
+07:56:36 | [info ] | Module Establishment loaded successfully
+07:56:36 | [info ] | Loading module Feeding
+07:56:36 | [info ] | 	Loading script "shared\FeedingList.lua"
+07:56:36 | [info ] | 	Loading script "server\Feeding.lua"
+07:56:36 | [info ] | 	Loading script "server\FeedingStore.lua"
+07:56:36 | [info ] | Module Feeding loaded successfully
+07:56:36 | [info ] | Loading module HUD
+07:56:36 | [info ] | 	Loading script "server\HUD.lua"
+07:56:36 | [info ] | 	Loading script "server\InformationAlert.lua"
+07:56:36 | [info ] | 	Loading script "server\NotificationAlert.lua"
+07:56:36 | [info ] | Module HUD loaded successfully
+07:56:36 | [info ] | Loading module Inventory
+07:56:36 | [info ] | 	Loading script "shared\InventoryGPSList.lua"
+07:56:36 | [info ] | 	Loading script "server\Inventory.lua"
+07:56:36 | [info ] | Module Inventory loaded successfully
+07:56:36 | [info ] | Loading module JobCabby
+07:56:36 | [info ] | 	Loading script "server\JobTaxiDriver.lua"
+07:56:36 | [info ] | Module JobCabby loaded successfully
+07:56:36 | [info ] | Loading module Jobs
+07:56:36 | [info ] | 	Loading script "shared\JobsList.lua"
+07:56:36 | [info ] | 	Loading script "server\Jobs.lua"
+07:56:36 | [info ] | Module Jobs loaded successfully
+07:56:36 | [info ] | Loading module Level
+07:56:36 | [info ] | 	Loading script "server\Level.lua"
+07:56:36 | [info ] | Module Level loaded successfully
+07:56:36 | [info ] | Loading module Objects
+07:56:36 | [info ] | 	Loading script "server\Objects.lua"
+07:56:36 | [info ] | Module Objects loaded successfully
+07:56:36 | [info ] | Loading module physgun
+07:56:36 | [info ] | 	Loading script "shared\settings.lua"
+07:56:36 | [info ] | 	Loading script "shared\util.lua"
+07:56:36 | [info ] | 	Loading script "server\physgun_init.lua"
+07:56:36 | [info ] | Module physgun loaded successfully
+07:56:36 | [info ] | Loading module PlayerController
+07:56:36 | [info ] | 	Loading script "server\PlayerController.lua"
+07:56:36 | [info ] | Module PlayerController loaded successfully
+07:56:36 | [info ] | Loading module Radio
+07:56:36 | [info ] | Module Radio loaded successfully
+07:56:36 | [info ] | Loading module Tutorial
+07:56:36 | [info ] | 	Loading script "server\Tutorial.lua"
+07:56:36 | [info ] | Module Tutorial loaded successfully
+07:56:36 | [info ] | Loading module Vehicles
+07:56:36 | [info ] | 	Loading script "server\Vehicles.lua"
+07:56:37 | [info ] | Module Vehicles loaded successfully
+07:56:39 | [info ] | Module Admin unloaded successfully
+07:56:39 | [info ] | Module Bank unloaded successfully
+07:56:39 | [info ] | Module closehud unloaded successfully
+07:56:39 | [info ] | Module Clothings unloaded successfully
+07:56:39 | [info ] | Module Combustivel unloaded successfully
+07:56:39 | [info ] | Module CommandsController unloaded successfully
+07:56:39 | [info ] | Module Controls unloaded successfully
+07:56:39 | [info ] | Module CustomChat unloaded successfully
+07:56:39 | [info ] | Module Establishment unloaded successfully
+07:56:39 | [info ] | Module Feeding unloaded successfully
+07:56:39 | [info ] | Module HUD unloaded successfully
+07:56:39 | [info ] | Module Inventory unloaded successfully
+07:56:39 | [info ] | Module JobCabby unloaded successfully
+07:56:39 | [info ] | Module Jobs unloaded successfully
+07:56:39 | [info ] | Module Level unloaded successfully
+07:56:39 | [info ] | Module Objects unloaded successfully
+07:56:39 | [info ] | Module physgun unloaded successfully
+07:56:39 | [info ] | Module PlayerController unloaded successfully
+07:56:39 | [info ] | Module Radio unloaded successfully
+07:56:39 | [info ] | Module Tutorial unloaded successfully
+07:56:39 | [info ] | Module Vehicles unloaded successfully
+07:56:40 | [info ] | Server shutdown
