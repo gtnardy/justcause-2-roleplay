@@ -1,1 +1,5 @@
 SteamCMD/
+Server/default_scripts
+Server/steamapps
+Server/minidumps
+Server/server.log
