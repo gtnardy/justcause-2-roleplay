@@ -6,7 +6,6 @@ function JobsList()
 	Languages:SetLanguage("JOB_02_D", {["en"] = "Player teste.", ["pt"] = "Description ETEste"})
 	
 	local list = {
-
 		[1] = {name = Languages.JOB_01_N, description = Languages.JOB_01_D},
 		[2] = {name = Languages.JOB_02_N, description = Languages.JOB_02_D}
 	}
