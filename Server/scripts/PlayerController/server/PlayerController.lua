@@ -12,6 +12,13 @@ function PlayerController:__init()
 	Events:Subscribe("PlayerMoneyChange", self, self.PlayerMoneyChange)
 	
 	Events:Subscribe("NewPlayerCreated", self, self.NewPlayerCreated)
+	Events:Subscribe("GiveExperience", self, self.GiveExperience)
+end
+
+
+function PlayerController:GiveExperience(args)
+
+
 end
 
 
@@ -74,7 +81,6 @@ function PlayerController:UpdatePlayer(player)
 		player:SetNetworkValue("Fome", 100)
 		player:SetNetworkValue("Sede", 100)
 		player:SetNetworkValue("Combustivel", 100)
-		
 		return false
 	end
 end
