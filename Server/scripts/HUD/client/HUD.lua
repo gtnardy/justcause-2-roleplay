@@ -67,7 +67,7 @@ function HUD:AtualizarSpots(args)
 		end
 	end
 	
-	self.Menu.mapa.spots = self.spots
+	self.Menu.ScreenMap.spots = self.spots
 end
 
 
@@ -264,6 +264,7 @@ function HUD:SetLanguages()
 	self.Languages:SetLanguage("PLAYER_DYING_THIRST", {["en"] = "You are dying of thirst!", ["pt"] = "Você está morrendo de Sede!"})
 	self.Languages:SetLanguage("PLAYER_OUT_FUEL", {["en"] = "You are out of fuel!", ["pt"] = "Você está sem combustível!"})
 	self.Languages:SetLanguage("LABEL_HUNGER", {["en"] = "Hunger", ["pt"] = "Fome"})
+	self.Languages:SetLanguage("LABEL_OXYGEN", {["en"] = "Oxygen", ["pt"] = "Oxigênio"})
 	self.Languages:SetLanguage("LABEL_THIRST", {["en"] = "Thirst", ["pt"] = "Sede"})
 	self.Languages:SetLanguage("LABEL_FUEL", {["en"] = "Fuel", ["pt"] = "Combustivel"})
 	self.Languages:SetLanguage("VILLAGE_SPOT_DESCRIPTION", {["en"] = "Village", ["pt"] = "Vila"})

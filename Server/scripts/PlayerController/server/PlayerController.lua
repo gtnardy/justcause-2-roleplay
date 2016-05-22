@@ -1,7 +1,7 @@
 class 'PlayerController'
 
 function PlayerController:__init()
-
+	
 	Events:Subscribe("ClientModuleLoad", self, self.ClientModuleLoad)
 	Events:Subscribe("PlayerSpawn", self, self.PlayerSpawn)
 	Events:Subscribe("PlayerJoin", self, self.PlayerJoin)
@@ -12,13 +12,6 @@ function PlayerController:__init()
 	Events:Subscribe("PlayerMoneyChange", self, self.PlayerMoneyChange)
 	
 	Events:Subscribe("NewPlayerCreated", self, self.NewPlayerCreated)
-	Events:Subscribe("GiveExperience", self, self.GiveExperience)
-end
-
-
-function PlayerController:GiveExperience(args)
-
-
 end
 
 
@@ -53,7 +46,7 @@ end
 
 
 function PlayerController:UpdatePlayer(player)
-	local query = SQL:Query("SELECT Nome, NivelUsuario, Dinheiro, DinheiroBanco, IdJob, Nivel, Experiencia, UltimaPosicao, Fome, Sede, Combustivel FROM Player WHERE Id = ?")
+	local query = SQL:Query("SELECT Nome, NivelUsuario, Dinheiro, DinheiroBanco, IdJob, Nivel, Experiencia, UltimaPosicao, Fome, Sede, Combustivel, Idioma FROM Player WHERE Id = ?")
 	query:Bind(1, player:GetSteamId().id)
 	local result = query:Execute()
 	if (#result > 0) then
@@ -70,6 +63,7 @@ function PlayerController:UpdatePlayer(player)
 		player:SetNetworkValue("Sede", tonumber(result[1].Sede))
 		player:SetNetworkValue("Combustivel", tonumber(result[1].Combustivel))
 		player:SetValue("UltimaPosicao", self:StringToVector3(tostring(result[1].UltimaPosicao)))
+		player:SetNetworkValue("Language", result[1].Idioma)
 
 		return true
 	else
@@ -138,18 +132,14 @@ end
 
 function PlayerController:ModuleLoad()
 	for player in Server:GetPlayers() do
-	
 		self:UpdatePlayer(player)
-	
 	end
 end
 
 
 function PlayerController:ModuleUnload()
 	for player in Server:GetPlayers() do
-	
 		self:PlayerQuit({player = player})
-	
 	end
 end
 
@@ -163,7 +153,7 @@ function PlayerController:ServerStart()
 		"Dinheiro INTEGER NOT NULL," ..
 		"DinheiroBanco INTEGER NOT NULL DEFAULT 0," ..
 		"IdJob INTEGER NOT NULL DEFAULT 1," ..
-		"Idioma INTEGER NOT NULL DEFAULT 0," ..
+		"Idioma VARCHAR(2) NOT NULL DEFAULT 'pt'," ..
 		"DataEntrada DATETIME NOT NULL," ..
 		"DataUltimaEntrada DATETIME NOT NULL," ..
 		"UltimaPosicao VARCHAR(50) NOT NULL," ..

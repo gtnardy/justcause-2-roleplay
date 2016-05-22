@@ -9,6 +9,7 @@ function NotificationAlert:__init()
 	self.messages = {}
 	self.timer = Timer()
 	
+	Network:Subscribe("AddNotificationAlert", self, self.AddNotificationAlert)
 	Events:Subscribe("AddNotificationAlert", self, self.AddNotificationAlert)
 	Events:Subscribe("PostTick", self, self.PostTick)
 end

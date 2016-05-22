@@ -4,15 +4,21 @@ function JobTaxiDriver:__init()
 	
 	self.PRICE_KM = 5
 	
+	self.requests = {}
+	
 	self.taximeterOn = false
 	self.passenger = nil
 	self.driver = nil
 	self.distance = 0
 	
+	self.passengerWaiting = nil
+	
 	self.timer = Timer()
+	Network:Subscribe("UpdateData", self, self.UpdateData)
 	Network:Subscribe("PassengerEnteredTaxi", self, self.PassengerEnteredTaxi)
 	Network:Subscribe("TaximeterOff", self, self.TaximeterOff)
 	Network:Subscribe("TaximeterOn", self, self.TaximeterOn)
+	Network:Subscribe("AcceptedTaxi", self, self.AcceptedTaxi)
 	
 	Events:Subscribe("PostTick", self, self.PostTick)
 	Events:Subscribe("Render", self, self.Render)
@@ -20,6 +26,57 @@ function JobTaxiDriver:__init()
 	Events:Subscribe("LocalPlayerExitVehicle", self, self.LocalPlayerExitVehicle)
 	Events:Subscribe("ModuleLoad", self, self.ModuleLoad)
 	Events:Subscribe("KeyUp", self, self.KeyUp)
+	Events:Subscribe("PlayerQuit", self, self.PlayerQuit)
+	
+	Events:Subscribe("CallTaxi", self, self.CallTaxi)
+	Events:Subscribe("AcceptTaxi", self, self.AcceptTaxi)
+end
+
+
+function JobTaxiDriver:PlayerQuit(args)
+	if self.passengerWaiting then
+		if args.player == self.passengerWaiting then
+			self:RemovePassengerWaiting()
+		end
+	end
+end
+
+
+function JobTaxiDriver:UpdateData(args)
+	self.requests = args.requests
+	Events:Fire("TaxiRequests", self.requests)
+end
+
+
+function JobTaxiDriver:AcceptedTaxi(args)
+	self.passengerWaiting = args.player
+	Events:Fire("SetObjective", {texts = {
+									{text = self.Languages.TEXT_BRING .. " ", color = Color.White},
+									{text = self.Languages.TEXT_PASSENGER, color = Color(206, 194, 105)},
+									{text = ".", color = Color.White},
+								},
+								color = Color(206, 194, 105),
+								name = self.passengerWaiting:GetCustomName(),
+								position = self.passengerWaiting:GetPosition(),
+								dynamicPosition = self.passengerWaiting,
+				})
+end
+
+
+function JobTaxiDriver:AcceptTaxi(args)
+	Network:Send("AcceptTaxi", args)
+end
+
+
+function JobTaxiDriver:RemovePassengerWaiting()
+	self.passengerWaiting = nil
+	Events:Fire("AddNotificationAlert", {message = self.Languages.PASSENGER_WAITING_QUIT})
+	Events:Fire("RemoveObjective")
+end
+
+
+function JobTaxiDriver:CallTaxi()
+	Network:Send("CallTaxi")
 end
 
 
@@ -103,6 +160,12 @@ end
 
 
 function JobTaxiDriver:PostTick()
+	if self.passengerWaiting then
+		if Vector2.Distance(self.passengerWaiting, LocalPlayer:GetPosition()) <= 10 then
+			self:RemovePassengerWaiting()
+		end
+	end
+	
 	if not self.taximeterOn then return end
 
 	if self.timer:GetSeconds() >= 1 then
@@ -165,6 +228,8 @@ end
 
 function JobTaxiDriver:SetLanguages()
 	self.Languages = Languages()
+	self.Languages:SetLanguage("TEXT_BRING", {["en"] = "Go bring the ", ["pt"] = "Vá buscar o "})
+	self.Languages:SetLanguage("TEXT_PASSENGER", {["en"] = "passenger", ["pt"] = "passageiro"})
 	self.Languages:SetLanguage("PASSENGER_ENTERED_TAXI", {["en"] = "A passenger has entered into your Taxi. Press F to start the run.", ["pt"] = "Um passageiro entrou em seu Taxi. Pressione F para iniciar a corrida."})
 	self.Languages:SetLanguage("TAXI_STARTED_RUN", {["en"] = "The race has started! Exit the vehicle to finish him.", ["pt"] = "A corrida foi iniciada, saia do veículo para terminá-la."})
 	self.Languages:SetLanguage("TAXI_FINISHED_RUN", {["en"] = "The race has finished! The value was R$ ", ["pt"] = "A corrida foi finalizada, o valor de foi R$"})
@@ -175,6 +240,7 @@ function JobTaxiDriver:SetLanguages()
 	self.Languages:SetLanguage("LABEL_VALUE", {["en"] = "Value", ["pt"] = "Valor"})
 	self.Languages:SetLanguage("LABEL_DRIVER", {["en"] = "Driver", ["pt"] = "Motorista"})
 	self.Languages:SetLanguage("LABEL_PASSENGER", {["en"] = "Passenger", ["pt"] = "Passageiro"})
+	self.Languages:SetLanguage("PASSENGER_WAITING_QUIT", {["en"] = "The passenger quit the game.", ["pt"] = "O passageiro saiu do jogo."})
 end
 
 

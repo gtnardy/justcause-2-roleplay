@@ -6,6 +6,7 @@ function Experiencia:__init()
 	self.experience = 0
 	self.maxExperience = 100
 	
+	self.toEarnExperience = 0
 	self:UpdateValues()
 	
 	self.textSize = 20
@@ -19,11 +20,14 @@ end
 function Experiencia:ObjectValueChange(args)
 	if args.object.__type == "LocalPlayer" then
 		if args.key == "Experience" then
-			self.experience = tonumber(args.value)
+			self.toEarnExperience = tonumber(args.value) - self.experience
+			if self.toEarnExperience < 0 then
+				self.toEarnExperience = self.maxExperience - self.experience + tonumber(args.value)
+			end
 		elseif args.key == "Level" then
-			self.level = tonumber(args.value)
+			--self.level = tonumber(args.value)
 		elseif args.key == "MaxExperience" then
-			self.maxExperience = tonumber(args.value)
+			--self.maxExperience = tonumber(args.value)
 		end
 	end
 end
@@ -45,11 +49,29 @@ function Experiencia:Render(position)
 		Render:DrawText(position + Vector2.One, maxExperience, Color(0, 0, 0, 100), self.textSize)
 		Render:DrawText(position, maxExperience, Color(255, 255, 255), self.textSize)
 		
+		if self.toEarnExperience > 0 then
+			self.toEarnExperience = self.toEarnExperience - 1
+			self.experience = self.experience + 1
+		end
+		
+		if self.experience >= self.maxExperience then
+			self.level = LocalPlayer:GetLevel()
+			self.maxExperience = LocalPlayer:GetMaxExperience()
+			self.experience = 0
+		end
+		
 		-- Experience
 		local experience = tostring(self.experience) .. " XP"
 		position.x = position.x - Render:GetTextWidth(experience, self.textSize)
 		Render:DrawText(position + Vector2.One, experience, Color(0, 0, 0, 100), self.textSize)
 		Render:DrawText(position, experience, Color(206, 194, 105), self.textSize)
+		
+		-- Bar
+		local widthBar = Render:GetTextWidth(experience .. maxExperience, self.textSize) - 2
+		Render:FillArea(position + Vector2(0, Render:GetTextHeight(experience, self.textSize)), Vector2(widthBar, 5), Color(0, 0, 0, 100))
+		local widthExperienceBar = (self.experience / self.maxExperience) * widthBar - 1
+		Render:FillArea(position + Vector2(1, Render:GetTextHeight(experience, self.textSize) + 1), Vector2(widthExperienceBar, 3), Color(206, 194, 105))
+		Render:FillArea(position + Vector2(widthExperienceBar + 1, Render:GetTextHeight(experience, self.textSize)), Vector2(1, 5), Color.White)
 		
 		-- Level
 		local level = tostring(self.level)

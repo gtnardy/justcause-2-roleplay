@@ -8,12 +8,37 @@ function Player:GetLevel()
 	return level and level or 1
 end
 
+function Player:GetExperience()
+	local experience = self:GetValue("Experience")
+	return experience and experience or 0
+end
+
+function Player:GetMaxExperience()
+	local maxExperience = self:GetValue("MaxExperience")
+	return maxExperience and maxExperience or 1
+end
+
 function Player:GetJob()
 	local idJob = self:GetValue("IdJob")
 	return idJob and idJob or 1
 end
 
-function Player:GetJobName()
-	local jobName = self:GetValue("JobName")
-	return jobName and jobName or "nil"
+function Player:GetJobLevel()
+	local jobLevel = self:GetValue("JobLevel")
+	return jobLevel and jobLevel or 0
+end
+
+function Player:GetJobExperience()
+	local experience = self:GetValue("JobExperience")
+	return experience and experience or 0
+end
+
+function Player:GetJobUnlocks()
+	local unlocks = self:GetValue("JobUnlocks")
+	return unlocks and unlocks or {}
+end
+
+function Player:GetJobMaxExperience()
+	local maxExperience = self:GetValue("JobExperienceNecessary")
+	return maxExperience and maxExperience or 1
 end

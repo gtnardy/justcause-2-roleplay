@@ -23,7 +23,6 @@ end
 
 
 function Inventory:ModuleLoad()
-	
 	for id, name in pairs(self.InventoryGPSList) do
 		local positions = {}
 		local query = SQL:Query("SELECT Position FROM Establishment WHERE Type = ?")

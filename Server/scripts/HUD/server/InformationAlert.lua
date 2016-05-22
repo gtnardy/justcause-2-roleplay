@@ -8,12 +8,12 @@ end
 
 
 function InformationAlert:AddInformationAlert(args)
-	Network:Send("AddInformationAlert", args.player, args.data)
+	Network:Send(args.player, "AddInformationAlert", args.data)
 end
 
 
 function InformationAlert:RemoveInformationAlert(args)
-	Network:Send("RemoveInformationAlert", args.player, args.data)
+	Network:Send(args.player, "RemoveInformationAlert", args.data)
 end
 
 

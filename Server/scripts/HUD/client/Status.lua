@@ -41,15 +41,19 @@ end
 function Status:Render(position, size, languages)
 	if self.Fome and self.Sede and self.Combustivel then
 		position.y = position.y + 2
-		
+		local pos = 1
 		-- Fome
 		self:DrawBlock(position, size, languages.LABEL_HUNGER, Color(241, 196, 15), self.Fome, 1)
-		
+
 		-- Sede
 		self:DrawBlock(position, size, languages.LABEL_THIRST, Color(52, 152, 219), self.Sede, 2)
 		
-		-- Gasolina
-		if LocalPlayer:InVehicle() and LocalPlayer:GetVehicle():GetDriver() == LocalPlayer then
+		-- Oxigenio
+		if LocalPlayer:GetOxygen() < 1 then
+			self:DrawBlock(position, size, languages.LABEL_OXYGEN, Color(240, 240, 240), LocalPlayer:GetOxygen() * 100, 3)
+			
+			-- Gasolina
+		elseif LocalPlayer:InVehicle() and LocalPlayer:GetVehicle():GetDriver() == LocalPlayer then
 			self:DrawBlock(position, size, languages.LABEL_FUEL, Color(230, 126, 34), self.Combustivel, 3)
 		end
 	end

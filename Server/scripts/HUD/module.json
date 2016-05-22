@@ -50,6 +50,15 @@
 	
 	"Level_Background": "http://i.imgur.com/UG7Eojs.png",
 	
-	"Blood_Screen": "http://i.imgur.com/CoXaqeZ.png"
+	"Blood_Screen": "http://i.imgur.com/CoXaqeZ.png",
+	
+	"JOB_UNLOCK": "http://i.imgur.com/Dw3ZaUR.png",
+	
+	"TUTORIAL_Q": "http://i.imgur.com/FTWcjGP.png",
+	"TUTORIAL_E": "http://i.imgur.com/vOQYQgG.png",
+	"TUTORIAL_LEFT": "http://i.imgur.com/ykHh2cQ.png",
+	"TUTORIAL_RIGHT": "http://i.imgur.com/zIJQiHf.png",
+	"TUTORIAL_UP": "http://i.imgur.com/MVzXCA1.png",
+	"TUTORIAL_DOWN": "http://i.imgur.com/qxURepE.png"
   }
 }

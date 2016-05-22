@@ -4,9 +4,18 @@ function Menu:__init()
 	
 	self.active = false
 	
+	self.actualScreen = 1
+	
 	self.botoes = {}
-	self.mapa = Mapa()
-	self:AddTela(self.mapa)
+	
+	self.ScreenMap = ScreenMapa()
+	self.ScreenJob = ScreenJob()
+	
+	self:AddTela(self.ScreenMap)
+	self:AddTela(self.ScreenJob)
+	
+	self.IMAGE_TUTORIAL_Q = Image.Create(AssetLocation.Resource, "TUTORIAL_Q")
+	self.IMAGE_TUTORIAL_E = Image.Create(AssetLocation.Resource, "TUTORIAL_E")
 	
 	self.GUIStateObject = SharedObject.Create("GUIState")
 	
@@ -34,8 +43,8 @@ function Menu:SetActive(bool)
 	self.active = bool
 	Mouse:SetVisible(bool)
 	if bool then
-		if self.botoes[1] then
-			self.botoes[1]:SetActive(true)
+		if self.botoes[self.actualScreen] then
+			self.botoes[self.actualScreen]:SetActive(true)
 		end
 	else
 		for _, botao in ipairs(self.botoes) do
@@ -45,15 +54,46 @@ function Menu:SetActive(bool)
 end
 
 
+function Menu:PrevScreen()
+	self:SetActiveScreen(self.actualScreen - 1)
+end
+
+
+function Menu:SetActiveScreen(screen)
+	if self.botoes[screen] then
+		self.botoes[self.actualScreen]:SetActive(false)
+		self.actualScreen = screen
+		self.botoes[self.actualScreen]:SetActive(true)
+	end
+end
+
+
+function Menu:NextScreen()
+	self:SetActiveScreen(self.actualScreen + 1)
+end
+
+
 function Menu:Toogle()
 	self:SetActive(not self.active)
 end
 
 
 function Menu:KeyUp(args)
-	if args.key == VirtualKey.F1 or args.key == string.byte("M") then
+	if args.key == VirtualKey.F1 then
 		if Game:GetGUIState() == GUIState.Menu then return end
 		self:Toogle()
+	elseif args.key == VirtualKey.F2 then
+		if Game:GetGUIState() == GUIState.Menu then return end
+		self:SetActiveScreen(2)
+		self:Toogle()
+	elseif args.key == string.byte("M") then
+		if Game:GetGUIState() == GUIState.Menu then return end
+		self:SetActiveScreen(1)
+		self:Toogle()
+	elseif args.key == string.byte("Q") then
+		self:PrevScreen()
+	elseif args.key == string.byte("E") then
+		self:NextScreen()
 	end
 end
 
@@ -65,14 +105,16 @@ end
 
 function Menu:Render()
 	if (self.active and Game:GetGUIState() == GUIState.PDA) then
-		local position = CONFORTOHUD + Vector2(0, 70)
+		local position = CONFORTOHUD + Vector2(60, 70)
+		self.botoes[self.actualScreen].tela:Render()
+		self.IMAGE_TUTORIAL_Q:SetPosition(position - Vector2(60, 0))
+		self.IMAGE_TUTORIAL_Q:Draw()
 		for _, botao in ipairs(self.botoes) do
-			if botao.tela then
-				botao.tela:Render()
-			end
 			
-			position.x = position.x + 10 + botao:Render(position)
+			position.x = position.x + 30 + botao:Render(position)
 		end
+		self.IMAGE_TUTORIAL_E:SetPosition(position)
+		self.IMAGE_TUTORIAL_E:Draw()
 	end
 end
 
@@ -97,7 +139,7 @@ end
 
 function Botao:SetActive(bool)
 	self.active = bool
-	self.cor = bool and Color(222, 184, 34) or Color(255, 255, 255)
+	self.cor = bool and Color(206, 194, 105) or Color(255, 255, 255)
 
 	self:SetTelaActive(bool)
 end

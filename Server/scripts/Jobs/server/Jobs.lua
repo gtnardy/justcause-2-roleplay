@@ -2,8 +2,6 @@ class 'Jobs'
 
 function Jobs:__init()
 
-
-	self.JobsList = JobsList()
 	self.categoriesJobs = {}
 	
 	Network:Subscribe("ChangeJob", self, self.ChangeJob)
@@ -11,17 +9,43 @@ function Jobs:__init()
 	
 	Events:Subscribe("EarnJobExperience", self, self.EarnJobExperience)
 	Events:Subscribe("ServerStart", self, self.ServerStart)
-	Events:Subscribe("PlayerJoin", self, self.PlayerJoin)
 	Events:Subscribe("ClientModuleLoad", self, self.ClientModuleLoad)
 	Events:Subscribe("ModuleLoad", self, self.ModuleLoad)
 end
 
 
 function Jobs:EarnJobExperience(args)
-	local command = SQL:Command("UPDATE PlayerJobs SET Experience = Experience + ? WHERE IdPlayer = ? AND IdJob = ?")
-	command:Bind(1, args.experience)
-	command:Bind(2, args.player:GetSteamId().id)
-	command:Bind(3, args.player:GetJob())
+	local jobLevel = args.player:GetJobLevel()
+	local experience = args.player:GetJobExperience()
+	local maxExperience = args.player:GetJobMaxExperience()
+	
+	if (experience + args.experience >= maxExperience) then
+		self:SetLevel(args.player, level + 1)
+		self:SetExperience(args.player, experience + args.experience - maxExperience)
+		self:UpdateJobData(args.player)
+	else
+		self:SetExperience(args.player, experience + args.experience)
+	end
+end
+
+
+function Jobs:SetLevel(player, level)
+	player:SetNetworkValue("JobLevel", level)
+	local command = SQL:Command("UPDATE PlayerJobs SET Level = ? WHERE IdPlayer = ?")
+	command:Bind(1, level)
+	command:Bind(2, player:GetSteamId().id)
+	command:Execute()
+	
+	self:UpdateJobUnlocks(player)
+end
+
+
+function Jobs:SetExperience(player, experience)
+	player:SetNetworkValue("JobExperience", experience)
+	local command = SQL:Command("UPDATE PlayerJobs SET Experiencia = ? WHERE IdPlayer = ? AND IdJob = ?")
+	command:Bind(1, experience)
+	command:Bind(2, player:GetSteamId().id)
+	command:Bind(3, player:GetJob())
 	command:Execute()
 end
 
@@ -47,7 +71,7 @@ function Jobs:ChangeJob(args, player)
 	end
 	
 	player:SetNetworkValue("IdJob", args.idJob)
-	self:PlayerJoin({player = player})
+	self:UpdateJobData(args.player)
 end
 
 
@@ -59,18 +83,62 @@ end
 
 function Jobs:ClientModuleLoad(args)
 	Network:Send(args.player, "UpdateData", {categoriesJobs = self.categoriesJobs})
+	
+	self:UpdateJobData(args.player)
 end
 
 
-function Jobs:PlayerJoin(args)
-	local jobName = self.JobsList[player:GetJob()]
-	if jobName then jobName = jobName.name else "nil" end
-	args.player:SetNetworkValue("JobName", jobName)
+function Jobs:UpdateJobData(player)
+	
+	local query = SQL:Query("SELECT Level, Experience FROM PlayerJobs WHERE IdPlayer = ? AND IdJob = ?")
+	query:Bind(1, player:GetSteamId().id)
+	query:Bind(2, player:GetJob())
+	local result = query:Execute()
+	
+	local jobLevel = 0 
+	local jobExperience = 0
+	if #result > 0 then
+		jobLevel = tonumber(result[1].Level)
+		jobExperience = tonumber(result[1].Experience)
+	end
+	
+	player:SetNetworkValue("JobLevel", jobLevel)
+	player:SetNetworkValue("JobExperience", jobExperience)
+	
+	local query = SQL:Query("SELECT Experience FROM JobsExperience WHERE IdJob = ? AND Level = ?")
+	query:Bind(1, player:GetJob())
+	query:Bind(2, player:GetJobLevel())
+	local result = query:Execute()
+	
+	local experienceJobNecessary = 666
+	if #result > 0 then
+		experienceJobNecessary = tonumber(result[1].Experience)
+	end
+	
+	player:SetNetworkValue("JobExperienceNecessary", experienceJobNecessary)
+	
+	self:UpdateJobUnlocks(player)
+	Network:Send(player, "UpdateJobData")
+end
+
+
+function Jobs:UpdateJobUnlocks(player)
+	local query = SQL:Query("SELECT IdUnlock, MinimumLevel FROM JobsUnlocks WHERE IdJob = ?")
+	query:Bind(1, player:GetJob())
+	local result = query:Execute()
+	
+	local playerJobLevel = player:GetJobLevel()
+	local list = {}
+	for _, line in ipairs(result) do
+		list[tonumber(line.IdUnlock)] = {unlocked = (playerJobLevel >= tonumber(line.MinimumLevel)), minimumLevel = tonumber(line.MinimumLevel)}
+	end
+
+	player:SetNetworkValue("JobUnlocks", list)
+	Network:Send(player, "UpdateJobUnlocks")
 end
 
 
 function Jobs:ModuleLoad()
-
 	local query = SQL:Query("SELECT * FROM Jobs ORDER BY MinimumLevel")
 	local result = query:Execute()
 	for _, line in ipairs(result) do
@@ -96,6 +164,18 @@ function Jobs:ServerStart()
 		"Difficulty INTEGER NOT NULL," ..
 		"SpawnPosition Varchar(30) NOT NULL," ..
 		"IdJobCategory INTEGER NOT NULL)")
+		
+	SQL:Execute("CREATE TABLE IF NOT EXISTS JobsUnlocks(" ..
+		"IdJob INTEGER NOT NULL," ..
+		"IdUnlock INTEGER NOT NULL," ..
+		"MinimumLevel INTEGER NOT NULL," ..
+		"PRIMARY KEY(IdJob, IdUnlock))")
+		
+	SQL:Execute("CREATE TABLE IF NOT EXISTS JobsExperience(" ..
+		"IdJob INTEGER NOT NULL," ..
+		"Level INTEGER NOT NULL," ..
+		"Experience INTEGER NOT NULL," ..
+		"PRIMARY KEY(IdJob, Level))")
 		
 	SQL:Execute("CREATE TABLE IF NOT EXISTS PlayerJobs(" ..
 		"IdPlayer VARCHAR(20) NOT NULL," ..

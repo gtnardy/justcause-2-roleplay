@@ -104,6 +104,51 @@ function Inventory:ConfigureContextMenu()
 	end
 	
 	self.ContextMenu.list:AddItem(itemInventory)
+	
+	-- Utilities
+	local itemUtilities = ContextMenuItem({
+		text = self.Languages.TEXT_UTILITIES,
+		legend = self.Languages.TEXT_ACCESS_UTILITIES,
+		enabled = true,
+	})
+	
+	local listUtilities = ContextMenuList({subtitle = string.upper(self.Languages.TEXT_UTILITIES)})
+	listUtilities.subtitleNumeric = false
+	itemUtilities.list = listUtilities
+	
+	local itemUtilitiesCallTaxi = ContextMenuItem({
+			text = self.Languages.TEXT_CALL_TAXI,
+			enabled = true,
+			legend = self.Languages.TEXT_CALL_TAXI_DESCRIPTION,
+		})
+		
+	itemUtilitiesCallTaxi.pressEvent = function() Inventory:CallTaxi() end
+	
+	listUtilities:AddItem(itemUtilitiesCallTaxi)
+	self.ContextMenu.list:AddItem(itemUtilities)	
+	
+	-- Job
+	local itemJob = ContextMenuItem({
+		text = self.Languages.TEXT_JOB,
+		legend = self.Languages.TEXT_ACCESS_JOB,
+		textRight = LocalPlayer:GetJobName(),
+		enabled = true,
+	})
+	
+	local listJob = self.InventoryJobController:GetContextMenuListForJob(LocalPlayer:GetJob())
+	itemJob.list = listJob
+	
+	self.ContextMenu.list:AddItem(itemJob)	
+end
+
+
+function Inventory:CallTaxi()
+	Events:Fire("CallTaxi")
+end
+
+
+function Inventory:AcceptTaxi(item)
+	Events:Fire("AcceptTaxi", {player = item.data.player})
 end
 
 
@@ -162,6 +207,7 @@ end
 
 
 function Inventory:ModuleLoad()
+	self.InventoryJobController = InventoryJobController()
 	self:SetLanguages()
 end
 
@@ -174,7 +220,11 @@ function Inventory:SetLanguages()
 	self.Languages:SetLanguage("GPS_SET_TO", {["en"] = "Set your GPS to nearest", ["pt"] = "Setar seu GPS para"})
 	self.Languages:SetLanguage("GPS_NONE", {["en"] = "None", ["pt"] = "Nenhum"})
 	self.Languages:SetLanguage("GPS_REMOVE", {["en"] = "Remve the GPS.", ["pt"] = "Remover o GPS."})
+	self.Languages:SetLanguage("TEXT_JOB", {["en"] = "Job", ["pt"] = "Emprego"})
+	self.Languages:SetLanguage("TEXT_UTILITIES", {["en"] = "Utilities", ["pt"] = "Utilidades"})
 	self.Languages:SetLanguage("TEXT_INVENTORY", {["en"] = "Inventory", ["pt"] = "Inventário"})
+	self.Languages:SetLanguage("TEXT_ACCESS_UTILITIES", {["en"] = "Access the Utilities menu.", ["pt"] = "Acessar o menu de utilidades."})
+	self.Languages:SetLanguage("TEXT_ACCESS_JOB", {["en"] = "Access the Job options.", ["pt"] = "Acessar as opções de seu Emprego."})
 	self.Languages:SetLanguage("TEXT_ACCESS_GPS", {["en"] = "Access the GPS.", ["pt"] = "Acessar o GPS."})
 	self.Languages:SetLanguage("TEXT_ACCESS_INVENTORY", {["en"] = "Access the Inventory.", ["pt"] = "Acessar o Inventário."})
 	self.Languages:SetLanguage("TEXT_CONSUME", {["en"] = "Consume", ["pt"] = "Consumir"})
@@ -183,6 +233,8 @@ function Inventory:SetLanguages()
 	self.Languages:SetLanguage("TEXT_THIRST", {["en"] = "Thirst", ["pt"] = "Sede"})
 	self.Languages:SetLanguage("TEXT_BROWSE", {["en"] = "Browse", ["pt"] = "Navegar"})
 	self.Languages:SetLanguage("TEXT_SELECT", {["en"] = "Select", ["pt"] = "Selecionar"})
+	self.Languages:SetLanguage("TEXT_CALL_TAXI", {["en"] = "Call a Taxi", ["pt"] = "Chamar um Taxi"})
+	self.Languages:SetLanguage("TEXT_CALL_TAXI_DESCRIPTION", {["en"] = "Your request will be forwarded to the taxi drivers present on the server and your position will be constantly sent to them. The request expires in 3 minutes.", ["pt"] = "Seu pedido será encaminhado aos taxistas presentes no servidor e sua posição será constantemente enviada a eles. O pedido expira com 3 minutos."})
 end
 
 
