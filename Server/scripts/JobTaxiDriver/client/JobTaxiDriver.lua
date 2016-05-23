@@ -36,7 +36,7 @@ end
 function JobTaxiDriver:PlayerQuit(args)
 	if self.passengerWaiting then
 		if args.player == self.passengerWaiting then
-			self:RemovePassengerWaiting()
+			self:RemovePassengerWaiting(true)
 		end
 	end
 end
@@ -68,9 +68,11 @@ function JobTaxiDriver:AcceptTaxi(args)
 end
 
 
-function JobTaxiDriver:RemovePassengerWaiting()
+function JobTaxiDriver:RemovePassengerWaiting(announce)
 	self.passengerWaiting = nil
-	Events:Fire("AddNotificationAlert", {message = self.Languages.PASSENGER_WAITING_QUIT})
+	if announce then
+		Events:Fire("AddNotificationAlert", {message = self.Languages.PASSENGER_WAITING_QUIT})
+	end
 	Events:Fire("RemoveObjective")
 end
 
@@ -161,8 +163,8 @@ end
 
 function JobTaxiDriver:PostTick()
 	if self.passengerWaiting then
-		if Vector2.Distance(self.passengerWaiting, LocalPlayer:GetPosition()) <= 10 then
-			self:RemovePassengerWaiting()
+		if Vector3.Distance(self.passengerWaiting:GetPosition(), LocalPlayer:GetPosition()) <= 10 then
+			self:RemovePassengerWaiting(false)
 		end
 	end
 	

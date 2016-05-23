@@ -144,11 +144,13 @@ end
 
 function Inventory:CallTaxi()
 	Events:Fire("CallTaxi")
+	self:SetActive(false)	
 end
 
 
 function Inventory:AcceptTaxi(item)
 	Events:Fire("AcceptTaxi", {player = item.data.player})
+	self:SetActive(false)	
 end
 
 
