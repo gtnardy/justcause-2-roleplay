@@ -54,20 +54,43 @@ end
 function HUD:AtualizarSpots(args)
 	self.requestingAtualizarSpots = false
 	if args.spots then
+	
+		self.Menu.ScreenJob.Map.spots = {}
+	
 		self.spots = {}
 		self:AddSpot(SpotPlayer())
 		self:AddSpot(SpotWaypoint())
+		
 		for i = 1, #args.spots do
 			local spot = args.spots[i]
 			local image = nil
 			if (spot.Spot) then
 				image = self:CreateImage(spot.Spot)
 			end
-			table.insert(self.spots, Spot({id = spot.Id, name = spot.Name, position = Vector3.ParseString(spot.Position), image = image, description = self.Languages[spot.Spot.."_DESCRIPTION"], spotType = spot.Spot, radius = tonumber(spot.Radius)}))
+			
+			local spotData = Spot({
+				id = spot.Id, 
+				name = spot.Name, 
+				position = Vector3.ParseString(spot.Position), 
+				image = image, 
+				description = self.Languages[spot.Spot.."_DESCRIPTION"], 
+				spotType = spot.Spot,
+				radius = tonumber(spot.Radius),
+				company = spot.IdCompany and {
+					id = tonumber(spot.IdCompany), 
+					production = tonumber(spot.Production),
+					value = tonumber(spot.Value), 
+					isFactory = not (tonumber(spot.IsFactory) == 0),
+					owner = spot.IdOwner and {id = spot.IdOwner, name = spot.Owner} or nil
+				} or nil,
+			})
+			
+			table.insert(self.spots, spotData)
 		end
 	end
 	
-	self.Menu.ScreenMap.spots = self.spots
+	self.Menu.ScreenJob:SetSpots(self.spots)
+	self.Menu.ScreenMap:SetSpots(self.spots)
 end
 
 
@@ -277,6 +300,8 @@ function HUD:SetLanguages()
 	self.Languages:SetLanguage("CLOTHINGSHOP_SPOT_DESCRIPTION", {["en"] = "Clothing Store", ["pt"] = "Loja de Roupas"})
 	self.Languages:SetLanguage("CITY_SPOT_DESCRIPTION", {["en"] = "City", ["pt"] = "Cidade"})
 	self.Languages:SetLanguage("AIRPORT_SPOT_DESCRIPTION", {["en"] = "Airport", ["pt"] = "Aeroporto"})
+	self.Languages:SetLanguage("CLOTHFACTORY_SPOT_DESCRIPTION", {["en"] = "Cloth Factory", ["pt"] = "Fábrica de Tecidos"})
+	self.Languages:SetLanguage("JOBAGENCY_SPOT_DESCRIPTION", {["en"] = "Job Agency", ["pt"] = "Agência de Empregos"})
 end
 
 

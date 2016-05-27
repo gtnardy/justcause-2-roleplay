@@ -10,9 +10,11 @@ function Menu:__init()
 	
 	self.ScreenMap = ScreenMapa()
 	self.ScreenJob = ScreenJob()
+	self.ScreenProgress = ScreenProgress()
 	
 	self:AddTela(self.ScreenMap)
 	self:AddTela(self.ScreenJob)
+	self:AddTela(self.ScreenProgress)
 	
 	self.IMAGE_TUTORIAL_Q = Image.Create(AssetLocation.Resource, "TUTORIAL_Q")
 	self.IMAGE_TUTORIAL_E = Image.Create(AssetLocation.Resource, "TUTORIAL_E")

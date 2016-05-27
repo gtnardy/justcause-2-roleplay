@@ -3,8 +3,10 @@ class 'ClothingStore'
 function ClothingStore:__init()
 	
 	self.active = false
-	self.naLoja = false
+	self.atStore = false
 	self.ContextMenu = nil
+
+	self.CompanyModule = CompanyModule()
 	
 	self.ClothingStores = {}
 	self.ClothingsList = ClothingsList()
@@ -68,7 +70,7 @@ function ClothingStore:ConfigureContextMenu()
 	local clothingsPlayer = LocalPlayer:GetValue("Clothings")
 	if not clothingsPlayer then clothingsPlayer = {} end
 	
-	for clothingType, clothings in pairs(self.naLoja.clothingTypes) do
+	for clothingType, clothings in pairs(self.atStore.clothingTypes) do
 		local itemClothing = ContextMenuItem({text = self.Languages["LABEL_"..clothingType]})
 		self.ContextMenu.list:AddItem(itemClothing)
 		
@@ -122,6 +124,10 @@ function ClothingStore:ConfigureContextMenu()
 			itemClothing.list:AddItem(item)	
 		end
 	end
+	
+	if self.atStore.company then
+		self.ContextMenu.list:AddItem(self.CompanyModule:GetContextMenuModule(self.atStore.company))
+	end
 end
 
 
@@ -172,7 +178,7 @@ end
 
 function ClothingStore:KeyUp(args)
 	if args.key == string.byte("F") then
-		if self.naLoja then
+		if self.atStore then
 			self:SetActive(not self.active)
 		elseif self.active then
 			self:SetActive(false)
@@ -199,7 +205,7 @@ end
 
 
 function ClothingStore:GetShop(args)
-	--{id = spot.id, position = spot.position, radius = spot.radius, spotType = spot.spotType, name = spot.name, description = spot.description}
+	--{id = spot.id, position = spot.position, radius = spot.radius, spotType = spot.spotType, name = spot.name, description = spot.description, company = spot.company}
 	args.clothingTypes = self.ClothingStores[args.id]
 	return args
 end
@@ -207,7 +213,7 @@ end
 
 function ClothingStore:LocalPlayerEnterSpot(args)
 	if args.spotType == "CLOTHINGSTORE_SPOT" then
-		self.naLoja = self:GetShop(args)
+		self.atStore = self:GetShop(args)
 		Events:Fire("AddInformationAlert", {id = "PLAYER_ENTER_CLOTHING_SHOP", message = self.Languages.PLAYER_ENTER_CLOTHING_SHOP, priority = true})
 	end
 end
@@ -215,7 +221,7 @@ end
 
 function ClothingStore:LocalPlayerExitSpot(args)
 	if args.spotType == "CLOTHINGSTORE_SPOT" then
-		self.naLoja = false
+		self.atStore = false
 		Events:Fire("RemoveInformationAlert", {id = "PLAYER_ENTER_CLOTHING_SHOP"})
 	end
 end

@@ -7,7 +7,11 @@ function JobTaxiDriver:__init()
 	self.taxiRequests = {}
 	self.timer = Timer()
 	
-	self.PRICE_KM = 5
+	self.PRICE_KM = {
+		[1] = 4,
+		[2] = 5,
+		[3] = 6
+	}
 	
 	Network:Subscribe("EnteredTaxiAsPassgenger", self, self.EnteredTaxiAsPassgenger)
 	Network:Subscribe("TaximeterOn", self, self.TaximeterOn)
@@ -104,7 +108,7 @@ end
 
 
 function JobTaxiDriver:TaximeterOff(args, player)
-	local price = self.PRICE_KM * math.ceil(args.distance / 1000)
+	local price = self.PRICE_KM[args.flag] * math.ceil(args.distance / 1000)
 
 	if args.passenger then
 		if args.passenger.player then

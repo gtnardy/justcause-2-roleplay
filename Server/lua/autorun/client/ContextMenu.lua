@@ -280,10 +280,12 @@ function ContextMenuItem:__init(args)
 	self.textSize = 16
 	self.image = args.image
 	self.data = args.data
+	self.textColor = args.textColor and args.textColor or Color.White
+	self.textColorSelected = args.textColorSelected and args.textColorSelected or Color.Black
 	self.listInLine = args.listInLine != nil and args.listInLine or false
 	if args.enabled != nil then self.enabled = args.enabled else self.enabled = true end
 	
-	self.legend = ContextMenuLegend({text = args.legend, textNotActive = args.textLegendNotActive})
+	self:SetLegend(args.legend, args.textLegendNotActive)
 	self.statistics = ContextMenuStatistics({statistics = args.statistics})
 	self.tutorial = ContextMenuTutorial()
 	
@@ -292,6 +294,11 @@ function ContextMenuItem:__init(args)
 	
 	self.selectEvent = function() end
 	self.pressEvent = function() end
+end
+
+
+function ContextMenuItem:SetLegend(text, textNotActive)
+	self.legend = ContextMenuLegend({text = text, textNotActive = textNotActive})
 end
 
 
@@ -333,15 +340,21 @@ end
 
 function ContextMenuItem:Render(position, size, selected)
 
-	local textColor = self.enabled and Color.White or Color(255, 255, 255, 150)
+	local textColor = self.textColor
+
 	if selected then
 		Render:FillArea(position, size, Color.White)
-		textColor = self.enabled and Color.Black or Color(0, 0, 0, 150)
+		textColor = self.textColorSelected 
 	else
 		local backgroundColor = Color(0, 0, 0, 150)
 		if self.backgroundColor then backgroundColor = self.backgroundColor end
 		Render:FillArea(position, size, backgroundColor)
 	end
+	
+	if not self.enabled then
+		textColor.a = 150
+	end	
+	
 	local textRightColor = self.textRightColor or textColor
 	
 	if self.image then

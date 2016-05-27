@@ -6,6 +6,8 @@ function FeedingStore:__init()
 	self.atStore = false
 	self.ContextMenu = nil
 	
+	self.CompanyModule = CompanyModule()
+	
 	self.FeedingStores = {}
 	self.FeedingList = FeedingList()["FOOD"]
 	
@@ -67,6 +69,10 @@ function FeedingStore:ConfigureContextMenu()
 		itemFood.pressEvent = function()
 			FeedingStore:BuyItem(itemFood.list, itemFood)
 		end
+	end
+	
+	if self.atStore.company then
+		self.ContextMenu.list:AddItem(self.CompanyModule:GetContextMenuModule(self.atStore.company))
 	end
 end
 

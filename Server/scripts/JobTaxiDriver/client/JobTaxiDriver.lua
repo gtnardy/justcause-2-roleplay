@@ -2,7 +2,11 @@ class 'JobTaxiDriver'
 
 function JobTaxiDriver:__init()
 	
-	self.PRICE_KM = 5
+	self.PRICE_KM = {
+		[1] = 4,
+		[2] = 5,
+		[3] = 6
+	}
 	
 	self.requests = {}
 	
@@ -10,6 +14,7 @@ function JobTaxiDriver:__init()
 	self.passenger = nil
 	self.driver = nil
 	self.distance = 0
+	self.flag = 1
 	
 	self.passengerWaiting = nil
 	
@@ -83,18 +88,30 @@ end
 
 
 function JobTaxiDriver:LocalPlayerEnterVehicle(args)
-	if args.vehicle:GetModelId() == 70 then
+	-- 9, 70, 67
+	local vehicleModelId = args.vehicle:GetModelId()
+	if vehicleModelId == 9 or vehicleModelId == 70 or vehicleModelId == 67 then
 		if args.is_driver then
-			if LocalPlayer:GetJob() == Jobs.TaxiDriver then
-				self:EnteredTaxiAsDriver()
+			if LocalPlayer:GetJob() == Jobs.TaxiDriver then		
+				if self:DriverUnlocked(LocalPlayer, vehicleModelId) then
+					self:EnteredTaxiAsDriver()
+				else
+					Events:Fire("AddNotificationAlert", {message = self.Languages.MINIMUM_LEVEL_NOT_ACQUIRED})
+				end
 			end
 		else
 			local driver = args.vehicle:GetDriver()
-			if driver:GetJob() == Jobs.TaxiDriver then
+			if driver:GetJob() == Jobs.TaxiDriver and self:DriverUnlocked(driver, vehicleModelId) then
 				self:EnteredTaxiAsPassgenger(driver)
 			end
 		end
 	end
+end
+
+
+function JobTaxiDriver:DriverUnlocked(player, vehicleId)
+	local unlocks = player:GetJobUnlocks()
+	return (vehicleModelId == 9 or (vehicleModelId == 70 and not unlocks[2].unlocked) or (vehicleModelId == 67 and not unlocks[3].unlocked))
 end
 
 
@@ -111,7 +128,6 @@ end
 
 
 function JobTaxiDriver:PassengerEnteredTaxi(args)
-	Chat:Print("passenger entered taxi", Color.Pink)
 	Events:Fire("AddInformationAlert", {id = "PASSENGER_ENTERED_TAXI", message = self.Languages.PASSENGER_ENTERED_TAXI, priority = true})
 	self.passenger = {player = args.passenger, steamId = args.passenger:GetSteamId().id}
 end
@@ -134,7 +150,7 @@ function JobTaxiDriver:Render()
 	local textTaximeterValue = tostring(self.distance) .. " m"
 	self:RenderRetangle(pos, size, self.Languages.LABEL_TAXIMETER, textTaximeterValue)
 	
-	local textValueValue = "R$ " .. tostring(math.floor(self.distance * self.PRICE_KM / 1000))
+	local textValueValue = "R$ " .. tostring(math.floor(self.distance * self.PRICE_KM[self.flag] / 1000))
 	self:RenderRetangle(pos, size, self.Languages.LABEL_VALUE, textValueValue)
 		
 	local textDriver = self.driver and self.Languages.LABEL_DRIVER or self.Languages.LABEL_PASSENGER
@@ -203,8 +219,10 @@ end
 function JobTaxiDriver:TaximeterOn(args)
 	if self.passenger then
 		Network:Send("TaximeterOn", {passenger = self.passenger, driver = LocalPlayer})
+		self.flag = self:GetFlag(LocalPlayer)
 	else
 		self.driver = {player = args.driver, steamId = args.driver:GetSteamId().id}
+		self.flag = self:GetFlag(args.driver)
 	end
 	self.distance = 0
 	self.taximeterOn = true
@@ -212,16 +230,32 @@ function JobTaxiDriver:TaximeterOn(args)
 end
 
 
+function JobTaxiDriver:GetFlag(player)
+	local vehicle = player:GetVehicle()
+	local flag = 1
+	if vehicle then
+		local vehicleModelId = vehicle:GetModelId()
+		if vehicleModelId == 70 then
+			flag = 2
+		elseif vehicleModelId == 67 then
+			flag = 3
+		end
+	end
+	return flag
+end
+
+
 function JobTaxiDriver:TurnOffTaximeter()
-	Network:Send("TaximeterOff", {driver = self.driver, passenger = self.passenger, distance = self.distance})
+	Network:Send("TaximeterOff", {driver = self.driver, passenger = self.passenger, distance = self.distance, flag = self.flag})
 	self:TaximeterOff()
 end
 
 
 function JobTaxiDriver:TaximeterOff()
-	local price = math.floor(self.PRICE_KM * self.distance / 1000)
+	local price = math.floor(self.PRICE_KM[self.flag] * self.distance / 1000)
 	Events:Fire("AddNotificationAlert", {message = self.Languages.TAXI_FINISHED_RUN .. " " ..tostring(price) .. "."})
 	self.distance = 0
+	self.flag = 1
 	self.taximeterOn = false
 	self.driver = nil
 	self.passenger = nil
@@ -243,6 +277,7 @@ function JobTaxiDriver:SetLanguages()
 	self.Languages:SetLanguage("LABEL_DRIVER", {["en"] = "Driver", ["pt"] = "Motorista"})
 	self.Languages:SetLanguage("LABEL_PASSENGER", {["en"] = "Passenger", ["pt"] = "Passageiro"})
 	self.Languages:SetLanguage("PASSENGER_WAITING_QUIT", {["en"] = "The passenger quit the game.", ["pt"] = "O passageiro saiu do jogo."})
+	self.Languages:SetLanguage("MINIMUM_LEVEL_NOT_ACQUIRED", {["en"] = "You don't have the minimum level necessary to drive this vehicle.", ["pt"] = "Você não possui o nível minimo necessário na profissão para poder trabalhar nesse veiculo."})
 end
 
 

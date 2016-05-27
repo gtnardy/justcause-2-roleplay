@@ -10,6 +10,7 @@ function Spot:__init(args)
 	self.description = args.description
 	self.spotType = args.spotType
 	self.radius = args.radius
+	self.company = args.company
 	
 	if self.image then
 		self.imageSize = self.image:GetSize()

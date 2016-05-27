@@ -54,7 +54,7 @@ end
 function Checkpoint:LocalPlayerTriggerSpot(spot, entered)
 	if not spot then return end
 	local eventName = entered and 'LocalPlayerEnterSpot' or 'LocalPlayerExitSpot'
-	Events:Fire(eventName, {id = spot.id, position = spot.position, radius = spot.radius, spotType = spot.spotType, name = spot.name, description = spot.description})
+	Events:Fire(eventName, {id = spot.id, position = spot.position, radius = spot.radius, spotType = spot.spotType, name = spot.name, description = spot.description, company = spot.company})
 	self.currentSpots[spot.id] = entered and spot or nil
 	self.timerRender:Restart()
 end

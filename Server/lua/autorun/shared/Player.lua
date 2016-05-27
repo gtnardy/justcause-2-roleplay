@@ -42,3 +42,8 @@ function Player:GetJobMaxExperience()
 	local maxExperience = self:GetValue("JobExperienceNecessary")
 	return maxExperience and maxExperience or 1
 end
+
+function Player:GetCompany()
+	local company = self:GetValue("IdCompany")
+	return company and company or nil
+end
