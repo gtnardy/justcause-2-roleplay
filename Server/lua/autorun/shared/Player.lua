@@ -47,3 +47,18 @@ function Player:GetCompany()
 	local company = self:GetValue("IdCompany")
 	return company and company or nil
 end
+
+function Player:GetWorking()
+	local working = self:GetValue("Working")
+	return working and working or nil
+end
+
+function Player:GetLicenses()
+	local licenses = self:GetValue("Licenses")
+	return licenses and licenses or {}
+end
+
+function Player:GetLifeInsurance()
+	local li = self:GetValue("LifeInsurance")
+	return li and li or false
+end

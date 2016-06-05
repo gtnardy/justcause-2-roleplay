@@ -15,9 +15,38 @@ end
 
 
 function Checkpoint:GameRender()
+	local playerPosition = LocalPlayer:GetPosition()
 	for _, spot in pairs(self.spotsNear) do
-		if not spot.image then break end
+		local spotPosition = spot:GetPosition()
+		if spot.radius and spot.radius < 50 and Vector3.Distance(playerPosition, spotPosition) < 100 then
+			spotPosition.y = Physics:GetTerrainHeight(spotPosition) + 0.3
+			self:RenderCircle(spotPosition, spot.radius, Color.Red)
+			self:RenderWord(spotPosition, tostring(spot.name):sub(1, 1), Color.Red)
+		end
 	end
+end
+
+
+function Checkpoint:RenderWord(position, word, color)
+	local t3 = Transform3()
+	local textSize = Render:GetTextSize(word, TextSize.Default)
+	t3:Translate(position)
+	t3:Scale(0.1)
+	t3:Translate(Vector3(-textSize.x / 2, 30, -textSize.y / 2))
+	t3:Rotate(Angle(Camera:GetAngle().yaw, math.pi, 0))
+	Render:SetTransform(t3)
+	Render:DrawText(Vector3.Zero, word, Color.Red, TextSize.Default)
+	Render:ResetTransform()
+end
+
+
+function Checkpoint:RenderCircle(position, radius, color)
+	local t3 = Transform3()
+	t3:Translate(position)
+	t3:Rotate(Angle(0, -math.pi/2, 0))
+	Render:SetTransform(t3)
+	Render:DrawCircle(Vector3.Zero, radius, Color.Red)
+	Render:ResetTransform()
 end
 
 

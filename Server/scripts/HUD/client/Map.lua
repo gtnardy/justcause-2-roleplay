@@ -201,9 +201,7 @@ end
 
 function Map:Vector3ToMapa(position)
 	position = Vector2(position.x, position.z) + self.tamanhoMapa / 2
-	
 	local posicaoFinal = position / self.proporcao + self.mapaImagem:GetPosition()
-	
 	return posicaoFinal	
 end
 
@@ -217,12 +215,12 @@ function Map:CenterMapa()
 end
 
 
-function Map:CenterAt(position)
+function Map:CenterAt(position, zoom)
 	position = Vector2(position.x, position.z)
 	self.zoom = 1
 	self:UpdateMapa()
 	self.mapaPosition = -(position / self.proporcao)
-	self:SetZoom(self.defaultZoom)
+	self:SetZoom(zoom and zoom or self.defaultZoom)
 end
 
 

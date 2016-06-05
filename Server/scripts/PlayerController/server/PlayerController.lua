@@ -46,7 +46,7 @@ end
 
 
 function PlayerController:UpdatePlayer(player)
-	local query = SQL:Query("SELECT Nome, NivelUsuario, Dinheiro, DinheiroBanco, IdJob, Nivel, Experiencia, UltimaPosicao, Fome, Sede, Combustivel, Idioma FROM Player WHERE Id = ?")
+	local query = SQL:Query("SELECT Nome, NivelUsuario, Dinheiro, DinheiroBanco, IdJob, Nivel, Experiencia, UltimaPosicao, Fome, Sede, Combustivel, Idioma, LicenseA, LicenseB, LicenseC, LicenseD, LicenseE, LicenseF, LifeInsurance FROM Player WHERE Id = ?")
 	query:Bind(1, player:GetSteamId().id)
 	local result = query:Execute()
 	if (#result > 0) then
@@ -64,6 +64,15 @@ function PlayerController:UpdatePlayer(player)
 		player:SetNetworkValue("Combustivel", tonumber(result[1].Combustivel))
 		player:SetValue("UltimaPosicao", self:StringToVector3(tostring(result[1].UltimaPosicao)))
 		player:SetNetworkValue("Language", result[1].Idioma)
+		player:SetNetworkValue("LifeInsurance", tonumber(result[1].LifeInsurance) == 1)
+		player:SetNetworkValue("Licenses", {
+			A = tonumber(result[1].LicenseA) == 1,
+			B = tonumber(result[1].LicenseB) == 1,
+			C = tonumber(result[1].LicenseC) == 1,
+			D = tonumber(result[1].LicenseD) == 1,
+			E = tonumber(result[1].LicenseE) == 1,
+			F = tonumber(result[1].LicenseF) == 1,
+		})
 
 		return true
 	else
@@ -99,7 +108,14 @@ function PlayerController:CreateNewPlayer(player)
 	command:Bind(4, tostring(os.date()))
 	command:Bind(5, tostring(os.date()))
 	command:Bind(6, tostring(player:GetPosition()))
+	command:Execute()
 	
+
+	local command = SQL:Command("INSERT INTO PlayerClothing (IdPlayer, IdClothing, ClothingType, Equipped) VALUES(?, ?, ?, ?)")
+	command:Bind(1, player:GetSteamId().id)
+	command:Bind(2, player:GetModelId())
+	command:Bind(3, "SKIN")
+	command:Bind(4, 1)
 	command:Execute()
 	
 	self:UpdatePlayer(player)
@@ -161,10 +177,13 @@ function PlayerController:ServerStart()
 		"Sede INT NOT NULL DEFAULT 70," ..
 		"Combustivel INT NOT NULL DEFAULT 30," ..
 		"NivelUsuario INT NOT NULL DEFAULT 1," ..
-		"HabilitacaoA BIT NOT NULL DEFAULT 0," ..
-		"HabilitacaoB BIT NOT NULL DEFAULT 0," ..
-		"HabilitacaoC BIT NOT NULL DEFAULT 0," ..
-		"HabilitacaoD BIT NOT NULL DEFAULT 0)")
+		"LicenseA BIT NOT NULL DEFAULT 0," ..
+		"LicenseB BIT NOT NULL DEFAULT 0," ..
+		"LicenseC BIT NOT NULL DEFAULT 0," ..
+		"LicenseD BIT NOT NULL DEFAULT 0," ..
+		"LicenseE BIT NOT NULL DEFAULT 0," ..
+		"LicenseF BIT NOT NULL DEFAULT 0," ..
+		"LifeInsurance BIT NOT NULL DEFAULT 0)")
 end
 
 

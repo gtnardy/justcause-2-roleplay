@@ -9,7 +9,7 @@ end
 
 
 function Objects:Render()
-	--Render:DrawText(Vector2(10, 200), tostring(Camera:GetPosition()) .. " " .. tostring(Camera:GetAngle()) .. " " .. tostring(LocalPlayer:GetLinearVelocity()), Color.Pink)
+	Render:DrawText(Vector2(10, 200), tostring(Camera:GetPosition()) .. " " .. tostring(Camera:GetAngle()) .. " " .. tostring(LocalPlayer:GetLinearVelocity()), Color.Pink)
 end
 
 

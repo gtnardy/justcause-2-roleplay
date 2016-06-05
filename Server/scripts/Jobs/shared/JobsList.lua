@@ -24,7 +24,7 @@ end
 function JobCategoriesList()
 	local Languages = Languages()
 	Languages:SetLanguage("JOBCATEGORY_01_N", {["en"] = "Common", ["pt"] = "Comum"})
-	Languages:SetLanguage("JOBCATEGORY_02_N", {["en"] = "Transport	", ["pt"] = "Transporte"})
+	Languages:SetLanguage("JOBCATEGORY_02_N", {["en"] = "Transport", ["pt"] = "Transporte"})
 	
 	local list = {
 		[1] = {name = Languages.JOBCATEGORY_01_N},
@@ -45,12 +45,18 @@ function JobsUnlockList()
 	Languages:SetLanguage("JOBUNLOCK_02_03_N", {["en"] = "Heli Taxi", ["pt"] = "Taxi Aéreo"})
 	Languages:SetLanguage("JOBUNLOCK_02_03_D", {["en"] = "Can drive and carry passengers on a helicopter Taxi. The fare is slightly further than a common Taxi.", ["pt"] = "Pode dirigir e transportar passageiros em um Taxi helicoptero. A tarifa é um pouco maior que um taxi convencional."})
 	
+	Languages:SetLanguage("JOBUNLOCK_03_01_N", {["en"] = "Motorcycle Delivery", ["pt"] = "Entrega de Moto"})
+	Languages:SetLanguage("JOBUNLOCK_03_01_D", {["en"] = "Can delivery goods on a motorcycle. Due be a small vehicle, its capacity of loading is reduced.", ["pt"] = "Pode transportar mercadorias dirigindo uma motocicleta. Por ser um veículo de pequeno porte, sua capacidade de carregamento também é reduzida."})
+	
 	local list = {
 		[1] = {},
 		[2] = {
 			[1] = {name = Languages.JOBUNLOCK_02_01_N, description = Languages.JOBUNLOCK_02_01_D},
 			[2] = {name = Languages.JOBUNLOCK_02_02_N, description = Languages.JOBUNLOCK_02_02_D},
 			[3] = {name = Languages.JOBUNLOCK_02_03_N, description = Languages.JOBUNLOCK_02_03_D},
+		},
+		[3] = {
+			[1] = {name = Languages.JOBUNLOCK_03_01_N, description = Languages.JOBUNLOCK_03_01_D},
 		}
 	}
 	return list

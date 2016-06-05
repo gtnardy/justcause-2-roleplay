@@ -3,8 +3,9 @@ class("ScreenProgress")(Tela)
 function ScreenProgress:__init()
 
 	YELLOW = Color(206, 194, 105)
-	GREEN = Color(104, 127, 113)
+	GREEN = Color(46, 204, 113)
 	RED = Color(191, 49, 54)
+	BLUE = Color(52, 152, 219)
 	
 	self:SetLanguages()
 	self.nome = self.Languages.LABEL_PROGRESS

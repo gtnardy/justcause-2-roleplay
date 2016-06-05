@@ -21,9 +21,16 @@ function Menu:__init()
 	
 	self.GUIStateObject = SharedObject.Create("GUIState")
 	
+	Events:Subscribe("ToogleMenu", self, self.ToogleMenu)
+	
 	Events:Subscribe("KeyUp", self, self.KeyUp)
 	Events:Subscribe("LocalPlayerInput", self, self.LocalPlayerInput)
 	Events:Subscribe("ModuleUnload", self, self.ModuleUnload)
+end
+
+
+function Menu:ToogleMenu()
+	self:Toogle()
 end
 
 

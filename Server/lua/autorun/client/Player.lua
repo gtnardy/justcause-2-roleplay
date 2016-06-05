@@ -12,3 +12,8 @@ function Player:GetJobUnlocksList()
 	local unlocks = self:GetValue("JobUnlocksList")
 	return unlocks and unlocks or {}
 end
+
+function Player:GetObjective()
+	local objective = self:GetValue("Objective")
+	return objective and objective or false
+end

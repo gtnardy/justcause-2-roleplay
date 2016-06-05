@@ -154,4 +154,4 @@ function Radio:ModuleLoad()
 end
 
 
-Radio = Radio()
+-- Radio = Radio()

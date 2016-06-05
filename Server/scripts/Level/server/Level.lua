@@ -26,6 +26,7 @@ function Level:EarnExperience(args)
 		self:SetLevel(args.player, level + 1)
 		self:SetExperience(args.player, experience + args.experience - maxExperience)
 		self:UpdatePlayer(args.player)
+		Events:Fire("PlayerUppedLevel")
 	else
 		self:SetExperience(args.player, experience + args.experience)
 	end

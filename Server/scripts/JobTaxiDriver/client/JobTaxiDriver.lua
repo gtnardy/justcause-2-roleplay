@@ -109,9 +109,9 @@ function JobTaxiDriver:LocalPlayerEnterVehicle(args)
 end
 
 
-function JobTaxiDriver:DriverUnlocked(player, vehicleId)
+function JobTaxiDriver:DriverUnlocked(player, vehicleModelId)
 	local unlocks = player:GetJobUnlocks()
-	return (vehicleModelId == 9 or (vehicleModelId == 70 and not unlocks[2].unlocked) or (vehicleModelId == 67 and not unlocks[3].unlocked))
+	return (vehicleModelId == 9 or (vehicleModelId == 70 and unlocks[2].unlocked) or (vehicleModelId == 67 and unlocks[3].unlocked))
 end
 
 

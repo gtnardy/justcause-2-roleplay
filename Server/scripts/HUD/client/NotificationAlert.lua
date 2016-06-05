@@ -31,7 +31,8 @@ function NotificationAlert:AddMessage(message)
 	label:SizeToContents()	
 	label:SetHeight(label:GetHeight() + 5)
 	label:Hide()
-
+	label:Subscribe("PostRender", self, function() label:Hide() end)
+	
 	table.insert(self.messages, {label = label, duration = self.duration})
 	ClientSound.Play(AssetLocation.Game, {bank_id = 11, sound_id = 2, position = Camera:GetPosition(), angle = Angle(), timeout = 10, variable_id_focus = 0})
 end

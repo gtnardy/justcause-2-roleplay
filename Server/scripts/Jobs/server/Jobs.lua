@@ -20,9 +20,10 @@ function Jobs:EarnJobExperience(args)
 	local maxExperience = args.player:GetJobMaxExperience()
 	
 	if (experience + args.experience >= maxExperience) then
-		self:SetLevel(args.player, level + 1)
+		self:SetLevel(args.player, jobLevel + 1)
 		self:SetExperience(args.player, experience + args.experience - maxExperience)
 		self:UpdateJobData(args.player)
+		Events:Fire("PlayerUppedJobLevel", {player = args.player})
 	else
 		self:SetExperience(args.player, experience + args.experience)
 	end
@@ -65,13 +66,13 @@ function Jobs:ChangeJob(args, player)
 		local command = SQL:Command("INSERT INTO PlayerJobs VALUES(?, ?, ?, ?)")
 		command:Bind(1, player:GetSteamId().id)
 		command:Bind(2, args.idJob)
-		command:Bind(3, 0)
+		command:Bind(3, 1)
 		command:Bind(4, 0)
 		command:Execute()	
 	end
 	
 	player:SetNetworkValue("IdJob", args.idJob)
-	self:UpdateJobData(args.player)
+	self:UpdateJobData(player)
 end
 
 

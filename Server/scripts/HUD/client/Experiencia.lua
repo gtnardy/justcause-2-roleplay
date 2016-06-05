@@ -4,7 +4,7 @@ function Experiencia:__init()
 	
 	self.level = 1
 	self.experience = 0
-	self.maxExperience = 100
+	self.maxExperience = 0
 	
 	self.toEarnExperience = 0
 	self:UpdateValues()
@@ -14,6 +14,14 @@ function Experiencia:__init()
 	self.levelBackground = Image.Create(AssetLocation.Resource, "Level_Background")
 	
 	Events:Subscribe("NetworkObjectValueChange", self, self.ObjectValueChange)
+	Events:Subscribe("ModuleLoad", self, self.ModuleLoad)
+end
+
+
+function Experiencia:ModuleLoad()
+	self.level = LocalPlayer:GetLevel()
+	self.experience = LocalPlayer:GetExperience()
+	self.maxExperience = LocalPlayer:GetMaxExperience()
 end
 
 
@@ -27,7 +35,7 @@ function Experiencia:ObjectValueChange(args)
 		elseif args.key == "Level" then
 			--self.level = tonumber(args.value)
 		elseif args.key == "MaxExperience" then
-			--self.maxExperience = tonumber(args.value)
+			self.maxExperience = tonumber(args.value)
 		end
 	end
 end

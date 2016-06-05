@@ -124,3 +124,42 @@ function SpotWaypoint:GetPosition()
 
 	return Waypoint:GetPosition()
 end
+
+
+class 'SpotObjective'
+
+function SpotObjective:__init()
+
+	self.name = "OBJECTIVE"
+	self.fixed = true
+	self.id = -1
+end
+
+
+function SpotObjective:Render(position, zoom, alpha)
+	local objective = LocalPlayer:GetObjective()
+	if not objective then return end
+	self.name = objective.name
+	
+	Render:DrawCircle(position, 11, Color(0, 0, 0, 150))
+	Render:DrawCircle(position, 10, objective.color)
+	Render:DrawCircle(position, 9, objective.color)
+	Render:FillCircle(position, 7, Color(0, 0, 0, 150))
+	Render:FillCircle(position, 6, objective.color)
+end
+
+
+function SpotObjective:RenderMinimap(positionMinimap, zoom, alpha)
+	self:Render(positionMinimap, zoom, alpha)
+end
+
+
+function SpotObjective:GetPosition()
+	local objective = LocalPlayer:GetObjective()
+	if not objective then return Vector3(0, 0, 0) end
+	if objective.dynamicPosition then
+		return objective.dynamicPosition:GetPosition()
+	else
+		return objective.position
+	end
+end

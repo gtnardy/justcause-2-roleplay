@@ -8,11 +8,10 @@ end
 
 
 function Establishment:SetEstablishment(args)
-	local command = SQL:Command("INSERT INTO Establishment (Name, Description, Position, Type) VALUES(?, ?, ?, ?)")
+	local command = SQL:Command("INSERT INTO Establishment (Name, Position, Type) VALUES(?, ?, ?)")
 	command:Bind(1, args.name)
-	command:Bind(2, args.description)
-	command:Bind(3, tostring(args.position))
-	command:Bind(4, args.establishmentType)
+	command:Bind(2, tostring(args.position))
+	command:Bind(3, args.establishmentType)
 	command:Execute()
 	
 	Events:Fire("AtualizarSpots")

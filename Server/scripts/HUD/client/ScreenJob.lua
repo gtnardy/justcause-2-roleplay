@@ -27,8 +27,9 @@ end
 
 function ScreenJob:UpdateModule()
 	local idJob = LocalPlayer:GetJob()
-	if idJob == 3 then
+	if idJob == Jobs.Deliver then
 		self.module = ScreenJobDeliver()
+		self.module.ScreenJob = self
 	end
 end
 

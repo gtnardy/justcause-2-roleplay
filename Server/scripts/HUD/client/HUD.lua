@@ -58,6 +58,7 @@ function HUD:AtualizarSpots(args)
 		self.Menu.ScreenJob.Map.spots = {}
 	
 		self.spots = {}
+		self:AddSpot(SpotObjective())
 		self:AddSpot(SpotPlayer())
 		self:AddSpot(SpotWaypoint())
 		
@@ -275,6 +276,10 @@ function HUD:RenderAlert()
 		end
 	end
 	
+	if LocalPlayer:GetValue("DrivingSchool") and not LocalPlayer:InVehicle() then
+		message = string.upper(self.Languages.TEXT_BACK_VEHICLE)
+	end
+	
 	if message then
 		local position = Render.Size / 2 - Render:GetTextSize(message, 20) / 2 + Vector2(0, 150)
 		self.Alert:Render(position, message, Color.White, 20)
@@ -283,6 +288,7 @@ end
 
 
 function HUD:SetLanguages()
+	self.Languages:SetLanguage("TEXT_BACK_VEHICLE", {["en"] = "Back to the vehicle!", ["pt"] = "Volte para o veículo!"})
 	self.Languages:SetLanguage("PLAYER_STARVING", {["en"] = "You are starving!", ["pt"] = "Você está morrendo de Fome!"})
 	self.Languages:SetLanguage("PLAYER_DYING_THIRST", {["en"] = "You are dying of thirst!", ["pt"] = "Você está morrendo de Sede!"})
 	self.Languages:SetLanguage("PLAYER_OUT_FUEL", {["en"] = "You are out of fuel!", ["pt"] = "Você está sem combustível!"})
@@ -290,6 +296,7 @@ function HUD:SetLanguages()
 	self.Languages:SetLanguage("LABEL_OXYGEN", {["en"] = "Oxygen", ["pt"] = "Oxigênio"})
 	self.Languages:SetLanguage("LABEL_THIRST", {["en"] = "Thirst", ["pt"] = "Sede"})
 	self.Languages:SetLanguage("LABEL_FUEL", {["en"] = "Fuel", ["pt"] = "Combustivel"})
+	
 	self.Languages:SetLanguage("VILLAGE_SPOT_DESCRIPTION", {["en"] = "Village", ["pt"] = "Vila"})
 	self.Languages:SetLanguage("STRONGHOLD_SPOT_DESCRIPTION", {["en"] = "Stronghold", ["pt"] = "Fortaleza Militar"})
 	self.Languages:SetLanguage("RADIO_SPOT_DESCRIPTION", {["en"] = "Radio", ["pt"] = "Posto Avançado"})
@@ -297,11 +304,15 @@ function HUD:SetLanguages()
 	self.Languages:SetLanguage("OIL_SPOT_DESCRIPTION", {["en"] = "Oil Rig", ["pt"] = "Plataforma Petrolífera"})
 	self.Languages:SetLanguage("MILITARY_SPOT_DESCRIPTION", {["en"] = "Military Base", ["pt"] = "Base Militar"})
 	self.Languages:SetLanguage("FUEL_SPOT_DESCRIPTION", {["en"] = "Gas Station", ["pt"] = "Posto de Combustível"})
-	self.Languages:SetLanguage("CLOTHINGSHOP_SPOT_DESCRIPTION", {["en"] = "Clothing Store", ["pt"] = "Loja de Roupas"})
+	self.Languages:SetLanguage("CLOTHINGSTORE_SPOT_DESCRIPTION", {["en"] = "Clothing Store", ["pt"] = "Loja de Roupas"})
+	self.Languages:SetLanguage("FOODSTORE_SPOT_DESCRIPTION", {["en"] = "Food Store", ["pt"] = "Loja de Alimentos"})
 	self.Languages:SetLanguage("CITY_SPOT_DESCRIPTION", {["en"] = "City", ["pt"] = "Cidade"})
 	self.Languages:SetLanguage("AIRPORT_SPOT_DESCRIPTION", {["en"] = "Airport", ["pt"] = "Aeroporto"})
 	self.Languages:SetLanguage("CLOTHFACTORY_SPOT_DESCRIPTION", {["en"] = "Cloth Factory", ["pt"] = "Fábrica de Tecidos"})
-	self.Languages:SetLanguage("JOBAGENCY_SPOT_DESCRIPTION", {["en"] = "Job Agency", ["pt"] = "Agência de Empregos"})
+	self.Languages:SetLanguage("JOBSAGENCY_SPOT_DESCRIPTION", {["en"] = "Job Agency", ["pt"] = "Agência de Empregos"})
+	self.Languages:SetLanguage("DRIVINGSCHOOL_SPOT_DESCRIPTION", {["en"] = "Driving School", ["pt"] = "Auto-Escola"})
+	self.Languages:SetLanguage("HOSPITAL_SPOT_DESCRIPTION", {["en"] = "Hospital", ["pt"] = "Hospital"})
+	self.Languages:SetLanguage("BANK_SPOT_DESCRIPTION", {["en"] = "Bank", ["pt"] = "Banco"})
 end
 
 

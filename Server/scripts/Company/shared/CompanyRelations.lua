@@ -1,8 +1,9 @@
 class 'CompanyRelations'
 
 function CompanyRelations:__init()
-	-- [CompanyTypes] = {FactoryTypes...}
+	-- [CompanyTypes] = {ProviderType...}
 	self.relations = {
-		[10] = {14}
+		[10] = {14},
+		[14] = {15},
 	}
 end

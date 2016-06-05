@@ -1,10 +1,12 @@
-class 'Bank'
+class ("Bank")(EstablishmentModule)
 
 function Bank:__init()
 	
-	self.active = false
-	self.atBank = false
-	self.ContextMenu = nil
+	self:ConfigureEstablishmentModule()
+	self:SetLanguages()
+	
+	self.enterEstablishmentMessage = self.Languages.PLAYER_ENTER_BANK
+	self.spotType = "BANK_SPOT"
 	
 	self.MoneyBank = 0
 	
@@ -12,12 +14,6 @@ function Bank:__init()
 		10, 50, 100, 500, 1000, 10000, 100000,
 	}
 	
-	Events:Subscribe("Render", self, self.Render)
-	Events:Subscribe("ModuleLoad", self, self.ModuleLoad)
-	Events:Subscribe("LocalPlayerExitSpot", self, self.LocalPlayerExitSpot)
-	Events:Subscribe("LocalPlayerEnterSpot", self, self.LocalPlayerEnterSpot)
-	Events:Subscribe("LocalPlayerInput", self, self.LocalPlayerInput)
-	Events:Subscribe("KeyUp", self, self.KeyUp)
 	Events:Subscribe("NetworkObjectValueChange", self, self.NetworkObjectValueChange)
 end
 
@@ -27,28 +23,6 @@ function Bank:NetworkObjectValueChange(args)
 		self.itemBalance.data.value = args.value
 		self.itemBalance.textRight = "$".. tostring(args.value)
 		self.MoneyBank = args.value
-	end
-end
-
-
-
-function Bank:SetActive(bool)
-	self.active = bool
-	if bool then
-		self:ConfigureContextMenu()
-		self.active = self.ContextMenu:SetActive(true)
-	else
-		if self.ContextMenu then
-			self.ContextMenu:SetActive(false)
-		end
-		self.ContextMenu = nil
-	end
-end
-
-
-function Bank:Render()
-	if self.active and self.ContextMenu and not self.ContextMenu.active then
-		self:SetActive(false)
 	end
 end
 
@@ -142,40 +116,6 @@ function Bank:Withdraw(itemValueWithdraw)
 end
 
 
-function Bank:KeyUp(args)
-	if args.key == string.byte("F") then
-		if self.atBank then
-			self:SetActive(not self.active)
-		elseif self.active then
-			self:SetActive(false)
-		end
-	end
-end
-
-
-function Bank:LocalPlayerInput(args)
-	if self.active and (args.input < Action.LookUp or args.input > Action.LookRight) then
-		return false
-	end
-end
-
-
-function Bank:LocalPlayerEnterSpot(args)
-	if args.spotType == "BANK_SPOT" then
-		self.atBank = true
-		Events:Fire("AddInformationAlert", {id = "PLAYER_ENTER_BANK", message = self.Languages.PLAYER_ENTER_BANK, priority = true})
-	end
-end
-
-
-function Bank:LocalPlayerExitSpot(args)
-	if args.spotType == "BANK_SPOT" then
-		self.atBank = false
-		Events:Fire("RemoveInformationAlert", {id = "PLAYER_ENTER_BANK"})
-	end
-end
-
-
 function Bank:SetLanguages()
 	self.Languages = Languages()
 	self.Languages:SetLanguage("PLAYER_ENTER_BANK", {["en"] = "Press F to access the Bank.", ["pt"] = "Pressione F para acessar o Banco."})
@@ -187,11 +127,6 @@ function Bank:SetLanguages()
 	self.Languages:SetLanguage("TEXT_NOT_ENOUGH_MONEY", {["en"] = "You do not have enough money!", ["pt"] = "Você não possui dinheiro suficiente!"})
 	self.Languages:SetLanguage("TEXT_NOT_ENOUGH_MONEY_BANK", {["en"] = "You do not have enough money in the bank!", ["pt"] = "Você não possui dinheiro suficiente no banco!"})
 	self.Languages:SetLanguage("TEXT_BALANCE_AVAILABLE", {["en"] = "Your available balance.", ["pt"] = "Seu saldo disponível."})
-end
-
-
-function Bank:ModuleLoad()
-	self:SetLanguages()
 end
 
 

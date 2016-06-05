@@ -3,6 +3,7 @@ class 'Admin'
 function Admin:__init()
 	
 	-- Admins Commands
+	Network:Subscribe("Vspawn", self, self.Vspawn) 
 	Network:Subscribe("Ban", self, self.Ban) 
 	Network:Subscribe("Kick", self, self.Kick) 
 	Network:Subscribe("TP", self, self.TP)
@@ -10,6 +11,17 @@ function Admin:__init()
 	
 	-- Sets
 	Network:Subscribe("SetEstablishment", self, self.SetEstablishment) 
+end
+
+
+function Admin:Vspawn(args, player)
+	local vehicle = Vehicle.Create({
+		position = player:GetPosition(),
+		model_id = args.model_id,
+		angle = player:GetAngle(),
+		world = player:GetWorld(),
+	})
+	player:EnterVehicle(vehicle, VehicleSeat.Driver)
 end
 
 

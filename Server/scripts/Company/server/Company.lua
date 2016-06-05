@@ -5,6 +5,8 @@ function Company:__init()
 	self.companies = {}
 	self.timer = Timer()
 	
+	self.queryCompany = "SELECT c.IdEstablishment, c.Value, c.Goods, c.Feedstock, c.Production, c.IdOwner, c.IsFactory, e.Type, e.Position, e.Name FROM Company c INNER JOIN Establishment e ON e.Id = c.IdEstablishment"
+	
 	self.CompanyRelations = CompanyRelations()
 	
 	Events:Subscribe("ServerStart", self, self.ServerStart)
@@ -12,13 +14,14 @@ function Company:__init()
 	Events:Subscribe("PostTick", self, self.PostTick)
 	Events:Subscribe("PlayerJoin", self, self.PlayerJoin)
 	Events:Subscribe("ClientModuleLoad", self, self.ClientModuleLoad)
+	Events:Subscribe("UpdateCompany", self, self.UpdateCompany)
 end
 
 
 function Company:PostTick()
-	if self.timer:GetSeconds() > 60 then
-		for idEstablishment, company in pairs(self.companies) do
-			self:Produce(idEstablishment, company)
+	if self.timer:GetSeconds() > 5 then
+		for _, company in pairs(self.companies) do
+			self:Produce(company)
 		end
 		self:UpdatePlayers()
 		self.timer:Restart()
@@ -26,81 +29,112 @@ function Company:PostTick()
 end
 
 
-function Company:Produce(id, company)
-
+function Company:Produce(company)
 	if company.isFactory or company.feedstock >= company.production then
-		self:SetGoods(id, company, company.goods + company.production)
+		self:SetGoods(company, company.goods + company.production)
 		if not company.isFactory then
-			self:SetFeedstock(id, company, company.feedstock - company.production)
+			self:SetFeedstock(company, company.feedstock - company.production)
 		end		
 	end
 
-	if not company.isFactory and company.feedstock <= company.production * 2 then
-		self:CreateDelivery(id, company)
+	if not company.isFactory and company.feedstock <= company.production * 3 then
+		self:CreateDelivery(company)
 	end
 end
 
 
-function Company:CreateDelivery(id, company)
+function Company:CreateDelivery(company)
+
+	local query = SQL:Query("SELECT 1 FROM JobDeliveryDeliveries WHERE IdEstablishmentTo = ?")
+	query:Bind(1, company.id)
+	local result = query:Execute()
+	if #result > 0 then return end
+
 	local relations = self.CompanyRelations.relations[company.typeCompany]
-	if relations then
-		local delivery = {to = {id = id, company = company}} -- from: to:
-		for idFactory, factory in pairs(self.companies) do
-			for _, typeCompany in pairs(relations) do
-				if factory.typeCompany == typeCompany then
-					if factory.goods >= company.production then
-						local distance = Vector3.Distance(company.position, factory.position)
-						if not delivery.distance or delivery.distance > distance then
-							delivery.distance = distance
-							delivery.from = {id = idFactory, company = factory}
-						end
+	if not relations then return end
+	
+	local delivery = {to = company} -- from: to:
+
+	for _, provider in pairs(self.companies) do
+		for _, typeCompany in pairs(relations) do
+			if provider.typeCompany == typeCompany then
+				if provider.goods >= company.production then
+					local distance = Vector3.Distance(company.position, provider.position)
+					if not delivery.distance or delivery.distance > distance then
+						delivery.distance = math.ceil(distance)
+						delivery.from = provider
+						delivery.cost = 2000
+						delivery.goods = company.production
+						delivery.deliveries = 3
 					end
 				end
 			end
 		end
-		
-		if delivery.from then
-			Events:Fire("CreateDelivery", delivery)
-		else
-		end
+	end
+	
+	if delivery.from then
+		Events:Fire("CreateDelivery", delivery)
 	end
 end
 
 
-function Company:SetGoods(id, company, goods)
+function Company:SetGoods(company, goods)
 	local command = SQL:Command("UPDATE Company SET Goods = ? WHERE IdEstablishment = ?")
 	command:Bind(1, goods)
-	command:Bind(2, id)
+	command:Bind(2, company.id)
 	command:Execute()
 	
 	company.goods = goods
 end
 
 
-function Company:SetFeedstock(id, company, feedstock)
+function Company:SetFeedstock(company, feedstock)
 	local command = SQL:Command("UPDATE Company SET Feedstock = ? WHERE IdEstablishment = ?")
 	command:Bind(1, feedstock)
-	command:Bind(2, id)
+	command:Bind(2, company.id)
 	command:Execute()
 	
 	company.feedstock = feedstock
 end
 
 
+function Company:InstanceCompany(args)
+	for _, company in pairs(self.companies) do
+		if company.id == tonumber(args.IdEstablishment) then
+			table.remove(self.companies, _)
+		end
+	end
+	
+	table.insert(self.companies, {
+		id = tonumber(args.IdEstablishment),
+		value = tonumber(args.Value),
+		idOwner = args.IdOwner,
+		goods = tonumber(args.Goods),
+		feedstock = tonumber(args.Feedstock),
+		production = tonumber(args.Production),
+		isFactory = not (tonumber(args.IsFactory) == 0),
+		typeCompany = tonumber(args.Type),
+		position = Vector3.ParseString(args.Position),
+		name = args.Name,
+	})
+end
+
+
+function Company:UpdateCompany(args)
+	local query = SQL:Query(self.queryCompany .. " WHERE c.IdEstablishment = ?")
+	query:Bind(1, args.id)
+	local result = query:Execute()
+	if #result > 0 then
+		self:InstanceCompany(result[1])
+	end
+end
+
+
 function Company:ModuleLoad()
-	local query = SQL:Query("SELECT c.IdEstablishment, c.Value, c.Goods, c.Feedstock, c.Production, c.IdOwner, c.IsFactory, e.Type, e.Position FROM Company c INNER JOIN Establishment e ON e.Id = c.IdEstablishment")
+	local query = SQL:Query(self.queryCompany)
 	local result = query:Execute()
 	for _, line in pairs(result) do
-		self.companies[tonumber(line.IdEstablishment)] = {
-			value = tonumber(line.Value),
-			idOwner = line.IdOwner,
-			goods = tonumber(line.Goods),
-			feedstock = tonumber(line.Feedstock),
-			production = tonumber(line.Production),
-			isFactory = not (tonumber(line.IsFactory) == 0),
-			typeCompany = tonumber(line.Type),
-			position = Vector3.ParseString(line.Position),
-		}
+		self:InstanceCompany(line)
 	end
 end
 
@@ -111,9 +145,9 @@ end
 
 
 function Company:UpdatePlayer(player)
-	for idCompany, company in pairs(self.companies) do
+	for _, company in pairs(self.companies) do
 		if company.idOwner and company.idOwner == player:GetSteamId().id then
-			player:SetNetworkValue("IdCompany", idCompany)
+			player:SetNetworkValue("IdCompany", company.id)
 		end
 	end
 	Network:Send(player, "UpdateData", {companies = self.companies})

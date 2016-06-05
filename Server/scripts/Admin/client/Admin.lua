@@ -42,13 +42,19 @@ function Admin:ConfigureCommands()
 		end
 	end)
 	
-	self:SetCommand("SETESTABLISHMENT", 2, {"type", "name", "description"}, function(args)
+	self:SetCommand("SETESTABLISHMENT", 2, {"type", "name"}, function(args)
 		Network:Send("SetEstablishment", {
 			position = LocalPlayer:GetPosition() + Vector3(0, 1, 0),
 			establishmentType = tonumber(args[1]),
 			name = args[2],
-			description = args[3],
 		})
+	end)
+	
+	self:SetCommand("VSPAWN", 2, {"model_id"}, function(args)
+		local model_id = tonumber(args[1])
+		if model_id then
+			Network:Send("Vspawn", {model_id = model_id})
+		end
 	end)
 end
 

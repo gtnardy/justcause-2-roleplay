@@ -114,6 +114,8 @@ function JobTaxiDriver:TaximeterOff(args, player)
 		if args.passenger.player then
 			Network:Send(args.passenger.player, "TaximeterOff")
 			args.passenger.player:SetMoney(args.passenger.player:GetMoney() - price)
+			Events:Fire("EarnJobExperience", {player = player, experience = price})
+			Events:Fire("EarnExperience", {player = player, experience = price})
 		else
 			local command = SQL:Command("UPDATE Player SET Dinheiro = Dinheiro - ? WHERE Id = ?")
 			command:Bind(1, price)

@@ -28,6 +28,39 @@ function CompanyModule:GetContextMenuModule(company)
 	itemCompany.list = ContextMenuList({subtitle =  string.upper(textRight)})
 	itemCompany.list.subtitleNumeric = false
 	
+	if LocalPlayer:GetJob() == Jobs.Deliver then
+		local itemCompanyDeliver = ContextMenuItem({
+			text = self.Languages.LABEL_COMPANY_NO_DELIVERY,
+			legend = self.Languages.LABEL_COMPANY_NO_DELIVERY_DESCRIPTION,
+			enabled = false,
+		})
+		
+		itemCompany.list:AddItem(itemCompanyDeliver)
+		local request = AsyncRequest():Request("RequestDelivery", {id = company.id},
+			function(data)
+				if LocalPlayer:GetWorking() then
+					if data.to and data.deliveringToThis then
+						itemCompanyDeliver.text = self.Languages.LABEL_COMPANY_TO_UNLOAD
+						itemCompanyDeliver:SetLegend(self.Languages.LABEL_COMPANY_TO_UNLOAD_DESCRIPTION)
+						itemCompanyDeliver.enabled = true
+						itemCompanyDeliver.pressEvent = function()
+							Events:Fire("DoneDelivery")
+						end
+					end
+				elseif #data.from > 0 and data.from[1].enabled then
+					itemCompanyDeliver.text = self.Languages.LABEL_COMPANY_TO_LOAD
+					itemCompanyDeliver.textRight = "x" .. tostring(data.from[1].deliveries)
+					itemCompanyDeliver:SetLegend(self.Languages.LABEL_COMPANY_TO_LOAD_DESCRIPTION)
+					itemCompanyDeliver.enabled = true
+					itemCompanyDeliver.pressEvent = function()
+						Events:Fire("StartDelivery", data.from[1])
+					end
+				end
+			end
+
+		)
+	end
+	
 	local itemCompanyProduction = ContextMenuItem({
 		text = self.Languages.LABEL_COMPANY_PRODUCTION,
 		textRight = tostring(company.production) .. " /" .. self.Languages.TEXT_HOUR,
@@ -96,6 +129,12 @@ end
 
 function CompanyModule:SetLanguages()
 	self.Languages = Languages()
+	self.Languages:SetLanguage("LABEL_COMPANY_TO_UNLOAD", {["en"] = "Unload delivery", ["pt"] = "Descarregar entrega"})
+	self.Languages:SetLanguage("LABEL_COMPANY_TO_UNLOAD_DESCRIPTION", {["en"] = "Unload delivery", ["pt"] = "Descarregar entrega"})
+	self.Languages:SetLanguage("LABEL_COMPANY_TO_LOAD", {["en"] = "Start delivery", ["pt"] = "Iniciar entrega"})
+	self.Languages:SetLanguage("LABEL_COMPANY_TO_LOAD_DESCRIPTION", {["en"] = "Start the delivery for this company.", ["pt"] = "Iniciar a entrega para essa empresa."})
+	self.Languages:SetLanguage("LABEL_COMPANY_NO_DELIVERY", {["en"] = "Delivery not avaliable", ["pt"] = "Entrega não disponível"})
+	self.Languages:SetLanguage("LABEL_COMPANY_NO_DELIVERY_DESCRIPTION", {["en"] = "The delivery for this company is not available yet.", ["pt"] = "A entrega para essa empresa ainda não está disponível."})
 	self.Languages:SetLanguage("LABEL_COMPANY", {["en"] = "Company", ["pt"] = "Empresa"})
 	self.Languages:SetLanguage("LABEL_COMPANY_PRODUCTION", {["en"] = "Production", ["pt"] = "Produção"})
 	self.Languages:SetLanguage("LABEL_COMPANY_SELL", {["en"] = "Sell the Company", ["pt"] = "Vender a Empresa"})
