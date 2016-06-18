@@ -8,6 +8,8 @@ function Level:__init()
 	Events:Subscribe("ServerStart", self, self.ServerStart)
 	Events:Subscribe("PlayerJoin", self, self.PlayerJoin)
 	
+	Events:Subscribe("NetworkObjectValueChange", self, self.ObjectValueChange)
+	
 	Events:Subscribe("EarnExperience", self, self.EarnExperience)
 	-- Events:Subscribe("PlayerChat", self, self.PlayerChat)
 end
@@ -53,6 +55,15 @@ end
 
 function Level:GetMaxExperience(level)
 	return self.LevelExperiences[level] and self.LevelExperiences[level] or 99999
+end
+
+
+function Level:ObjectValueChange(args)
+	if args.object.__type == "Player" then
+		if args.key == "Level" then
+			self:UpdatePlayer(args.object)
+		end
+	end
 end
 
 

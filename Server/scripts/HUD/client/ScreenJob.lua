@@ -9,6 +9,7 @@ function ScreenJob:__init()
 	self:UpdateModule()
 	self.nome = self.Languages.LABEL_JOB
 	self.Map = Map()
+	self.Map.active = false
 	self.Map.notFade = true
 	self.Map.centerAtPlayer = false
 	self.Map.defaultZoom = 0.2

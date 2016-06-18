@@ -14,7 +14,7 @@ function Establishment:SetEstablishment(args)
 	command:Bind(3, args.establishmentType)
 	command:Execute()
 	
-	Events:Fire("AtualizarSpots")
+	Events:Fire("UpdateSpots", {establishmentType = args.establishmentType})
 end
 
 

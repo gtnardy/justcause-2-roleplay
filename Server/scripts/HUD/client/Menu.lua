@@ -38,6 +38,7 @@ function Menu:AddTela(tela)
 
 	local botao = Botao({texto = tela.nome, tela = tela})
 	table.insert(self.botoes, botao)
+	botao:SetActive(false)
 end
 
 
@@ -69,7 +70,7 @@ end
 
 
 function Menu:SetActiveScreen(screen)
-	if self.botoes[screen] then
+	if self.active and self.botoes[screen] then
 		self.botoes[self.actualScreen]:SetActive(false)
 		self.actualScreen = screen
 		self.botoes[self.actualScreen]:SetActive(true)

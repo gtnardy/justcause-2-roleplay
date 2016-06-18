@@ -1,0 +1,1 @@
+DamageEntity.Starve = 5

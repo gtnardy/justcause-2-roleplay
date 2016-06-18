@@ -6,7 +6,6 @@ function Feeding:__init()
 	Network:Subscribe("Starving", self, self.Starving)
 	Events:Subscribe("ServerStart", self, self.ServerStart)
 	Events:Subscribe("ConsumeFood", self, self.ConsumeFood)
-	DamageEntity.Starve = 5
 end
 
 

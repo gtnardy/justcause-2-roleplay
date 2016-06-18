@@ -34,7 +34,6 @@ function HUD:__init()
 	
 	self.requestingAtualizarSpots = false
 	self.timer = Timer()
-	
 	Events:Subscribe("PostTick", self, self.PostTick)	
 	
 	Events:Subscribe("Render", self, self.Render) 
@@ -298,21 +297,26 @@ function HUD:SetLanguages()
 	self.Languages:SetLanguage("LABEL_FUEL", {["en"] = "Fuel", ["pt"] = "Combustivel"})
 	
 	self.Languages:SetLanguage("VILLAGE_SPOT_DESCRIPTION", {["en"] = "Village", ["pt"] = "Vila"})
+	self.Languages:SetLanguage("CITY_SPOT_DESCRIPTION", {["en"] = "City", ["pt"] = "Cidade"})
+	self.Languages:SetLanguage("AIRPORT_SPOT_DESCRIPTION", {["en"] = "Airport", ["pt"] = "Aeroporto"})
+	self.Languages:SetLanguage("PORT_SPOT_DESCRIPTION", {["en"] = "Port", ["pt"] = "Porto"})
+	self.Languages:SetLanguage("MILITARY_SPOT_DESCRIPTION", {["en"] = "Military Base", ["pt"] = "Base Militar"})
 	self.Languages:SetLanguage("STRONGHOLD_SPOT_DESCRIPTION", {["en"] = "Stronghold", ["pt"] = "Fortaleza Militar"})
 	self.Languages:SetLanguage("RADIO_SPOT_DESCRIPTION", {["en"] = "Radio", ["pt"] = "Posto Avançado"})
-	self.Languages:SetLanguage("PORT_SPOT_DESCRIPTION", {["en"] = "Port", ["pt"] = "Porto"})
 	self.Languages:SetLanguage("OIL_SPOT_DESCRIPTION", {["en"] = "Oil Rig", ["pt"] = "Plataforma Petrolífera"})
-	self.Languages:SetLanguage("MILITARY_SPOT_DESCRIPTION", {["en"] = "Military Base", ["pt"] = "Base Militar"})
 	self.Languages:SetLanguage("FUEL_SPOT_DESCRIPTION", {["en"] = "Gas Station", ["pt"] = "Posto de Combustível"})
 	self.Languages:SetLanguage("CLOTHINGSTORE_SPOT_DESCRIPTION", {["en"] = "Clothing Store", ["pt"] = "Loja de Roupas"})
 	self.Languages:SetLanguage("FOODSTORE_SPOT_DESCRIPTION", {["en"] = "Food Store", ["pt"] = "Loja de Alimentos"})
-	self.Languages:SetLanguage("CITY_SPOT_DESCRIPTION", {["en"] = "City", ["pt"] = "Cidade"})
-	self.Languages:SetLanguage("AIRPORT_SPOT_DESCRIPTION", {["en"] = "Airport", ["pt"] = "Aeroporto"})
-	self.Languages:SetLanguage("CLOTHFACTORY_SPOT_DESCRIPTION", {["en"] = "Cloth Factory", ["pt"] = "Fábrica de Tecidos"})
+	self.Languages:SetLanguage("BANK_SPOT_DESCRIPTION", {["en"] = "Bank", ["pt"] = "Banco"})
 	self.Languages:SetLanguage("JOBSAGENCY_SPOT_DESCRIPTION", {["en"] = "Job Agency", ["pt"] = "Agência de Empregos"})
+	self.Languages:SetLanguage("CLOTHINGFACTORY_SPOT_DESCRIPTION", {["en"] = "Clothing Factory", ["pt"] = "Fábrica de Tecidos"})
+	self.Languages:SetLanguage("FOODFACTORY_SPOT_DESCRIPTION", {["en"] = "Food Factory", ["pt"] = "Fábrica de Alimentos"})
 	self.Languages:SetLanguage("DRIVINGSCHOOL_SPOT_DESCRIPTION", {["en"] = "Driving School", ["pt"] = "Auto-Escola"})
 	self.Languages:SetLanguage("HOSPITAL_SPOT_DESCRIPTION", {["en"] = "Hospital", ["pt"] = "Hospital"})
-	self.Languages:SetLanguage("BANK_SPOT_DESCRIPTION", {["en"] = "Bank", ["pt"] = "Banco"})
+	self.Languages:SetLanguage("FARM_SPOT_DESCRIPTION", {["en"] = "Farm", ["pt"] = "Fazenda"})
+	self.Languages:SetLanguage("WEAPONSSTORE_SPOT_DESCRIPTION", {["en"] = "Weapons Store", ["pt"] = "Loja de Armas"})
+	self.Languages:SetLanguage("WEAPONSFACTORY_SPOT_DESCRIPTION", {["en"] = "Weapons Factory", ["pt"] = "Fábrica de Armas"})
+	self.Languages:SetLanguage("SYNTHETICFABRICFACTORY_SPOT_DESCRIPTION", {["en"] = "Synthetic Fabric Factory", ["pt"] = "Fábrica de Tecidos Sinteticos"})
 end
 
 

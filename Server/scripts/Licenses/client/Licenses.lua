@@ -18,8 +18,12 @@ function Licenses:LocalPlayerEnterVehicle(args)
 	local vehicleType = self.VehicleList:GetVehicleType(modelId)
 	local licenseVehicleNecessary = self.VehicleList:GetLicenseType(vehicleType)
 	
-	if ((vehicleType == 1 or vehicleType == 2) and LocalPlayer:GetLevel() < 5) then
-		Events:Fire("AddNotificationAlert", {message = self.Languages.PLAYER_DO_NOT_LICENSED_YET})
+	if vehicleType == 1 or vehicleType == 2 or vehicleType == 6 or vehicleType == 7 then
+		if LocalPlayer:GetLevel() < 5 then
+			Events:Fire("AddNotificationAlert", {message = self.Languages.PLAYER_DO_NOT_LICENSED_YET})
+		else
+			Events:Fire("AddNotificationAlert", {message = self.Languages.PLAYER_DO_NOT_LICENSED_WARNING})
+		end
 	elseif not licenses[licenseVehicleNecessary] then
 		Events:Fire("AddNotificationAlert", {message = self.Languages.PLAYER_DO_NOT_LICENSED})
 		Network:Send("EjectPlayer")
@@ -29,6 +33,7 @@ end
 
 function Licenses:SetLanguages()
 	self.Languages = Languages()
+	self.Languages:SetLanguage("PLAYER_DO_NOT_LICENSED_WARNING", {["en"] = "You are not licensed to drive this vehicle. Go to a driving school.", ["pt"] = "Você não possui habilitação para dirigir este veículo, procure uma auto-escola."})
 	self.Languages:SetLanguage("PLAYER_DO_NOT_LICENSED", {["en"] = "You are not licensed to drive this vehicle. Go to a driving school.", ["pt"] = "Você não possui habilitação para dirigir este veículo, procure uma auto-escola."})
 	self.Languages:SetLanguage("PLAYER_DO_NOT_LICENSED_YET", {["en"] = "Alert! You are not licensed to drive this vehicle, but you can drive because you level is below 5, go to a driving school faster you can.", ["pt"] = "Atenção! Você não possui habilitação para dirigir este veículo, porém como seu nível está abaixo de 5 você poderá, procure uma auto-escola o mais rápido possível."})
 end

@@ -62,3 +62,18 @@ function Player:GetLifeInsurance()
 	local li = self:GetValue("LifeInsurance")
 	return li and li or false
 end
+
+function Player:GetWantedStars()
+	local li = self:GetValue("WantedStars")
+	return li and li or {}
+end
+
+function Player:GetTrafficTickets()
+	local li = self:GetValue("TrafficTickets")
+	return li and li or {}
+end
+
+function Player:GetArrested()
+	local a = self:GetValue("Arrested")
+	return a and a or false
+end

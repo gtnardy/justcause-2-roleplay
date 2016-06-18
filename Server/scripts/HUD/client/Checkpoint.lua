@@ -19,7 +19,7 @@ function Checkpoint:GameRender()
 	for _, spot in pairs(self.spotsNear) do
 		local spotPosition = spot:GetPosition()
 		if spot.radius and spot.radius < 50 and Vector3.Distance(playerPosition, spotPosition) < 100 then
-			spotPosition.y = Physics:GetTerrainHeight(spotPosition) + 0.3
+			-- spotPosition.y = Physics:GetTerrainHeight(spotPosition) + 0.3
 			self:RenderCircle(spotPosition, spot.radius, Color.Red)
 			self:RenderWord(spotPosition, tostring(spot.name):sub(1, 1), Color.Red)
 		end

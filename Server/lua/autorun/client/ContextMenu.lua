@@ -455,11 +455,16 @@ function ContextMenuStatistics:Render(position, width)
 	position.x = position.x + self.margin.x
 	position.y = position.y + 10
 	for _, bar in pairs(self.bars) do
+		local barColor = Color(240, 240, 240)
 		Render:DrawText(position, bar.text, Color.White, self.textSize)
 		position.y = position.y + 5
 		Render:FillArea(Vector2(position.x + width - self.margin.x * 2 - self.barSize.x, position.y), self.barSize, Color(75, 75, 75))
 		local w = bar.value * self.barSize.x / 100
-		Render:FillArea(Vector2(position.x + width - self.margin.x * 2 - self.barSize.x, position.y), Vector2(w, self.barSize.y), Color(240, 240, 240))
+		if w < 0 then
+			w = math.abs(w)
+			barColor = Color(231, 76, 60)
+		end
+		Render:FillArea(Vector2(position.x + width - self.margin.x * 2 - self.barSize.x, position.y), Vector2(w, self.barSize.y), barColor)
 		position.y = position.y + 25
 	end
 end

@@ -58,7 +58,7 @@ function VehicleList:GetVehicleType(vehicleModelId)
 			end
 		end
 	end
-	return 0
+	return 2
 end
 
 

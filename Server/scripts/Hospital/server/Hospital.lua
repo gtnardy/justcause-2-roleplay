@@ -13,6 +13,9 @@ end
 
 function Hospital:PlayerDeath(args)
 		
+	args.player:SetNetworkValue("Fome", 70)
+	args.player:SetNetworkValue("Sede", 70)
+
 	-- {distance, position}
 	local nearHospital = nil
 	for _, hospital in pairs(self.hospitals) do

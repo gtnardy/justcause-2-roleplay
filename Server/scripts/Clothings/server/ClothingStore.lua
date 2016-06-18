@@ -13,6 +13,8 @@ function ClothingStore:__init()
 	Events:Subscribe("ModuleLoad", self, self.ModuleLoad)
 	Events:Subscribe("ClientModuleLoad", self, self.ClientModuleLoad)
 	Events:Subscribe("ServerStart", self, self.ServerStart)
+	
+	Events:Subscribe("UpdateSpots", self, self.UpdateSpots)
 end
 
 
@@ -24,6 +26,15 @@ end
 
 function ClothingStore:TrySkin(args, player)
 	player:SetModelId(tonumber(args.id))
+end
+
+
+function ClothingStore:UpdateSpots(args)
+	if args.establishmentType != 10 then return end
+	self:ModuleLoad()
+	for player in Server:GetPlayers() do
+		Network:Send(player, "UpdateClothingStores", {ClothingStores = self.ClothingStores})
+	end
 end
 
 
@@ -112,26 +123,26 @@ end
 
 function ClothingStore:ModuleLoad()
 
-	local query = SQL:Query("SELECT DISTINCT(IdEstablishment) FROM EstablishmentClothing")
+	local query = SQL:Query("SELECT Id FROM Establishment")
 	local establishments = query:Execute()
 	
 	for e, establishment in ipairs(establishments) do
-		self.ClothingStores[establishment.IdEstablishment] = {}
+		self.ClothingStores[establishment.Id] = {}
 		
 		query = SQL:Query("SELECT DISTINCT(ClothingType) FROM EstablishmentClothing WHERE IdEstablishment = ? ORDER BY ClothingType")
-		query:Bind(1, establishment.IdEstablishment)
+		query:Bind(1, establishment.Id)
 		local clothingTypes = query:Execute()
 		
 		for t, clothingType in ipairs(clothingTypes) do
-			self.ClothingStores[establishment.IdEstablishment][clothingType.ClothingType] = {}
+			self.ClothingStores[establishment.Id][clothingType.ClothingType] = {}
 			
 			query = SQL:Query("SELECT IdClothing FROM EstablishmentClothing WHERE IdEstablishment = ? AND ClothingType = ?")
-			query:Bind(1, establishment.IdEstablishment)
+			query:Bind(1, establishment.Id)
 			query:Bind(2, clothingType.ClothingType)
 			local clothings = query:Execute()
 			
 			for v, clothing in ipairs(clothings) do
-				table.insert(self.ClothingStores[establishment.IdEstablishment][clothingType.ClothingType], clothing.IdClothing)
+				table.insert(self.ClothingStores[establishment.Id][clothingType.ClothingType], clothing.IdClothing)
 			end
 		end
 	end

@@ -81,6 +81,8 @@ function Feeding:PostTick()
 	if self.timer:GetSeconds() > 1 then
 		self.timer:Restart()
 		
+		if LocalPlayer:GetArrested() then return end
+		
 		local gasto = self:GetGasto()
 
 		self.Fome = math.max(self.Fome - gasto, 0)

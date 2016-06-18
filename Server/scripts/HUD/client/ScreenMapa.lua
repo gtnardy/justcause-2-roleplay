@@ -8,6 +8,7 @@ function ScreenMapa:__init()
 	
 	self.nome = self.Languages.LABEL_MAP
 	self.Map = Map()
+	self.Map.active = false
 end
 
 

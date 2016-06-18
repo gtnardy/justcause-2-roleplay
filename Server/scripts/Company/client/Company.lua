@@ -5,7 +5,7 @@ function Company:__init()
 	self:SetLanguages()
 	
 	self.companies = {}
-	self.whitelistCompanies = {"CLOTHFACTORY_SPOT", "COTTONFACTORY_SPOT"}
+	self.whitelistCompanies = {"WEAPONSFACTORY_SPOT", "CLOTHINGFACTORY_SPOT", "FOODFACTORY_SPOT", "FARM_SPOT"}
 	
 	self.atCompany = false
 	self.active = false

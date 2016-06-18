@@ -4,7 +4,7 @@ function HUD:__init()
 
 	Network:Subscribe("RequestAtualizarSpots", self, self.RequestAtualizarSpots)
 	Events:Subscribe("ModuleLoad", self, self.ModuleLoad)
-	Events:Subscribe("AtualizarSpots", self, self.AtualizarSpots)
+	Events:Subscribe("UpdateSpots", self, self.UpdateSpots)
 	
 	self.spots = {}
 end
@@ -19,6 +19,12 @@ end
 
 function HUD:RequestAtualizarSpots(args, player)
 	Network:Send(player, "AtualizarSpots", {spots = self.spots})
+end
+
+
+function HUD:UpdateSpots()
+	self:ModuleLoad()
+	self:AtualizarSpots()
 end
 
 

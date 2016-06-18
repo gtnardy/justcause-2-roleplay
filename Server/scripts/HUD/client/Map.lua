@@ -225,6 +225,7 @@ end
 
 
 function Map:WaypointAt(mousePosition)
+Console:Print("mapway")
 	if self.spotHover then
 		Waypoint:SetPosition(self.spotHover:GetPosition())
 	else
