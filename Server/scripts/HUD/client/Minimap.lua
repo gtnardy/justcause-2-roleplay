@@ -45,6 +45,7 @@ function Minimapa:RenderSpots(posicao, tamanho)
 		local spot = self.spotsNear[i]
 		if (spot) then 			
 			local pos = spot:GetPosition()
+			if not pos then break end
 			
 			local posMinimapa = self:Vector3ToMinimap(pos, posicao, tamanho, spot.fixed)
 

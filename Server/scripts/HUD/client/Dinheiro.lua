@@ -6,7 +6,7 @@ function Dinheiro:__init()
 	self.moneyChanged = nil
 	
 	Events:Subscribe("LocalPlayerMoneyChange", self, self.LocalPlayerMoneyChange)
-	self.timerVisible = Timer()
+
 	self.timerMoneyChanged = Timer()
 end
 
@@ -34,7 +34,6 @@ end
 
 
 function Dinheiro:LocalPlayerMoneyChange(args)
-	self.timerVisible:Restart()
 	self.timerMoneyChanged:Restart()
 	self.moneyChanged = args.new_money - args.old_money
 end

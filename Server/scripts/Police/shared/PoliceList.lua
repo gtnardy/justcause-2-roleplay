@@ -13,6 +13,8 @@ function PoliceList:__init()
 	}
 	
 	self.prisionLocation = Vector3(0, 0, 0)
+	self.weaponLicensePrice = 5000
+	self.weaponLicenseMinimumLevel = 5
 end
 
 

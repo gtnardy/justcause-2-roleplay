@@ -70,9 +70,9 @@ function Objective:Render(position)
 			self.WaypointScreen.position = self.dynamicPosition:GetPosition()
 		end
 		self.WaypointScreen:Render()
-	end
-	
-	if self.removeOnEnter and Vector3.Distance(LocalPlayer:GetPosition(), self.WaypointScreen.position) < 5 then
-		self:RemoveObjective()
+		
+		if self.removeOnEnter and Vector3.Distance(LocalPlayer:GetPosition(), self.WaypointScreen.position) < 5 then
+			self:RemoveObjective()
+		end
 	end
 end

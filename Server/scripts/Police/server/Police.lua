@@ -8,6 +8,7 @@ function Police:__init()
 	Events:Subscribe("ServerStart", self, self.ServerStart)
 	Events:Subscribe("PlayerJoin", self, self.PlayerJoin)
 	
+	Network:Subscribe("AcquireWeaponLicense", self, self.AcquireWeaponLicense)
 	Network:Subscribe("PayWantedStar", self, self.PayWantedStar)
 	Network:Subscribe("PayTrafficTicket", self, self.PayTrafficTicket)
 	Network:Subscribe("EscapedPrision", self, self.EscapedPrision)
@@ -21,6 +22,20 @@ end
 
 function Police:EscapedPrision(args, player)
 	player:SetPosition(self.PoliceList.prisionLocation)
+end
+
+
+function Police:AcquireWeaponLicense(args, player)
+	if player:GetMoney() >= self.PoliceList.weaponLicensePrice
+	and player:GetLevel() >= self.PoliceList.weaponLicenseMinimumLevel
+	and not player:GetWeaponLicense() then
+	
+		local command = SQL:Command("UPDATE Player SET WeaponLicense = 1 WHERE Id = ?")
+		command:Bind(1, player:GetSteamId().id)
+		command:Execute()
+
+		player:SetNetworkValue("WeaponLicense", true)
+	end
 end
 
 
@@ -69,7 +84,7 @@ end
 
 
 function Police:UpdatePlayer(player)
-	local query = SQL:Query("SELECT * FROM PlayerTrafficTicket WHERE IdPlayer = ?"),
+	local query = SQL:Query("SELECT * FROM PlayerTrafficTicket WHERE IdPlayer = ?")
 	query:Bind(1, player:GetSteamId().id)
 	local trafficTickets = query:Execute()
 	local tickets = {}

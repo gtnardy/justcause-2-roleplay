@@ -156,10 +156,12 @@ end
 
 function SpotObjective:GetPosition()
 	local objective = LocalPlayer:GetObjective()
-	if not objective then return Vector3(0, 0, 0) end
+	if not objective then return Vector3.Zero end
 	if objective.dynamicPosition then
 		return objective.dynamicPosition:GetPosition()
-	else
+	elseif objective.position then
 		return objective.position
 	end
+	
+	return Vector3.Zero
 end

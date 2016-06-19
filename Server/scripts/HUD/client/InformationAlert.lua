@@ -63,7 +63,6 @@ function InformationAlert:RemoveMessage(id)
 	end
 	self.label:Hide()
 	self:NextMessage()
-	Events:Fire("RemovedInformationAlert", {id = id})
 end
 
 

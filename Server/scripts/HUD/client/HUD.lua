@@ -200,6 +200,10 @@ function HUD:Render()
 		self.Dinheiro:Render(positionUpperRight)
 	end
 	
+	if self.Weapons then
+		self.Weapons:Render(Vector2(Render.Width - CONFORTOHUD.x, CONFORTOHUD.y + 30), Vector2(160, 24), self.Languages)
+	end
+	
 	positionUpperRight.x = positionUpperRight.x - 30
 	
 	if self.Experiencia then
@@ -315,6 +319,7 @@ function HUD:SetLanguages()
 	self.Languages:SetLanguage("HOSPITAL_SPOT_DESCRIPTION", {["en"] = "Hospital", ["pt"] = "Hospital"})
 	self.Languages:SetLanguage("FARM_SPOT_DESCRIPTION", {["en"] = "Farm", ["pt"] = "Fazenda"})
 	self.Languages:SetLanguage("WEAPONSSTORE_SPOT_DESCRIPTION", {["en"] = "Weapons Store", ["pt"] = "Loja de Armas"})
+	self.Languages:SetLanguage("POLICEDEPARTMENT_SPOT_DESCRIPTION", {["en"] = "Police Department", ["pt"] = "Departamento de Polícia"})
 	self.Languages:SetLanguage("WEAPONSFACTORY_SPOT_DESCRIPTION", {["en"] = "Weapons Factory", ["pt"] = "Fábrica de Armas"})
 	self.Languages:SetLanguage("SYNTHETICFABRICFACTORY_SPOT_DESCRIPTION", {["en"] = "Synthetic Fabric Factory", ["pt"] = "Fábrica de Tecidos Sinteticos"})
 end

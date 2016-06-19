@@ -46,7 +46,7 @@ end
 
 
 function PlayerController:UpdatePlayer(player)
-	local query = SQL:Query("SELECT Nome, NivelUsuario, Dinheiro, DinheiroBanco, IdJob, Nivel, Experiencia, UltimaPosicao, Fome, Sede, Combustivel, Idioma, LicenseA, LicenseB, LicenseC, LicenseD, LicenseE, LicenseF, LifeInsurance FROM Player WHERE Id = ?")
+	local query = SQL:Query("SELECT Nome, NivelUsuario, Dinheiro, DinheiroBanco, IdJob, Nivel, Experiencia, UltimaPosicao, Fome, Sede, Combustivel, Idioma, LicenseA, LicenseB, LicenseC, LicenseD, LicenseE, LicenseF, LifeInsurance, WeaponLicense FROM Player WHERE Id = ?")
 	query:Bind(1, player:GetSteamId().id)
 	local result = query:Execute()
 	if (#result > 0) then
@@ -64,7 +64,6 @@ function PlayerController:UpdatePlayer(player)
 		player:SetNetworkValue("Combustivel", tonumber(result[1].Combustivel))
 		player:SetValue("UltimaPosicao", self:StringToVector3(tostring(result[1].UltimaPosicao)))
 		player:SetNetworkValue("Language", result[1].Idioma)
-		player:SetNetworkValue("LifeInsurance", tonumber(result[1].LifeInsurance) == 1)
 		player:SetNetworkValue("Licenses", {
 			A = tonumber(result[1].LicenseA) == 1,
 			B = tonumber(result[1].LicenseB) == 1,
@@ -73,6 +72,8 @@ function PlayerController:UpdatePlayer(player)
 			E = tonumber(result[1].LicenseE) == 1,
 			F = tonumber(result[1].LicenseF) == 1,
 		})
+		player:SetNetworkValue("LifeInsurance", tonumber(result[1].LifeInsurance) == 1)
+		player:SetNetworkValue("WeaponLicense", tonumber(result[1].WeaponLicense) == 1)
 
 		return true
 	else
@@ -183,7 +184,8 @@ function PlayerController:ServerStart()
 		"LicenseD BIT NOT NULL DEFAULT 0," ..
 		"LicenseE BIT NOT NULL DEFAULT 0," ..
 		"LicenseF BIT NOT NULL DEFAULT 0," ..
-		"LifeInsurance BIT NOT NULL DEFAULT 0)")
+		"LifeInsurance BIT NOT NULL DEFAULT 0," ..
+		"WeaponLicense BIT NOT NULL DEFAULT 0)")
 end
 
 

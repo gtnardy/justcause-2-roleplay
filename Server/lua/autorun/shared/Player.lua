@@ -77,3 +77,13 @@ function Player:GetArrested()
 	local a = self:GetValue("Arrested")
 	return a and a or false
 end
+
+function Player:GetWeaponLicense()
+	local a = self:GetValue("WeaponLicense")
+	return a and a or false
+end
+
+function Player:GetWeapons()
+	local a = self:GetValue("Weapons")
+	return a and a or {}
+end
